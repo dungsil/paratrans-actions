@@ -1,0 +1,17 @@
+﻿#l_braz_por:
+l_english:
+#l_french:
+#l_german:
+#l_japanese:
+#l_korean:
+#l_polish:
+#l_russian:
+#l_simp_chinese:
+#l_spanish:
+#l_turkish:
+
+zw_decision_pruchase_port_said_for_suez_canal: "$suez_canal_purchase$"
+zw_decision_pruchase_port_said_for_suez_canal_desc: ""
+
+notification_zw_noti_pruchase_port_said_for_suez_canal_name: "$suez_sale$"
+notification_zw_noti_pruchase_port_said_for_suez_canal_desc: "We're forced to sell $HUB_NAME_STATE_SINAI_city$ for the construction of Suez Canal."

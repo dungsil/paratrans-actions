@@ -1,0 +1,38 @@
+﻿l_english:
+ 
+ #Taiping Reconstruction
+ taiping_reconstruction_progress_bar: "Taiping Reconstruction"
+ taiping_reconstruction_progress_bar_desc: "Re-establishing control over the Celestial Empire"
+ tpg_reconstruction_mandate_preserved_tt: "Manchu Mandate Preserved"
+ tpg_reconstruction_turmoil_progress_tt: "Han and Manchu homeland states below #variable 25%#! [concept_turmoil]#!"
+ tpg_reconstruction_turmoil_retreat_tt: "Han and Manchu homeland states above #variable 25%#! [concept_turmoil]#!"
+ tpg_reconstruction_turmoil_retreat_2_tt: "Han and Manchu homeland states above #variable 50%#! [concept_turmoil]#!"
+ 
+ #Chinese Subsistence
+ chinese_agriculture_progress_bar: "Agricultural Reform"
+ chinese_agriculture_progress_bar_desc: "Researching & implementing new agricultural methods"
+ researched_intensive_agriculture: "Researched Intensive Agriculture"
+ researched_improved_fertilizer: "Researched Improved Fertilizer"
+ researched_nitrogen_fixation: "Researched Nitrogen Fixation"
+ 
+ #The Matter of Ireland
+ IRELAND_JE_NO_COLONISING: "No Colonisation"
+ IRELAND_JE_NO_COLONISATION_LAW: "No Colonial Intentions"
+ IRELAND_JE_INCORP_LEINSTER: "Incoporated: Leinster"
+ IRELAND_JE_INCORP_ULSTER: "Incoporated: Ulster"
+ IRELAND_JE_INCORP_CONNAUGHT: "Incoporated: Connaught"
+ IRELAND_JE_INCORP_MUNSTER: "Incoporated: Munster"
+ IRELAND_JE_DECREE_LEINSTER: "Emergency Welfare: Leinster"
+ IRELAND_JE_DECREE_ULSTER: "Emergency Welfare: Ulster"
+ IRELAND_JE_DECREE_CONNAUGHT: "Emergency Welfare: Connaught"
+ IRELAND_JE_DECREE_MUNSTER: "Emergency Welfare: Munster"
+ IRELAND_JE_DECREE_2_LEINSTER: "Promote Social Mobility: Leinster"
+ IRELAND_JE_DECREE_2_ULSTER: "Promote Social Mobility: Ulster"
+ IRELAND_JE_DECREE_2_CONNAUGHT: "Promote Social Mobility: Connaught"
+ IRELAND_JE_DECREE_2_MUNSTER: "Promote Social Mobility: Munster"
+ IRELAND_JE_UNI_LEINSTER: "University: Leinster"
+ IRELAND_JE_UNI_ULSTER: "University: Ulster"
+ IRELAND_JE_UNI_CONNAUGHT: "University: Connaught"
+ IRELAND_JE_UNI_MUNSTER: "University: Munster"
+ IRELAND_JE_BASE_RETREAT: "Moderate Nationalism"
+ IRELAND_JE_CATHOLIC_DISCRIMINATION: "Catholic Discrimination"

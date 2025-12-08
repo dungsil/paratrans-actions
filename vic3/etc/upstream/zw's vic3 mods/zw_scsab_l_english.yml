@@ -1,0 +1,347 @@
+﻿#l_braz_por:
+l_english:
+#l_french:
+#l_german:
+#l_japanese:
+#l_korean:
+#l_polish:
+#l_russian:
+#l_simp_chinese:
+#l_spanish:
+#l_turkish:
+
+# decisions
+
+	zw_expand_buildings_add_je: "$je_zw_expand_buildings$"
+	zw_expand_buildings_add_je_desc: "Adds $je_zw_expand_buildings$ to journal."
+
+# journal entries
+
+	je_zw_expand_buildings: "Supply Chains Management"
+	je_zw_expand_buildings_reason: "Expand the existing buildings of the given supply chains and plan more railways and power plants to ensure we have sufficient infrastructure and power supply."
+
+# Build New Railways
+
+	zw_build_new_railway_button: "[ROOT.GetCountry.GetCustom('zw_build_new_railway_button_cl')]"
+	zw_build_new_railway_button_cl_1: "#gold @green_checkmark_box!Build New Railways#!"
+	zw_build_new_railway_button_cl_2: "@simple_box!Build New Railways"
+	zw_build_new_railway_button_desc: ""
+	zw_build_new_railway_button_effect: "$zw_build_new_railway_button_effect_breakdown_01$$zw_build_new_railway_button_effect_breakdown_02$$zw_build_new_railway_button_effect_breakdown_03$$zw_build_new_railway_button_effect_breakdown_04$$zw_build_new_railway_button_effect_breakdown_05$$zw_build_new_railway_button_effect_breakdown_06$$zw_build_new_railway_button_effect_breakdown_07$"
+
+	zw_build_new_railway_button_effect_breakdown_01: "Build new railways gradually in states that #white #b doesn't have#!#! railway.\n\nNew railways will only be built in states that meet these conditions:"
+	zw_build_new_railway_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least one of these conditions is met:#!"
+	zw_build_new_railway_button_effect_breakdown_03: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_infrastructure] < [concept_infrastructure_usage] + 3#!"
+	zw_build_new_railway_button_effect_breakdown_04: "#indent_newline:8 \n$EFFECT_LIST_BULLET$All these conditions are met:#!"
+	zw_build_new_railway_button_effect_breakdown_05: "#indent_newline:12 \n$EFFECT_LIST_BULLET$@transportation!$transportation$[concept_local_price] >= 120%[concept_base_price]#!"
+	zw_build_new_railway_button_effect_breakdown_06: "#indent_newline:12 \n$EFFECT_LIST_BULLET$Has [GetBuildingType('building_urban_center').GetName]#!"
+	zw_build_new_railway_button_effect_breakdown_07: "\n\n#white #b The more infrastructure a state needs, the higher priority will be given to this state while planning a new railway. States whose infrastructure usage has exceeded the limit will get extra priority.#!#!"
+
+# Expand Railways
+
+	zw_expand_building_railway_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_railway_button_cl')]"
+	zw_expand_building_railway_button_cl_1: "#gold @green_checkmark_box! Expand Railways#!"
+	zw_expand_building_railway_button_cl_2: "@simple_box! Expand Railways"
+	zw_expand_building_railway_button_desc: ""
+	zw_expand_building_railway_button_effect: "$zw_expand_building_railway_button_effect_breakdown_01$$zw_expand_building_railway_button_effect_breakdown_02$$zw_expand_building_railway_button_effect_breakdown_03$$zw_expand_building_railway_button_effect_breakdown_04$$zw_expand_building_railway_button_effect_breakdown_05$$zw_expand_building_railway_button_effect_breakdown_06$$zw_expand_building_railway_button_effect_breakdown_07$$zw_expand_building_railway_button_effect_breakdown_08$$zw_expand_building_railway_button_effect_breakdown_09$$zw_expand_building_railway_button_effect_breakdown_10$$zw_expand_building_railway_button_effect_breakdown_11$$zw_expand_building_railway_button_effect_breakdown_12$"
+
+	zw_expand_building_railway_button_effect_breakdown_01: "Expand the existing railways that meet these conditions:"
+	zw_expand_building_railway_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.95#!"
+	zw_expand_building_railway_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$$TRIGGER_IS_UNDER_CONSTRUCTION_NOT$#!"
+	zw_expand_building_railway_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least one of these conditions are met:#!"
+	zw_expand_building_railway_button_effect_breakdown_05: "#indent_newline:8 \n$EFFECT_LIST_BULLET$All of these conditions are met:#!"
+	zw_expand_building_railway_button_effect_breakdown_06: "#indent_newline:12 \n$EFFECT_LIST_BULLET$@transportation!$transportation$[concept_local_price] >= 115% [concept_base_price]#!"
+	zw_expand_building_railway_button_effect_breakdown_07: "#indent_newline:12 \n$EFFECT_LIST_BULLET$$TRIGGER_BUILDING_HAS_GOODS_SHORTAGE_NOT$#!"
+	zw_expand_building_railway_button_effect_breakdown_08: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_infrastructure] < [concept_infrastructure_usage] + 10#!"
+	zw_expand_building_railway_button_effect_breakdown_09: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least one of these conditions are met:#!"
+	zw_expand_building_railway_button_effect_breakdown_10: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$IS_SUBSIDIZED$#!"
+	zw_expand_building_railway_button_effect_breakdown_11: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ > 0#!"
+	zw_expand_building_railway_button_effect_breakdown_12: "\n\n#white #b The more infrastructure or @transportation! transportation a state needs, the more levels of its railways might be added to the construction queue.#!#!"
+
+# limit_max_added_levels_railway
+
+	zw_limit_max_added_levels_railway_button: "[ROOT.GetCountry.GetCustom('zw_limit_max_added_levels_railway_button_cl')]"
+	zw_limit_max_added_levels_railway_button_cl_1: "#gold @green_checkmark_box! Limit Expanded Levels @transportation!#!"
+	zw_limit_max_added_levels_railway_button_cl_2: "@simple_box! Limit Expanded Levels @transportation!"
+	zw_limit_max_added_levels_railway_button_desc: ""
+	zw_limit_max_added_levels_railway_button_effect: "Limit the maximum expanded levels for a railway each time.\n\nIf no maximum expanded levels was set, the required added levels will always be added to the construction queue #white #b at once#!#!.\n\nExpensive transportation is expected when our country is still in the early stage of industrialization and lack of advanced technologies for railways. #white #b It's recommended to limit the maximum expanded levels for railways and power plants each time until we acquire more advanced technologies#!#!, so that transportation won't be overproduced once the more advanced production methods are used and other important supply chains won't be ignored due to long construction queue."
+
+# change_max_added_levels_railway
+
+	zw_change_max_added_levels_railway_button: "[ROOT.GetCountry.GetCustom('zw_change_max_added_levels_railway_button_cl')]"
+	zw_change_max_added_levels_railway_button_cl_1: "#gold @arrow_up_up!@arrow_down_down! Expanded Levels @transportation!#!"
+	zw_change_max_added_levels_railway_button_cl_2: "@arrow_up_up!@arrow_down_down! Expanded Levels @transportation!"
+	zw_change_max_added_levels_railway_button_desc: ""
+	zw_change_max_added_levels_railway_button_effect_1: "Change the maximum expanded levels for a railway each time.\n\nCurrently: #yellow #b [ROOT.Var('zw_var_max_added_levels_railway').GetValue]#!#! (1~10)"
+	zw_change_max_added_levels_railway_button_effect_2: "We #white #b haven't#!#! limited the maximum expanded levels."
+
+# Build New Power Plants
+
+	zw_build_new_power_plant_button: "[ROOT.GetCountry.GetCustom('zw_build_new_power_plant_button_cl')]"
+	zw_build_new_power_plant_button_cl_1: "#gold @green_checkmark_box! Build New Power Plants#!"
+	zw_build_new_power_plant_button_cl_2: "@simple_box! Build New Power Plants"
+	zw_build_new_power_plant_button_desc: ""
+	zw_build_new_power_plant_button_effect: "Build new power plants gradually in states that #white #b doesn't have#!#! power plants but has [GetBuildingType('building_urban_center').GetName].\n\n#white #b The more urbanized a state is, the higher priority will be given to this state while planning a new power plant.#!#!"
+
+# Expand Power Plants
+
+	zw_expand_building_power_plant_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_power_plant_button_cl')]"
+	zw_expand_building_power_plant_button_cl_1: "#gold @green_checkmark_box! Expand Power Plants#!"
+	zw_expand_building_power_plant_button_cl_2: "@simple_box! Expand Power Plants"
+	zw_expand_building_power_plant_button_desc: ""
+	zw_expand_building_power_plant_button_effect: "$zw_expand_building_power_plant_button_effect_breakdown_01$$zw_expand_building_power_plant_button_effect_breakdown_02$$zw_expand_building_power_plant_button_effect_breakdown_03$$zw_expand_building_power_plant_button_effect_breakdown_04$$zw_expand_building_power_plant_button_effect_breakdown_05$$zw_expand_building_power_plant_button_effect_breakdown_06$$zw_expand_building_power_plant_button_effect_breakdown_07$$zw_expand_building_power_plant_button_effect_breakdown_08$$zw_expand_building_power_plant_button_effect_breakdown_09$$zw_expand_building_power_plant_button_effect_breakdown_10$"
+
+	zw_expand_building_power_plant_button_effect_breakdown_01: "Expand the existing power plants that meet these conditions:"
+	zw_expand_building_power_plant_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.95#!"
+	zw_expand_building_power_plant_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$$TRIGGER_IS_UNDER_CONSTRUCTION_NOT$#!"
+	zw_expand_building_power_plant_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$$TRIGGER_BUILDING_HAS_GOODS_SHORTAGE_NOT$#!"
+	zw_expand_building_power_plant_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$@electricity!$electricity$[concept_local_price] >= 115% [concept_base_price]#!"
+	zw_expand_building_power_plant_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[concept_market_access] = 100%#!"
+	zw_expand_building_power_plant_button_effect_breakdown_07: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least one of these conditions are met:：#!"
+	zw_expand_building_power_plant_button_effect_breakdown_08: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$IS_SUBSIDIZED$#!"
+	zw_expand_building_power_plant_button_effect_breakdown_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ > 0#!"
+	zw_expand_building_power_plant_button_effect_breakdown_10: "\n\n#white #b The more @electricity! electricity a state needs, the more levels of its power plant might be added to the construction queue.#!#!"
+
+# limit_max_added_levels_power_plant
+
+	zw_limit_max_added_levels_power_plant_button: "[ROOT.GetCountry.GetCustom('zw_limit_max_added_levels_power_plant_button_cl')]"
+	zw_limit_max_added_levels_power_plant_button_cl_1: "#gold @green_checkmark_box! Limit Expanded Levels @electricity!#!"
+	zw_limit_max_added_levels_power_plant_button_cl_2: "@simple_box! Limit Expanded Levels @electricity!"
+	zw_limit_max_added_levels_power_plant_button_desc: ""
+	zw_limit_max_added_levels_power_plant_button_effect: "Limit the maximum expanded levels for a power plant each time.\n\nIf no maximum expanded levels was set, the required added levels will always be added to the construction queue at once.\n\nExpensive electricity is expected when our country is still in the early stage of industrialization and lack of advanced technologies for power plants. #white #b It's recommended to limit the maximum expanded levels for power plants each time until we acquire more advanced technologies#!#!, so that electricity won't be overproduced once the more advanced production methods are used and other important supply chains won't be ignored due to long construction queue."
+
+# change_max_added_levels_power_plant
+
+	zw_change_max_added_levels_power_plant_button: "[ROOT.GetCountry.GetCustom('zw_change_max_added_levels_power_plant_button_cl')]"
+	zw_change_max_added_levels_power_plant_button_cl_1: "#gold @arrow_up_up!@arrow_down_down! Expanded Levels @electricity!#!"
+	zw_change_max_added_levels_power_plant_button_cl_2: "@arrow_up_up!@arrow_down_down! Expanded Levels @electricity!"
+	zw_change_max_added_levels_power_plant_button_desc: ""
+	zw_change_max_added_levels_power_plant_button_effect_1: "Change the maximum expanded levels for a power plant each time.\n\nCurrently: #yellow #b [ROOT.Var('zw_var_max_added_levels_power_plant').GetValue]#!#! (1~10)"
+	zw_change_max_added_levels_power_plant_button_effect_2: "We #white #b haven't#!#! limited the maximum expanded levels."
+
+# Incorporated States
+
+	zw_develop_incorporated_states_button: "[ROOT.GetCountry.GetCustom('zw_develop_incorporated_states_button_cl')]"
+	zw_develop_incorporated_states_button_cl_1: "#gold @green_checkmark_box! Incorporated States#!"
+	zw_develop_incorporated_states_button_cl_2: "@simple_box! Incorporated States"
+	zw_develop_incorporated_states_button_desc: ""
+	zw_develop_incorporated_states_button_effect: "Only develop incorporated states."
+
+# Expand Supply Chains
+
+	zw_expand_building_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_button_cl')]"
+	zw_expand_building_button_cl_1: "#gold @green_checkmark_box! Expand Supply Chains#!"
+	zw_expand_building_button_cl_2: "@simple_box! Expand Supply Chains"
+	zw_expand_building_button_desc: ""
+	zw_expand_building_button_effect: "$zw_expand_building_button_effect_breakdown_01$$zw_expand_building_button_effect_breakdown_02$$zw_expand_building_button_effect_breakdown_03$$zw_expand_building_button_effect_breakdown_04$$zw_expand_building_button_effect_breakdown_05$$zw_expand_building_button_effect_breakdown_06$$zw_expand_building_button_effect_breakdown_07$"
+
+	zw_expand_building_button_effect_breakdown_01: "Expand the existing buildings of selected supply chains."
+	zw_expand_building_button_effect_breakdown_02: "\n\nOnly buildings that meet these conditions can be expanded:"
+	zw_expand_building_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ > 0#!"
+	zw_expand_building_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.95#!"
+	zw_expand_building_button_effect_breakdown_05: "\n\nThe more profitable a building is, the higher priority and more construction levels will be given to this building."
+	zw_expand_building_button_effect_breakdown_06: "\n\nBuilding that has input goods [concept_shortage] or whose [concept_market_access] is lower than 100% will be given much lower priority."
+	zw_expand_building_button_effect_breakdown_07: "\n\nThe number of the total added constructions will be limited to a reasonable range based on the number of already on-going constructions, construction production, technologies and economic system, so that we can react to potential market changes faster."
+
+# labor_threshold
+
+	zw_increase_labor_threshold_button: "@arrow_up_up! [ROOT.GetCountry.GetCustom('zw_labor_threshold_button_cl')]"
+	zw_increase_labor_threshold_button_desc: ""
+	zw_increase_labor_threshold_button_effect_1: "Increase the state labor threshold while #white #b expanding supply chains#!#!.$zw_text_labor_threshold$\n\nCurrent labor threshold: #yellow #b [ROOT.Var('zw_var_labor_threshold').GetValue|*]#!#!"
+	zw_increase_labor_threshold_button_effect_2: "Increase the state labor threshold while #white #b expanding supply chains#!#!.$zw_text_labor_threshold$\n\nCurrent labor threshold: #yellow #b No Limit#!#!"
+
+	zw_decrease_labor_threshold_button: "@arrow_down_down! [ROOT.GetCountry.GetCustom('zw_labor_threshold_button_cl')]"
+	zw_decrease_labor_threshold_button_desc: ""
+	zw_decrease_labor_threshold_button_effect_1: "Decrease the state labor threshold while #white #b expanding supply chains#!#!.$zw_text_labor_threshold$\n\nCurrent labor threshold: #yellow #b [ROOT.Var('zw_var_labor_threshold').GetValue|*]#!#!"
+	zw_decrease_labor_threshold_button_effect_2: "Decrease the state labor threshold while #white #b expanding supply chains#!#!.$zw_text_labor_threshold$\n\nCurrent labor threshold: #yellow #b No Limit#!#!"
+
+	zw_text_labor_threshold: "$zw_text_labor_threshold_01$$zw_text_labor_threshold_02$$zw_text_labor_threshold_03$$zw_text_labor_threshold_04$"
+	zw_text_labor_threshold_01: "\n\nState Labor = Peasants Labor + Unemployed Labor"
+	zw_text_labor_threshold_02: "\n\nIf labor threshold was set, only states whose labor is higher than the threshold will be considered while expanding supply chains and the maximum expanded levels for each building are also limited by the threshold."
+	zw_text_labor_threshold_03: "\n\nIf no labor threshold is set, only buildings' occupancy will be used as the labor threshold. This encourages a continuous flow of labor toward more productive industries while phasing out outdated ones, thereby optimizing the nation's industrial structure. It also ensures sufficient available jobs to absorb immigrants. This is the preferable option when the nation has a #white #b large economy#!#! and #white #b high construction capacity#!#!."
+	zw_text_labor_threshold_04: "\n\nIf labor threshold is set, it prevents construction capacity from being wasted in state with insufficient labor. This is the preferable option when the nation has a #white #b small economy#!#! and #white #b limited construction capacity#!#!."
+
+	zw_labor_threshold_button_cl_1: "#gold Labor Threshold#!"
+	zw_labor_threshold_button_cl_2: "Labor Threshold"
+
+# increase/decrease_added_constructions
+
+	zw_increase_added_constructions_button: "@arrow_up_up! [ROOT.GetCountry.GetCustom('zw_added_constructons_button_cl')]"
+	zw_increase_added_constructions_button_desc: ""
+	zw_increase_added_constructions_button_effect: "Increase the max number of added constructions for #white #b expanding supply chains#!#!.\n\nThe current max number of added constructions factor: #yellow #b [ROOT.GetCountry.GetCustom('zw_added_constructons_cl')]#!#!\n\nThe default value is 1. If it's set to 2, the max number of added constructions will be 2 times the default number.\n\nThe number of the total added constructions will be limited to a reasonable range based on the number of already on-going constructions, construction production, technologies and economic system, so that we can react to potential market changes faster.\n\n#white #b If the income of our private investment pool is too low to afford enough the private constructions compared to the max number of private constructions allowed by our current economic system#!#!, we can increase the added government constructions to avoid wasting our construction points when the government budget allows.\n\n#white #b Please note that this won't change the private construction allocation determined by our economic system but will only change the number of added  constructions each time.#!#!"
+
+	zw_decrease_added_constructions_button: "@arrow_down_down! [ROOT.GetCountry.GetCustom('zw_added_constructons_button_cl')]"
+	zw_decrease_added_constructions_button_desc: ""
+	zw_decrease_added_constructions_button_effect: "Decrease the max number of added constructions for #white #b expanding supply chains#!#!.\n\nThe current max number of added constructions factor: #yellow #b [ROOT.GetCountry.GetCustom('zw_added_constructons_cl')]#!#!\n\nThe default value is 1. If it's set to 0.5, the max number of added constructions will be 50% of the default number.\n\nThe number of the total added constructions will be limited to a reasonable range based on the number of already on-going constructions, construction production, technologies and economic system, so that we can react to potential market changes faster.\n\n#white #b If our government budget cannot afford enough government constructions#!#!, we can decrease the number of added government constructions to lower the government expense\n\n#white #b Please note that this won't change the private construction allocation determined by our economic system but will only change the number of added  constructions each time.#!#!"
+
+	zw_added_constructons_cl_1: "[ROOT.Var('zw_var_added_constructions').GetValue]"
+	zw_added_constructons_cl_2: "1"
+
+	zw_added_constructons_button_cl_1: "#gold Max Added Constructions#!"
+	zw_added_constructons_button_cl_2: "Max Added Constructions"
+
+# Expand Supply Chains: Machines
+
+	zw_expand_building_machine_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_machine_button_cl')]"
+	zw_expand_building_machine_button_cl_1: "#gold @green_checkmark_box! Machines#!"
+	zw_expand_building_machine_button_cl_2: "@simple_box! Machines"
+	zw_expand_building_machine_button_desc: ""
+	zw_expand_building_machine_button_effect: "$zw_expand_building_machine_button_effect_breakdown_01$$zw_expand_building_machine_button_effect_breakdown_02$$zw_expand_building_machine_button_effect_breakdown_03$$zw_expand_building_machine_button_effect_breakdown_04$$zw_expand_building_machine_button_effect_breakdown_05$$zw_expand_building_machine_button_effect_breakdown_06$$zw_expand_building_machine_button_effect_breakdown_07$$zw_expand_building_machine_button_effect_breakdown_08$$zw_expand_building_machine_button_effect_breakdown_09$$zw_expand_building_machine_button_effect_breakdown_10$$zw_expand_building_machine_button_effect_breakdown_11$"
+
+	zw_expand_building_machine_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_machine_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_coal_mine').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_rubber_plantation').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_oil_rig').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_07: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_tooling_workshops').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_08: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_steel_mills').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_09: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_motor_industry').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_10: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_automotive_industry').GetName]#!"
+	zw_expand_building_machine_button_effect_breakdown_11: "\n\n#white #b The supply chain of machines is the foundation of our industrialization. It's always recommended to give it extra priority.#!#!"
+
+# Expand Supply Chains: Food
+
+	zw_expand_building_food_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_food_button_cl')]"
+	zw_expand_building_food_button_cl_1: "#gold @green_checkmark_box! Food#!"
+	zw_expand_building_food_button_cl_2: "@simple_box! Food"
+	zw_expand_building_food_button_desc: ""
+	zw_expand_building_food_button_effect: "$zw_expand_building_food_button_effect_breakdown_01$$zw_expand_building_food_button_effect_breakdown_02$$zw_expand_building_food_button_effect_breakdown_03$$zw_expand_building_food_button_effect_breakdown_04$$zw_expand_building_food_button_effect_breakdown_05$$zw_expand_building_food_button_effect_breakdown_06$$zw_expand_building_food_button_effect_breakdown_07$$zw_expand_building_food_button_effect_breakdown_08$$zw_expand_building_food_button_effect_breakdown_09$$zw_expand_building_food_button_effect_breakdown_10$$zw_expand_building_food_button_effect_breakdown_11$$zw_expand_building_food_button_effect_breakdown_12$"
+
+	zw_expand_building_food_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_food_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_rye_farm').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_wheat_farm').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_rice_farm').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_maize_farm').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_millet_farm').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_07: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_livestock_ranch').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_08: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_sugar_plantation').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_09: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_banana_plantation').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_10: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_fishing_wharf').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_11: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_whaling_station').GetName]#!"
+	zw_expand_building_food_button_effect_breakdown_12: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_food_industry').GetName]#!"
+
+# Expand Supply Chains: Consumer Goods
+
+	zw_expand_building_clothes_furniture_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_clothes_furniture_button_cl')]"
+	zw_expand_building_clothes_furniture_button_cl_1: "#gold @green_checkmark_box! Consumer Goods#!"
+	zw_expand_building_clothes_furniture_button_cl_2: "@simple_box! Consumer Goods"
+	zw_expand_building_clothes_furniture_button_desc: ""
+	zw_expand_building_clothes_furniture_button_effect: "$zw_expand_building_clothes_furniture_button_effect_breakdown_01$$zw_expand_building_clothes_furniture_button_effect_breakdown_02$$zw_expand_building_clothes_furniture_button_effect_breakdown_03$$zw_expand_building_clothes_furniture_button_effect_breakdown_04$$zw_expand_building_clothes_furniture_button_effect_breakdown_05$$zw_expand_building_clothes_furniture_button_effect_breakdown_06$$zw_expand_building_clothes_furniture_button_effect_breakdown_07$$zw_expand_building_clothes_furniture_button_effect_breakdown_08$$zw_expand_building_clothes_furniture_button_effect_breakdown_09$$zw_expand_building_clothes_furniture_button_effect_breakdown_10$$zw_expand_building_clothes_furniture_button_effect_breakdown_11$"
+
+	zw_expand_building_clothes_furniture_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_cotton_plantation').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_silk_plantation').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_furniture_manufacturies').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_textile_mills').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_07: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_synthetics_plants').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_08: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('lathe').GetName] has been researched：#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_dye_plantation').GetName]#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_10: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('vulcanization').GetName] has been researched：#!"
+	zw_expand_building_clothes_furniture_button_effect_breakdown_11: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_rubber_plantation').GetName]#!"
+
+# Expand Supply Chains: Glassworks
+
+	zw_expand_building_glassworks_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_glassworks_button_cl')]"
+	zw_expand_building_glassworks_button_cl_1: "#gold @green_checkmark_box! Glass And China#!"
+	zw_expand_building_glassworks_button_cl_2: "@simple_box! Glass And China"
+	zw_expand_building_glassworks_button_desc: ""
+	zw_expand_building_glassworks_button_effect: "$zw_expand_building_glassworks_button_effect_breakdown_01$$zw_expand_building_glassworks_button_effect_breakdown_02$$zw_expand_building_glassworks_button_effect_breakdown_03$$zw_expand_building_glassworks_button_effect_breakdown_04$$zw_expand_building_glassworks_button_effect_breakdown_05$$zw_expand_building_glassworks_button_effect_breakdown_06$$zw_expand_building_glassworks_button_effect_breakdown_07$$zw_expand_building_glassworks_button_effect_breakdown_08$$zw_expand_building_glassworks_button_effect_breakdown_09$"
+
+	zw_expand_building_glassworks_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_glassworks_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_dye_plantation').GetName]#!"
+	zw_expand_building_glassworks_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_glassworks').GetName]#!"
+	zw_expand_building_glassworks_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('crystal_glass').GetName] hasn't been researched:#!"
+	zw_expand_building_glassworks_button_effect_breakdown_05: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]#!"
+	zw_expand_building_glassworks_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('lathe').GetName] has been researched:#!"
+	zw_expand_building_glassworks_button_effect_breakdown_07: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_lead_mine').GetName]#!"
+	zw_expand_building_glassworks_button_effect_breakdown_08: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('plastics').GetName] has been researched:#!"
+	zw_expand_building_glassworks_button_effect_breakdown_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_oil_rig').GetName]#!"
+
+# Expand Supply Chains: Chemicals
+
+	zw_expand_building_chemical_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_chemical_button_cl')]"
+	zw_expand_building_chemical_button_cl_1: "#gold @green_checkmark_box! Chemicals#!"
+	zw_expand_building_chemical_button_cl_2: "@simple_box! Chemicals"
+	zw_expand_building_chemical_button_desc: ""
+	zw_expand_building_chemical_button_effect: "$zw_expand_building_chemical_button_effect_breakdown_01$$zw_expand_building_chemical_button_effect_breakdown_02$$zw_expand_building_chemical_button_effect_breakdown_03$$zw_expand_building_chemical_button_effect_breakdown_04$$zw_expand_building_chemical_button_effect_breakdown_05$$zw_expand_building_chemical_button_effect_breakdown_06$$zw_expand_building_chemical_button_effect_breakdown_07$$zw_expand_building_chemical_button_effect_breakdown_08$$zw_expand_building_chemical_button_effect_breakdown_09$$zw_expand_building_chemical_button_effect_breakdown_10$$zw_expand_building_chemical_button_effect_breakdown_11$$zw_expand_building_chemical_button_effect_breakdown_12$"
+
+	zw_expand_building_chemical_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_chemical_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_sulfur_mine').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_paper_mills').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_chemical_plants').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_07: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_explosives_factory').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_08: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('chemical_bleaching').GetName] has been researched:#!"
+	zw_expand_building_chemical_button_effect_breakdown_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_dye_plantation').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_10: "#indent_newline:4 \n$EFFECT_LIST_BULLET$If [GetTechnology('nitrogen_fixation').GetName] has been researched:#!"
+	zw_expand_building_chemical_button_effect_breakdown_11: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_oil_rig').GetName]#!"
+	zw_expand_building_chemical_button_effect_breakdown_12: "\n\n#white #b The supply chain of chemicals is the foundation of our industrialization. It's always recommended to give it extra priority.#!#!"
+
+# Expand Supply Chains: Electrics
+
+	zw_expand_building_electrics_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_electrics_button_cl')]"
+	zw_expand_building_electrics_button_cl_1: "#gold @green_checkmark_box! Electrics#!"
+	zw_expand_building_electrics_button_cl_2: "@simple_box! Electrics"
+	zw_expand_building_electrics_button_desc: ""
+	zw_expand_building_electrics_button_effect: "$zw_expand_building_electrics_button_effect_breakdown_01$$zw_expand_building_electrics_button_effect_breakdown_02$$zw_expand_building_electrics_button_effect_breakdown_03$$zw_expand_building_electrics_button_effect_breakdown_04$$zw_expand_building_electrics_button_effect_breakdown_05$"
+
+	zw_expand_building_electrics_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_electrics_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]#!"
+	zw_expand_building_electrics_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_lead_mine').GetName]#!"
+	zw_expand_building_electrics_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_rubber_plantation').GetName]#!"
+	zw_expand_building_electrics_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_electrics_industry').GetName]#!"
+
+# Expand Supply Chains: Cash Crops
+
+	zw_expand_building_plantations_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_plantations_button_cl')]"
+	zw_expand_building_plantations_button_cl_1: "#gold @green_checkmark_box! Cash Crops#!"
+	zw_expand_building_plantations_button_cl_2: "@simple_box! Cash Crops"
+	zw_expand_building_plantations_button_desc: ""
+	zw_expand_building_plantations_button_effect: "$zw_expand_building_plantations_button_effect_breakdown_01$$zw_expand_building_plantations_button_effect_breakdown_02$$zw_expand_building_plantations_button_effect_breakdown_03$$zw_expand_building_plantations_button_effect_breakdown_04$$zw_expand_building_plantations_button_effect_breakdown_05$$zw_expand_building_plantations_button_effect_breakdown_06$"
+
+	zw_expand_building_plantations_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_plantations_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_coffee_plantation').GetName]#!"
+	zw_expand_building_plantations_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_tea_plantation').GetName]#!"
+	zw_expand_building_plantations_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_tobacco_plantation').GetName]#!"
+	zw_expand_building_plantations_button_effect_breakdown_05: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_vineyard_plantation').GetName]#!"
+	zw_expand_building_plantations_button_effect_breakdown_06: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_opium_plantation').GetName]#!"
+
+# Expand Supply Chains: Shipbuilding
+
+	zw_expand_building_shipyards_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_shipyards_button_cl')]"
+	zw_expand_building_shipyards_button_cl_1: "#gold @green_checkmark_box! Shipbuilding#!"
+	zw_expand_building_shipyards_button_cl_2: "@simple_box! Shipbuilding"
+	zw_expand_building_shipyards_button_desc: ""
+	zw_expand_building_shipyards_button_effect: "$zw_expand_building_shipyards_button_effect_breakdown_01$$zw_expand_building_shipyards_button_effect_breakdown_02$$zw_expand_building_shipyards_button_effect_breakdown_03$"
+
+	zw_expand_building_shipyards_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_shipyards_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_shipyards').GetName]#!"
+	zw_expand_building_shipyards_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_military_shipyards').GetName]#!"
+
+# Expand Supply Chains: Military Goods
+
+	zw_expand_building_military_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_military_button_cl')]"
+	zw_expand_building_military_button_cl_1: "#gold @green_checkmark_box! Military Goods#!"
+	zw_expand_building_military_button_cl_2: "@simple_box! Military Goods"
+	zw_expand_building_military_button_desc: ""
+	zw_expand_building_military_button_effect: "$zw_expand_building_military_button_effect_breakdown_01$$zw_expand_building_military_button_effect_breakdown_02$$zw_expand_building_military_button_effect_breakdown_03$$zw_expand_building_military_button_effect_breakdown_04$"
+
+	zw_expand_building_military_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_military_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_arms_industry').GetName]#!"
+	zw_expand_building_military_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_artillery_foundries').GetName]#!"
+	zw_expand_building_military_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_munition_plants').GetName]#!"
+
+# Expand Supply Chains: Other
+
+	zw_expand_building_other_button: "[ROOT.GetCountry.GetCustom('zw_expand_building_other_button_cl')]"
+	zw_expand_building_other_button_cl_1: "#gold @green_checkmark_box! Other#!"
+	zw_expand_building_other_button_cl_2: "@simple_box! Other"
+	zw_expand_building_other_button_desc: ""
+	zw_expand_building_other_button_effect: "$zw_expand_building_other_button_effect_breakdown_01$$zw_expand_building_other_button_effect_breakdown_02$$zw_expand_building_other_button_effect_breakdown_03$$zw_expand_building_other_button_effect_breakdown_04$"
+
+	zw_expand_building_other_button_effect_breakdown_01: "Including the following buildings:"
+	zw_expand_building_other_button_effect_breakdown_02: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_gold_mine').GetName]#!"
+	zw_expand_building_other_button_effect_breakdown_03: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_arts_academy').GetName]#!"
+	zw_expand_building_other_button_effect_breakdown_04: "#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_port').GetName]#!"

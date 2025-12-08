@@ -1,0 +1,2 @@
+﻿l_english:
+ TOOLTIP_REFORM_GOVERNMENT:0 "#HEADER $REFORM_GOVERNMENT$#!\n[ReformGovernment.GetConfirmDesc][ConcatIfNeitherEmpty('\n', AddLocalizationIf(LessThan_int32(ReformGovernment.GetPredictedLegitimacy, '(int32)10'), 'ILLEGITIMATE_GOVERNMENT_WARNING_REFORM'))]"

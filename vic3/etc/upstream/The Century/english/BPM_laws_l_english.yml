@@ -1,0 +1,24 @@
+﻿l_english:
+# Nationality
+ law_multicultural:0 "Cosmopolitanism"
+
+# Religion
+ law_total_separation:0 "Secularism"
+ law_total_separation_desc:0 "Religion is de-emphasised and removed as much as possible from interfering in civil institutions. Discrimination based on religion in society at large is not practiced, but atheist values may be promoted."
+
+# Womens Rights
+ law_no_womens_rights:0 "Traditional Family"
+ law_no_womens_rights_desc:0 "Whether by convention or by law, the sexes are expected to follow a division of labor according to the traditional familial structure of their culture."
+
+# Police
+ law_no_police:0 "No Formal Police"
+ law_local_police:0 "Local Police Only"
+ law_dedicated_police:0 "Standardised Police"
+ law_militarized_police:0 "Militarized Police"
+
+# Freedom of Speech
+
+ law_right_of_assembly:0 "State Media"
+ law_right_of_assembly_desc:0 "The public enjoys the right of assembly and freedom of speech; the state, however, reserves the right to interfere in popular culture via production of their own publications and sponsorship of arts."
+ law_protected_speech:0 "No Speech Interference"
+ law_protected_speech_desc:0 "The state does not interfere in public discourse. Freedom of assembly and freedom of speech are guaranteed, and public structures do not produce their own media or interfere significantly with arts."

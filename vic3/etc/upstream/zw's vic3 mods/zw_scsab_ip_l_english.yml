@@ -1,0 +1,158 @@
+﻿#l_braz_por:
+l_english:
+#l_french:
+#l_german:
+#l_japanese:
+#l_korean:
+#l_polish:
+#l_russian:
+#l_simp_chinese:
+#l_spanish:
+#l_turkish:
+
+# JE industrial planning
+
+	je_zw_industrial_planning: "Industrial Planning"
+	je_zw_industrial_planning_reason: "Establish important local supply chains in suitable states."
+
+# zw_ip_machine_button
+
+	zw_ip_machine_button: "New Supply Chain @tools!"
+
+	zw_ip_machine_button_desc: ""
+
+	zw_ip_machine_button_effect: "$zw_ip_machine_button_effect_1$$zw_ip_machine_button_effect_2$$zw_ip_machine_button_effect_3$$zw_ip_machine_button_effect_4$$zw_ip_machine_button_effect_5$$zw_ip_machine_button_effect_6$"
+
+	zw_ip_machine_button_effect_1: "Build a new supply chain of #white #b machines#!#! in a suitable state."
+
+	zw_ip_machine_button_effect_2: "\n\nOnly building types allowed by the current technology of [ROOT.GetCountry.GetNameNoFlag] are included."
+
+	zw_ip_machine_button_effect_3: "\n\n#white #b Potential#!#! building types:#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_coal_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_oil_rig').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_rubber_plantation').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_tooling_workshops').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_steel_mills').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_motor_industry').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_automotive_industry').GetName]#!"
+
+	zw_ip_machine_button_effect_4: "\n\nIf #white #b $zw_ip_flexible_resource_conditions_button$#!#! is not enabled, only states that meet these conditions are suitable:"
+
+	zw_ip_machine_button_effect_5: "$zw_ip_machine_button_effect_5_1$$zw_ip_machine_button_effect_5_2$$zw_ip_machine_button_effect_5_3$$zw_ip_machine_button_effect_5_4$$zw_ip_machine_button_effect_5_5$$zw_ip_machine_button_effect_5_6$$zw_ip_machine_button_effect_5_7$"
+
+	zw_ip_machine_button_effect_5_1: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least two of these conditions are met:#!"
+
+	zw_ip_machine_button_effect_5_2: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_coal_mine').GetName]#!"
+
+	zw_ip_machine_button_effect_5_3: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_iron_mine').GetName]#!"
+
+	zw_ip_machine_button_effect_5_4: "#indent_newline:8 \n$EFFECT_LIST_BULLET$All of these conditions are met:#!"
+
+	zw_ip_machine_button_effect_5_5: "#indent_newline:12 \n$EFFECT_LIST_BULLET$Has unlocked [GetBuildingType('building_automotive_industry').GetName]#!"
+
+	zw_ip_machine_button_effect_5_6: "#indent_newline:12 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_oil_rig').GetName]#!"
+
+	zw_ip_machine_button_effect_5_7: "#indent_newline:12 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_rubber_plantation').GetName]#!"
+
+	zw_ip_machine_button_effect_6: "\n\nThe more #white #b populated#!#! a state is, the more suitable #white #b resources#!#! a state has, the higher priority will be given to this state.\n"
+
+# zw_ip_chemical_button
+
+	zw_ip_chemical_button: "New Supply Chain @fertilizer!"
+
+	zw_ip_chemical_button_desc: ""
+
+	zw_ip_chemical_button_effect: "$zw_ip_chemical_button_effect_1$$zw_ip_chemical_button_effect_2$$zw_ip_chemical_button_effect_3$$zw_ip_chemical_button_effect_4$$zw_ip_chemical_button_effect_5$$zw_ip_chemical_button_effect_6$"
+
+	zw_ip_chemical_button_effect_1: "Build a new supply chain of #white #b chemicals#!#! in a suitable state."
+
+	zw_ip_chemical_button_effect_2: "\n\nOnly building types allowed by the current technology of [ROOT.GetCountry.GetNameNoFlag] are included."
+
+	zw_ip_chemical_button_effect_3: "\n\n#white #b Potential#!#! building types:#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_logging_camp').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_sulfur_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_chemical_plants').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_explosives_factory').GetName]\n$EFFECT_LIST_BULLET$If state supports [GetBuildingType('building_logging_camp').GetName]：#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_paper_mills').GetName]#!#!"
+
+	zw_ip_chemical_button_effect_4: "\n\nIf #white #b $zw_ip_flexible_resource_conditions_button$#!#! is not enabled, only states that meet these conditions are suitable:"
+
+	zw_ip_chemical_button_effect_5: "#indent_newline:4 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_sulfur_mine').GetName]#!"
+
+	zw_ip_chemical_button_effect_6: "\n\nThe more #white #b populated#!#! a state is, the more suitable #white #b resources#!#! a state has, the higher priority will be given to this state.\n"
+
+# zw_ip_glass_button
+
+	zw_ip_glass_button: "New Supply Chain @glass!"
+
+	zw_ip_glass_button_desc: ""
+
+	zw_ip_glass_button_effect: "$zw_ip_glass_button_effect_1$$zw_ip_glass_button_effect_2$$zw_ip_glass_button_effect_3$$zw_ip_glass_button_effect_4$$zw_ip_glass_button_effect_5$$zw_ip_glass_button_effect_6$"
+
+	zw_ip_glass_button_effect_1: "Build a new supply chain of #white #b glass and china#!#! in a suitable state."
+
+	zw_ip_glass_button_effect_2: "\n\nOnly building types allowed by the current technology of [ROOT.GetCountry.GetNameNoFlag] are included."
+	
+	zw_ip_glass_button_effect_3: "\n\n#white #b Potential#!#! building types:#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_lead_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_glassworks').GetName]#!"
+
+	zw_ip_glass_button_effect_4: "\n\nIf #white #b $zw_ip_flexible_resource_conditions_button$#!#! is not enabled, only states that meet these conditions are suitable:"
+
+	zw_ip_glass_button_effect_5: "#indent_newline:4 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_lead_mine').GetName]#!"
+
+	zw_ip_glass_button_effect_6: "\n\nThe more #white #b populated#!#! a state is, the more suitable #white #b resources#!#! a state has, the higher priority will be given to this state.\n"
+
+# zw_ip_electrics_button
+
+	zw_ip_electrics_button: "New Supply Chain @telephones!"
+
+	zw_ip_electrics_button_desc: ""
+
+	zw_ip_electrics_button_effect: "$zw_ip_electrics_button_effect_1$$zw_ip_electrics_button_effect_2$$zw_ip_electrics_button_effect_3$$zw_ip_electrics_button_effect_4$$zw_ip_electrics_button_effect_5$$zw_ip_electrics_button_effect_6$"
+
+	zw_ip_electrics_button_effect_1: "Build a new supply chain of #white #b electrics#!#! in a suitable state."
+
+	zw_ip_electrics_button_effect_2: "\n\nOnly building types allowed by the current technology of [ROOT.GetCountry.GetNameNoFlag] are included."
+
+	zw_ip_electrics_button_effect_3: "\n\n#white #b Potential#!#! building types:#indent_newline:4 \n$EFFECT_LIST_BULLET$[GetBuildingType('building_iron_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_lead_mine').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_rubber_plantation').GetName]\n$EFFECT_LIST_BULLET$[GetBuildingType('building_electrics_industry').GetName]#!"
+
+	zw_ip_electrics_button_effect_4: "\n\nIf #white #b $zw_ip_flexible_resource_conditions_button$#!#! is not enabled, only states that meet these conditions are suitable:"
+
+	zw_ip_electrics_button_effect_5: "$zw_ip_electrics_button_effect_5_1$$zw_ip_electrics_button_effect_5_2$$zw_ip_electrics_button_effect_5_3$$zw_ip_electrics_button_effect_5_4$"
+
+	zw_ip_electrics_button_effect_5_1: "#indent_newline:4 \n$EFFECT_LIST_BULLET$At least two of these conditions are met:#!"
+
+	zw_ip_electrics_button_effect_5_2: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_iron_mine').GetName]#!"
+
+	zw_ip_electrics_button_effect_5_3: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_lead_mine').GetName]#!"
+
+	zw_ip_electrics_button_effect_5_4: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Support [GetBuildingType('building_rubber_plantation').GetName]#!"
+
+	zw_ip_electrics_button_effect_6: "\n\nThe more #white #b populated#!#! a state is, the more suitable #white #b resources#!#! a state has, the higher priority will be given to this state.\n"
+
+# zw_ip_incorporated_button
+
+	zw_ip_incorporated_button: "Incorporated States"
+
+	zw_ip_incorporated_button_desc: ""
+
+	zw_ip_incorporated_button_effect: "New supply chains will only be planned in incorporated states."
+
+# zw_ip_current_state_percent_button
+
+	zw_ip_current_state_percent_button: "State Proportion"
+
+	zw_ip_current_state_percent_button_desc: ""
+
+	zw_ip_current_state_percent_button_effect: "A new supply chain won't be planned if more than 30% of states already have this supply chain."
+
+# zw_ip_state_factories_num_button
+
+	zw_ip_state_factories_num_button: "Number Of Factories"
+
+	zw_ip_state_factories_num_button_desc: ""
+
+	zw_ip_state_factories_num_button_effect: "Supply chains will only be planned in states whose factory types are less than certain number.\n"
+
+	zw_ip_state_factories_num_button_effect_0: "#white #b Current number: no limit#!#!\n\n#yellow #b Click the button again to change the number.#!#!"
+
+	zw_ip_state_factories_num_button_effect_1: "#white #b Current number: 1#!#!\n\n#yellow #b Click the button again to change the number.#!#!"
+
+	zw_ip_state_factories_num_button_effect_2: "#white #b Current number: 3#!#!\n\n#yellow #b Click the button again to change the number.#!#!"
+
+	zw_ip_state_factories_num_button_effect_3: "#white #b Current number: 5#!#!\n\n#yellow #b Click the button again to change the number.#!#!"
+
+# zw_ip_flexible_resource_conditions_button
+
+	zw_ip_flexible_resource_conditions_button: "Flexible Resource Limit"
+
+	zw_ip_flexible_resource_conditions_button_desc: ""
+
+	zw_ip_flexible_resource_conditions_button_effect: "States that have suitable resources will be given much higher priority, but other states will also be taken into account."

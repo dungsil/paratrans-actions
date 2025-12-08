@@ -1,0 +1,48 @@
+﻿l_english:
+    # Power Bloc stuff
+    CEFENG_SYSTEM: "$UPB_txt_cefeng_system_custom$"
+    
+    UPB_cefeng_tizhi:  "Cèfēng Tizhì"
+    UPB_chaogong_tixi: "Cháogòng Tixì"
+    
+    UPB_dot_pattern:     "Circle"
+    UPB_pb_china_dragon: "Azure Dragon"
+    
+    UPB_identity_china_tributary:      "Chinese Tributary System"
+    UPB_identity_china_tributary_desc: "This identity is centered around China's dominant position as the center of East Asian culture."
+    
+    UPB_principle_group_sinosphere:  "Sinocentric Hegemony"
+    UPB_principle_group_sinosphere_desc:   "[Concept('concept_power_bloc_member', '$concept_power_bloc_members$')] recognize China as the cultural capital of East Asia, receiving in return the blessings of the Chinese emperor, legitimizing their rule and gaining access to China's vast riches."
+    UPB_principle_sinosphere_desc:   "[Concept('concept_power_bloc_member', '$concept_power_bloc_members$')] recognize China as the cultural capital of East Asia, receiving in return the blessings of the Chinese emperor, legitimizing their rule and gaining access to China's vast riches."
+    UPB_principle_sinosphere_1_desc: "$UPB_principle_sinosphere_desc$"
+    UPB_principle_sinosphere_2_desc: "$UPB_principle_sinosphere_desc$"
+    UPB_principle_sinosphere_3_desc: "$UPB_principle_sinosphere_desc$"
+    
+    # Modifiers
+    UPB_md_china_hegemon: "The Hegemon of Asia"
+    
+    # Tooltips
+    UPB_tt_has_chinese_homeland: "Is a [GetCulture('han').GetName], [GetCulture('manchu').GetName], or [GetCulture('mongol').GetName] [concept_homeland]"
+    UPB_tt_is_fully_controlled:  "Is fully owned by [SCOPE.GetRootScope.GetCountry.GetName]"
+    UPB_tt_asian_bloc_members:   "[Concept('concept_power_bloc_member','$concept_power_bloc_members_non_leader$')] with an #tooltippable;tooltip:[GetPlayer.GetTooltipTag],UPB_tt_asian_members_breakdown Asian#! [Concept('concept_primary_cultures','$concept_primary_culture$')]"
+    
+    UPB_tt_asian_members_breakdown: "$UPB_tt_asian_members_breakdown_h$#indent_newline:3 \n• $UPB_tt_asian_members_breakdown_1$\n• $UPB_tt_asian_members_breakdown_2$\n• $UPB_tt_asian_members_breakdown_3$\n• $UPB_tt_asian_members_breakdown_4$\n• $UPB_tt_asian_members_breakdown_5$#!"
+    UPB_tt_asian_members_breakdown_h: "Has any of the following [Concept('concept_cultural_heritage_trait','$concept_cultural_heritage_traits$')]:"
+    UPB_tt_asian_members_breakdown_1: "#bold $east_asian_heritage$#!"
+    UPB_tt_asian_members_breakdown_2: "#bold $north_asian_heritage$#!"
+    UPB_tt_asian_members_breakdown_3: "#bold $southeast_asian_heritage$#!"
+    UPB_tt_asian_members_breakdown_4: "#bold $central_asian_heritage$#!"
+    UPB_tt_asian_members_breakdown_5: "#bold $south_asian_heritage$#!"
+    
+    # Game Rules
+    UPB_de_reform_cefeng:      "Reform the $CEFENG_SYSTEM$ Bloc"
+    UPB_de_reform_cefeng_desc: "If we can reclaim the Mandate of Heaven and unify China, we can reestablish the diplomatic, economic, and tributary links connecting nations once in China's sphere of influence and cement our position in Asia for centuries to come!"
+    
+    rule_UPB_gr_cefeng_name:               "Chinese Power Bloc Name"
+    setting_UPB_gr_use_cefeng_tizhi:       "$UPB_cefeng_tizhi$"
+    setting_UPB_gr_use_cefeng_tizhi_desc:  "#yellow $CHI$#! will use the name #v $UPB_cefeng_tizhi$#! for their [concept_power_bloc]."
+    setting_UPB_gr_use_chaogong_tixi:      "$UPB_chaogong_tixi$"
+    setting_UPB_gr_use_chaogong_tixi_desc: "#yellow $CHI$#! will use the name #v $UPB_chaogong_tixi$#! for their [concept_power_bloc]."
+    
+    # Technical
+    UPB_txt_cefeng_system_custom: "[AddLocalizationIf( EqualTo_string(AccessGameRules.AccessNamedGameRule('UPB_gr_cefeng_name').GetSetting.GetKey, 'UPB_gr_use_cefeng_tizhi'), 'UPB_cefeng_tizhi')][AddLocalizationIf( EqualTo_string(AccessGameRules.AccessNamedGameRule('UPB_gr_cefeng_name').GetSetting.GetKey, 'UPB_gr_use_chaogong_tixi'), 'UPB_chaogong_tixi')]"
