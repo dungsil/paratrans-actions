@@ -99,6 +99,11 @@ pnpm ck3:update-dict -- --since-date "2024-01-01"    # 날짜 이후
 pnpm ck3:retranslate
 pnpm vic3:retranslate
 pnpm stellaris:retranslate
+
+# 음역 마이그레이션 (PR #1 이전에 번역된 culture/dynasty/names 파일 재번역)
+pnpm ck3:migrate-transliteration
+pnpm vic3:migrate-transliteration
+pnpm stellaris:migrate-transliteration
 ```
 
 ### 단어사전 관리

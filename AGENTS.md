@@ -46,6 +46,10 @@ pnpm ck3:update-dict -- --since-date "2024-01-01"
 # Retranslate incorrectly translated items (based on validation rules)
 pnpm ck3:retranslate
 
+# Migrate to transliteration mode (invalidate hashes for culture/dynasty/names files)
+# Use this after PR #1 to re-translate files that were semantically translated but should be transliterated
+pnpm ck3:migrate-transliteration
+
 # Run VIC3 translation process
 pnpm vic3
 
@@ -63,6 +67,9 @@ pnpm vic3:update-dict -- --since-date "2024-01-01"
 # Retranslate incorrectly translated VIC3 items
 pnpm vic3:retranslate
 
+# Migrate to transliteration mode for VIC3
+pnpm vic3:migrate-transliteration
+
 # Run Stellaris translation process
 pnpm stellaris
 
@@ -79,6 +86,9 @@ pnpm stellaris:update-dict -- --since-date "2024-01-01"
 
 # Retranslate incorrectly translated Stellaris items
 pnpm stellaris:retranslate
+
+# Migrate to transliteration mode for Stellaris
+pnpm stellaris:migrate-transliteration
 
 # Add dictionary entries from a git commit
 pnpm add-dict <commit-id>

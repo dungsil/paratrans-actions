@@ -162,7 +162,7 @@ async function migrateTranslationFile(
       throw error
     }
 
-    const targetYaml = parseYaml(targetContent) as Record<string, Record<string, [string, string]>>
+    const targetYaml = parseYaml(targetContent) as Record<string, Record<string, [string, string | null]>>
 
     // 번역 파일의 언어 키 찾기
     const targetLangKey = Object.keys(targetYaml)[0]
@@ -177,7 +177,7 @@ async function migrateTranslationFile(
     // 모든 항목의 해시를 초기화 (이미 번역된 항목만)
     for (const [key, [translationValue, translationHash]] of Object.entries(targetYaml[targetLangKey])) {
       // 번역값이 있고 해시도 있는 경우에만 무효화
-      if (translationValue && translationHash && translationHash !== '') {
+      if (translationValue && translationHash) {
         targetYaml[targetLangKey][key] = [translationValue, null]
         invalidatedCount++
         hasChanges = true
