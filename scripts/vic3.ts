@@ -4,6 +4,7 @@ import { join } from 'pathe'
 import { processModTranslations } from './factory/translate'
 import { invalidateDictionaryTranslations } from './utils/dictionary-invalidator'
 import { invalidateIncorrectTranslations } from './utils/retranslation-invalidator'
+import { migrateToTransliteration } from './utils/transliteration-migrator'
 import { getChangedDictionaryKeys } from './utils/dictionary-changes'
 import { parseDictionaryFilterArgs } from './utils/cli-args'
 import { log } from './utils/logger'
@@ -18,6 +19,7 @@ async function main () {
     const onlyHash = process.argv?.[2] === 'onlyHash'
     const updateDict = process.argv?.[2] === 'updateDict'
     const retranslate = process.argv?.[2] === 'retranslate'
+    const migrateTransliteration = process.argv?.[2] === 'migrateToTransliteration'
     
     // 특정 모드가 지정된 경우 해당 모드만 처리
     const mods = filterMods(allMods, process.argv?.[3])
@@ -74,6 +76,19 @@ async function main () {
       await invalidateIncorrectTranslations('vic3', vic3Dir, mods)
       
       log.success(`잘못 번역된 항목 무효화 완료!`)
+    } else if (migrateTransliteration) {
+      log.box(
+        `
+        VIC3 음역 마이그레이션
+        - 대상 경로: ${vic3Dir}
+        - 대상 모드 (${mods.length}개): ${mods}
+        - 처리 대상: culture, dynasty, names 관련 파일
+        `,
+      )
+      
+      await migrateToTransliteration('vic3', vic3Dir, mods)
+      
+      log.success(`음역 마이그레이션 완료!`)
     } else {
       log.box(
         `
