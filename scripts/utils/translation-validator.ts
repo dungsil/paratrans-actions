@@ -639,12 +639,75 @@ export function validateTranslation(
 }
 
 /**
+ * 음역 검증: 번역이 의미 번역이 아닌 음역인지 확인합니다.
+ * 고유명사(문화명, 왕조명, 인물명)는 발음 기반 음역이어야 하며, 의미 번역이면 안 됩니다.
+ * 
+ * 휴리스틱 기반 감지:
+ * 1. 일반적인 한국어 단어가 포함되어 있으면 의미 번역으로 간주
+ * 2. 원본과 음절 수가 크게 차이나면 의미 번역 가능성
+ */
+function validateTransliteration(
+  sourceText: string,
+  translatedText: string
+): ValidationResult {
+  // 일반적인 한국어 단어 목록 (의미 번역에 자주 사용되는 단어들)
+  // 음역에는 거의 나타나지 않는 일상 단어들
+  const commonKoreanWords = [
+    '문화', '왕조', '이름', '사람', '사람들',
+    '나라', '국가', '왕국', '제국', '공화국',
+    '동쪽', '서쪽', '남쪽', '북쪽', '중앙',
+    '크다', '작다', '높다', '낮다', '멀다', '멀리', '가깝다',
+    '새로운', '오래된', '옛', '고대',
+    '바다', '산', '강', '숲', '평원', '사막',
+    '신성한', '거룩한', '성스러운',
+    '위대한', '강력한', '약한',
+    '빛', '어둠', '그림자',
+    '황금', '은', '철',
+    '붉은', '푸른', '검은', '하얀', '녹색',
+    '하늘', '땅', '불', '물', '바람',
+    '동부', '서부', '남부', '북부'
+  ]
+
+  const normalizedTranslation = translatedText.toLowerCase()
+  
+  // 1. 일반적인 한국어 단어가 포함되어 있는지 확인
+  for (const word of commonKoreanWords) {
+    if (normalizedTranslation.includes(word)) {
+      return {
+        isValid: false,
+        reason: `의미 번역 감지: "${word}" 포함 (음역 필요)`
+      }
+    }
+  }
+
+  // 2. 음절 수 차이 검증
+  // 원본 영어 단어의 음절 수와 한국어 음절 수가 크게 차이나면 의미 번역일 가능성
+  const sourceLength = sourceText.replace(/[^a-zA-Z]/g, '').length
+  const translationLength = translatedText.replace(/[^가-힣]/g, '').length
+  
+  // 영어 단어가 짧은데 (10자 이하) 한국어가 너무 길면 (3배 이상) 의미 번역 가능성
+  if (sourceLength <= 10 && translationLength > sourceLength * 3) {
+    return {
+      isValid: false,
+      reason: `의미 번역 가능성: 음절 수 불균형 (원본: ${sourceLength}, 번역: ${translationLength})`
+    }
+  }
+
+  return { isValid: true }
+}
+
+/**
  * 번역 파일을 검증하고 잘못 번역된 항목들을 찾습니다.
+ * @param sourceEntries 원본 항목들
+ * @param translationEntries 번역된 항목들
+ * @param gameType 게임 타입
+ * @param useTransliteration 음역 모드 여부 (true면 음역 검증 추가)
  */
 export function validateTranslationEntries(
   sourceEntries: Record<string, [string, string]>,
   translationEntries: Record<string, [string, string]>,
-  gameType: GameType = 'ck3'
+  gameType: GameType = 'ck3',
+  useTransliteration: boolean = false
 ): { key: string; sourceValue: string; translatedValue: string; reason: string }[] {
   const invalidEntries: { key: string; sourceValue: string; translatedValue: string; reason: string }[] = []
 
@@ -670,6 +733,19 @@ export function validateTranslationEntries(
         translatedValue,
         reason: validation.reason || '알 수 없는 오류'
       })
+    }
+
+    // 음역 모드인 경우 의미 번역 여부 추가 검증
+    if (useTransliteration && validation.isValid) {
+      const transliterationValidation = validateTransliteration(sourceValue, translatedValue)
+      if (!transliterationValidation.isValid) {
+        invalidEntries.push({
+          key,
+          sourceValue,
+          translatedValue,
+          reason: transliterationValidation.reason || '의미 번역 감지 (음역 필요)'
+        })
+      }
     }
   }
 

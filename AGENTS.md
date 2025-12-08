@@ -44,11 +44,8 @@ pnpm ck3:update-dict -- --commit-range <from-commit>..<to-commit>
 pnpm ck3:update-dict -- --since-date "2024-01-01"
 
 # Retranslate incorrectly translated items (based on validation rules)
+# For transliteration files (culture, dynasty, names), also detects semantic translations
 pnpm ck3:retranslate
-
-# Migrate to transliteration mode (invalidate hashes for culture/dynasty/names files)
-# Use this after PR #1 to re-translate files that were semantically translated but should be transliterated
-pnpm ck3:migrate-transliteration
 
 # Run VIC3 translation process
 pnpm vic3
@@ -65,10 +62,8 @@ pnpm vic3:update-dict -- --commit-range <from>..<to>
 pnpm vic3:update-dict -- --since-date "2024-01-01"
 
 # Retranslate incorrectly translated VIC3 items
+# For transliteration files (culture, dynasty, names), also detects semantic translations
 pnpm vic3:retranslate
-
-# Migrate to transliteration mode for VIC3
-pnpm vic3:migrate-transliteration
 
 # Run Stellaris translation process
 pnpm stellaris
@@ -85,10 +80,8 @@ pnpm stellaris:update-dict -- --commit-range <from>..<to>
 pnpm stellaris:update-dict -- --since-date "2024-01-01"
 
 # Retranslate incorrectly translated Stellaris items
+# For transliteration files (culture, dynasty, names), also detects semantic translations
 pnpm stellaris:retranslate
-
-# Migrate to transliteration mode for Stellaris
-pnpm stellaris:migrate-transliteration
 
 # Add dictionary entries from a git commit
 pnpm add-dict <commit-id>
@@ -235,7 +228,41 @@ File: events_l_english.yml (translation mode)
 - `scripts/factory/translate.ts` - Mode integration in translation pipeline
 - `scripts/utils/dictionary.ts` - Separate proper nouns dictionary
 - `scripts/utils/dictionary-invalidator.ts` - Handles transliteration files in update-dict
-- `scripts/utils/retranslation-invalidator.ts` - Handles transliteration files in retranslate
+- `scripts/utils/retranslation-invalidator.ts` - Handles transliteration files in retranslate and validates semantic translations
+
+### Transliteration Validation in Retranslate
+
+The `retranslate` command (`pnpm ck3:retranslate`) now includes intelligent validation for transliteration files to detect semantic translations that should be transliterations.
+
+**How it works**:
+1. When processing files that match transliteration patterns (culture, dynasty, names), the validation system checks if translations are semantic rather than phonetic
+2. Uses heuristics to detect semantic translations:
+   - **Common Korean words**: Detects if translation contains everyday Korean vocabulary (e.g., "멀리" = "far away", "동쪽" = "east")
+   - **Syllable mismatch**: Flags translations that are disproportionately longer than the source (indicating descriptive translation)
+3. Items detected as semantic translations are automatically invalidated and will be re-translated in transliteration mode
+
+**Example detection**:
+```
+File: culture_names_l_korean.yml (transliteration file)
+"Afar" → "멀리" (❌ Detected: semantic translation using "멀리" = "far away")
+"Eastern" → "동쪽" (❌ Detected: semantic translation using "동쪽" = "eastern")
+"Algonquian" → "알곤킨" (✅ Valid: phonetic transliteration)
+```
+
+**Benefits**:
+- Automatically finds and fixes semantic translations in transliteration files
+- No need for separate migration scripts
+- Works with existing validation infrastructure
+- Only invalidates items that actually need re-translation
+
+**Usage**:
+```bash
+# Run retranslate to detect and fix semantic translations in transliteration files
+pnpm ck3:retranslate
+
+# Then run normal translation to re-translate in transliteration mode
+pnpm ck3
+```
 
 ### Directory Structure
 

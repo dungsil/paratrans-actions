@@ -1512,3 +1512,174 @@ describe('리터럴 텍스트와 완전한 변수가 인접한 패턴 처리', (
     expect(result.reason).toContain('잘못된 형식의 변수 패턴')
   })
 })
+
+describe('음역 검증', () => {
+  describe('의미 번역 감지 (일반적인 한국어 단어)', () => {
+    it('일반적인 한국어 단어가 포함된 경우 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Afar', ''],
+        culture_2: ['Eastern Bantu', '']
+      }
+      const translationEntries = {
+        culture_1: ['멀리', 'hash1'], // "멀리" = "far away" (의미 번역)
+        culture_2: ['동부 반투', 'hash2'] // "동부" = "eastern" (의미 번역)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(2)
+      expect(result[0].reason).toContain('의미 번역 감지')
+      expect(result[1].reason).toContain('의미 번역 감지')
+    })
+
+    it('음역된 경우 유효한 것으로 수락해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Afar', ''],
+        culture_2: ['Algonquian', ''],
+        culture_3: ['Iroquoian', '']
+      }
+      const translationEntries = {
+        culture_1: ['아파르', 'hash1'], // 음역
+        culture_2: ['알곤킨', 'hash2'], // 음역
+        culture_3: ['이로쿼이', 'hash3'] // 음역
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('일반 단어가 포함된 경우 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        dynasty_1: ['Golden', '']
+      }
+      const translationEntries = {
+        dynasty_1: ['황금색', 'hash1'] // "황금" 포함
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('황금')
+    })
+
+    it('방향을 나타내는 단어가 포함된 경우 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Northern', '']
+      }
+      const translationEntries = {
+        culture_1: ['북쪽 지역', 'hash1'] // "북쪽" 포함
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('북쪽')
+    })
+  })
+
+  describe('음절 수 불균형 감지', () => {
+    it('짧은 원본에 대해 너무 긴 번역은 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        name_1: ['Afar', ''] // 4글자
+      }
+      const translationEntries = {
+        name_1: ['아주아주먼매우먼곳의먼지역들', 'hash1'] // 14글자 (4 * 3배 초과, 일반 단어 없음)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('음절 수 불균형')
+    })
+
+    it('적절한 길이의 음역은 수락해야 함', () => {
+      const sourceEntries = {
+        name_1: ['Afar', ''], // 4글자
+        name_2: ['Algonquian', ''] // 10글자
+      }
+      const translationEntries = {
+        name_1: ['아파르', 'hash1'], // 3글자
+        name_2: ['알곤킨', 'hash2'] // 3글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('긴 원본 단어는 음절 수 검증을 건너뛰어야 함', () => {
+      const sourceEntries = {
+        name_1: ['VeryLongNameExample', ''] // 19글자
+      }
+      const translationEntries = {
+        name_1: ['매우 긴 이름의 예시입니다', 'hash1'] // 긴 번역이지만 원본도 김
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      // 원본이 10자 초과이므로 음절 수 검증 건너뜀
+      expect(result.length).toBe(1) // "이름" 키워드로 인해 의미 번역 감지
+      expect(result[0].reason).toContain('이름')
+    })
+  })
+
+  describe('음역 모드가 아닐 때는 검증 건너뛰기', () => {
+    it('useTransliteration=false일 때는 음역 검증을 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        event_1: ['Afar', '']
+      }
+      const translationEntries = {
+        event_1: ['멀리', 'hash1'] // 의미 번역이지만 일반 파일이므로 OK
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', false)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('기본값(useTransliteration 미지정)일 때는 음역 검증을 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        event_1: ['Afar', '']
+      }
+      const translationEntries = {
+        event_1: ['멀리', 'hash1']
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3')
+      
+      expect(result.length).toBe(0)
+    })
+  })
+
+  describe('기존 검증과 음역 검증 함께 동작', () => {
+    it('기존 검증 실패 시 음역 검증은 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        culture_1: ['[GetTitle]', '']
+      }
+      const translationEntries = {
+        culture_1: ['[GetTitle', 'hash1'] // 대괄호 불균형 (기존 검증 실패)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('대괄호 불균형')
+      expect(result[0].reason).not.toContain('의미 번역')
+    })
+
+    it('기존 검증 통과하고 음역 검증 실패 시 음역 오류를 반환해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Afar', '']
+      }
+      const translationEntries = {
+        culture_1: ['멀리', 'hash1'] // 기존 검증 OK, 음역 검증 실패
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('의미 번역')
+    })
+  })
+})
