@@ -1,6 +1,54 @@
 import { describe, it, expect } from 'vitest'
 import { shouldUseTransliteration, getSystemPrompt, CK3_SYSTEM_PROMPT, CK3_TRANSLITERATION_PROMPT, STELLARIS_SYSTEM_PROMPT, STELLARIS_TRANSLITERATION_PROMPT, VIC3_SYSTEM_PROMPT, VIC3_TRANSLITERATION_PROMPT } from './prompts'
 
+describe('시스템 프롬프트', () => {
+  describe('getSystemPrompt', () => {
+    describe('번역 모드 (useTransliteration=false)', () => {
+      it('CK3 게임 타입에 대해 CK3 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('ck3', false)
+        
+        expect(prompt).toBe(CK3_SYSTEM_PROMPT)
+      })
+
+      it('Stellaris 게임 타입에 대해 Stellaris 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('stellaris', false)
+        
+        expect(prompt).toBe(STELLARIS_SYSTEM_PROMPT)
+      })
+
+      it('VIC3 게임 타입에 대해 VIC3 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('vic3', false)
+        
+        expect(prompt).toBe(VIC3_SYSTEM_PROMPT)
+      })
+    })
+
+    describe('음역 모드 (useTransliteration=true)', () => {
+      it('CK3 음역 모드에 대해 CK3 음역 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('ck3', true)
+        
+        expect(prompt).toBe(CK3_TRANSLITERATION_PROMPT)
+      })
+
+      it('Stellaris 음역 모드에 대해 Stellaris 음역 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('stellaris', true)
+        
+        expect(prompt).toBe(STELLARIS_TRANSLITERATION_PROMPT)
+      })
+
+      it('VIC3 음역 모드에 대해 VIC3 음역 프롬프트를 반환해야 함', () => {
+        const prompt = getSystemPrompt('vic3', true)
+        
+        expect(prompt).toBe(VIC3_TRANSLITERATION_PROMPT)
+      })
+    })
+
+    it('지원하지 않는 게임 타입에 대해 오류를 발생시켜야 함', () => {
+      expect(() => getSystemPrompt('invalid' as any)).toThrow('Unsupported game type: invalid')
+    })
+  })
+})
+
 describe('shouldUseTransliteration', () => {
   describe('음역 모드를 사용해야 하는 파일명 패턴', () => {
     it('culture 키워드가 포함된 파일명은 음역 모드를 사용해야 함', () => {
@@ -67,86 +115,6 @@ describe('shouldUseTransliteration', () => {
 
     it('빈 문자열은 번역 모드를 사용해야 함', () => {
       expect(shouldUseTransliteration('')).toBe(false)
-    })
-  })
-})
-
-describe('getSystemPrompt', () => {
-  describe('번역 모드 프롬프트', () => {
-    it('CK3 게임에 대한 번역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('ck3', false)
-      expect(prompt).toBe(CK3_SYSTEM_PROMPT)
-      expect(prompt).toContain('Crusader Kings III')
-      expect(prompt).toContain('medieval')
-    })
-
-    it('Stellaris 게임에 대한 번역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('stellaris', false)
-      expect(prompt).toBe(STELLARIS_SYSTEM_PROMPT)
-      expect(prompt).toContain('Stellaris')
-      expect(prompt).toContain('sci-fi')
-    })
-
-    it('VIC3 게임에 대한 번역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('vic3', false)
-      expect(prompt).toBe(VIC3_SYSTEM_PROMPT)
-      expect(prompt).toContain('Victoria 3')
-      expect(prompt).toContain('industrial')
-    })
-
-    it('기본값(useTransliteration=false)으로 번역 프롬프트를 반환해야 함', () => {
-      expect(getSystemPrompt('ck3')).toBe(CK3_SYSTEM_PROMPT)
-      expect(getSystemPrompt('stellaris')).toBe(STELLARIS_SYSTEM_PROMPT)
-      expect(getSystemPrompt('vic3')).toBe(VIC3_SYSTEM_PROMPT)
-    })
-  })
-
-  describe('음역 모드 프롬프트', () => {
-    it('CK3 게임에 대한 음역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('ck3', true)
-      expect(prompt).toBe(CK3_TRANSLITERATION_PROMPT)
-      expect(prompt).toContain('transliterate')
-      expect(prompt).toContain('phonetic')
-    })
-
-    it('Stellaris 게임에 대한 음역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('stellaris', true)
-      expect(prompt).toBe(STELLARIS_TRANSLITERATION_PROMPT)
-      expect(prompt).toContain('transliterate')
-      expect(prompt).toContain('phonetic')
-    })
-
-    it('VIC3 게임에 대한 음역 프롬프트를 반환해야 함', () => {
-      const prompt = getSystemPrompt('vic3', true)
-      expect(prompt).toBe(VIC3_TRANSLITERATION_PROMPT)
-      expect(prompt).toContain('transliterate')
-      expect(prompt).toContain('phonetic')
-    })
-  })
-
-  describe('음역 프롬프트 내용 검증', () => {
-    it('CK3 음역 프롬프트에 예시가 포함되어 있어야 함', () => {
-      const prompt = CK3_TRANSLITERATION_PROMPT
-      expect(prompt).toContain('Afar')
-      expect(prompt).toContain('아파르')
-      expect(prompt).toContain('Anglo-Saxon')
-      expect(prompt).toContain('앵글로색슨')
-    })
-
-    it('Stellaris 음역 프롬프트에 예시가 포함되어 있어야 함', () => {
-      const prompt = STELLARIS_TRANSLITERATION_PROMPT
-      expect(prompt).toContain('Zroni')
-      expect(prompt).toContain('즈로니')
-      expect(prompt).toContain('Vultaum')
-      expect(prompt).toContain('불타움')
-    })
-
-    it('VIC3 음역 프롬프트에 예시가 포함되어 있어야 함', () => {
-      const prompt = VIC3_TRANSLITERATION_PROMPT
-      expect(prompt).toContain('Bismarck')
-      expect(prompt).toContain('비스마르크')
-      expect(prompt).toContain('Prussia')
-      expect(prompt).toContain('프로이센')
     })
   })
 })

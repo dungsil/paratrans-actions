@@ -198,7 +198,7 @@ async function invalidateTranslationFile(
   }
 }
 
-function getLocalizationFolderName(gameType: GameType): string {
+export function getLocalizationFolderName(gameType: GameType): string {
   switch (gameType) {
     case 'ck3':
     case 'vic3':

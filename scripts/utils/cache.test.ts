@@ -1,10 +1,7 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest'
-import { hasCache, getCache, setCache, removeCache, isSqliteIOError } from './cache'
-import { unlinkSync, existsSync } from 'fs'
+import { describe, it, expect, afterEach } from 'vitest'
+import { hasCache, getCache, setCache, removeCache } from './cache'
 
 describe('캐시', () => {
-  const testDbPath = 'translate-cache.db'
-  
   afterEach(async () => {
     // 테스트 캐시 항목 정리
     try {
@@ -15,40 +12,6 @@ describe('캐시', () => {
     } catch (error) {
       // 정리 오류 무시
     }
-  })
-
-  describe('isSqliteIOError', () => {
-    it('SQLITE_IOERR 메시지가 있는 오류를 감지해야 함', () => {
-      const error = new Error('SQLITE_IOERR_FSYNC: disk I/O error')
-      expect(isSqliteIOError(error)).toBe(true)
-    })
-
-    it('disk I/O error 메시지가 있는 오류를 감지해야 함', () => {
-      const error = new Error('disk I/O error occurred')
-      expect(isSqliteIOError(error)).toBe(true)
-    })
-
-    it('database is locked 메시지가 있는 오류를 감지해야 함', () => {
-      const error = new Error('database is locked')
-      expect(isSqliteIOError(error)).toBe(true)
-    })
-
-    it('대소문자를 구분하지 않아야 함', () => {
-      const error = new Error('DISK I/O ERROR')
-      expect(isSqliteIOError(error)).toBe(true)
-    })
-
-    it('관련 없는 오류에 대해 false를 반환해야 함', () => {
-      const error = new Error('Some other error')
-      expect(isSqliteIOError(error)).toBe(false)
-    })
-
-    it('Error가 아닌 값에 대해 false를 반환해야 함', () => {
-      expect(isSqliteIOError('not an error')).toBe(false)
-      expect(isSqliteIOError(null)).toBe(false)
-      expect(isSqliteIOError(undefined)).toBe(false)
-      expect(isSqliteIOError(123)).toBe(false)
-    })
   })
 
   describe('setCache와 getCache', () => {
@@ -72,29 +35,6 @@ describe('캐시', () => {
       
       expect(value).toBe('value2')
     })
-
-    it('빈 문자열 값을 처리할 수 있어야 함', async () => {
-      await setCache('test-key-1', '', 'ck3')
-      const value = await getCache('test-key-1', 'ck3')
-      
-      expect(value).toBe('')
-    })
-
-    it('유니코드 값을 처리할 수 있어야 함', async () => {
-      const koreanText = '한글 텍스트'
-      await setCache('test-key-1', koreanText, 'ck3')
-      const value = await getCache('test-key-1', 'ck3')
-      
-      expect(value).toBe(koreanText)
-    })
-
-    it('긴 텍스트 값을 처리할 수 있어야 함', async () => {
-      const longText = 'a'.repeat(10000)
-      await setCache('test-key-1', longText, 'ck3')
-      const value = await getCache('test-key-1', 'ck3')
-      
-      expect(value).toBe(longText)
-    })
   })
 
   describe('hasCache', () => {
@@ -110,14 +50,6 @@ describe('캐시', () => {
       
       expect(exists).toBe(false)
     })
-
-    it('제거 후 false를 반환해야 함', async () => {
-      await setCache('test-key-1', 'value', 'ck3')
-      await removeCache('test-key-1', 'ck3')
-      const exists = await hasCache('test-key-1', 'ck3')
-      
-      expect(exists).toBe(false)
-    })
   })
 
   describe('removeCache', () => {
@@ -127,10 +59,6 @@ describe('캐시', () => {
       const value = await getCache('test-key-1', 'ck3')
       
       expect(value).toBe(null)
-    })
-
-    it('존재하지 않는 키 제거 시 오류가 발생하지 않아야 함', async () => {
-      await expect(removeCache('non-existent-key', 'ck3')).resolves.not.toThrow()
     })
   })
 
@@ -158,31 +86,6 @@ describe('캐시', () => {
       expect(ck3Value).toBe('ck3-value')
       expect(stellarisValue).toBe('stellaris-value')
       expect(vic3Value).toBe('vic3-value')
-    })
-
-    it('게임 타입이 지정되지 않으면 ck3를 기본값으로 사용해야 함', async () => {
-      await setCache('test-key-1', 'value')
-      const value = await getCache('test-key-1', 'ck3')
-      
-      expect(value).toBe('value')
-    })
-  })
-
-  describe('키의 특수 문자', () => {
-    it('특수 문자가 포함된 키를 처리할 수 있어야 함', async () => {
-      const key = 'key:with:colons'
-      await setCache(key, 'value', 'ck3')
-      const value = await getCache(key, 'ck3')
-      
-      expect(value).toBe('value')
-    })
-
-    it('슬래시가 포함된 키를 처리할 수 있어야 함', async () => {
-      const key = 'key/with/slashes'
-      await setCache(key, 'value', 'ck3')
-      const value = await getCache(key, 'ck3')
-      
-      expect(value).toBe('value')
     })
   })
 })

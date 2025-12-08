@@ -110,7 +110,125 @@ pnpm exec tsc --noEmit scripts/utils/ai.ts
 
 ### 3. 테스트
 
-현재 프로젝트에는 자동화된 테스트가 없습니다. 수동 테스트를 수행하세요:
+이 프로젝트는 Vitest를 사용하여 자동화된 테스트를 제공합니다.
+
+#### 테스트 실행
+
+```bash
+# 전체 테스트 실행
+pnpm test
+
+# 특정 테스트 파일 실행
+pnpm test -- prompts
+
+# 워치 모드로 테스트 실행
+pnpm test:watch
+
+# 커버리지와 함께 테스트 실행
+pnpm test:coverage
+```
+
+#### 테스트 작성 원칙
+
+**제거/작성하지 말아야 할 테스트:**
+
+- **라이브러리/OS API 래퍼 동작 테스트**
+  - 예: xxhash-wasm의 유니코드 처리, Node.js의 statfsSync 호출
+  - 이유: 외부 의존성의 동작을 테스트하는 것이지 우리의 비즈니스 로직이 아님
+
+- **타이밍/구현 세부사항 테스트**
+  - 예: queue.ts의 재시도 백오프가 정확히 2^n초인지, setTimeout이 정확한 밀리초를 지연하는지
+  - 이유: 구현 세부사항이 변경되면 테스트가 깨지며, 동작의 정확성을 보장하지 않음
+
+- **정적 문자열 내용 검증 테스트**
+  - 예: CK3_SYSTEM_PROMPT에 "Crusader Kings III" 키워드 포함 여부
+  - 이유: 상수 값을 확인할 뿐 로직을 검증하지 않으며, 유지보수 시 불필요한 테스트 수정 발생
+
+**작성해야 할 테스트:**
+
+- 비즈니스 로직 및 애플리케이션 동작 테스트
+- 함수 로직 테스트 (입력에 따른 출력, 오류 처리)
+- 데이터 변환 테스트 (파일명 변환, 경로 매핑 등)
+
+#### 테스트 예제
+
+```typescript
+// ✅ 좋은 예: 비즈니스 로직 테스트
+describe('getLocalizationFolderName', () => {
+  it('CK3는 localization 폴더를 반환해야 함', () => {
+    expect(getLocalizationFolderName('ck3')).toBe('localization')
+  })
+  
+  it('Stellaris는 localisation 폴더를 반환해야 함', () => {
+    expect(getLocalizationFolderName('stellaris')).toBe('localisation')
+  })
+  
+  it('지원하지 않는 게임 타입에 대해 오류를 발생시켜야 함', () => {
+    expect(() => getLocalizationFolderName('invalid')).toThrow()
+  })
+})
+
+// ❌ 나쁜 예: 정적 문자열 내용 검증
+describe('프롬프트 내용', () => {
+  it('CK3 프롬프트에 특정 키워드가 포함되어야 함', () => {
+    // 상수 검증일 뿐, 로직을 검증하지 않음
+    expect(CK3_SYSTEM_PROMPT).toContain('Crusader Kings III')
+  })
+})
+
+// ❌ 나쁜 예: 라이브러리 내부 동작
+describe('해싱', () => {
+  it('xxhash 알고리즘이 특정 바이트 패턴을 생성해야 함', () => {
+    // xxhash-wasm 라이브러리의 내부 알고리즘 구현을 테스트하는 것
+    const hash = hashing('test')
+    expect(hash).toMatch(/^[0-9a-f]{16}$/)  // 라이브러리 동작 검증
+  })
+})
+```
+
+#### 테스트 체크리스트
+
+새로운 기능이나 버그 수정을 위한 테스트 작성 시 다음 체크리스트를 확인하세요:
+
+**기본 체크리스트:**
+- [ ] 함수의 모든 분기(if/else, switch case)를 테스트하는가?
+- [ ] 오류 처리 경로를 테스트하는가?
+- [ ] 경계 값(빈 문자열, null, undefined, 0, 음수 등)을 테스트하는가?
+- [ ] 테스트 이름이 무엇을 테스트하는지 명확하게 설명하는가?
+
+**피해야 할 안티패턴:**
+- [ ] 테스트가 구현 로직을 그대로 복사하고 있지 않은가? (Tautological test)
+- [ ] 테스트가 외부 라이브러리/API의 동작을 검증하고 있지 않은가?
+- [ ] 테스트가 타이밍이나 구현 세부사항에 의존하지 않는가?
+- [ ] 테스트가 정적 문자열 내용만 검증하고 있지 않은가?
+
+**좋은 테스트의 특징:**
+- [ ] 테스트가 비즈니스 로직을 검증하는가?
+- [ ] 테스트가 실패했을 때 어떤 기능이 깨졌는지 명확한가?
+- [ ] 테스트가 독립적으로 실행 가능한가? (다른 테스트에 의존하지 않음)
+- [ ] 테스트가 빠르게 실행되는가? (외부 API 호출이나 파일 시스템 접근 최소화)
+
+**예제 체크:**
+```typescript
+// ✅ 좋은 예: 모든 분기 커버
+describe('getSystemPrompt', () => {
+  it('번역 모드에서 번역 프롬프트를 반환', () => {
+    expect(getSystemPrompt('ck3', false)).toBe(CK3_SYSTEM_PROMPT)
+  })
+  
+  it('음역 모드에서 음역 프롬프트를 반환', () => {
+    expect(getSystemPrompt('ck3', true)).toBe(CK3_TRANSLITERATION_PROMPT)
+  })
+  
+  it('지원하지 않는 게임 타입에 오류 발생', () => {
+    expect(() => getSystemPrompt('invalid')).toThrow()
+  })
+})
+```
+
+#### 수동 통합 테스트
+
+자동화된 단위 테스트 외에도 수동 통합 테스트를 수행할 수 있습니다:
 
 ```bash
 # 로컬 테스트 모드 생성
@@ -134,6 +252,7 @@ pnpm ck3
 # 결과 확인
 cat ck3/TestMod/mod/localization/korean/___test_l_korean.yml
 ```
+
 
 ### 4. 코드 리뷰 준비
 
