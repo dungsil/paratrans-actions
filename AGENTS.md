@@ -451,3 +451,117 @@ ck3/RICE/
 - Only create markdown files when the user explicitly asks for a specific file by name or path
 - Analysis results, verification reports, and summaries should be communicated directly to the user in the chat, not saved as files
 - If temporary documentation is needed during development, create it in `/tmp` directory
+
+## Testing Guidelines for AI Assistants
+
+### Test Execution
+
+**Always run tests before and after making changes:**
+```bash
+# Run all tests
+pnpm test
+
+# Run specific test file
+pnpm test -- prompts
+
+# Run tests in watch mode during development
+pnpm test:watch
+
+# Run tests with coverage
+pnpm test:coverage
+```
+
+### Test Writing Principles
+
+**DO NOT write tests for:**
+- **Library/OS API wrapper behavior** - Testing external dependencies like xxhash-wasm unicode handling, Node.js statfsSync calls
+  - Reason: Tests external code, not our business logic
+- **Timing/implementation details** - Testing queue.ts backoff intervals, setTimeout precision
+  - Reason: Implementation changes break tests without guaranteeing correctness
+- **Static string content validation** - Testing if CK3_SYSTEM_PROMPT contains specific keywords
+  - Reason: Tests constants, not logic; creates maintenance burden
+- **Tautological tests** - Tests that duplicate implementation logic
+  - Reason: Only fails if test code changes, doesn't protect against bugs
+
+**DO write tests for:**
+- **Business logic** - Application-specific behavior like `getLocalizationFolderName()`
+- **Function logic** - Input→output mapping, error handling
+- **Data transformation** - File name conversion, path mapping rules
+
+### Test Quality Checklist
+
+Before committing tests, verify:
+
+**Basic Requirements:**
+- [ ] Tests cover all branches (if/else, switch cases)
+- [ ] Tests cover error handling paths
+- [ ] Tests cover boundary values (empty string, null, undefined, 0, negative)
+- [ ] Test names clearly describe what is being tested
+
+**Avoid Anti-patterns:**
+- [ ] No tautological tests (copying implementation logic)
+- [ ] No external dependency behavior tests
+- [ ] No timing/implementation detail dependencies
+- [ ] No static string content validation
+
+**Good Test Characteristics:**
+- [ ] Tests verify business logic
+- [ ] Test failures clearly indicate what broke
+- [ ] Tests run independently (no dependencies on other tests)
+- [ ] Tests execute quickly (minimal external API calls or file system access)
+
+### Test Examples
+
+**✅ Good Example: Complete branch coverage**
+```typescript
+describe('getSystemPrompt', () => {
+  it('returns translation prompt in translation mode', () => {
+    expect(getSystemPrompt('ck3', false)).toBe(CK3_SYSTEM_PROMPT)
+  })
+  
+  it('returns transliteration prompt in transliteration mode', () => {
+    expect(getSystemPrompt('ck3', true)).toBe(CK3_TRANSLITERATION_PROMPT)
+  })
+  
+  it('throws error for unsupported game type', () => {
+    expect(() => getSystemPrompt('invalid')).toThrow()
+  })
+})
+```
+
+**❌ Bad Example: Tautological test**
+```typescript
+describe('file name conversion', () => {
+  it('adds ___ prefix', () => {
+    // This duplicates the implementation logic
+    const result = '___' + fileName.replace('_l_english', '_l_korean')
+    expect(result).toBe('___file_l_korean.yml')
+  })
+})
+```
+
+**❌ Bad Example: Static string validation**
+```typescript
+describe('prompt content', () => {
+  it('contains specific keywords', () => {
+    // Tests constant value, not logic
+    expect(CK3_SYSTEM_PROMPT).toContain('Crusader Kings III')
+  })
+})
+```
+
+### When Modifying Scripts
+
+1. **Before changes**: Run `pnpm test` to understand current test state
+2. **After changes**: Run `pnpm test` to ensure no regressions
+3. **Adding new functions**: Add corresponding tests following the principles above
+4. **Modifying existing functions**: Update tests to match new behavior
+5. **All tests must pass**: 331 tests should pass before committing
+
+### Test File Locations
+
+Tests are colocated with source files using `.test.ts` extension:
+- `scripts/utils/prompts.ts` → `scripts/utils/prompts.test.ts`
+- `scripts/factory/translate.ts` → `scripts/factory/translate.test.ts`
+
+All tests in `scripts/**/*.test.ts` are automatically discovered by Vitest.
