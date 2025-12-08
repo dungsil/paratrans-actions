@@ -22,7 +22,7 @@ describe('재번역 무효화', () => {
 
   describe('파일명 변환 규칙', () => {
     it('원본 파일명에 ___ 접두사를 추가하고 언어를 변경해야 함', () => {
-      // 실제 로직 테스트: invalidateModLocalization의 라인 90
+      // 실제 로직 테스트: invalidateModLocalization에서 파일명 변환
       // const targetFileName = '___' + base.replace(`_l_${sourceLanguage}.yml`, '_l_korean.yml')
       const sourceFile = 'event_l_english.yml'
       const sourceLanguage = 'english'
@@ -34,7 +34,7 @@ describe('재번역 무효화', () => {
     })
 
     it('replace 경로를 포함한 locPath는 korean/replace로 매핑되어야 함', () => {
-      // 실제 로직 테스트: invalidateModLocalization의 라인 75
+      // 실제 로직 테스트: invalidateModLocalization에서 타겟 디렉토리 결정
       // locPath.includes('replace') ? 'korean/replace' : 'korean'
       const locPathWithReplace = 'localization/replace'
       const locPathWithoutReplace = 'localization/english'
