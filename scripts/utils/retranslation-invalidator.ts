@@ -2,7 +2,7 @@ import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { join, parse } from 'pathe'
 import { parseToml, parseYaml, stringifyYaml } from '../parser'
 import { log } from './logger'
-import { type GameType } from './prompts'
+import { type GameType, shouldUseTransliteration } from './prompts'
 import { validateTranslationEntries } from './translation-validator'
 
 interface ModMeta {
@@ -90,6 +90,12 @@ async function invalidateModLocalization(
         const targetFileName = '___' + base.replace(`_l_${sourceLanguage}.yml`, '_l_korean.yml')
         const targetRelativePath = dir ? join(dir, targetFileName) : targetFileName
         const targetFilePath = join(targetDir, targetRelativePath)
+
+        // 파일명으로 음역 모드 판단
+        const useTransliteration = shouldUseTransliteration(file)
+        if (useTransliteration) {
+          log.debug(`[${modName}] 음역 모드 파일: ${file}`)
+        }
 
         log.debug(`[${modName}] 처리할 파일: ${file}`)
         log.debug(`[${modName}] 소스: ${sourceFilePath}`)

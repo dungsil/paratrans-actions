@@ -72,10 +72,7 @@ async function withRetry<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 function getCacheKey(key: string, gameType: GameType): string {
-  // CK3는 기존 캐시와의 하위호환성을 위해 프리픽스 없이 사용
-  if (gameType === 'ck3') {
-    return key
-  }
+  // 모든 게임 타입에 대해 통일된 형식 사용: gameType:key
   return `${gameType}:${key}`
 }
 

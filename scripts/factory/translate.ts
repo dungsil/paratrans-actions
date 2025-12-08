@@ -5,7 +5,7 @@ import { hashing } from '../utils/hashing'
 import { log } from '../utils/logger'
 import { translate, TranslationRetryExceededError, TranslationRefusedError } from '../utils/translate'
 import { updateAllUpstreams } from '../utils/upstream'
-import { type GameType } from '../utils/prompts'
+import { type GameType, shouldUseTransliteration } from '../utils/prompts'
 
 // 번역 거부 항목 출력 파일 이름 접미사
 const UNTRANSLATED_ITEMS_FILE_SUFFIX = 'untranslated-items.json'
@@ -203,6 +203,12 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
   const sourcePath = join(sourceDir, file)
   const untranslatedItems: UntranslatedItem[] = []
 
+  // 파일명을 기반으로 음역 모드 감지
+  const useTransliteration = shouldUseTransliteration(file)
+  if (useTransliteration) {
+    log.info(`[${mode}/${file}] 음역 모드 활성화됨 (파일명에 culture/dynasty/names 키워드 감지)`)
+  }
+
   // 파일 순서를 최상위로 유지해 덮어쓸 수 있도록 앞에 '___'를 붙임 (ex: `___00_culture_l_english.yml`)
   const targetParentDir = join(targetBaseDir, dirname(file))
   await mkdir(targetParentDir, { recursive: true })
@@ -275,13 +281,13 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
 
     log.verbose(`[${mode}/${file}:${key}] 번역파일 문자열: ${targetHash} | "${targetValue}"`)
 
-    // 번역 요청
-    log.verbose(`[${mode}/${file}:${key}] 번역 요청: ${sourceHash} | "${sourceValue}"`)
+    // 번역 요청 (음역 모드 플래그 전달)
+    log.verbose(`[${mode}/${file}:${key}] ${useTransliteration ? '음역' : '번역'} 요청: ${sourceHash} | "${sourceValue}"`)
     let translatedValue: string
     let hashForEntry: string | null = sourceHash
 
     try {
-      translatedValue = await translate(sourceValue, gameType)
+      translatedValue = await translate(sourceValue, gameType, 0, undefined, useTransliteration)
     } catch (error) {
       if (error instanceof TranslationRetryExceededError) {
         log.warn(`[${mode}/${file}:${key}] 번역 재시도 초과, 원문을 유지합니다.`)

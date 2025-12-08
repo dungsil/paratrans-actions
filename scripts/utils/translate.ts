@@ -140,7 +140,7 @@ function sanitizeTranslationText (text: string): string {
   return text.replace(addSpaceAfterClosingVariable, '$1 ')
 }
 
-export async function translate (text: string, gameType: GameType = 'ck3', retry: number = 0, retranslationContext?: RetranslationContext): Promise<string> {
+export async function translate (text: string, gameType: GameType = 'ck3', retry: number = 0, retranslationContext?: RetranslationContext, useTransliteration: boolean = false): Promise<string> {
 
   if (retry > 5) {
     log.debug(`번역 재시도 횟수 초과: "${text}" (사유: ${retranslationContext?.failureReason || '알 수 없음'})`)
@@ -186,30 +186,38 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
   }
 
   // 캐시에 이미 번역된 텍스트가 있는 경우 캐시에서 반환
-  if (await hasCache(normalizedText, gameType)) {
-    const cached = await getCache(normalizedText, gameType)
+  // 음역 모드가 활성화된 경우 캐시 키에 음역 prefix 추가하여 별도로 관리
+  // 캐시 키 구조 (모든 게임 통일, 실제 캐시 키는 cache.ts의 getCacheKey()에서 gameType: prefix가 추가됨):
+  // - 번역: "gameType:text" (예: "ck3:Hello World")
+  // - 음역: "gameType:transliteration:text" (예: "ck3:transliteration:Afar")
+  const transliterationPrefix = useTransliteration ? 'transliteration:' : ''
+  const cacheKey = `${transliterationPrefix}${normalizedText}`
+  
+  if (await hasCache(cacheKey, gameType)) {
+    const cached = await getCache(cacheKey, gameType)
 
     if (cached) {
       const sanitizedCached = sanitizeTranslationText(cached)
 
+      // 캐시 내용이 sanitize되었으면 같은 cacheKey로 업데이트
       if (sanitizedCached !== cached) {
-        await setCache(text, sanitizedCached, gameType)
+        await setCache(cacheKey, sanitizedCached, gameType)
       }
 
       const { isValid } =  validateTranslation(normalizedText, sanitizedCached, gameType)
       if (isValid) {
-        log.debug(`캐시에서 번역된 텍스트 반환: ${normalizedText} -> ${sanitizedCached}`)
+        log.debug(`캐시에서 번역된 텍스트 반환: ${normalizedText} -> ${sanitizedCached}${useTransliteration ? ' (음역 모드)' : ''}`)
         return sanitizedCached
       }
 
       // 잘못 저장된 캐시는 제거
-      await removeCache(normalizedText, gameType)
+      await removeCache(cacheKey, gameType)
     }
   }
 
   // 실제 AI 번역 요청
-  const translatedText = sanitizeTranslationText(await translateAI(text, gameType, retranslationContext))
-  log.debug(`AI 번역 결과: ${normalizedText} -> ${translatedText}`)
+  const translatedText = sanitizeTranslationText(await translateAI(text, gameType, retranslationContext, useTransliteration))
+  log.debug(`AI 번역 결과: ${normalizedText} -> ${translatedText}${useTransliteration ? ' (음역 모드)' : ''}`)
 
   // 잘못된 결과 재 번역 시도
   if (translatedText.toLowerCase().includes('language model')) {
@@ -218,7 +226,7 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
       previousTranslation: translatedText,
       failureReason: 'It appears that a meta-response was returned without performing the translation.'
     }
-    return await translate(text, gameType, retry + 1, newContext)
+    return await translate(text, gameType, retry + 1, newContext, useTransliteration)
   }
 
   // 번역 유효성 검증 (translation-validator.ts의 통합 로직 사용)
@@ -230,9 +238,9 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
       previousTranslation: translatedText,
       failureReason: validation.reason || 'Validation failed - The translation failed validation. Please ensure you follow all guidelines in the system instruction, especially regarding variable preservation, technical identifiers, and formatting rules.'
     }
-    return await translate(text, gameType, retry + 1, newContext)
+    return await translate(text, gameType, retry + 1, newContext, useTransliteration)
   }
 
-  await setCache(text, translatedText, gameType)
+  await setCache(cacheKey, translatedText, gameType)
   return translatedText
 }
