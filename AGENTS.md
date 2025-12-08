@@ -145,7 +145,9 @@ language = "english"                          # Source language
 **Smart Caching System** (`scripts/utils/cache.ts`):
 - Content-based hashing to detect source changes
 - Translation memory with manual dictionary overrides
-- Separate cache namespaces: `transliteration:text` vs `text` (or `{game}:transliteration:text` for non-CK3)
+- Separate cache namespaces:
+  - CK3: `transliteration:text` vs `text`
+  - Other games: `gameType:transliteration:text` vs `gameType:text`
 - Persistent storage to avoid retranslation
 
 **Translation Validation** (`scripts/utils/translation-validator.ts`):

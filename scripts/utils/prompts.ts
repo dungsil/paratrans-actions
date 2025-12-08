@@ -529,6 +529,19 @@ export function shouldUseTransliteration(filename: string): boolean {
     'name_list',
   ]
   
-  // 파일명에 키워드가 포함되어 있으면 음역 모드 사용
-  return transliterationKeywords.some(keyword => lowerFilename.includes(keyword))
+  // 파일명을 구분자(_,-, /)로 분할하여 세그먼트 확인
+  const segments = lowerFilename.split(/[_\-\/]/)
+  
+  // 각 키워드에 대해:
+  // 1. 단일 단어 키워드(culture, cultures, dynasty, dynasties, names)는 세그먼트와 정확히 일치해야 함
+  // 2. 복합 키워드(character_name, name_list)는 원본 파일명에 포함되어 있으면 매치
+  return transliterationKeywords.some(keyword => {
+    if (keyword.includes('_')) {
+      // 복합 키워드는 원본 파일명에 포함되어 있는지 확인
+      return lowerFilename.includes(keyword)
+    } else {
+      // 단일 키워드는 세그먼트와 정확히 일치하는지 확인 (false positive 방지)
+      return segments.includes(keyword)
+    }
+  })
 }
