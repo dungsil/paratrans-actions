@@ -110,15 +110,17 @@ language = "english"                          # Source language
 1. **Upstream Update**: Optimized repository sync using sparse checkout (`utils/upstream.ts`)
 2. **Discovery**: Scan for `meta.toml` files in game directories
 3. **Parsing**: Parse YAML localization files (`l_english:` → `l_korean:`)
-4. **Hashing**: Generate content hashes to detect changes (via `utils/hashing.ts`)
-5. **Translation**: AI translation with CK3-specific context prompts
-6. **Caching**: Store translations in database to avoid redundant API calls
-7. **Output**: Generate Korean files with `___` prefix for proper load order
+4. **Mode Detection**: Automatic transliteration mode detection based on filename patterns
+5. **Hashing**: Generate content hashes to detect changes (via `utils/hashing.ts`)
+6. **Translation/Transliteration**: AI translation or transliteration with game-specific context prompts
+7. **Caching**: Store results in database with separate cache keys for translation vs transliteration
+8. **Output**: Generate Korean files with `___` prefix for proper load order
 
 ### Key Components
 
 **Core Translation Logic** (`scripts/factory/translate.ts`):
 - Orchestrates the entire translation workflow
+- Automatic transliteration mode detection via `shouldUseTransliteration(filename)`
 - Handles file discovery, parsing, and output generation
 - Translation refusal tracking and graceful error handling
 - Exports untranslated items to `{game}-untranslated-items.json`
@@ -126,8 +128,15 @@ language = "english"                          # Source language
 **AI Integration** (`scripts/utils/ai.ts`):
 - Google Gemini API integration
 - Context-aware prompts for medieval/historical content
+- Separate transliteration prompts for proper nouns (culture, dynasty, character names)
 - Retry logic for API failures
 - Translation refusal detection and error handling
+
+**Prompt Management** (`scripts/utils/prompts.ts`):
+- Dual-mode system: translation prompts vs transliteration prompts
+- `getSystemPrompt(gameType, useTransliteration)` - selects appropriate prompt
+- `shouldUseTransliteration(filename)` - detects files by keywords: culture, dynasty, names, character_name, name_list
+- Game-specific transliteration prompts using proper nouns dictionary instead of general glossary
 
 **Game-Specific Parsing** (`scripts/parser/yaml.ts`):
 - Preserves CK3 variables (`$k_france$`, `[GetTitle]`, `#bold#`)
@@ -136,6 +145,7 @@ language = "english"                          # Source language
 **Smart Caching System** (`scripts/utils/cache.ts`):
 - Content-based hashing to detect source changes
 - Translation memory with manual dictionary overrides
+- Separate cache namespaces: `transliteration:text` vs `text` (or `{game}:transliteration:text` for non-CK3)
 - Persistent storage to avoid retranslation
 
 **Translation Validation** (`scripts/utils/translation-validator.ts`):
@@ -148,9 +158,72 @@ language = "english"                          # Source language
 **Dictionary Management** (`scripts/utils/dictionary.ts` and `scripts/add-dict-from-commit.ts`):
 - Manual translation dictionary for game-specific terms and proper nouns
 - Separate dictionaries for each game type (CK3, Stellaris, VIC3)
+- Two dictionary types: general glossary (for translation) and proper nouns (for transliteration)
 - `add-dict-from-commit.ts` script extracts dictionary entries from git commits and adds them to the dictionary file
 - Supports automatic duplicate detection when adding entries
 - Usage: `pnpm add-dict <commit-id>` to import dictionary changes from a specific commit
+
+### Transliteration Mode
+
+The system automatically switches between **translation** (번역) and **transliteration** (음역) based on file naming patterns.
+
+**When to use each mode**:
+- **Translation**: Semantic meaning conversion for general game content (events, modifiers, decisions, etc.)
+- **Transliteration**: Phonetic conversion for proper nouns (culture names, dynasty names, character names)
+
+**Automatic detection** (`shouldUseTransliteration(filename)`):
+Files are automatically processed in transliteration mode when the filename contains:
+- `culture` or `cultures` - Culture name files
+- `dynasty` or `dynasties` - Dynasty name files
+- `names` - Name list files
+- `character_name` - Character name files
+- `name_list` - Name list files
+
+**Examples**:
+```typescript
+// Transliteration mode (automatic)
+shouldUseTransliteration("culture_name_lists_l_english.yml")  // → true
+shouldUseTransliteration("wap_dynasty_names_l_english.yml")   // → true
+shouldUseTransliteration("character_names_l_english.yml")     // → true
+
+// Translation mode (automatic)
+shouldUseTransliteration("events_l_english.yml")              // → false
+shouldUseTransliteration("modifiers_l_english.yml")           // → false
+```
+
+**How it works**:
+1. File is detected during processing in `factory/translate.ts`
+2. `shouldUseTransliteration(filename)` determines the mode
+3. Appropriate prompt is selected: `CK3_TRANSLITERATION_PROMPT` vs `CK3_SYSTEM_PROMPT`
+4. Proper nouns dictionary is used instead of general glossary
+5. Cache key includes `transliteration:` prefix to separate from translations
+6. Both modes use the same YAML output format
+
+**Result differences**:
+```
+File: culture_name_lists_l_english.yml (transliteration mode)
+"Afar" → "아파르" (phonetic)
+"Anglo-Saxon" → "앵글로색슨" (phonetic)
+"Bolghar" → "볼가르" (phonetic)
+
+File: events_l_english.yml (translation mode)
+"the culture" → "문화" (semantic)
+"dynasty name" → "왕조 이름" (semantic)
+```
+
+**Benefits**:
+- Maintains consistency in proper noun transliteration
+- Prevents semantic translation errors for names (e.g., "Afar" as "멀리" meaning "far away")
+- Uses established proper nouns dictionary for historical accuracy
+- Completely automatic - no manual configuration needed
+- Separate caching ensures no conflicts between modes
+
+**Related files**:
+- `scripts/utils/prompts.ts` - Mode detection and prompt selection
+- `scripts/factory/translate.ts` - Mode integration in translation pipeline
+- `scripts/utils/dictionary.ts` - Separate proper nouns dictionary
+- `scripts/utils/dictionary-invalidator.ts` - Handles transliteration files in update-dict
+- `scripts/utils/retranslation-invalidator.ts` - Handles transliteration files in retranslate
 
 ### Directory Structure
 
