@@ -28,10 +28,10 @@ const generationConfig = {
   maxOutputTokens: 8192,
 }
 
-const gemini = (model: string, gameType: GameType) => ai.getGenerativeModel({
+const gemini = (model: string, gameType: GameType, useTransliteration: boolean = false) => ai.getGenerativeModel({
   model,
   generationConfig,
-  systemInstruction: getSystemPrompt(gameType),
+  systemInstruction: getSystemPrompt(gameType, useTransliteration),
 })
 
 export interface RetranslationContext {
@@ -39,13 +39,13 @@ export interface RetranslationContext {
   failureReason: string
 }
 
-export async function translateAI (text: string, gameType: GameType = 'ck3', retranslationContext?: RetranslationContext) {
+export async function translateAI (text: string, gameType: GameType = 'ck3', retranslationContext?: RetranslationContext, useTransliteration: boolean = false) {
   return new Promise<string>((resolve, reject) => {
     try {
-      return translateAIByModel(resolve, gemini('gemini-flash-lite-latest', gameType), text, retranslationContext)
+      return translateAIByModel(resolve, gemini('gemini-flash-lite-latest', gameType, useTransliteration), text, retranslationContext)
     } catch (e) {
       try {
-        return translateAIByModel(resolve, gemini('gemini-flash-latest', gameType), text, retranslationContext)
+        return translateAIByModel(resolve, gemini('gemini-flash-latest', gameType, useTransliteration), text, retranslationContext)
       } catch (ee) {
         reject(ee)
       }

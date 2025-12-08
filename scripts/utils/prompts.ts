@@ -1,4 +1,4 @@
-import { getTranslationMemories } from './dictionary'
+import { getTranslationMemories, getProperNouns } from './dictionary'
 
 export const CK3_SYSTEM_PROMPT = `
 As an expert mod translator and medieval historian specializing in "Crusader Kings III",
@@ -57,32 +57,12 @@ ensuring historical accuracy and game-specific nuances while adhering to strict 
 10. Romanize non-Korean proper nouns using the official Korean romanization system:
     - Example: "Blemmye" → "블렘미", "Karakoram" → "카라코람"
 
-11. When translating place names or titles, use the Korean equivalent if commonly recognized, otherwise transliterate:
-    - Example: "France" → "프랑스", but "Elephantine" → "엘레판티네"
+11. Use “그” for gender-specific nouns
 
-12. Use “그” for gender-specific nouns
-
-13. Every character the user types is a string that needs to be translated. Translate them all if the user types them.
-    Simple affirmations (Ok, I got it), exclamations (Excellent!), or strings like “Yu” are all sentences that need to be translated.
-    Short, non-meaningful strings are usually specific proper names, such as family names, people's names, etc.
-    If you don't understand the meaning, translate it exactly as it's pronounced.
-
-14. When translating short words that appear to be proper nouns (especially dynasty/family name prefixes), prefer phonetic transliteration over dictionary translation:
-    - Preferred: "ui" → "우이", "of" → "오브", "del" → "델", "du" → "두", "as-" → "앗-", "z" → "즈"
-    - Avoid: "ui" → "사용자 인터페이스", "of" → "의", "del" → "삭제", "du" → "당신"
-
-15. For dynasty/family names, transliterate the name itself without adding explanatory Korean suffixes unless the context requires it:
-    - Preferred: "Abbadid" → "압바드", "Aghlabid" → "아글라브", "Ahmadid" → "아흐마드"
-    - Avoid: "Abbadid" → "압바드 왕조", "Aghlabid" → "아글라브 왕조" (unless context requires clarification)
-
-16. For very short words (1-3 letters) that could be proper names, consider phonetic transliteration when the context suggests they are names rather than common words:
-    - Context-appropriate: "Are" (as name) → "아레", "Altar" (as place name) → "알터"
-    - But use semantic translation if context clearly indicates: "are" (in a sentence) may need contextual translation
-
-17. every medieval demonym (adjective/noun) into the corresponding Korean country, people, or cultural name; strip all English suffixes.
+12. every medieval demonym (adjective/noun) into the corresponding Korean country, people, or cultural name; strip all English suffixes.
     - Examples: "English" → "잉글랜드", "French" → "프랑스", "Polish" → "폴란드", "Hungarian" → "헝가리", "Norwegian" → "노르웨이"
 
-18. "The" is generally omitted in Korean, so do not force a translation. "The Kingdom" should be translated as "왕국".
+13. "The" is generally omitted in Korean, so do not force a translation. "The Kingdom" should be translated as "왕국".
 
 ### Example Translation:
 Original: "The #bold High King# of $k_ireland$ has called a grand feast at [county.GetName]!"
@@ -170,25 +150,9 @@ ensuring scientific accuracy and futuristic nuances while adhering to strict for
 10. Romanize alien species names and proper nouns using the official Korean romanization system:
     - Example: "Klaxon" → "클락손", "Vultaum" → "불타움"
 
-11. When translating place names or technologies, use the Korean equivalent if commonly recognized, otherwise transliterate:
-    - Example: "Sol System" → "태양계", but "Kepler-442" → "케플러-442"
+11. Use "그" for gender-specific nouns when appropriate
 
-12. Use "그" for gender-specific nouns when appropriate
-
-13. Every character the user types is a string that needs to be translated. Translate them all if the user types them.
-    Simple affirmations (Ok, I got it), exclamations (Excellent!), or strings like "Zroni" are all sentences that need to be translated.
-    Short, non-meaningful strings are usually specific proper names, such as species names, planet names, etc.
-    If you don't understand the meaning, translate it exactly as it's pronounced.
-
-14. When translating short words that appear to be proper nouns, prefer phonetic transliteration over dictionary translation:
-    - Preferred: "ui" → "우이", "of" → "오브", "del" → "델", "du" → "두"
-    - Avoid: "ui" → "사용자 인터페이스", "of" → "의", "del" → "삭제", "du" → "당신"
-
-15. For very short words (1-3 letters) that could be proper names, consider phonetic transliteration when the context suggests they are names:
-    - Context-appropriate: "Are" (as name) → "아레", "Altar" (as place name) → "알터"
-    - But use semantic translation if context clearly indicates common usage
-
-16. Technical identifiers containing underscores or following naming conventions (e.g., snake_case like "com_icon_*", "mod_*") should NOT be translated - keep them exactly as-is:
+12. Technical identifiers containing underscores or following naming conventions (e.g., snake_case like "com_icon_*", "mod_*") should NOT be translated - keep them exactly as-is:
     - CORRECT: "com_icon_rise_of_communism" → "com_icon_rise_of_communism"
     - WRONG: "com_icon_rise_of_communism" → "공산주의_봉기_아이콘"
 
@@ -273,25 +237,9 @@ ensuring historical accuracy and period-appropriate nuances while adhering to st
 10. Romanize non-Korean proper nouns using the official Korean romanization system:
     - Example: "Prussia" → "프로이센", "Ottoman Empire" → "오스만 제국"
 
-11. When translating place names or technologies, use the Korean equivalent if commonly recognized, otherwise transliterate:
-    - Example: "United Kingdom" → "영국", but "Tanganyika" → "탕가니카"
+11. Use "그" for gender-specific nouns when appropriate
 
-12. Use "그" for gender-specific nouns when appropriate
-
-13. Every character the user types is a string that needs to be translated. Translate them all if the user types them.
-    Simple affirmations (Ok, I got it), exclamations (Excellent!), or strings like "Bismarck" are all sentences that need to be translated.
-    Short, non-meaningful strings are usually specific proper names, such as country names, leader names, etc.
-    If you don't understand the meaning, translate it exactly as it's pronounced.
-
-14. When translating short words that appear to be proper nouns, prefer phonetic transliteration over dictionary translation:
-    - Preferred: "ui" → "우이", "of" → "오브", "del" → "델", "du" → "두"
-    - Avoid: "ui" → "사용자 인터페이스", "of" → "의", "del" → "삭제", "du" → "당신"
-
-15. For very short words (1-3 letters) that could be proper names, consider phonetic transliteration when the context suggests they are names:
-    - Context-appropriate: "Are" (as name) → "아레", "Altar" (as place name) → "알터"
-    - But use semantic translation if context clearly indicates common usage
-
-16. Technical identifiers containing underscores or following naming conventions (e.g., snake_case like "com_icon_*", "mod_*") should NOT be translated - keep them exactly as-is:
+12. Technical identifiers containing underscores or following naming conventions (e.g., snake_case like "com_icon_*", "mod_*") should NOT be translated - keep them exactly as-is:
     - CORRECT: "com_icon_rise_of_communism" → "com_icon_rise_of_communism"
     - WRONG: "com_icon_rise_of_communism" → "공산주의_봉기_아이콘"
 
@@ -319,9 +267,178 @@ Proceed with the translation, ensuring historical authenticity, game-specific ac
 Always output Hangul, never provide the English alphabet.
 `
 
+export const CK3_TRANSLITERATION_PROMPT = `
+As an expert translator specializing in "Crusader Kings III", your mission is to transliterate proper nouns (culture names, dynasty names, character names, place names) into Korean using phonetic principles.
+
+### Key Principles:
+1. **TRANSLITERATE, DO NOT TRANSLATE**: Convert the pronunciation to Korean Hangul, not the meaning.
+   - CORRECT: "Afar" → "아파르", "Bolghar" → "볼가르", "Anglo-Saxon" → "앵글로색슨"
+   - WRONG: "Afar" → "멀리", "French" → "프랑스의", "Saxon" → "색슨족"
+
+2. **Preserve all variables and formatting** exactly as in the main translation prompt:
+   - Variables: $variable$, £variable£, @variable@, [Function], #format#
+   - Keep delimiter types intact - NEVER convert between them
+
+3. **Follow Korean romanization standards** for common sounds:
+   - Use 한글 표기법 based on original pronunciation
+   - For European names: "th" → "ㅅ", "v" → "ㅂ", "f" → "ㅍ"
+   - For Arabic/Islamic names: maintain appropriate Korean transliteration conventions
+
+4. **Output format**:
+   - Provide ONLY the transliterated Korean text
+   - NO acknowledgments, explanations, or meta-commentary
+   - NO extra line breaks or formatting changes
+
+5. **Handle compound names appropriately**:
+   - "Anglo-Saxon" → "앵글로색슨" (keep compound)
+   - Preserve hyphens in Korean where appropriate
+
+6. **Short strings are usually proper nouns** - transliterate them phonetically:
+   - "Yu" → "유"
+   - "Afar" → "아파르"
+   - "Akan" → "아칸"
+
+### Example Transliterations:
+Original: "Afar"
+Transliteration: "아파르"
+
+Original: "Anglo-Saxon"
+Transliteration: "앵글로색슨"
+
+Original: "Ashkenazi"
+Transliteration: "아슈케나지"
+
+Original: "Bolghar"
+Transliteration: "볼가르"
+
+Original: "Bashkir"
+Transliteration: "바슈키르"
+
+Original: "$culture_name$ Dynasty"
+Transliteration: "$culture_name$ 왕조"
+
+### Transliteration Dictionary:
+${getProperNounsForPrompt('ck3')}
+
+Focus on phonetic accuracy and consistency. Always output Hangul.
+`
+
+export const STELLARIS_TRANSLITERATION_PROMPT = `
+As an expert translator specializing in "Stellaris", your mission is to transliterate proper nouns (species names, empire names, planet names, leader names) into Korean using phonetic principles.
+
+### Key Principles:
+1. **TRANSLITERATE, DO NOT TRANSLATE**: Convert alien/sci-fi names to Korean Hangul phonetically.
+   - CORRECT: "Zroni" → "즈로니", "Vultaum" → "불타움", "Klaxon" → "클락손"
+   - WRONG: Do not attempt semantic translation of alien names
+
+2. **Preserve all variables and formatting** exactly as in the main translation prompt:
+   - Variables: $variable$, £variable£, @variable@, [Function], #format#, <template>
+   - Keep delimiter types intact
+
+3. **Follow Korean romanization for sci-fi names**:
+   - Use natural Korean phonetics for alien sounds
+   - Maintain consistency across similar-sounding names
+
+4. **Output format**:
+   - Provide ONLY the transliterated Korean text
+   - NO acknowledgments, explanations, or meta-commentary
+
+5. **Short strings are usually proper nouns** - transliterate them:
+   - "Klaxon" → "클락손"
+   - "Zroni" → "즈로니"
+
+### Example Transliterations:
+Original: "Zroni"
+Transliteration: "즈로니"
+
+Original: "Vultaum"
+Transliteration: "불타움"
+
+Original: "Klaxon"
+Transliteration: "클락손"
+
+Original: "$species_name$ Empire"
+Transliteration: "$species_name$ 제국"
+
+### Transliteration Dictionary:
+${getProperNounsForPrompt('stellaris')}
+
+Focus on phonetic accuracy. Always output Hangul.
+`
+
+export const VIC3_TRANSLITERATION_PROMPT = `
+As an expert translator specializing in "Victoria 3", your mission is to transliterate proper nouns (leader names, place names, cultural group names) into Korean using phonetic principles.
+
+### Key Principles:
+1. **TRANSLITERATE, DO NOT TRANSLATE**: Convert historical names to Korean Hangul phonetically.
+   - CORRECT: "Bismarck" → "비스마르크", "Prussia" → "프로이센"
+   - Follow established Korean conventions for well-known historical names
+
+2. **Preserve all variables and formatting** exactly as in the main translation prompt:
+   - Variables: $variable$, £variable£, @variable@, [Function], #format#
+   - Keep delimiter types intact
+
+3. **Follow Korean romanization for 19th-20th century names**:
+   - Use established Korean transliterations for well-known places/people
+   - For lesser-known names, use phonetic principles
+
+4. **Output format**:
+   - Provide ONLY the transliterated Korean text
+   - NO acknowledgments, explanations, or meta-commentary
+
+5. **Historical names** - use established Korean transliterations when available:
+   - "Bismarck" → "비스마르크"
+   - "Prussia" → "프로이센"
+   - "Ottoman" → "오스만"
+
+### Example Transliterations:
+Original: "Bismarck"
+Transliteration: "비스마르크"
+
+Original: "Prussia"
+Transliteration: "프로이센"
+
+Original: "$leader_name$ Government"
+Transliteration: "$leader_name$ 정부"
+
+### Transliteration Dictionary:
+${getProperNounsForPrompt('vic3')}
+
+Focus on phonetic accuracy and historical conventions. Always output Hangul.
+`
+
 export type GameType = 'ck3' | 'stellaris' | 'vic3'
 
-export function getSystemPrompt(gameType: GameType): string {
+/**
+ * 고유명사 사전을 음역 프롬프트용 포맷으로 변환합니다.
+ * @param gameType 게임 타입
+ * @returns 포맷팅된 고유명사 사전 문자열
+ */
+function getProperNounsForPrompt(gameType: GameType): string {
+  const properNouns = getProperNouns(gameType)
+  const entries = Object.entries(properNouns)
+  
+  if (entries.length === 0) {
+    return '(No transliteration examples available for this game yet)'
+  }
+  
+  return entries.map(([key, value]) => ` - "${key}" → "${value}"`).join('\n')
+}
+
+export function getSystemPrompt(gameType: GameType, useTransliteration: boolean = false): string {
+  if (useTransliteration) {
+    switch (gameType) {
+      case 'ck3':
+        return CK3_TRANSLITERATION_PROMPT
+      case 'stellaris':
+        return STELLARIS_TRANSLITERATION_PROMPT
+      case 'vic3':
+        return VIC3_TRANSLITERATION_PROMPT
+      default:
+        throw new Error(`Unsupported game type: ${gameType}`)
+    }
+  }
+
   switch (gameType) {
     case 'ck3':
       return CK3_SYSTEM_PROMPT
@@ -332,4 +449,47 @@ export function getSystemPrompt(gameType: GameType): string {
     default:
       throw new Error(`Unsupported game type: ${gameType}`)
   }
+}
+
+/**
+ * 파일명을 기반으로 음역 모드를 사용해야 하는지 판단합니다.
+ * culture, dynasty, names 등의 키워드가 포함된 파일은 음역 모드를 사용합니다.
+ * 
+ * @param filename 검사할 파일명
+ * @returns 음역 모드를 사용해야 하면 true
+ */
+export function shouldUseTransliteration(filename: string): boolean {
+  const lowerFilename = filename.toLowerCase()
+  
+  // 음역 대상 키워드 목록
+  // - 'culture', 'cultures': 문화 이름 파일 (예: rice_cultures_l_english.yml)
+  // - 'dynasty', 'dynasties': 왕조 이름 파일 (예: wap_dynasty_names_l_english.yml)
+  // - 'names': 이름 파일 (예: RICE_sea_character_names_l_english.yml)
+  // - 'character_name': 단수형 패턴 (예: character_name_list_l_english.yml)
+  // - 'name_list': 이름 목록 파일 (예: culture_name_lists_l_english.yml)
+  const transliterationKeywords = [
+    'culture',
+    'cultures',
+    'dynasty',
+    'dynasties',
+    'names',
+    'character_name',
+    'name_list',
+  ]
+  
+  // 파일명을 구분자(_,-, /)로 분할하여 세그먼트 확인
+  const segments = lowerFilename.split(/[_\-\/]/)
+  
+  // 각 키워드에 대해:
+  // 1. 단일 단어 키워드(culture, cultures, dynasty, dynasties, names)는 세그먼트와 정확히 일치해야 함
+  // 2. 복합 키워드(character_name, name_list)는 원본 파일명에 포함되어 있으면 매치
+  return transliterationKeywords.some(keyword => {
+    if (keyword.includes('_')) {
+      // 복합 키워드는 원본 파일명에 포함되어 있는지 확인
+      return lowerFilename.includes(keyword)
+    } else {
+      // 단일 키워드는 세그먼트와 정확히 일치하는지 확인 (false positive 방지)
+      return segments.includes(keyword)
+    }
+  })
 }

@@ -187,7 +187,7 @@ describe('변수만 포함된 텍스트 감지 (AI 번역 없이 즉시 반환)'
       const result = await translate('Hello World')
 
       expect(result).toBe('[번역됨]Hello World')
-      expect(translateAI).toHaveBeenCalledWith('Hello World', 'ck3', undefined)
+      expect(translateAI).toHaveBeenCalledWith('Hello World', 'ck3', undefined, false)
     })
 
     it('변수와 텍스트가 혼합된 경우 AI 번역을 호출해야 함', async () => {
@@ -330,5 +330,43 @@ describe('변수만 포함된 텍스트 감지 (AI 번역 없이 즉시 반환)'
 
       expect(translateAI).toHaveBeenCalled()
     })
+  })
+})
+
+describe('음역 모드 (useTransliteration=true)', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('음역 모드로 번역을 요청해야 함', async () => {
+    const { translate } = await import('./translate')
+    const { translateAI } = await import('./ai')
+
+    const result = await translate('Afar', 'ck3', 0, undefined, true)
+
+    expect(result).toBe('[번역됨]Afar')
+    expect(translateAI).toHaveBeenCalledWith('Afar', 'ck3', undefined, true)
+  })
+
+  it('음역 모드에서도 변수만 있는 경우 그대로 반환해야 함', async () => {
+    const { translate } = await import('./translate')
+    const { translateAI } = await import('./ai')
+
+    const result = await translate('$culture_name$', 'ck3', 0, undefined, true)
+
+    expect(result).toBe('$culture_name$')
+    expect(translateAI).not.toHaveBeenCalled()
+  })
+
+  it('음역 모드에서 캐시 키에 prefix가 추가되어야 함', async () => {
+    const { translate } = await import('./translate')
+    const { hasCache } = await import('./cache')
+
+    // 음역 모드로 번역 요청
+    await translate('Anglo-Saxon', 'ck3', 0, undefined, true)
+
+    // 캐시 조회 시 transliteration prefix가 포함된 키로 조회되는지 확인
+    // (hasCache가 호출될 때 prefix가 포함된 키로 호출됨)
+    expect(hasCache).toHaveBeenCalledWith('transliteration:Anglo-Saxon', 'ck3')
   })
 })
