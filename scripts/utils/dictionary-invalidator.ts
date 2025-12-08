@@ -5,7 +5,7 @@ import { getDictionaries, getDictionary, getProperNouns } from './dictionary'
 import { type DictionaryChangeOptions, type DictionaryKeyInfo, getChangedDictionaryKeysWithInfo } from './dictionary-changes'
 import { hashing } from './hashing'
 import { log } from './logger'
-import { type GameType } from './prompts'
+import { type GameType, shouldUseTransliteration } from './prompts'
 
 interface ModMeta {
   upstream: {
@@ -184,12 +184,16 @@ async function processModLocalization(
         const targetRelativePath = dir ? join(dir, targetFileName) : targetFileName
         const targetFilePath = join(targetDir, targetRelativePath)
 
+        // 파일명으로 음역 모드 판단
+        const useTransliteration = shouldUseTransliteration(file)
+        
         const result = await processTranslationFile(
           modName,
           sourceFilePath,
           targetFilePath,
           gameType,
-          changedKeyInfos
+          changedKeyInfos,
+          useTransliteration
         )
 
         totalInvalidated += result.invalidated
@@ -214,12 +218,17 @@ async function processTranslationFile(
   sourceFilePath: string,
   targetFilePath: string,
   gameType: GameType,
-  changedKeyInfos: DictionaryKeyInfo[]
+  changedKeyInfos: DictionaryKeyInfo[],
+  useTransliteration: boolean = false
 ): Promise<ProcessResult> {
   let invalidated = 0
   let replaced = 0
   let ignored = 0
   let skippedProperNouns = 0
+
+  if (useTransliteration) {
+    log.debug(`[${modName}] 음역 모드 파일 처리: ${sourceFilePath}`)
+  }
 
   try {
     // 원본 파일 읽기
