@@ -200,7 +200,7 @@ await updateAllUpstreams('/path/to/project', 'ck3')         // CK3만
 await updateAllUpstreams('/path/to/project', 'ck3', 'RICE') // CK3의 RICE 모드만
 ```
 
-**CLI 사용법 (PR #155):**
+**CLI 사용법:**
 ```bash
 pnpm upstream                  # 모든 게임의 모든 모드
 pnpm upstream ck3              # CK3 게임만
@@ -241,10 +241,10 @@ async function cloneOptimizedRepository(path: string, config: UpstreamConfig) {
 - 태그가 없는 경우: 기본 브랜치의 최신 커밋 사용
 
 **최적화 개선 (2025-11~12):**
-- **Shallow Clone 추가** (PR #126): `--depth=1` 옵션으로 디스크 사용량 최대 90% 절감
+- **Shallow Clone 추가**: `--depth=1` 옵션으로 디스크 사용량 최대 90% 절감
 - **자동 Unshallow**: 기존 shallow clone 업데이트 시 자동으로 `--unshallow` 처리
-- **게임/모드별 필터링** (PR #155): 특정 게임이나 모드만 업데이트 가능
-- **Git 태그 정렬 개선** (PR #130, #132, #133): GitHub Releases API를 통한 시맨틱 버전 기반 최신 태그 감지
+- **게임/모드별 필터링**: 특정 게임이나 모드만 업데이트 가능
+- **Git 태그 정렬 개선**: GitHub Releases API를 통한 시맨틱 버전 기반 최신 태그 감지
 
 ### 5. AI Integration
 

@@ -43,7 +43,7 @@ pnpm ck3:update-dict -- --commit-range <from-commit>..<to-commit>
 # Only invalidate translations for dictionary keys changed since a specific date
 pnpm ck3:update-dict -- --since-date "2024-01-01"
 
-# Retranslate incorrectly translated items (based on validation rules from issue #64)
+# Retranslate incorrectly translated items (based on validation rules)
 pnpm ck3:retranslate
 
 # Run VIC3 translation process

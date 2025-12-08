@@ -52,7 +52,7 @@ Now translate: "The duke improves his stewardship"
 
 ## 사전 구조
 
-### CK3 사전 분리 구조 (PR #151)
+### CK3 사전 분리 구조
 
 CK3 사전은 용어집(Glossary)과 고유명사(Proper Nouns)로 분리되어 있습니다:
 

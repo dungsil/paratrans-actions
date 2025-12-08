@@ -21,7 +21,7 @@ pnpm ck3:update-hash
 # Invalidate translations based on dictionary updates
 pnpm ck3:update-dict
 
-# Retranslate incorrectly translated items (based on validation rules from issue #64)
+# Retranslate incorrectly translated items (based on validation rules)
 pnpm ck3:retranslate
 
 # Run VIC3 translation process

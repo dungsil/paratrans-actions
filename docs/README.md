@@ -246,8 +246,7 @@ translation-pipeline.md → caching.md → validation.md
 - [Stellaris 모딩 위키](https://stellaris.paradoxwikis.com/Modding)
 
 ### 커뮤니티
-- [GitHub Issues](https://github.com/dungsil/paradox-auto-translate/issues) - 버그 리포트 및 기능 요청
-- [GitHub Discussions](https://github.com/dungsil/paradox-auto-translate/discussions) - 질문 및 토론
+- GitHub Discussions - 질문 및 토론
 
 ## 🤝 문서 기여
 
@@ -263,11 +262,10 @@ translation-pipeline.md → caching.md → validation.md
 
 ### 기여 절차
 
-1. 이슈를 생성하여 변경 사항 논의
-2. Fork 및 브랜치 생성
-3. 변경 사항 작성 및 커밋
-4. Pull Request 제출
-5. 리뷰 및 병합
+1. Fork 및 브랜치 생성
+2. 변경 사항 작성 및 커밋
+3. Pull Request 제출
+4. 리뷰 및 병합
 
 자세한 내용은 [개발 가이드](development.md)를 참조하세요.
 
@@ -294,10 +292,7 @@ translation-pipeline.md → caching.md → validation.md
 
 ## 📞 지원 및 문의
 
-- **버그 리포트**: [GitHub Issues](https://github.com/dungsil/paradox-auto-translate/issues)
-- **기능 요청**: [GitHub Issues](https://github.com/dungsil/paradox-auto-translate/issues)
-- **질문**: [GitHub Discussions](https://github.com/dungsil/paradox-auto-translate/discussions)
-- **문서 오류**: [GitHub Issues](https://github.com/dungsil/paradox-auto-translate/issues)
+프로젝트에 대한 질문이나 도움이 필요하신 경우 GitHub Discussions를 활용해 주세요.
 
 ---
 

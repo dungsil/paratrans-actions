@@ -75,7 +75,6 @@
 - 게임 내에서 정상 작동하는 패턴들 허용
 - 실제 위험한 패턴은 여전히 정확히 감지
 
-## 관련 이슈
+## 관련 문서
 
-- 검증 오탐 수정 요청: https://github.com/dungsil/paradox-auto-translate/issues/...
 - 이전 오탐 수정 (구두점): `FALSE_POSITIVE_FIX.md`
