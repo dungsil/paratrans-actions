@@ -1,4 +1,4 @@
-import { getTranslationMemories } from './dictionary'
+import { getTranslationMemories, getProperNouns } from './dictionary'
 
 export const CK3_SYSTEM_PROMPT = `
 As an expert mod translator and medieval historian specializing in "Crusader Kings III",
@@ -369,8 +369,8 @@ Transliteration: "바슈키르"
 Original: "$culture_name$ Dynasty"
 Transliteration: "$culture_name$ 왕조"
 
-### Translation Memory:
-${getTranslationMemories('ck3')}
+### Transliteration Dictionary:
+${getProperNounsForPrompt('ck3')}
 
 Focus on phonetic accuracy and consistency. Always output Hangul.
 `
@@ -412,8 +412,8 @@ Transliteration: "클락손"
 Original: "$species_name$ Empire"
 Transliteration: "$species_name$ 제국"
 
-### Translation Memory:
-${getTranslationMemories('stellaris')}
+### Transliteration Dictionary:
+${getProperNounsForPrompt('stellaris')}
 
 Focus on phonetic accuracy. Always output Hangul.
 `
@@ -453,13 +453,29 @@ Transliteration: "프로이센"
 Original: "$leader_name$ Government"
 Transliteration: "$leader_name$ 정부"
 
-### Translation Memory:
-${getTranslationMemories('vic3')}
+### Transliteration Dictionary:
+${getProperNounsForPrompt('vic3')}
 
 Focus on phonetic accuracy and historical conventions. Always output Hangul.
 `
 
 export type GameType = 'ck3' | 'stellaris' | 'vic3'
+
+/**
+ * 고유명사 사전을 음역 프롬프트용 포맷으로 변환합니다.
+ * @param gameType 게임 타입
+ * @returns 포맷팅된 고유명사 사전 문자열
+ */
+function getProperNounsForPrompt(gameType: GameType): string {
+  const properNouns = getProperNouns(gameType)
+  const entries = Object.entries(properNouns)
+  
+  if (entries.length === 0) {
+    return '(No transliteration examples available for this game yet)'
+  }
+  
+  return entries.map(([key, value]) => ` - "${key}" → "${value}"`).join('\n')
+}
 
 export function getSystemPrompt(gameType: GameType, useTransliteration: boolean = false): string {
   if (useTransliteration) {

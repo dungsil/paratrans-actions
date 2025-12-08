@@ -358,15 +358,15 @@ describe('음역 모드 (useTransliteration=true)', () => {
     expect(translateAI).not.toHaveBeenCalled()
   })
 
-  it('음역 모드에서 캐시 키에 접미사가 추가되어야 함', async () => {
+  it('음역 모드에서 캐시 키에 prefix가 추가되어야 함', async () => {
     const { translate } = await import('./translate')
     const { hasCache } = await import('./cache')
 
     // 음역 모드로 번역 요청
     await translate('Anglo-Saxon', 'ck3', 0, undefined, true)
 
-    // 캐시 조회 시 접미사가 포함된 키로 조회되는지 확인
-    // (hasCache가 호출될 때 접미사가 포함된 키로 호출됨)
-    expect(hasCache).toHaveBeenCalledWith('Anglo-Saxon__TRANSLITERATION__', 'ck3')
+    // 캐시 조회 시 transliteration prefix가 포함된 키로 조회되는지 확인
+    // (hasCache가 호출될 때 prefix가 포함된 키로 호출됨)
+    expect(hasCache).toHaveBeenCalledWith('transliteration:Anglo-Saxon', 'ck3')
   })
 })
