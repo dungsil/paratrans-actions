@@ -5,7 +5,7 @@ import { getDictionaries, getDictionary, getProperNouns } from './dictionary'
 import { type DictionaryChangeOptions, type DictionaryKeyInfo, getChangedDictionaryKeysWithInfo } from './dictionary-changes'
 import { hashing } from './hashing'
 import { log } from './logger'
-import { type GameType, shouldUseTransliteration } from './prompts'
+import { type GameType, shouldUseTransliteration, shouldUseTransliterationForKey } from './prompts'
 
 interface ModMeta {
   upstream: {

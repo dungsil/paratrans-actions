@@ -1,4 +1,4 @@
-import { type GameType } from './prompts'
+import { type GameType, shouldUseTransliterationForKey } from './prompts'
 
 /**
  * 번역 검증 규칙:
@@ -717,7 +717,10 @@ export function validateTranslationEntries(
 
     // 음역 모드인 경우 의미 번역 여부 추가 검증
     // decisions, desc, event 키는 일반 번역 컨텍스트이므로 음역 검증 제외
-    if (useTransliteration && validation.isValid) {
+    // 파일 레벨 음역 모드가 아니더라도 키 레벨에서 음역이 필요한 경우 검증
+    const shouldTransliterate = useTransliteration || shouldUseTransliterationForKey(key)
+    
+    if (shouldTransliterate && validation.isValid) {
       // 키가 decision, desc, event로 끝나는 경우 제외 (예: heritage_desc, culture_event, decision)
       const isRegularTranslationContext = /(?:^|_)(decision|desc|event)$/.test(key)
       
