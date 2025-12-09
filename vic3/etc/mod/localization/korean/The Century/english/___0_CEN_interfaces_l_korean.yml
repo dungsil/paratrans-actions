@@ -18,7 +18,7 @@
   INNOVATION_DESCRIPTION: "주간 투자 혁신: #v @innovation![Country.GetWeeklyInnovation|+0]#!" # 1538098012573658940
   BUILDING_MAP_LIST_PANEL_UNEMPLOYED_HEADER_2: "실업" # 5587113436077884102
   BUILDING_MAP_LIST_PANEL_HMPS_TRAIT: "이 [concept_state]의 특성" # 14628298401379221351
-  HMPS_ENABLE_DEBUG: "디버그 모드 활성화"
+  HMPS_ENABLE_DEBUG: "디버그 모드 활성화" # 10299878406794897489
   PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_ALT_TOOLTIP: "#header [Country.GetAdjective] 함대#!\n현재: @flotillas! [Country.GetWarships|v] ([Country.GetFlotillasRanking])\n$TOOLTIP_DELIMITER$\n$PANEL_MILITARY_NAVY_POWER_PROJECTION$" # 8644498156935117181
   PANEL_MILITARY_ARMY_OVERVIEW_ALT_TOOLTIP: "#header [Country.GetAdjective] [Concept('concept_battalion', '$concept_battalions$')] 및 [Concept('concept_conscript_battalion','$concept_conscript_battalions$')]#!\n@battalions![Country.GetRegularBattalions|v] [Concept('concept_battalion', '$concept_battalions$')] (#v [Country.GetFullyMobilizedBattalionsPercentageRaw|0%]#!@mobilization! [Concept('concept_mobilize_battalion', '$concept_mobilize_battalion_mobilized$')])\n@conscripts![Country.CalcConscriptableBattalions|v]개 중 [Country.GetConscriptedBattalions|v]개의 [Concept('concept_conscript_battalion','$concept_conscript_battalions$')] 징집됨\n$TOOLTIP_DELIMITER$\n$PANEL_MILITARY_ARMY_POWER_PROJECTION$" # 1515297580343791932
   CHARACTER_INTERACTION_CONFIRMATION: "$CHARACTER_INTERACTION_HEADER$$CHARACTER_INTERACTION_EFFECTS$\n\n정말 확실합니까?" # 7733983341375251597
