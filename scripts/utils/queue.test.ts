@@ -76,6 +76,7 @@ describe('큐', () => {
 
     it('TranslationRefusedError는 재시도 없이 즉시 전파해야 함', async () => {
       const error = new TranslationRefusedError('test text', 'PROHIBITED_CONTENT')
+      let caughtError: unknown = null
       const mockTask = vi.fn(async () => {
         throw error
       })
@@ -83,15 +84,23 @@ describe('큐', () => {
       // addQueue 호출
       addQueue('test-key', mockTask)
       
-      // 큐 처리 (에러는 무시)
+      // 큐 처리 - 에러는 비동기적으로 발생하여 unhandled rejection이 됨
+      // try-catch는 동기적으로 발생하는 에러만 잡을 수 있으므로, 
+      // 실제로 catch되지 않지만 타입 안전성을 위해 검증 추가
       try {
         await vi.runAllTimersAsync()
-      } catch {
-        // 에러 무시 - 우리는 재시도 횟수만 확인하면 됨
+      } catch (err) {
+        caughtError = err
+        // 만약 에러가 catch된다면 올바른 타입인지 확인
+        expect(err).toBeInstanceOf(TranslationRefusedError)
       }
       
-      // 재시도 없이 한 번만 실행되어야 함 (중요한 검증 포인트)
+      // 핵심 검증: 재시도 없이 한 번만 실행되어야 함
+      // TranslationRefusedError가 발생하면 재시도 로직을 건너뛰고 즉시 전파됨
       expect(mockTask).toHaveBeenCalledTimes(1)
+      
+      // Note: 이 테스트에서는 unhandled rejection 경고가 예상됨
+      // 이는 큐 시스템이 의도적으로 에러를 상위로 전파하기 때문
     })
   })
 })
