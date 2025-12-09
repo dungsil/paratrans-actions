@@ -237,7 +237,6 @@ The `retranslate` command (`pnpm ck3:retranslate`) now includes intelligent vali
 **How it works**:
 1. When processing files that match transliteration patterns (culture, dynasty, names), the validation system checks if translations are semantic rather than phonetic
 2. Uses heuristics to detect semantic translations:
-   - **Common Korean words**: Detects if translation contains everyday Korean vocabulary (e.g., "멀리" = "far away", "동쪽" = "east")
    - **Syllable mismatch**: Flags translations that are disproportionately longer than the source (indicating descriptive translation)
 3. Items detected as semantic translations are automatically invalidated and will be re-translated in transliteration mode
 
