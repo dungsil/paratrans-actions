@@ -61,6 +61,9 @@ async function processQueue (): Promise<void> {
         }
       }
       isProcessing = false
+      if (translationQueue.length > 0) {
+        void processQueue()
+      }
       return
     }
   }
