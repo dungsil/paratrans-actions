@@ -42,10 +42,10 @@ export interface RetranslationContext {
 export async function translateAI (text: string, gameType: GameType = 'ck3', retranslationContext?: RetranslationContext, useTransliteration: boolean = false) {
   return new Promise<string>((resolve, reject) => {
     try {
-      return translateAIByModel(resolve, reject, gemini('gemini-flash-lite-latest', gameType, useTransliteration), text, retranslationContext)
+      return translateAIByModel(resolve, reject, gemini('gemini-flash-lite', gameType, useTransliteration), text, retranslationContext)
     } catch (e) {
       try {
-        return translateAIByModel(resolve, reject, gemini('gemini-flash-latest', gameType, useTransliteration), text, retranslationContext)
+        return translateAIByModel(resolve, reject, gemini('gemini-flash', gameType, useTransliteration), text, retranslationContext)
       } catch (ee) {
         reject(ee)
       }
