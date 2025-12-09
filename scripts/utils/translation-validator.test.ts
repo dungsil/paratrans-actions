@@ -1720,5 +1720,102 @@ describe('음역 검증', () => {
       
       expect(result.length).toBe(0)
     })
+
+    it('키 중간에 decision이 있는 경우(indecision 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        indecision_culture: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        indecision_culture: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // indecision은 제외되지 않음
+      expect(result[0].reason).toContain('음절 수 불균형')
+    })
+
+    it('키 중간에 desc가 있는 경우(descendant 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        descendant_name: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        descendant_name: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // descendant는 제외되지 않음
+      expect(result[0].reason).toContain('음절 수 불균형')
+    })
+
+    it('키 중간에 event가 있는 경우(prevention 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        prevention_culture: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        prevention_culture: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // prevention은 제외되지 않음
+      expect(result[0].reason).toContain('음절 수 불균형')
+    })
+  })
+
+  describe('음절 수 불균형 경계값 테스트', () => {
+    it('원본 10자, 번역 30자 (정확히 3배)는 통과해야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커', 'hash1'] // 정확히 30자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 3배는 경계값이므로 통과
+    })
+
+    it('원본 10자, 번역 31자 (3배 초과)는 무효화되어야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허고노도', 'hash1'] // 31자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // 3배 초과이므로 무효화
+      expect(result[0].reason).toContain('음절 수 불균형')
+    })
+
+    it('원본 11자 (임계값 초과)는 번역이 길어도 검증하지 않음', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghijk', ''] // 11자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허', 'hash1'] // 33자 (3배)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 원본이 11자이므로 검증 제외
+    })
+
+    it('원본 10자, 번역 29자 (3배 미만)는 통과해야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커', 'hash1'] // 29자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 3배 미만이므로 통과
+    })
   })
 })

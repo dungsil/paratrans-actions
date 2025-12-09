@@ -638,13 +638,17 @@ export function validateTranslation(
   return { isValid: true }
 }
 
+// 음역 검증 임계값 상수
+const SHORT_SOURCE_LENGTH_THRESHOLD = 10 // 짧은 원본 텍스트로 간주하는 최대 길이
+const MAX_TRANSLITERATION_LENGTH_RATIO = 3 // 음역으로 허용되는 최대 길이 비율
+
 /**
  * 음역 검증: 번역이 의미 번역이 아닌 음역인지 확인합니다.
  * 고유명사(문화명, 왕조명, 인물명)는 발음 기반 음역이어야 하며, 의미 번역이면 안 됩니다.
  * 
  * 휴리스틱 기반 감지:
- * 1. 일반적인 한국어 단어가 포함되어 있으면 의미 번역으로 간주
- * 2. 원본과 음절 수가 크게 차이나면 의미 번역 가능성
+ * - 원본과 음절 수가 크게 차이나면 의미 번역 가능성
+ *   (짧은 원본이 3배 이상 길어지면 설명적 번역으로 판단)
  */
 function validateTransliteration(
   sourceText: string,
@@ -653,10 +657,11 @@ function validateTransliteration(
   // 음절 수 차이 검증
   // 원본 영어 단어의 음절 수와 한국어 음절 수가 크게 차이나면 의미 번역일 가능성
   const sourceLength = sourceText.replace(/[^a-zA-Z]/g, '').length
-  const translationLength = translatedText.replace(/[^가-힣]/g, '').length
+  const translationLength = (translatedText.match(/[가-힣]/g) || []).length
   
-  // 영어 단어가 짧은데 (10자 이하) 한국어가 너무 길면 (3배 이상) 의미 번역 가능성
-  if (sourceLength <= 10 && translationLength > sourceLength * 3) {
+  // 영어 단어가 짧은데 한국어가 너무 길면 의미 번역 가능성
+  if (sourceLength <= SHORT_SOURCE_LENGTH_THRESHOLD && 
+      translationLength > sourceLength * MAX_TRANSLITERATION_LENGTH_RATIO) {
     return {
       isValid: false,
       reason: `의미 번역 가능성: 음절 수 불균형 (원본: ${sourceLength}, 번역: ${translationLength})`
@@ -708,10 +713,8 @@ export function validateTranslationEntries(
     // 음역 모드인 경우 의미 번역 여부 추가 검증
     // decisions, desc, event 키는 일반 번역 컨텍스트이므로 음역 검증 제외
     if (useTransliteration && validation.isValid) {
-      const isRegularTranslationContext = 
-        key.includes('decision') || 
-        key.includes('desc') || 
-        key.includes('event')
+      // 키 끝에 _decision, _desc, _event가 있거나 정확히 decision, desc, event인 경우 제외
+      const isRegularTranslationContext = /(?:^|_)(decision|desc|event)$/.test(key)
       
       if (!isRegularTranslationContext) {
         const transliterationValidation = validateTransliteration(sourceValue, translatedValue)
