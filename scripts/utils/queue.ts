@@ -5,6 +5,7 @@ import { log } from './logger'
 type QueueTask = { key: string, queue: () => Promise<void>, resolve: () => void, reject: (reason?: any) => void }
 const translationQueue: QueueTask[] = []
 
+// MAX_RETRIES = 5는 재시도 횟수 0~4를 의미 (총 5회 시도)
 const MAX_RETRIES = 5
 const RETRY_DELAYS = [1_000, 2_000, 8_000, 10_000, 60_000] // 밀리초 단위
 
@@ -56,19 +57,11 @@ async function processQueue (): Promise<void> {
         }
       }
       isProcessing = false
-      // Fix race condition: if new tasks were added after the last queue check, process them
-      if (translationQueue.length > 0) {
-        void processQueue()
-      }
       return
     }
   }
 
   isProcessing = false
-  // Fix race condition: if new tasks were added after the last queue check, process them
-  if (translationQueue.length > 0) {
-    void processQueue()
-  }
   // Fix race condition: if new tasks were added after the last queue check, process them
   if (translationQueue.length > 0) {
     void processQueue()
