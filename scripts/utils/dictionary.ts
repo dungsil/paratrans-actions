@@ -23,6 +23,8 @@ function loadDictionaryFromFile(filename: string): Record<string, string> {
     for (const [key, value] of Object.entries(parsed)) {
       if (typeof value === 'string') {
         dict[key] = value
+      } else {
+        console.warn(`Skipping non-string value in ${filename}: ${key} (type: ${typeof value})`)
       }
     }
     

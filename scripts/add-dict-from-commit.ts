@@ -236,7 +236,8 @@ async function addEntriesToDictionary(entries: DictionaryEntry[]): Promise<void>
     // 기존 항목 중복 체크를 위해 현재 딕셔너리의 키들을 추출
     const existingKeys = new Set<string>()
     // TOML 키 패턴: "key" = "value" 또는 key = "value"
-    const keyRegex = /^"?([^"=]+)"?\s*=/gm
+    // 주석 라인(#로 시작)은 제외
+    const keyRegex = /^(?!#)\s*"?([^"=]+)"?\s*=/gm
     let match
     while ((match = keyRegex.exec(content)) !== null) {
       existingKeys.add(match[1].toLowerCase())
@@ -259,10 +260,20 @@ async function addEntriesToDictionary(entries: DictionaryEntry[]): Promise<void>
     // TOML 형식으로 새 항목 생성
     const newEntriesText = newEntries
       .map(entry => {
-        // TOML은 값의 따옴표를 이스케이프해야 함
-        const escapedValue = entry.value.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+        // TOML 문자열 이스케이프: 백슬래시, 따옴표, 개행, 탭, 캐리지 리턴
+        const escapedValue = entry.value
+          .replace(/\\/g, '\\\\')
+          .replace(/"/g, '\\"')
+          .replace(/\n/g, '\\n')
+          .replace(/\t/g, '\\t')
+          .replace(/\r/g, '\\r')
         // 키도 항상 따옴표로 감싸기 (특수문자, 공백 등 안전하게 처리)
-        const escapedKey = entry.key.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+        const escapedKey = entry.key
+          .replace(/\\/g, '\\\\')
+          .replace(/"/g, '\\"')
+          .replace(/\n/g, '\\n')
+          .replace(/\t/g, '\\t')
+          .replace(/\r/g, '\\r')
         return `"${escapedKey}" = "${escapedValue}"`
       })
       .join('\n')
