@@ -6,12 +6,12 @@
   concept_india: "인도" # 15451890225809130342
   concept_india_desc: "[GetStrategicRegion('region_madras').GetName] [GetStrategicRegion('region_bengal').GetName] [GetStrategicRegion('region_bombay').GetName] [GetStrategicRegion('region_punjab').GetName] [GetStrategicRegion('region_central_india').GetName]" # 462326282650220301
   concept_british_isles: "영국 제도" # 14391008474416885898
-  concept_british_isles_desc: "잉글랜드 북해 연안" # 10826381619171446820
+  concept_british_isles_desc: "잉글랜드 북해 연안"
   concept_france: "프랑스" # 4699275736596575548
   concept_france_desc: "[GetStrategicRegion('region_france').GetName] [GetStrategicRegion('region_occitania').GetName]" # 9567423081274085521
   concept_germany: "독일" # 14036568033578636328
-  concept_germany_desc: "라인란트\n북독일\n남독일" # 4352747692015434064
+  concept_germany_desc: "라인란트\n북독일\n남독일"
   concept_nordic_states: "북유럽 국가들" # 6491908988123264703
-  concept_nordic_states_desc: "발트 핀란드" # 2563826517878899767
+  concept_nordic_states_desc: "발트 핀란드"
   concept_russia: "러시아" # 16765711952090638659
   concept_russia_desc: "[GetStrategicRegion('region_russia').GetName] [GetStrategicRegion('region_dnieper').GetName] [GetStrategicRegion('region_belarus').GetName] [GetStrategicRegion('region_arctic_russia').GetName] [GetStrategicRegion('region_urals').GetName]" # 13463747215389362024

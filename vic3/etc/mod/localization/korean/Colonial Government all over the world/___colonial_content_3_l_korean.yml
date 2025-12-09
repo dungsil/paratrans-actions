@@ -36,19 +36,19 @@
   je_colonial_administration_button_canada: "[SCOPE.sStateRegion('canada_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 3252165917174318256
   je_colonial_administration_button_canada_desc: "캐나다." # 9942414191094817435
   je_colonial_administration_button_new_england: "[SCOPE.sStateRegion('new_england_region_scope').GetStrategicRegion.GetName]에서 식민지 개척" # 539771315641950762
-  je_colonial_administration_button_new_england_desc: "뉴잉글랜드." # 209870559398527813
+  je_colonial_administration_button_new_england_desc: "뉴잉글랜드."
   je_colonial_administration_button_pacific_coast: "[SCOPE.sStateRegion('pacific_coast_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 14574864621952724115
-  je_colonial_administration_button_pacific_coast_desc: "태평양_연안." # 16058856891598480862
+  je_colonial_administration_button_pacific_coast_desc: "태평양_연안."
   je_colonial_administration_button_great_plains: "[SCOPE.sStateRegion('great_plains_region_scope').GetStrategicRegion.GetName]에 식민지 건설" # 12359497051244698343
-  je_colonial_administration_button_great_plains_desc: "대평원" # 12414204815543674923
+  je_colonial_administration_button_great_plains_desc: "대평원"
   je_colonial_administration_button_the_midwest: "[SCOPE.sStateRegion('the_midwest_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 6373152259200023209
-  je_colonial_administration_button_the_midwest_desc: "중서부." # 7275633689156549715
+  je_colonial_administration_button_the_midwest_desc: "중서부."
   je_colonial_administration_button_dixie: "[SCOPE.sStateRegion('dixie_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 12928717858626060748
   je_colonial_administration_button_dixie_desc: "딕시." # 7567546120157831580
   je_colonial_administration_button_mexico: "[SCOPE.sStateRegion('mexico_region_scope').GetStrategicRegion.GetName]에서 식민지 개척" # 14353804869339952741
   je_colonial_administration_button_mexico_desc: "멕시코." # 2848611815092259876
   je_colonial_administration_button_central_america: "[SCOPE.sStateRegion('central_america_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 4245038086976206494
-  je_colonial_administration_button_central_america_desc: "중앙아메리카." # 574639736169051972
+  je_colonial_administration_button_central_america_desc: "중앙아메리카."
   je_colonial_administration_button_caribbean: "[SCOPE.sStateRegion('caribbean_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 16353782999393068458
   je_colonial_administration_button_caribbean_desc: "카리브." # 8347548940193824116
   je_colonial_administration_button_brazil: "[SCOPE.sStateRegion('brazil_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 5572191404033167450
@@ -56,15 +56,15 @@
   je_colonial_administration_button_andes: "[SCOPE.sStateRegion('andes_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 16360226547455571366
   je_colonial_administration_button_andes_desc: "안데스" # 10998195900954160291
   je_colonial_administration_button_la_plata: "[SCOPE.sStateRegion('la_plata_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 10304032863140331596
-  je_colonial_administration_button_la_plata_desc: "라플라타." # 17539304862406334179
+  je_colonial_administration_button_la_plata_desc: "라플라타."
   je_colonial_administration_button_gran_colombia: "[SCOPE.sStateRegion('gran_colombia_region_scope').GetStrategicRegion.GetName]에 식민지 건설" # 8725317199861324022
-  je_colonial_administration_button_gran_colombia_desc: "그란 콜롬비아." # 13069139046515317166
+  je_colonial_administration_button_gran_colombia_desc: "그란 콜롬비아."
   je_colonial_administration_button_arabic: "[SCOPE.sStateRegion('arabic_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 17618958802478094197
   je_colonial_administration_button_arabic_desc: "아랍어." # 9779048688087834082
   je_colonial_administration_button_persia: "[SCOPE.sStateRegion('persia_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 5665098396702774276
   je_colonial_administration_button_persia_desc: "페르시아." # 11339502360890096746
   je_colonial_administration_button_central_asia: "[SCOPE.sStateRegion('central_asia_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 4192106470732715702
-  je_colonial_administration_button_central_asia_desc: "중앙아시아." # 15611071644754694410
+  je_colonial_administration_button_central_asia_desc: "중앙아시아."
   je_colonial_administration_button_caucasus: "[SCOPE.sStateRegion('caucasus_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 4481983849113655249
   je_colonial_administration_button_caucasus_desc: "카프카스" # 15613511938267895279
   je_colonial_administration_button_india: "[concept_india]에 식민지 개척" # 5690581243157816583
@@ -72,7 +72,7 @@
   je_colonial_administration_button_himalayas: "[SCOPE.sStateRegion('himalayas_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 10109302017665485674
   je_colonial_administration_button_himalayas_desc: "히말라야" # 10189943955639240442
   je_colonial_administration_button_british_isles: "[concept_british_isles]에 식민지 개척" # 12696390107618654313
-  je_colonial_administration_button_british_isles_desc: "영국 제도" # 10106899125428133962
+  je_colonial_administration_button_british_isles_desc: "영국 제도"
   je_colonial_administration_button_iberia: "[SCOPE.sStateRegion('iberia_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 506839016666690731
   je_colonial_administration_button_iberia_desc: "이베리아" # 5567194816206150261
   je_colonial_administration_button_france: "[concept_france]에 식민지 개척" # 15734840725118963707
@@ -84,7 +84,7 @@
   je_colonial_administration_button_balkans: "[SCOPE.sStateRegion('balkans_region_scope').GetStrategicRegion.GetName]에 식민지 건설" # 9911169619335004833
   je_colonial_administration_button_balkans_desc: "발칸." # 16278818757356834598
   je_colonial_administration_button_nordic_states: "[concept_nordic_states]에 식민지 개척" # 17466651300882887353
-  je_colonial_administration_button_nordic_states_desc: "북유럽 국가들" # 10101889788429356269
+  je_colonial_administration_button_nordic_states_desc: "북유럽 국가들"
   je_colonial_administration_button_danubia: "[SCOPE.sStateRegion('danubia_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 8097632124283910148
   je_colonial_administration_button_danubia_desc: "다누비아" # 8310907304399631715
   je_colonial_administration_button_poland: "[SCOPE.sStateRegion('poland_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 7441432070694104509
@@ -92,7 +92,7 @@
   je_colonial_administration_button_anatolia: "[SCOPE.sStateRegion('anatolia_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 4870461911624543571
   je_colonial_administration_button_anatolia_desc: "아나톨리아" # 8448988700148512223
   je_colonial_administration_button_baltic_states: "[SCOPE.sStateRegion('baltic_states_region_scope').GetStrategicRegion.GetName]에 식민지 개척" # 16611221999074670836
-  je_colonial_administration_button_baltic_states_desc: "발트 국가들." # 4328508686242696623
+  je_colonial_administration_button_baltic_states_desc: "발트 국가들."
   je_colonial_administration_button_tt_1: "지역 식민지 행정부를 수립할 때, 우리는 그 [Concept('concept_law', '$concept_laws$')]와 [concept_government]를 조정하여 본국과 본국을 구성하는 [Concept('concept_interest_group','$concept_interest_groups$')]의 필요에 가장 잘 부합하도록 할 수 있을 것입니다." # 17516365786251540789
   je_colonial_administration_button_tt_2: "해당 [concept_strategic_region] 내의 모든 [SCOPE.GetRootScope.GetCountry.GetAdjective] 영토는 우리의 새로운 식민 [concept_subject]에게 이전됩니다. 만약 어떤 [concept_state]가 [GetDecreeType('decree_greener_grass_campaign').GetName] [concept_decree]를 가지고 있다면, 해당 칙령을 가진 무작위 주가 그 수도로 지정됩니다." # 11492034723484019785
   je_colonial_administration_button_expand_senegal: "[SCOPE.sStateRegion('senegal_region_scope').GetStrategicRegion.GetName]에 식민지 확장" # 17528405106591049726
@@ -169,7 +169,7 @@
   je_colonial_administration_button_expand_british_isles_desc: "현재 우리는 영국 제도 내의 영토를 보유하고 있는데, 이는 우리의 식민 종속국이 관리하는 것이 더 나을 것입니다. 만약 이 [concept_strategic_region]에 둘 이상의 식민 [concept_subject]이 있다면, 그들은 하나로 통합될 것입니다." # 6011535304450368494
   je_colonial_administration_button_expand_iberia: "[SCOPE.sStateRegion('iberia_region_scope').GetStrategicRegion.GetName]의 우리 식민지 확장" # 10700148654311706525
   je_colonial_administration_button_expand_iberia_desc: "현재 [SCOPE.sStateRegion('iberia_region_scope').GetStrategicRegion.GetName]에 보유 중인 영토는 우리의 식민 종속국이 관리하는 것이 더 효율적일 것입니다. 만약 이 [concept_strategic_region]에 둘 이상의 식민 [concept_subject]가 있다면, 그들은 하나로 합병될 것입니다." # 8562171188489374926
-  je_colonial_administration_button_expand_france: "프랑스에 있는 우리 식민지를 확장하십시오" # 10332411982622864491
+  je_colonial_administration_button_expand_france: "프랑스에 있는 우리 식민지를 확장하십시오"
   je_colonial_administration_button_expand_france_desc: "현재 우리는 우리 식민지 종속국이 관리하는 것이 더 나을 프랑스 내 영토를 보유하고 있습니다. 만약 우리가 이 [concept_strategic_region] 내에 하나 이상의 식민지 [concept_subject]를 보유하고 있다면, 그들은 합병될 것입니다." # 5179174243448930287
   je_colonial_administration_button_expand_germany: "[concept_germany] 내 우리 식민지 확장" # 3263422359919394226
   je_colonial_administration_button_expand_germany_desc: "우리는 현재 독일에 영토를 보유하고 있으나, 이는 우리의 식민지 [concept_subject]가 통치하는 것이 더 나을 것입니다. 만약 우리가 이 [concept_strategic_region] 내에 둘 이상의 식민지 [concept_subject]를 보유하고 있다면, 그들은 합병될 것입니다." # 9584703571492593633

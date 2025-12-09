@@ -7,7 +7,7 @@
   DA_OVERSEA_INVESTMENT_NONE_TT: "[Country.GetName]은(는) #b 해외# 투자 자산이 없습니다!" # 11162791530301391433
   DA_FOREIGN_INVESTMENT_TT: "#b 해외 투자:#! [Country.MakeScope.ScriptValue('gdp_ownership_of_other_count')|v0]개국으로부터, [Country.GetAdjective] $GDP_SHORT$의 #tooltippable;tooltip:[Country.GetTooltipTag],da_gui_gdp_ownership_self [Country.MakeScope.ScriptValue('gdp_ownership_by_other')|%v-2]#!에 달합니다." # 13917132523760103082
   DA_FOREIGN_INVESTMENT_NONE_TT: "[Country.GetName]은(는) 어떠한 해외 투자도 #b 없습니다#!" # 9161409562644776557
-  da_gui_gdp_ownership_title: "#title $GDP_SHORT$ $HTAB$ 비중 $TAB$#b -#! [Concept('concept_building_level', '수준')] #b - #!$TAB$[concept_country]#!" # 4268176443944737849
+  da_gui_gdp_ownership_title: "#title $GDP_SHORT$ $HTAB$ 비중 $TAB$#b -#! [Concept('concept_building_level', '수준')] #b - #!$TAB$[concept_country]#!"
   da_gui_gdp_ownership_self: "[GetScriptedGui('da_gui_gdp_ownership_self_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]" # 8099173524167306488
   da_gui_gdp_ownership_self_tt: "@money![Multiply_CFixedPoint(Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self), Country.GetGDP)|Dv]$HTAB$[Country.GetInvestmentGdpFractionInCountry(THIS.GetCountry.Self)|%2v]$HTAB$[Country.GetInvestmentLevelsInCountry(THIS.GetCountry.Self)|v]$HTAB$[THIS.GetCountry.GetName]" # 7560234721443339549
   da_gui_gdp_ownership_other: "[GetScriptedGui('da_gui_gdp_ownership_other_list').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).End)]" # 3559469889416551076
