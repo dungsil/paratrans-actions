@@ -43,6 +43,13 @@ async function processQueue (): Promise<void> {
       task.resolve()
     } catch (error) {
       task.reject(error)
+      // 남은 작업들도 모두 reject 처리
+      while (translationQueue.length > 0) {
+        const remainingTask = translationQueue.shift()
+        if (remainingTask) {
+          remainingTask.reject(new Error('큐 처리가 이전 에러로 인해 중단됨'))
+        }
+      }
       isProcessing = false
       return
     }
