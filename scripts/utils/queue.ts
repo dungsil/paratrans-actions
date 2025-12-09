@@ -56,11 +56,23 @@ async function processQueue (): Promise<void> {
         }
       }
       isProcessing = false
+      // Fix race condition: if new tasks were added after the last queue check, process them
+      if (translationQueue.length > 0) {
+        void processQueue()
+      }
       return
     }
   }
 
   isProcessing = false
+  // Fix race condition: if new tasks were added after the last queue check, process them
+  if (translationQueue.length > 0) {
+    void processQueue()
+  }
+  // Fix race condition: if new tasks were added after the last queue check, process them
+  if (translationQueue.length > 0) {
+    void processQueue()
+  }
 }
 
 async function executeTaskWithRetry (task: QueueTask, retryCount = 0): Promise<void> {
