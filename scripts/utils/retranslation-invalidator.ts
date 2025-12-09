@@ -101,7 +101,7 @@ async function invalidateModLocalization(
         log.debug(`[${modName}] 소스: ${sourceFilePath}`)
         log.debug(`[${modName}] 타겟: ${targetFilePath}`)
 
-        const count = await invalidateTranslationFile(modName, sourceFilePath, targetFilePath, gameType)
+        const count = await invalidateTranslationFile(modName, sourceFilePath, targetFilePath, gameType, useTransliteration)
         invalidatedCount += count
         log.debug(`[${modName}/${file}] 무효화된 항목: ${count}개`)
       }
@@ -122,7 +122,8 @@ async function invalidateTranslationFile(
   modName: string,
   sourceFilePath: string,
   targetFilePath: string,
-  gameType: GameType
+  gameType: GameType,
+  useTransliteration: boolean = false
 ): Promise<number> {
   try {
     log.debug(`[${modName}] 파일 처리 시작: ${sourceFilePath}`)
@@ -166,11 +167,12 @@ async function invalidateTranslationFile(
     log.debug(`[${modName}] 원본 키 개수: ${Object.keys(sourceYaml[sourceLangKey]).length}`)
     log.debug(`[${modName}] 번역 키 개수: ${Object.keys(targetYaml[targetLangKey]).length}`)
 
-    // 번역 검증 수행
+    // 번역 검증 수행 (음역 모드 여부 전달)
     const invalidEntries = validateTranslationEntries(
       sourceYaml[sourceLangKey],
       targetYaml[targetLangKey],
-      gameType
+      gameType,
+      useTransliteration
     )
 
     // 잘못된 번역에 대해 해시 초기화

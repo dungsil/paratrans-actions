@@ -1512,3 +1512,297 @@ describe('리터럴 텍스트와 완전한 변수가 인접한 패턴 처리', (
     expect(result.reason).toContain('잘못된 형식의 변수 패턴')
   })
 })
+
+describe('음역 검증', () => {
+  describe('의미 번역 감지 (문자 수 불균형)', () => {
+    it('짧은 원본에 대해 너무 긴 번역은 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Afar', ''], // 4글자
+        culture_2: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        culture_1: ['아주아주아주먼매우먼곳의먼지역', 'hash1'], // 15글자 (3.75배)
+        culture_2: ['매우긴설명문장입니다정말긴데요', 'hash2'] // 15글자 (3.75배)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(2)
+      expect(result[0].reason).toContain('문자 수 불균형')
+      expect(result[1].reason).toContain('문자 수 불균형')
+    })
+
+    it('음역된 경우 유효한 것으로 수락해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Afar', ''],
+        culture_2: ['Algonquian', ''],
+        culture_3: ['Iroquoian', '']
+      }
+      const translationEntries = {
+        culture_1: ['아파르', 'hash1'], // 음역
+        culture_2: ['알곤킨', 'hash2'], // 음역
+        culture_3: ['이로쿼이', 'hash3'] // 음역
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+  })
+
+  describe('문자 수 불균형 감지', () => {
+    it('짧은 원본에 대해 너무 긴 번역은 의미 번역으로 감지해야 함', () => {
+      const sourceEntries = {
+        name_1: ['Afar', ''] // 4글자
+      }
+      const translationEntries = {
+        name_1: ['아주아주먼매우먼곳의먼지역들', 'hash1'] // 14글자 (4 * 3배 초과, 일반 단어 없음)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+
+    it('적절한 길이의 음역은 수락해야 함', () => {
+      const sourceEntries = {
+        name_1: ['Afar', ''], // 4글자
+        name_2: ['Algonquian', ''] // 10글자
+      }
+      const translationEntries = {
+        name_1: ['아파르', 'hash1'], // 3글자
+        name_2: ['알곤킨', 'hash2'] // 3글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('긴 원본 단어는 음절 수 검증을 건너뛰어야 함', () => {
+      const sourceEntries = {
+        name_1: ['VeryLongNameExample', ''] // 19글자
+      }
+      const translationEntries = {
+        name_1: ['매우긴이름의예시입니다', 'hash1'] // 긴 번역이지만 원본도 김
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      // 원본이 10자 초과이므로 음절 수 검증 건너뜀
+      expect(result.length).toBe(0)
+    })
+  })
+
+  describe('음역 모드가 아닐 때는 검증 건너뛰기', () => {
+    it('useTransliteration=false일 때는 음역 검증을 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        event_1: ['Afar', '']
+      }
+      const translationEntries = {
+        event_1: ['멀리', 'hash1'] // 의미 번역이지만 일반 파일이므로 OK
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', false)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('기본값(useTransliteration 미지정)일 때는 음역 검증을 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        event_1: ['Afar', '']
+      }
+      const translationEntries = {
+        event_1: ['멀리', 'hash1']
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3')
+      
+      expect(result.length).toBe(0)
+    })
+  })
+
+  describe('기존 검증과 음역 검증 함께 동작', () => {
+    it('기존 검증 실패 시 음역 검증은 수행하지 않아야 함', () => {
+      const sourceEntries = {
+        culture_1: ['[GetTitle]', '']
+      }
+      const translationEntries = {
+        culture_1: ['[GetTitle', 'hash1'] // 대괄호 불균형 (기존 검증 실패)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('대괄호 불균형')
+      expect(result[0].reason).not.toContain('의미 번역')
+    })
+
+    it('기존 검증 통과하고 음역 검증 실패 시 음역 오류를 반환해야 함', () => {
+      const sourceEntries = {
+        culture_1: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        culture_1: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자 (기존 검증 OK, 음역 검증 실패)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+  })
+
+  describe('decisions/desc/event 키 제외', () => {
+    it('desc 키워드로 끝나는 키는 음역 검증을 건너뛰어야 함 (예: *_desc)', () => {
+      const sourceEntries = {
+        heritage_desc: ['Very long heritage description', '']
+      }
+      const translationEntries = {
+        heritage_desc: ['매우긴문화유산설명문장입니다', 'hash1'] // 긴 텍스트지만 desc로 끝나므로 OK
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('event 키워드로 끝나는 키는 음역 검증을 건너뛰어야 함', () => {
+      const sourceEntries = {
+        culture_event: ['Very long event description', '']
+      }
+      const translationEntries = {
+        culture_event: ['매우긴이벤트설명문장입니다', 'hash1'] // 긴 텍스트지만 event으로 끝나므로 OK
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('일반 culture/dynasty/names 키는 여전히 음역 검증을 수행해야 함', () => {
+      const sourceEntries = {
+        heritage_name: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        heritage_name: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자 (4 * 3.75배 - 문자 수 불균형)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1)
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+
+    it('여러 제외 키워드가 있어도 하나만 매칭되면 건너뛰어야 함', () => {
+      const sourceEntries = {
+        roman_culture_decision_event_desc: ['Long text', '']
+      }
+      const translationEntries = {
+        roman_culture_decision_event_desc: ['매우긴텍스트입니다', 'hash1'] // decision+event+desc이므로 OK
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0)
+    })
+
+    it('키 중간에 decision이 있는 경우(indecision 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        indecision_culture: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        indecision_culture: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // indecision은 제외되지 않음
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+
+    it('키 중간에 desc가 있는 경우(descendant 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        descendant_name: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        descendant_name: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // descendant는 제외되지 않음
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+
+    it('키 중간에 event가 있는 경우(prevention 등)는 검증해야 함', () => {
+      const sourceEntries = {
+        prevention_culture: ['Test', ''] // 4글자
+      }
+      const translationEntries = {
+        prevention_culture: ['매우긴설명문장입니다정말긴데요', 'hash1'] // 15글자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // prevention은 제외되지 않음
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+  })
+
+  describe('문자 수 불균형 경계값 테스트', () => {
+    it('원본 10자, 번역 30자 (정확히 3배)는 통과해야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노도', 'hash1'] // 정확히 30자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 3배는 경계값이므로 통과
+    })
+
+    it('원본 10자, 번역 31자 (3배 초과)는 무효화되어야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허고노도', 'hash1'] // 31자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(1) // 3배 초과이므로 무효화
+      expect(result[0].reason).toContain('문자 수 불균형')
+    })
+
+    it('원본 11자 (임계값 초과)는 번역이 길어도 검증하지 않음', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghijk', ''] // 11자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허가나마사차파', 'hash1'] // 33자 (3배)
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 원본이 11자이므로 검증 제외
+    })
+
+    it('원본 10자, 번역 29자 (3배 미만)는 통과해야 함', () => {
+      const sourceEntries = {
+        test_name: ['abcdefghij', ''] // 정확히 10자
+      }
+      const translationEntries = {
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노', 'hash1'] // 29자
+      }
+      
+      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
+      
+      expect(result.length).toBe(0) // 3배 미만이므로 통과
+    })
+  })
+})
