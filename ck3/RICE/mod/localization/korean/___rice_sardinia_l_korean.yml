@@ -242,9 +242,9 @@
   RICE_sardinia_orthodox_decision_tooltip: "[GetGeographicalRegion('RICE_sardinia_region').GetName]에는 법률 및 관료제 개선이 필요합니다." # 6822837249195165138
   RICE_sardinia_orthodox_decision_desc: "[GetGeographicalRegion('RICE_sardinia_region').GetName]가 그리스 동방으로의 방향을 다시 틀면서부터, 이 섬의 [rulers|E]들은 나처럼 수 세기 동안 전쟁, 분쟁, 방치로 인해 잃어버린 행정 기반 시설을 재건하기 위해 지속적인 노력을 기울여 왔습니다. 이 섬은 새로운 법률, 헌장, 관직 임명, 정부 절차 덕분에 번성할 것입니다." # 10075735608303921625
   RICE_sardinia_orthodox_decision_confirm: "로마의 유산은 살아 숨 쉽니다." # 5780260951628300463
-  RICE_sardinia_orthodox_decision_effect_tooltip_1: "[ruler|E]이(가) [GetTitleByKey('e_byzantium').GetNameNoTier] 또는 [GetTitleByKey('e_roman_empire').GetNameNoTier]의 통치자이거나, 그들의 [vassals|E] 중 한 명이 귀하에게 [hook_i|E][hook|E](강하거나 약한)를 얻을 작은 가능성이 있습니다." # 10694301598246799782
+  RICE_sardinia_orthodox_decision_effect_tooltip_1: "[ruler|E]가 [GetTitleByKey('e_byzantium').GetNameNoTier]나 [GetTitleByKey('h_roman_empire').GetNameNoTier]의 통치자, 혹은 그들의 [vassals|E] 중 한 명이 당신에게 강하거나 약한 [hook_i|E][hook|E]를 얻을 작은 가능성이 있습니다." # 3796940348000173502
   RICE_sardinia_orthodox_decision_effect_tooltip_2: "비잔티움 행정관이 [courtier|E]로 나타날 작은 가능성이 있습니다." # 6870494419289483104
-  RICE_sardinia_orthodox_decision_effect_tooltip_3: "귀하가 얻는 [prestige|E]는 [GetTitleByKey('e_byzantium').GetNameNoTier] 또는 [GetTitleByKey('e_roman_empire').GetNameNoTier]의 [ruler|E]가 귀하를 얼마나 좋게 생각하는지([opinion|E])에 따라 달라집니다." # 13192096572212108566
+  RICE_sardinia_orthodox_decision_effect_tooltip_3: "귀하가 얻는 [prestige|E]는 [GetTitleByKey('e_byzantium').GetNameNoTier] 또는 [GetTitleByKey('h_roman_empire').GetNameNoTier]의 [ruler|E]가 귀하를 얼마나 좋게 평가하는지([opinion|E])에 따라 달라집니다." # 13787377670762157412
   RICE_sardinia_orthodox_decision_context_tooltip: "#emphasis 역사적 배경:#! 로마 제국은 456년에 반달족에게 사르데냐를 빼앗겼으나, 534년에 유스티니아누스 황제에 의해 재정복되었습니다. 이후 수 세기 동안 이 섬은 로마 통치의 서부 국경 역할을 했으며, 특히 7세기 아랍이 북아프리카를 정복한 이후에는 더욱 그러했습니다. 하지만 1000년대에 이르러 사르데냐는 더 이상 비잔티움의 영향권에 속하지 않았는데, 학자들 사이에서 그 이유에 대해 격렬한 논쟁이 벌어지고 있습니다. 그럼에도 불구하고 사르데냐의 종교, 법률, 문화에 대한 비잔티움의 영향력은 부인할 수 없습니다." # 14341758935893756504
   RICE_sardinia_north_african_decision: "사르데냐의 북아프리카 네트워크 확장하기" # 10963973653782230931
   RICE_sardinia_north_african_decision_tooltip: "[GetGeographicalRegion('RICE_sardinia_region').GetName]와 [GetGeographicalRegion('RICE_ifriqiya_region').GetName]는 관계를 돈독히 할 필요가 있습니다." # 3415238167801108022

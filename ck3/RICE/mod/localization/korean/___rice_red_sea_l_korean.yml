@@ -105,7 +105,7 @@
   RICE_red_sea_bought_camels: "최근 들여온 튼튼하고 강건한 낙타들" # 7291271547173206091
   RICE_red_sea_massawa_mosque: "동료들의 모스크" # 8921772133434868643
   RICE_red_sea_massawa_mosque_desc: "마사와 정착지에는 모스크가 하나 있는데, 작고 소박하지만 이슬람 신자들에게는 매우 중요한 곳입니다. 이곳은 세상에서 가장 초기에 지어진 모스크 중 하나로 여겨지기 때문입니다. 전설에 따르면, 예언자 무함마드가 박해를 피해 메카를 떠났을 때, 그의 추종자들 중 일부가 마사와로 피신하여 이 모스크를 세웠다고 합니다." # 4613722510576092805
-  RICE_red_sea_aspiration_red_sea_riches: "[aspiration|E]: 홍해를 피로 말려버리기" # 11221399009276471130
+  RICE_red_sea_aspiration_red_sea_riches: "[RICE_aspiration|E]: 홍해의 피를 말려라" # 14294850576923683025
   RICE_red_sea_aspiration_red_sea_riches_desc: "#italic 압바스 왕조의 권력 공백을 이용하고 적들을 잔혹하게 짓밟음으로써, 알-우마리는 동부 사막의 재물로 자신의 금고를 채우고 홍해를 따라 가장 두려운 군벌로 부상하기를 바라고 있습니다.#!$RICE_red_sea_aspiration_al_umari_desc$\n\n" # 7232400784529268187
   RICE_red_sea_seek_investors_from_aswan: "아스완에서 투자자를 찾으십시오" # 4926535241008582437
   RICE_red_sea_seek_investors_from_aswan_tooltip: "[ruler|E]의 통치자로서, 당신은 와디 알라키의 광산에 투자자를 찾게 될 것입니다." # 10552823139683702194

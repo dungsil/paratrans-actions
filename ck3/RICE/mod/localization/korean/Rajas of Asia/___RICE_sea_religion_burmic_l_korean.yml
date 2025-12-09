@@ -9,6 +9,11 @@
   burmic_adherent: "나트욘" # 370349694162483988
   burmic_adherent_plural: "민족들" # 6777505327776807815
   burmic_desc: "버마 지역의 백성들에게 있어, 나트 신들, 기타 정령들, 그리고 조상들은 주요 숭배 대상입니다. 불교와 힌두교 신앙이 그들의 땅으로 퍼져나가더라도 이는 변치 않을 것입니다." # 9018427928936436605
+  burmic_old: "오래된 나타크웨" # 5557426399615565631
+  burmic_old_adj: "오래된 나타크웨" # 5557426399615565631
+  burmic_old_adherent: "오래된 국가" # 13303921507994234341
+  burmic_old_adherent_plural: "오래된 국가들" # 46174981939634920
+  burmic_old_desc: "$burmic_desc$" # 9426267979593097221
   burmic_high_god_name: "마하기리" # 11776305195519072688
   burmic_high_god_name_possessive: "마하기리의" # 33089524516786608
   burmic_high_god_name_alternate: "마가 민" # 12209714348495825888

@@ -67,7 +67,7 @@
   RICE_socotra_host_poetry_contest_courtier_won_log: "[CHARACTER.GetShortUIName|U]가 시 짓기 대회에서 우승했습니다." # 16321773251949888244
   RICE_socotra_host_poetry_contest_courtier_won_log_title: "$RICE_socotra_host_poetry_contest_courtier_won_log$" # 11874914849968883780
   TRAVEL_NAME_FOR_activity_RICE_socotra_host_poetry_contest: "[Character.GetFirstNamePossessiveNoTooltip] $activity_RICE_socotra_poetry_contest$" # 7442228800895265804
-  RICE_socotra_host_poetry_contest_judge_intent_req: "[GetTrait('poet').GetName( GetNullCharacter )] [trait|E]를 보유하고 있거나, 적어도 [diplomacy|E] 또는 [learning|E]에서 #bold [EmptyScope.ScriptValue('decent_skill_rating')|0]# 이상이어야 합니다. 또한 [diplomacy|E]와 [learning|E] 모두에서 #bold [EmptyScope.ScriptValue('mediocre_skill_rating')|0]# 미만일 수는 없습니다." # 8569149225777620453
+  RICE_socotra_host_poetry_contest_judge_intent_req: "당신은 [GetTrait('lifestyle_poet').GetName( GetNullCharacter )] [trait|E]를 가지고 있거나, 적어도 [diplomacy|E] 또는 [learning|E]에서 #bold [EmptyScope.ScriptValue('decent_skill_rating')|0]#! 이상이어야 합니다. 또한 [diplomacy|E]와 [learning|E] 중 어느 하나라도 #bold [EmptyScope.ScriptValue('mediocre_skill_rating')|0]#! 미만일 수 없습니다." # 14553735657471800641
   NOT_RICE_socotra_host_poetry_contest_judge_intent_req: "$RICE_socotra_host_poetry_contest_judge_intent_req$" # 10233573507335821821
   game_concept_indian_ocean_pirate: "인도양 해적" # 18364884450763701091
   game_concept_indian_ocean_pirates: "인도양 해적들" # 528378064322841476

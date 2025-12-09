@@ -72,7 +72,7 @@
   TRAVEL_NAME_FOR_activity_RICE_yazd_sadeh_festival: "[Character.GetFirstNamePossessiveNoTooltip] $activity_RICE_yazd_sadeh_festival$" # 15182781693827197302
   RICE_yazd_sadeh_festival_grand_cost_amount: "성대한 사데 축제" # 6193490870041713362
   RICE_yazd_sadeh_festival_chak_chak_cost_amount: "착착의 사데 축제" # 7683074539831913993
-  RICE_yazd_sadeh_festival_poetry_intent_req: "[GetTrait('poet').GetName( GetNullCharacter )] 또는 [GetTrait('scholar').GetName( GetNullCharacter )] [traits|E]를 보유하고 있거나, 혹은 [diplomacy|E]나 [learning|E] 능력치가 최소 #bold [EmptyScope.ScriptValue('medium_skill_rating')|0]#! 이상이어야 합니다." # 6821221931400920298
+  RICE_yazd_sadeh_festival_poetry_intent_req: "[GetTrait('lifestyle_poet').GetName( GetNullCharacter )] 또는 [GetTrait('scholar').GetName( GetNullCharacter )] [traits|E] 특성을 보유하고 있거나, 최소한 [diplomacy|E] 또는 [learning|E] 능력치가 #bold [EmptyScope.ScriptValue('medium_skill_rating')|0]#! 이상이어야 합니다." # 16657453089171164200
   NOT_RICE_yazd_sadeh_festival_poetry_intent_req: "$RICE_yazd_sadeh_festival_poetry_intent_req$" # 921116437025171724
   building_type_RICE_yazd_arg_e_bam_01: "아르그 에 밤" # 2527527491136898815
   building_type_RICE_yazd_arg_e_bam_01_desc: "밤 성채는 세계에서 가장 큰 거주 건물이며, 수세기 동안 견고하게 서 있었던 웅장하고 난공불락의 요새로, 사산 왕조의 창시자인 아르다시르의 전설적인 숙적이었던 케르만(Kerman)의 하프트바드(Haftvad)의 수도였습니다. 이 요새는 세 겹의 성벽으로 이루어져 있으며 거대한 해자로 둘러싸여 있습니다. 내부에는 상점, 예배당, 주택들이 있는 하나의 도시가 자리하고 있습니다." # 12640453473619307638
@@ -145,7 +145,7 @@
   RICE_yazd_sadeh_burned_animals_desc: "동물 학대는 정말 재미있군!" # 7687122060284369241
   RICE_yazd_sadeh_animal_cruelty_approve: "동물에게 불을 붙이는 것은 재미있다" # 15740548998738239742
   RICE_yazd_sadeh_animal_cruelty_disapprove: "동물에게 불을 붙이는 것은 잔혹한 행위입니다" # 3624379275802098274
-  RICE_yazd_aspiration_claim_seljuk_throne: "[aspiration|E]: 셀주크 왕좌 주장하기" # 10806570614981402559
+  RICE_yazd_aspiration_claim_seljuk_throne: "[RICE_aspiration|E]: 셀주크 왕좌를 주장하라" # 18356264772150138509
   RICE_yazd_aspiration_claim_seljuk_throne_desc: "#italic 카와르드가 그의 가문에서 가장 선임자임에도 불구하고 셀주크 제국을 다스리지 못하는 것은 치욕입니다. 그분은 셀주크를 옛 전통으로 되돌리고 마땅히 자신의 것이어야 할 왕좌를 되찾기를 원하십니다.#!$RICE_yazd_aspiration_qawurd_desc$\n\n" # 2495532327064012131
   RICE_yazd_yakhchal_adventurer_modifier: "야흐찰의 얼음" # 17429224349256488965
   RICE_yazd_yakhchal_adventurer_modifier_desc: "이 인물은 최근 [Glossary( 'Yakhchal', 'YAKHCHAL_GLOSS' )]에서 얼음을 구매했습니다." # 3502837411752157220
@@ -262,7 +262,7 @@
   yazd.0009.t: "#bold 선왕의 적자상속#" # 3256694171558880921
   yazd.0009.desc: "아버지의 맏아들이자 숙부의 맏조카로서, 저는 숙부의 뒤를 이어 셀주크의 지도자가 될 것이라 기대했습니다. 하지만 제가 아무리 노력했음에도 불구하고, 숙부께서 돌아가셨을 때 그분은 가문의 운명을 제 동생인 [alp_arslan.GetFirstName]에게 맡기셨습니다. 실망했고, 지금도 실망스럽다는 것을 인정합니다.\n\n저는 제 차례를 기다리기로 결정했습니다. 만약 우리가 전통적인 [ROOT.Char.GetCulture.GetName] 관습을 따른다면, 왕위 계승에 있어서 저는 제 조카들보다 선임권을 가지게 될 것이며, 우리 군대의 많은 장교들이 이에 동의한다는 것을 알고 있습니다.\n\n제가 동생보다 오래 살 수 있을지는 모르겠습니다. 하지만 [ROOT.Char.GetFaith.HighGodName]께서 뜻하신다면, 언젠가 저의 인내와 노력이 보상받는 날이 올지도 모릅니다. 가장 선임인 셀주크 왕자로서, 위대한 셀주크 제국은 제가 다스리게 될 것입니다!" # 10893363022530387295
   yazd.0009.a: "그것은 단지 나의 정당한 권리일 뿐이오." # 15899466809915429626
-  yazd.0009.qawurd.tooltip: "#bold 카우르드의 [aspiration|E]: 셀주크 왕좌 주장#!$RICE_yazd_aspiration_qawurd_desc$\n" # 8374450929773354034
+  yazd.0009.qawurd.tooltip: "#bold 카우르드의 [RICE_aspiration|E]: 셀주크 왕좌 탈환#!$RICE_yazd_aspiration_qawurd_desc$\n" # 16524268580721377238
   yazd.0009.info: "#emphasis 역사적 배경:#! 카우르드는 형인 알프 아르슬란과 긴장 관계였음에도 불구하고, 알프 아르슬란이 살아있는 동안에는 그의 자리를 찬탈하려는 시도를 하지 않았습니다.\n\n하지만 1072년, 알프 아르슬란이 포로였던 적에게 뜻밖의 죽음을 당하고 그의 아들인 어린 말리크 샤가 뒤를 잇자, 카우르드는 셀주크 왕좌를 차지할 기회라고 여겨 반란을 일으켰습니다. 하마단 근처에서 벌어진 결정적인 전투에서 말리크 샤의 군대에 있던 많은 투르크멘들이 카우르드의 편으로 돌아섰음에도 불구하고, 말리크 샤가 승리했고 카우르드는 처형당했습니다.\n\n그럼에도 불구하고 카우르드의 두 아들인 술탄 샤와 투란 샤는 말리크 샤의 봉신으로서 케르만에 남아 있었습니다. 셀주크의 케르만 분가는 1100년대 후반까지 이어졌습니다." # 12003507371232813219
   yazd.0010.t: "$RICE_historical_aspiration_fulfilled_title$" # 6312590152546762382
   yazd.0010.desc: "내 평생의 꿈이 이루어졌소. #italic 나#!, [qawurd.GetFirstName]는 위대한 셀주크 제국을 다스리게 되었소. 나보다 자격이 부족한 어린 친척들은 내 밑에서 싸우고 잘 섬기기에 적합하지만, 우리 가문의 선임 왕자로서 이 왕좌에 앉는 것은 본래 나의 권리였소. 그것은 나의 #italic 타고난 권리#!였지.\n\n나를 지지해 준 투르크 전사들과 부족민들 역시 매우 기뻐하고 있소. 그들은 내 일부 친척들이 선대 승계와 같은 우리의 옛 전통을 버리는 것처럼 보이는 것에 대해 우려했었소. 이제 그들은 나에게 많은 것을 기대하고 있으며, 우리의 뿌리에 충실함으로써 그들의 소망을 달래주는 것이 현명할 것이오.\n\n어쨌든, 우리 가문은 여전히 강건하오. 내가 이 제국의 고삐를 잡음으로써, 우리는 시간이 지남에 따라 더욱 강해질 것이오." # 7475959209268492626

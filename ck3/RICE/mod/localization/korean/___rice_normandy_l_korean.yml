@@ -351,7 +351,7 @@
   RICE_normandy_apple_orchards: "사과 과수원 투자" # 4612868970837267181
   RICE_normandy_apple_orchards_desc: "사과는 노르망디의 중요한 수출품이며, 지역 통치자들은 이 지역의 산업 성장을 장려하기 위한 조치를 취했습니다." # 7859231552541655476
   RICE_normandy_brioche: "브리오슈를 많이 먹기" # 10421203968872225914
-  RICE_normandy_aspiration_settle_in_normandy: "[aspiration|E]: 노르망디에 정착하기" # 11400334547087596607
+  RICE_normandy_aspiration_settle_in_normandy: "[RICE_aspiration|E]: 노르망디에 정착하기" # 8433674370789934723
   RICE_normandy_aspiration_settle_in_normandy_desc: "#italic 흐롤프는 기독교의 신으로부터 북부 프랑스에 정착하여 새로운 영역을 세우고 자신의 백성을 더 나은 미래로 이끌라는 계시를 받았다고 전해집니다.#!$RICE_normandy_aspiration_rollo_desc$\n\n" # 11619891603707664213
   RICE_normandy_struggle_ending_conquest_decision: "노르만 정복" # 5495327025303258902
   RICE_normandy_struggle_ending_conquest_decision_tooltip: "당신의 백성을 위해 [kingdom|E] 전체를 정복하십시오" # 9763271978793528843
@@ -1010,7 +1010,7 @@
   normandy.0080.c.info: "$normandy.0080.intro.info$롤로에 대한 가장 초기의 전기적 출처는 롤로의 후손인 노르망디 공작들의 요청으로 10세기 말에서 11세기 초에 노르망디 성직자 뒤도 생캉탱인이 저술한 #italic 노르만인의 역사#!이다. 뒤도는 롤로가 덴마크인이라고 주장했다.\n\n\n뒤도의 저술은 편향성이 매우 심하고 많은 환상적인 허구들을 담고 있지만, 롤로의 시대에 가장 가까운 기록이다. 게다가 공작들과 가까웠던 뒤도는 롤로를 기억하는 사람들을 알고 있었을 수도 있다." # 17362713465611840302
   normandy.0080.tooltip: "만약 나중에 노르망디로 운명을 따라가게 된다면, 귀하의 [dynasty|E]는 #V de Normandie#!로 이름이 바뀔 것입니다." # 15627929729967161719
   normandy.0080.d: "그 노예는 멍청하군. 나는 그런 꿈을 꾼 적이 없으며, 내 운명은 내가 정한다!" # 10599075600452002102
-  normandy.0080.d.tooltip: "@warning_icon! #X 당신은 롤로의 이벤트 연쇄를 건너뛰어 롤로의 과거를 결정하고 추후 다양한 보너스를 얻을 기회를 잃게 됩니다. 또한 노르망디 정착 [aspiration|E]을 잃고 이를 달성했을 때 얻는 관련 보너스도 잃게 됩니다!#" # 18299285615481182693
+  normandy.0080.d.tooltip: "@warning_icon! #X 귀하는 롤로의 이벤트 연쇄를 건너뛰어 롤로의 과거를 결정하고 나중에 다양한 보너스를 얻을 기회를 잃게 됩니다. 또한, 노르망디에 정착하는 [RICE_aspiration|E]를 잃고 이를 달성했을 때 얻는 관련 보너스도 잃게 됩니다.!#" # 13706308993319268623
   normandy.0080.d.info: "$normandy.0080.intro.info$" # 16044828205523587695
   normandy.0081.t: "롤로의 기원" # 9602299231229680689
   normandy.0081.desc: "덴마크의 강력한 통치자인 [king.GetTitledFirstName]에 대한 우려는 부인할 수 없습니다.\n\n저희 가문은 이미 [king.GetFirstNameNoTooltip]와 여러 차례 충돌을 빚었는데, 이는 저희가 그가 주장하는 권위에 굴복하지 않기 때문입니다. 저와 제 휘하 사람들은 그가 자신과 스칸디나비아 전역에 자신의 권력을 강제하려는 시도를 달가워하지 않습니다. 결국 제 아버지는 스스로 왕이라 칭하는 거만한 바보들에게 결코 머리를 조아리지 말라고 늘 가르치셨습니다." # 10544149725617651218

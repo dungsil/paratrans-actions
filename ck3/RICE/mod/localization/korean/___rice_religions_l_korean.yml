@@ -4,6 +4,8 @@
   fervor_gain_RICE_restored_idol_zun_aruna: "아루나 산에 주운 신의 우상을 복원했습니다." # 16085834876116672931
   fervor_gain_RICE_closed_aswan_temple: "아스완의 사원을 공식적으로 폐쇄하여 신앙의 우월함을 증명했습니다." # 9999624045388581380
   fervor_gain_RICE_reopened_aswan_temple: "아스완의 사원을 공식적으로 재개방하여 다시 이용할 수 있도록 하였습니다." # 10897838774187182784
+  RICE_incompatible_doctrine_monotheism_trigger: "$doctrine_monotheist_name$ [doctrine|E]와 호환되지 않습니다" # 9739841768159434908
+  RICE_incompatible_doctrine_polytheism_trigger: "$doctrine_polytheist_name$ [doctrine|E]와 호환되지 않습니다" # 16532247192870100133
   holy_site_harran_name: "하란" # 3387555632618565405
   holy_site_harran_effect_name: "[holy_site|E] #weak ($holy_site_harran_name$)#!로부터" # 7798633797934825848
   holy_site_giza_name: "기자" # 10967684481223106632
@@ -48,6 +50,18 @@
   holy_site_ayn_farrah_effect_name: "[holy_site|E] #weak ($holy_site_ayn_farrah_name$)#!로부터" # 3311154617842430948
   holy_site_abwab_name: "셴디" # 691893528264380067
   holy_site_abwab_effect_name: "[holy_site|E] #weak ($holy_site_abwab_name$)#!로부터" # 2108074721700580548
+  holy_site_MAL_semantan_name: "세만탄" # 15951905092886343
+  holy_site_MAL_semantan_effect_name: "[holy_site|E] #weak ($holy_site_MAL_semantan_name$)#!로부터" # 3735505638075203208
+  holy_site_srihatta_name: "스리하타" # 14889722517801432143
+  holy_site_srihatta_effect_name: "[holy_site|E] #weak ($holy_site_srihatta_name$)#!로부터" # 8325155134074141976
+  holy_site_goalpara_name: "골파라" # 13705926333616052730
+  holy_site_goalpara_effect_name: "[holy_site|E] #weak ($holy_site_goalpara_name$)#!" # 3262947764056914809
+  holy_site_kamarupanagara_name: "카마루파나가라" # 9716734951492736800
+  holy_site_kamarupanagara_effect_name: "[holy_site|E] #weak ($holy_site_kamarupanagara_name$)#로부터!" # 2707292333562797783
+  holy_site_tripura_name: "트리푸라" # 2419925917832355462
+  holy_site_tripura_effect_name: "[holy_site|E] #weak ($holy_site_tripura_name$)#!" # 4945338398028874589
+  holy_site_chau_phong_name: "퐁쩌우" # 12742226042727433144
+  holy_site_chau_phong_effect_name_name: "[holy_site|E] #weak ($holy_site_chau_phong_effect_name$)#!로부터" # 4256445845845828782
   semitic_religion: "셈족의" # 5882046243640426878
   semitic_religion_adj: "셈족의" # 5882046243640426878
   semitic_religion_adherent: "셈족의" # 5882046243640426878
@@ -625,6 +639,7 @@
   sotho_pagan_old_adherent_plural: "오래된 모디모이스트들" # 8575696830057648632
   sotho_pagan_old_desc: "$sotho_pagan_desc$" # 17008030096572774367
   tsonga_pagan: "시크wem부교" # 9344472884849386843
+  tsonga_pagan_adj: "시크벰부이스트" # 6820348553213070079
   tsonga_pagan_adherent: "시크웸부이스트" # 6820348553213070079
   tsonga_pagan_adherent_plural: "시크웸부교도" # 16271795302550806913
   tsonga_pagan_desc: "시크웸부는 쫑가족의 최고신이지만, 직접 숭배되지는 않습니다. 대신, 종교적 관행은 조상들의 영혼을 기리는 데 중점을 둡니다. 영혼 빙의는 조상들이 산 자들과 소통하는 한 가지 방법이며, 이 경우 빙의된 사람은 그 영혼을 축출하기보다는 그 영혼을 받아들이는 법을 배워야 합니다." # 7601156284368795901
@@ -913,3 +928,25 @@
   rice_doctrine_northeast_african_tattoo_name: "$special_doctrine_rice_doctrine_northeast_african_tattoo_name$" # 5542622868316768932
   special_doctrine_rice_doctrine_northeast_african_tattoo_desc: "전통적으로, 종교적 상징의 문신은 북동아프리카에서 신념에 관계없이 마법적, 보호적, 영적인 힘을 지닌 것으로 여겨졌습니다." # 15497836344726502916
   doctrine_parameter_rice_unlock_northeast_african_tattoo_decision: "[culture|E]에 관계없이 #bold $RICE_east_african_tattoo_decision$# [decision|E]를 해금합니다!" # 9694487469892223531
+  special_doctrine_is_austroasiatic_faith_name: "오스트로아시아어족의 뿌리" # 15969302222257601995
+  is_austroasiatic_faith_name: "$special_doctrine_is_austroasiatic_faith_name$" # 10690351247964747544
+  special_doctrine_is_austroasiatic_faith_desc: "물리적으로나 시간적으로나 크게 떨어져 있지만, 오스트로아시아어족 사용자들과 그들의 영향을 받은 이들은 호랑이 신이나 쌀의 신에 대한 숭배 또는 두려움과 같은 놀랍도록 유사한 종교적 신념을 공유하고 있습니다." # 3417546507548654751
+  doctrine_parameter_hostility_override_special_doctrine_is_austroasiatic_faith: "$special_doctrine_is_austroasiatic_faith_name$ [doctrine|E]를 가진 [faiths|E]는 $hostility_hostile_tooltippable$ 또는 $hostility_evil_tooltippable$ 대신 [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]로 간주됩니다." # 15513661386572433173
+  doctrine_parameter_rice_unlocks_tiger_spirits_content: "$rice_doctrine_austroasiatic_tiger_god_name$ [doctrines|E]와 $RICE_austroasiatic_tiger_god_decision$ [decision|E]를 해금합니다." # 10881470110662852889
+  rice_doctrine_austroasiatic_tiger_god_name: "호랑이 정령들" # 12815877903608771472
+  rice_doctrine_austroasiatic_tiger_god_desc: "호랑이 숭배는 전 세계적으로 발견되지만, 많은 오스트로아시아 [faiths|E]에서 공유된 유산의 일부로서 영적으로 강력한 호랑이 신이나 정령이 그들의 우주론과 일상적인 영적 생활에서 핵심적인 역할을 합니다. 이러한 종교에서는 특정 상황에서 사람들이 심지어 늑대인간(혹은 호랑이인간)으로 변할 수도 있다고 믿어집니다." # 8322364196062933185
+  rice_austroasiatic_wise_tiger_name: "현명한 호랑이 정령들" # 13707989901012220906
+  rice_austroasiatic_wise_tiger_desc: "호랑이 정령들은 비록 거칠고 심지어 두렵기까지 하지만, 그들이 태고의 전설적인 과거에 우리에게 신성한 지식을 주었기에 궁극적으로는 자비롭습니다." # 5622190073486123118
+  doctrine_parameter_rice_austroasiatic_tiger_mechanic_wisdom: "$RICE_austroasiatic_tiger_god_decision$ [decision|E]는 [GetModifier('RICE_austroasiatic_wise_tiger_modifier').GetNameWithTooltip] [modifier|E]를 제공합니다." # 7444349683843544672
+  rice_austroasiatic_majestic_tiger_name: "장엄한 호랑이 정령들" # 4157993649361512786
+  rice_austroasiatic_majestic_tiger_desc: "비록 우리가 호랑이 정령을 두려워하지만, 그들은 궁극적으로 위엄 있고, 왕족 같으며, 공정한 본성을 지닌 존재들입니다. 우리가 그들에게 마땅한 존경을 표한다면, 그들도 우리를 도와줄지도 모릅니다." # 2497540027364332437
+  doctrine_parameter_rice_austroasiatic_tiger_mechanic_majesty: "$RICE_austroasiatic_tiger_god_decision$ [decision|E]는 [GetModifier('RICE_austroasiatic_majestic_tiger_modifier').GetNameWithTooltip] [modifier|E]를 제공합니다." # 14291283231140819931
+  rice_austroasiatic_retributive_tiger_name: "응징하는 호랑이 정령들" # 11691457379265509587
+  rice_austroasiatic_retributive_tiger_desc: "광야에는 살아있는 자들을 노리는 호랑이 정령들이 숨어 있습니다. 그들은 특히 부덕하거나 금기를 어긴 자와 같이 벌을 받아 마땅한 이들을 노립니다. 그들은 마땅한 의식을 통해 달래져야 합니다." # 10640224885421488050
+  doctrine_parameter_rice_austroasiatic_tiger_mechanic_danger: "$RICE_austroasiatic_tiger_god_decision$ [decision|E]는 [GetModifier('rice_austroasiatic_retributive_tiger_modifier').GetNameWithTooltip] [modifier|E]를 제공합니다." # 3917205950461547451
+  rice_austroasiatic_savage_tiger_name: "흉포한 호랑이 정령들" # 15431096758067331116
+  rice_austroasiatic_savage_tiger_desc: "호랑이 정령들은 이성적으로 대화하거나 통제하기가 어렵거나 불가능하며, 그들의 영역에 무방비 상태로 들어서는 어리석은 자, 특히 부도덕하거나 금기를 어긴 자들을 공격하고 빙의시키며 파멸로 이끌 것입니다." # 14650146726115969654
+  doctrine_parameter_rice_austroasiatic_tiger_mechanic_savagery: "$RICE_austroasiatic_tiger_god_decision$ [decision|E]는 [GetModifier('RICE_austroasiatic_savage_tiger_modifier').GetNameWithTooltip] [modifier|E]를 제공합니다." # 13387903054135247418
+  rice_austroasiatic_no_tiger_name: "약해진 호랑이 정령" # 13328804763935657804
+  rice_austroasiatic_no_tiger_desc: "호랑이가 영적인 힘을 가졌을지는 모르나, 호랑이 정령이 존재한다 하더라도 숭배하거나 두려워할 만한 주된 이계의 힘은 아닙니다. 우리는 정글과 그 혜택에 굴복하지 않습니다." # 9241964288218853905
+  doctrine_parameter_rice_austroasiatic_tiger_mechanic_disabled: "$RICE_austroasiatic_tiger_god_decision$ [decision|E]는 비활성화되어 있습니다." # 15670259580623761409

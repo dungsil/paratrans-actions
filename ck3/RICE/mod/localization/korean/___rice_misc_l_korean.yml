@@ -4,13 +4,13 @@
   setting_RICE_intro_event_on_desc: "게임을 불러올 때 한 번 발동하는 소개 이벤트는 현재 사용 중인 RICE 버전과 최신 기능을 알려줍니다. 이는 모드가 올바르게 설치되었고 최신 버전을 사용 중인지 확인하는 데 도움이 됩니다." # 11839336696882962670
   setting_RICE_intro_event_off: "끔" # 8927729592684634549
   setting_RICE_intro_event_off_desc: "시작 이벤트는 비활성화됩니다." # 11155068692559715121
-  RICEintro.0000.t: "RICE 1.17.0\"마쿠리\"" # 18282544586870254689
-  RICEintro.0000.desc: "RICE 1.17.0 설치가 성공적으로 완료되었습니다. 이 이벤트는 게임 시작 시에만 발생하며 게임 규칙을 통해 비활성화할 수 있습니다. 최신 업데이트에 추가된 일부 기능은 새 게임을 필요로 한다는 점에 유의하십시오. 스팀 창작마당, PI 포럼 또는 제 디스코드에서 버그를 신고하거나 피드백을 제공해 주십시오.\n\nRICE는 현재 전 세계의 다양한 문화, 종교 및 지역을 다루는 #V #bold 40#!#! 가지 풍미 팩을 포함하고 있습니다. 가장 새로운 풍미 팩은 #V #bold 누비아: 쿠시의 후예들#!#!입니다.\n\n이 풍미 팩은 [GetGeographicalRegion('RICE_greater_nubia_region').GetName]에 대한 새로운 풍미를 추가하는 데 중점을 두며, 두 가지 새로운 [situation_situations|E]인 [RICE_nile_river|E]와 [RICE_baqt|E]를 제공합니다." # 8296585363928881088
+  RICEintro.0000.t: "RICE 1.18.0\"선비-신사 계\"" # 163815602073961332
+  RICEintro.0000.desc: "RICE 1.18.0이 성공적으로 설치되었습니다. 이 이벤트는 게임 시작 시에만 발생하며 게임 규칙을 통해 비활성화할 수 있습니다. 최신 업데이트에서 추가된 일부 기능은 새 게임을 필요로 한다는 점에 유의하십시오. Steam 창작마당, PI 포럼 또는 제 디스코드에서 버그를 신고하거나 피드백을 제공해 주십시오.\n\nRICE는 현재 전 세계의 다양한 문화, 종교 및 지역을 다루는 #V #Bold 42#!#! 가지 풍미 팩을 포함하고 있습니다. 가장 새로운 풍미 팩은 #V #Bold 항저우: 송나라의 영화#!#!와 #V #Bold 아슬란인: 정글 평화주의자들#!#!입니다.\n\n이 풍미 팩들은 각각 [GetTitleByKey('c_hangzhou').GetNameNoTier]와 [RICE_culture.GetCollectiveNoun]에 새로운 풍미를 더하는 데 중점을 둡니다." # 11320717487415338944
   RICEintro.0000.a: "좋군!" # 2933982366699918903
   RICEintro.0000.b: "이번 업데이트의 새로운 추가 사항에 대한 개요를 원하시는군요." # 2296478953061761299
   RICEintro.0000.c: "이 메시지를 향후 이 저장 파일에서는 비활성화해 주십시오." # 15745156042237332393
   RICEintro.0000.c.tooltip: "#EMP 이 옵션을 선택하면 앞으로 이 저장 파일에 대한 성공적인 업데이트 알림을 받지 못하게 됩니다!#!" # 11916024186952248667
-  RICEintro_intro_tooltip: "#EMP “누비아인들은 에티오피아보다 더 크고 부유한 나라를 가진 기독교도들이다. 이집트의 나일강이 그들의 도시와 영토를 관통한다. 그들의 마을은 번성하며 비옥한 땅을 가지고 있다.”\n- 이븐 하우칼, 10세기 무슬림 여행가 및 지리학자#!" # 2648398314517638565
+  RICEintro_intro_tooltip: "#EMP “내 시야를 흐리는 흘러가는 구름을 두려워하지 않으리니, 나는 가장 높은 곳에 서 있기 때문이다.”\n– 왕안석 (1021 - 1086), 송나라의 정치가, 철학자, 시인#!" # 17808778604282883590
   RICEintro_TFE_warning_tooltip: "\n----------------------------------------\n\n#V #bold 타락한 독수리#!#!가 실행 중인 것으로 감지되었습니다. 이것이 사실이라면, 새 게임을 시작하기 전에 모드 로드 순서에서 TFE가 RICE보다 #underline 아래에# 오도록 #bold 확인하십시오#!." # 5055225297519247687
   RICEintro_ROA_warning_tooltip: "\n----------------------------------------\n\n#V #bold 아시아의 라자#!#!가 실행 중인 것으로 감지되었습니다. 사실이라면, 새 게임을 시작하기 전에 모드 로드 순서에서 ROA가 RICE #underline 아래에 오도록 #bold 확인하십시오#!." # 13831992960958359029
   RICE_decision_pagan_requirement: "이교도 [faith|E]를 따릅니다." # 2667718468984044947
@@ -171,7 +171,7 @@
   RICE_brittany_horse_region: "브르타뉴 및 인접 지역" # 17701268740422672643
   action_RICE_historical_aspiration: "[GetPlayer.Custom('RICE_historical_aspiration_action_title_name')]" # 11110513065511628458
   action_RICE_historical_aspiration_label: "당신은 달성할 수 있는 [historical_aspirations|E]를 가지고 있습니다." # 3088901280367166315
-  action_RICE_historical_aspiration_desc_default: "여러 보상을 얻기 위해 하나 이상의 [objectives|E]를 달성하여 [aspiration|E]를 이루십시오." # 18245156233832033699
+  action_RICE_historical_aspiration_desc_default: "[RICE_aspiration|E]을 달성하기 위해 하나 이상의 [objectives|E]를 완수하여 다양한 보상을 획득하십시오." # 7487366844899173782
   action_RICE_historical_aspiration_desc: "[GetPlayer.Custom('RICE_historical_aspiration_action_desc')]\n\n@alert_icon! #alert_trial [historical_aspirations|E]의 완료는 보통 연초에 계산됩니다!#" # 14148866787045702811
   action_RICE_historical_aspiration_click: "#내 인물 정보 보기#" # 15810112739006709897
   RICE_historical_aspiration_fulfilled: "[GetPlayer.GetTitledFirstName] 님께서 [GetPlayer.GetHerHis] [GetPlayer.Custom('RICE_historical_aspiration_modifier_desc')]을/를 이루셨습니다." # 12950234104406976318
@@ -183,8 +183,8 @@
   RICE_dynn_yngling_motto: "명예로써 우리는 승리하리라" # 13510113384523651412
   Goliath: "골리앗" # 4722524408798155140
   dynn_von_bern: "폰 베른" # 8618270525867681899
-  Weilian: "웨이란" # 15960400328285721859
-  Chenyu: "첸유" # 18229542385553249836
+  Van_Nhan: "반년" # 16305277934654558664
+  Chenyu_6668_745C: "$Chen_6668$ $Yu_745C$" # 14306389956182482029
   Valerie: "발레리" # 11448700949970169718
   RICE_friend_reason_placeholder: "[CHARACTER.GetShortUIName|U]와 [TARGET_CHARACTER.GetShortUIName]는 서로의 교제를 즐기게 되었습니다." # 5719785269926253061
   RICE_rival_reason_placeholder: "[CHARACTER.GetShortUIName|U]와 [TARGET_CHARACTER.GetShortUIName]는 모종의 차이로 인해 서로를 싫어하게 되었습니다." # 18121270760993488226
@@ -205,6 +205,8 @@
   RICE_NOT_has_tribal_holding_req: "[tribal_holding|E]를 소유한 [county|E]가 없습니다." # 13562642988425033095
   RICE_geographical_travel_req: "[TARGET_CHARACTER.GetUINamePossessiveNoTooltip|U] [domain|E][AddTextIf(TARGET_CHARACTER.IsLandlessRuler, Concatenate(' 혹은 ', TARGET_CHARACTER.GetDomicile.GetType.GetName ) )]은(는) [GEOGRAPHICAL_REGION.GetName]에 있습니다." # 6155352488011841925
   NOT_RICE_geographical_travel_req: "#EMP#는 [GEOGRAPHICAL_REGION.GetName] 내에 [county|E]나 [domicile|e]를 소유하고 있지 않습니다!" # 13303399201093114876
+  Man_Wol: "만월" # 575828522126225150
+  Giac_Hai: "지아하이" # 5589033478321690984
   activity_RICE_hot_springs_visit_host_an_a: "$host_activity_a$" # 13713790857143020716
   activity_RICE_hot_springs_visit: "온천 방문" # 647038537016052024
   activity_RICE_hot_springs_visit_desc: "이 세상에는 수많은 유명한 [hot_springs|E]가 있으며, 저는 그중 하나와 가까이 살게 된 행운을 누리고 있습니다. 일상의 근심을 잊고 스트레스를 해소하기 위해 그곳을 방문해야겠습니다." # 9117503003778629014
@@ -290,12 +292,12 @@
   game_concept_local_pilgrimage: "지역 성지 순례" # 10334250218750586114
   game_concept_local_pilgrimages: "지역 성지 순례" # 11430723927777496554
   game_concept_local_pilgrimage_desc: "$game_concept_local_pilgrimages$는 특정 종교 시설 근처에서 통치하거나 거주하는 [rulers|E]가 이용할 수 있는 [activities|E]입니다. 이 순례는 자신의 [faith|E]의 [holy_sites|E]로 떠나는 더 거대한 [pilgrimages|E]와는 구별되며, 범위와 영향력이 훨씬 작습니다.\n\n모든 사람이 지역 순례를 이용할 수 있는 것은 아닙니다. 또한, [ruler|E]가 적절한 위치에 있더라도, 특정 [decisions|E]가 내려지거나 특정 사건이 발생해야만 일부 지역 순례가 가능해집니다. 지역 순례는 때때로 순례로 얻는 이점을 증가시키거나 순례에 참여할 수 있는 사람들의 지리적 범위를 넓힐 수 있는 추가적인 특별 [decisions|E]와 관련되기도 합니다.\n\n어쨌든, 일반적인 [pilgrimages|E]보다 적은 이점을 제공함에도 불구하고, 지역 순례는 특정 목적지에 따라 특별한 [character_modifiers|E]와 같은 고유한 이점을 제공하는 경우가 많습니다. 게다가, 더 거대한 [pilgrimage|E]를 준비하기 위해 일반적인 [pilgrimages|E]보다 느린 속도이지만 [GetTrait('pilgrim').GetName( GetNullCharacter )] [trait_level_track_xp|E]를 얻을 수 있는 좋은 방법이기도 합니다." # 17562593228110268033
-  game_concept_aspiring: "야심 찬" # 297683825570704205
-  game_concept_aspires: "열망하다" # 10560010359615094533
-  game_concept_aspired: "열망하는" # 11533683879460386850
-  game_concept_aspire: "열망하다" # 2232911883679365896
-  game_concept_aspiration: "염원" # 6204533382103334096
-  game_concept_aspirations: "포부" # 12658286261684878112
+  game_concept_RICE_aspiring: "포부 있는" # 297683825570704205
+  game_concept_RICE_aspires: "열망하다" # 10560010359615094533
+  game_concept_RICE_aspired: "열망하는" # 11533683879460386850
+  game_concept_RICE_aspire: "열망" # 2232911883679365896
+  game_concept_RICE_aspiration: "염원" # 6204533382103334096
+  game_concept_RICE_aspirations: "포부" # 12658286261684878112
   game_concept_historical_aspiration: "역사적 포부" # 16249550667993392130
   game_concept_historical_aspirations: "역사적 염원" # 10330753275432524078
   game_concept_historical_aspirations_desc: "$game_concept_historical_aspirations$은 게임 시작 시 특정 역사적 [characters|E]에게 제공되는 간단하고 선택적인 임무입니다. 업적과는 달리, 이러한 열망은 완료 시 [modifiers|E]나 @dynasty_prestige_icon! [dynasty_prestige|E]와 같은 다양한 보너스를 부여합니다.\n\n열망은 일반적으로 거창한 가능성이나 가설보다는 해당 인물의 실제 역사적 상황과 동기를 반영하며, 플레이어가 그 인물의 실제 삶의 욕구와 경험을 역할극하도록 장려하기 위해 마련되었습니다.\n\n열망은 두 가지 유형의 목표로 구성됩니다. [historical_aspiration_main_objectives|E]를 충족해야 열망을 달성할 수 있습니다. 반면에 [historical_aspiration_bonus_objectives|E]는 충족할 필요는 없지만, 달성하면 추가 보너스를 얻을 수 있습니다. 목표는 [decision|E]를 내리는 것과 같은 직접적인 행동일 수도 있고, 특정 [religion|E]를 따르는 것과 같은 수동적인 것일 수도 있습니다.\n\n열망 달성 여부는 즉시가 아니라 매년 #V 시작#!에 계산된다는 점에 유의해야 합니다. 즉, 연초에 목표를 달성하면 열망을 충족하게 됩니다. 이는 보너스 목표를 달성할 약간의 여유 시간이 있을 수 있음을 의미합니다." # 2541453490335663499
@@ -476,10 +478,22 @@
   d_laamp_RICE_zhao_weiyi_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
   d_laamp_RICE_guido_of_nubia: "도타워의 순례자들" # 2674077046520093114
   d_laamp_RICE_guido_of_nubia_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_gung_ye: "예언된 복수자들" # 4889291234052424490
+  d_laamp_RICE_gung_ye_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_aravindahrada: "활의 군주들" # 4124877898796663308
+  d_laamp_RICE_aravindahrada_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_vidyanandana: "#bold 왕족 망명자들#!" # 3761957049615598908
+  d_laamp_RICE_vidyanandana_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_pei_toutuo: "금산사 금욕주의자들" # 1722126297598439225
+  d_laamp_RICE_pei_toutuo_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_bukuri_yongson: "천녀의 아들들" # 9187705333526692486
+  d_laamp_RICE_bukuri_yongson_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  d_laamp_RICE_seliangaya: "해상 여행자 집단" # 1048260995558323949
+  d_laamp_RICE_seliangaya_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
   d_nf_RICE_li_shichang: "서부의 학자-신사 계층" # 15491962007794571614
   d_nf_RICE_li_shichang_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
-  d_nf_RICE_zhai_dunhuang: "$dynn_zhai$ 가문" # 13864192181880426652
-  d_nf_RICE_zhai_dunhuang_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
+  c_nf_RICE_zhai_dunhuang: "$dynn_zhai$ 가문" # 13864192181880426652
+  c_nf_RICE_zhai_dunhuang_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
   d_nf_RICE_dunhuang_zhang: "$dynn_Zhang$ 가문" # 922652285077009488
   d_nf_RICE_dunhuang_zhang_article: "$DEFAULT_TITLE_NAME_ARTICLE$" # 14610429145904019047
   d_nf_RICE_dunhuang_cao: "$dynn_Cao$ 가문" # 12155006200347381470

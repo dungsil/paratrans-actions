@@ -446,7 +446,7 @@
   RICE_pamir_hephthalite_focus_south: "남부 헤프탈 영토" # 5522876403616531270
   RICE_pamir_hephthalite_focus_south_desc: "파미르 고원에 헵탈 왕국을 재건한 이 인물은 이제 제국적 야망의 다음 단계를 위해 남쪽을 바라보고 있습니다. 많은 이들이 그들을 백훈이라 부르며 두려운 약탈자이자 전사로 여기지만, 헵탈인들은 또한 건축가이자 장인이며 상인이기도 합니다. 이 인물은 자신의 운명이 수 세대에 걸쳐 통치해 온 수많은 민족들의 가장 훌륭한 자질을 본받는 데 있다고 믿습니다." # 11983887270622003341
   RICE_pamir_successful_chinir_festival: "성공적인 치니르 축제" # 5509604047821393430
-  RICE_pamir_aspiration_assert_zunbil_independence: "[aspiration|E]: 준빌 독립 주장" # 6630401692926886481
+  RICE_pamir_aspiration_assert_zunbil_independence: "[RICE_aspiration|E]: 준빌 독립 쟁취" # 983642425209988441
   RICE_pamir_aspiration_assert_zunbil_independence_desc: "#italic 피루즈는 정의의 신 주운의 진정한 챔피언으로 나서서, 즈운빌과 그들의 민족의 옛 생활 방식을 역경 속에서 영원히 지켜내야 합니다!#$RICE_pamir_aspiration_zunbil_desc$\n\n" # 15936612919387608811
   RICE_pamir_visit_bibi_fatima: "비비 파티마 온천을 방문하십시오" # 12284798727996748473
   RICE_pamir_visit_bibi_fatima_tooltip: "당신은 와칸의 비비 파트미나 온천을 방문하게 될 것입니다." # 14333763926238842373
@@ -677,7 +677,7 @@
   pamir.0017.desc: "이백 년 넘게 사파르 왕조의 침공에 맞서 자불리스탄의 준빌 왕조는 독립을 유지해 왔습니다. 이들은 한때 다투던 헵탈인부터 투르크인, 이란인 등 여러 부족을 통합하여 굳건히 저항했으나... 최근 그들의 상대가 될 만한 강력한 군벌인 [saffarid.GetTitledFirstName]을 만났습니다.\n\n패배 후, [RICE_zunbil_cousin.GetFirstName]과 같은 일부 준빌인들은 [saffarid.GetFirstName]에게 복종하기로 동의했습니다. 반면, 마지막 준빌 통치자의 아들인 [RICE_last_zunbil.GetFirstName]과 같은 이들은 여전히 옛 [RICE_last_zunbil.GetFaith.GetAdjective]의 방식을 믿으며 사파르 왕조의 권위에 저항하다 투옥되었습니다.\n\n소문에 따르면 [RICE_last_zunbil.GetFirstName]이 감옥에서 탈출하여 준빌의 고향에 대규모 병력을 모아 명목상의 독립을 유지하려 한다고 합니다. 또한 [RICE_zunbil_cousin.GetFirstName]이 사파르 왕조가 타히르 왕조와 충돌하는 틈을 타 반란을 준비하며 때를 기다리고 있다는 소문도 있습니다. 이 땅에 다시 전쟁이 일어날 것은 분명합니다.\n\n결국, 누가 더 큰 실수를 저질렀는지 의문일 뿐입니다. 준빌을 정복하려는 자들에게 가담한 [RICE_zunbil_cousin.GetFirstName]일까요, 아니면 피할 수 없는 운명에 헛되이 저항한 [RICE_last_zunbil.GetFirstName]일까요? 이것이 위대한 준빌 왕조, 옛 백훈족의 마지막 잔재의 마지막 장이 될 수 있을까요?" # 13680329216411614221
   pamir.0017.a: "저는 제 편을 골랐습니다. 준빌 가문의 운명은 곧 결정될 것입니다!" # 2285488841381042822
   pamir.0017.info: "#emphasis 역사적 배경:#! 9세기 중반, 사파르 왕조가 준빌 왕조의 지배를 받았던 영토들을 진정시키기 위해 시도했던 여러 노력들은 거센 저항에 부딪혔습니다. 예를 들어, 사파르 왕조 치하에서 알-루카즈(칸다하르)의 총독이 되었던 준빌 가문의 후계자가 867년에 반란을 일으켰습니다. 몇 년 후인 869년, 아랍 기록에 피루즈 이븐 카브크(Firuz ibn Kabk)라고 기록된 마지막 준빌 왕이 사파르 왕조의 포로 신세에서 벗어나 무슬림과 싸울 추종자들을 규합했습니다.\n\n준빌 왕조는 870년에 피루즈가 사파르 왕조 군대에게 패배하면서 막을 내렸습니다." # 8025583083914735342
-  pamir.0017.firuz.tooltip: "#bold 피루즈의 [aspiration|E]: 준빌 독립 선언#!$RICE_pamir_aspiration_zunbil_desc$\n" # 5160934860183438994
+  pamir.0017.firuz.tooltip: "#bold 피루즈의 [RICE_aspiration|E]: 준빌 독립 주장#!$RICE_pamir_aspiration_zunbil_desc$\n" # 2151300324565755769
   pamir.0018.t: "$RICE_historical_aspiration_fulfilled_title$" # 6312590152546762382
   pamir.0018.desc: "인정합니다. 여기까지 오리라 생각지 못했습니다. 사파르 왕조에 맞선 저항을 시작했을 때, 저의 주된 목표는 그들의 무시무시한 군대와 우리를 파멸시키려는 다른 자들의 군대에 맞서 우리의 입지를 확보하는 것뿐이었습니다.\n\n하지만 보십시오. 준빌 왕국이 복원되었습니다. 우리의 적들은 굴복했습니다. 준이 승리했습니다.\n\n앞으로의 여정은 험난할 것입니다. 우리는 고대의 문화와 오래전에 사라진 왕조의 유산이 깃든, 다양한 기원과 배경을 가진 땅입니다. 하지만 우리는 성공적으로 영역을 재건했으며 번영할 미래의 토대를 마련했습니다. 이 험준한 산맥과 비옥한 계곡에서 우리는 다시 한번 위대한 문명을 건설할 것입니다." # 15832995015834000393
   pamir.0018.a: "태양, 정의의 수여자시여, 찬양받으소서!" # 8396697900060687019

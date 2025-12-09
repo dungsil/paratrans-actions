@@ -9,7 +9,7 @@
   dynn_al_sufi: "알수피" # 17425718879394365513
   dynn_sukunid: "수쿠니드" # 15466267431051379756
   dynn_al_farghani: "알파르가니" # 10560443379797319225
-  dynn_al_kan: "알칸" # 2879521919334589292
+  dynn_al_kan: "마우두디드" # 16335041983911862366
   dynn_al_madhara_i: "알마다라이" # 13867728046915779168
   bugha_al_asghar: "부하 알-아스가르" # 17968316214966054151
   Abu_Ruh_Sukun: "아부 루흐 수쿤" # 14717290979278511756
@@ -18,9 +18,9 @@
   Lamis: "라미스" # 11887064552840635273
   Maymunah: "메이무나" # 16138282477341366620
   dynn_yarjukhid: "야르주키드" # 7121625884084549036
-  dynn_al_daya: "알다야" # 18407104406509347820
+  dynn_al_daya: "이브라힘" # 1683012477390210269
   nick_RICE_al_dallala: "알-와흐샤 알-달랄라" # 10481766259981792634
-  nick_RICE_al_dallala_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]께서는 성공적인 사업가, 특히 중개인\"알-달랄\")으로 알려져 있습니다. [CharYouSheHe(CHARACTER)|U]께서는 또한\"선망받는 \"\"알-우흐\")로도 알려져 있습니다." # 13685426908629738833
+  nick_RICE_al_dallala_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 님은 성공적인 사업가로, 특히 중개인\"알-달랄\")으로서 명성이 높습니다. [CharYouSheHe(CHARACTER)|U] 님은 또한\"탐나는 \"(알-우흐샤)로도 알려져 있습니다." # 3426223897238068170
   Sitt_Ghazal: "싯 가잘" # 2409429906517754573
   Arye: "아리예" # 13877346302021455851
   Juff: "줍" # 9960973854412712593
@@ -30,8 +30,11 @@
   dynn_RICE_turki: "튀르크" # 4762005653597584530
   Azjur: "아주르" # 12896731690592624849
   Ulugh: "울루그" # 1988511954731225957
+  nick_RICE_ibn_al_daya: "이븐 알다야" # 4591329935731946155
+  nick_RICE_ibn_al_daya_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 님은 칼리프의 아들 중 한 명의 유모, 즉 #italic 알-다야#!였던 여인의 아들입니다. [CharYouSheHe(CHARACTER)|U] 님은 그리하여 #italic 이븐 알-다야#!로 알려져 있습니다." # 10577576590149351203
+  nick_RICE_ibn_abd_kan: "이븐 압드 칸" # 16500719351525445822
+  nick_RICE_ibn_abd_kan_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] 님은 #italic 이븐 압드 칸#!으로 알려져 있는데, 이는\"작은 종의 아\"을 의미하며, 압드(Abd)는 아랍어로 종이나 노예를, 칸(Kan)은 페르시아어로 축소형 접미사를 뜻합니다." # 8770877889099046018
   game_concept_nile_flood: "나일강 범람" # 12904550849714625254
-  game_concept_nile_flood_desc: "나일강의 범람은 파라오 시대부터 이집트 생활의 중요한 부분이었습니다. 매년 나일강은 일정량 범람하며, [GetGeographicalRegion('RICE_nile_river_valley').GetName]을 따라 위치한 [counties|E]는 그 결과에 따라 [county_modifier|E]를 얻게 됩니다.\n\n대부분의 경우 범람은 정상적이며 게임 내 효과는 없을 것입니다. 범람이 평소보다 좋으면 [county_modifiers|E]는 다양한 이점을 제공할 것이고, 범람이 나쁘거나 나일강이 범람하면 [county_modifiers|E]는 불이익을 줄 것입니다.\n\n귀하의 [culture|E]가 #Bold $tradition_RICE_children_of_the_nile_name$#! [tradition|E]를 가지고 있다면, 범람과 관련된 두 가지 특별한 [activities|E]를 이용할 수 있습니다. 범람이 좋을 때는 [GetActivityType('activity_RICE_upper_egypt_open_nile_canals').GetName]을 수행할 수 있고, 범람이 나쁠 때는 #bold $RICE_upper_egypt_pray_for_a_good_nile_flood$#!을 수행할 수 있습니다.\n\n추가로, 세 번째 [decision|E]인 #Bold $RICE_upper_egypt_renovate_local_nilometers$.#에 접근할 수 있습니다. 이는 미래에 나쁜 범람의 영향을 완화하는 데 도움이 될 것이므로 중요한 [decision|E]입니다." # 14388688093787928281
   game_concept_temples_of_aswan: "아스완의 사원들" # 8827666519526968480
   game_concept_temple_in_aswan: "아스완의 사원들" # 18172368521868618600
   game_concept_temples_of_aswan_city: "아스완" # 6760714295602090191

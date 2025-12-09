@@ -219,6 +219,10 @@
   S_popi: "시포피" # 1296357366993334567
   RICE_baqt_happened_interface_message: "박트 휴전" # 8915457738884634685
   RICE_baqt_happened_interface_message_long: "[actor.GetTitledFirstName]와 [recipient.GetTitledFirstName]는 우리가 처리하도록 도왔던 [RICE_baqt_treaty|E] 조항에 따라 물품을 교환한 후 [truce|E]에 합의했습니다." # 1721250485509755058
+  Osmunda: "오스문다" # 1772965654624909278
+  Bertin: "베르탱" # 7670684329179536947
+  Maholdis: "마홀디스" # 18249625427042592597
+  Zalaf: "잘라프" # 5203559638448802789
   RICE_saint_catherine_ashtiname_of_muhammad: "무함마드의 아슈티나메" # 10995872647668662704
   RICE_saint_catherine_ashtiname_of_muhammad_desc: "#bold 무함마드의 아슈티나메#!, 혹은 무함마드의 언약은 무슬림 예언자 무함마드가 성 카타리나 수도원의 기독교 수도사들에게 부여한 보호와 특권을 명시한 헌장입니다. 원본 문서는 오늘날까지도 안전한 보관을 위해 수도원에 보관되어 있습니다." # 11670226967377225924
   RICE_saint_catherine_bedouin_guards: "베두인 근위대" # 17729499845432448129
@@ -792,29 +796,29 @@
   RICE_nubia_aspiration_badr_al_jamali_desc: "#bold [historical_aspiration_main_objectives|E]#!\n$EFFECT_LIST_BULLET$ #V Nasir al-Dawla#가 사망하거나, #V Yaldakush#가 사망하거나, #V Ildekuz#가 사망하거나, #V Nahid al-Dawla#가 사망하거나, 그들이 당신의 [vassals|E]이거나 [allies|E]이거나, 혹은 어떤 [titles|E]도 소유하고 있지 않아야 합니다.$RICE_nubia_aspiration_fatimid_turks_desc$" # 13322596889553347505
   RICE_nubia_historical_aspiration_action_badr_al_jamali: "#italic 파티마 왕조의 영지가 붕괴하고 있으며, 라이벌 군대와 파벌들이 이집트를 두고 싸우고 있습니다. 귀하의 동기가 명예롭든 아니든, 레반트의 주요 지휘관으로서 귀하는 라이벌들을 제거하고, 나일강 유역에 질서를 회복하며, 칼리프의 전능한 섭정이 되기 위해 필요한 모든 것을 할 것입니다.#!$RICE_nubia_aspiration_badr_al_jamali_desc$" # 4041701874276396628
   RICE_nubia_historical_aspiration_modifier_desc_badr_al_jamali: "[GetModifier('RICE_nubia_aspiration_become_egypts_military_dictator_badr_al_jamali').GetNameWithTooltip]" # 8427083660284437158
-  RICE_nubia_aspiration_defeat_the_traitor_and_the_bandit: "[aspiration|E]: 반역자와 도적을 격파하라" # 15190027304798080746
+  RICE_nubia_aspiration_defeat_the_traitor_and_the_bandit: "[RICE_aspiration|E]: 반역자와 도적을 격파하라" # 8926796820239180684
   RICE_nubia_aspiration_defeat_the_traitor_and_the_bandit_desc: "#italic 왕 게오르기오스가 조카인 뉴티를 군대와 함께 약탈자 알-우마리를 격파하기 위해 보냈으나, 배신자 왕자가 반란의 깃발을 올렸습니다. 속임수든, 외교든, 전투든, 이 두 말썽꾼, 즉 반역자와 도적놈을 제압해야만 마쿠리아에 질서를 회복할 수 있을 것입니다!#!$RICE_nubia_aspiration_georgios_867_desc$\n\n" # 1945180858302099746
-  RICE_nubia_aspiration_take_over_makuria: "[aspiration|E]: 마쿠리아를 점령하고 국경을 안정시키기" # 440927888934499683
+  RICE_nubia_aspiration_take_over_makuria: "[RICE_aspiration|E]: 마쿠리아를 장악하고 국경을 안정시키기" # 2539909547315352396
   RICE_nubia_aspiration_take_over_makuria_desc: "#italic 뉴티의 삼촌 게오르기오스는 그에게 군대를 주어 약탈자 알-우마리를 격파하도록 보냈지만, 그는 자신의 삼촌이 자격 미달의 늙고 허약한 왕임을 깨달았다. 마쿠리아의 왕좌는 교활하고 행동하는 자의 것이며, 그가 바로 알-우마리를 물리치고 마쿠리아에 새로운 번영의 시대를 가져올 것이다!#!$RICE_nubia_aspiration_niuty_desc$\n\n" # 12652069930301011322
-  RICE_nubia_aspiration_ascend_bureaucracy_makuria: "[aspiration|E]: 마쿠리아의 관료 사다리 오르기" # 5528580866376012554
+  RICE_nubia_aspiration_ascend_bureaucracy_makuria: "[RICE_aspiration|E]: 마쿠리아 관료 사다리 오르기" # 6128119488335669944
   RICE_nubia_aspiration_ascend_bureaucracy_makuria_desc: "#italic [GetTitleByKey('c_sai').GetNameNoTier]의 미천한 농업 관리로 시작했던 메르키는 자신의 농업 및 재정 능력으로 마쿠리아 행정부의 계단을 천천히 밟아 올라왔으며, 더 높은 곳을 갈망하고 있습니다.#!$RICE_nubia_aspiration_merki_desc$\n\n" # 11369881591788827512
-  RICE_nubia_aspiration_daju_migration_into_darfur: "[aspiration|E]: 다주 민족의 다르푸르 이주를 이끌기" # 16453805790048506863
+  RICE_nubia_aspiration_daju_migration_into_darfur: "[RICE_aspiration|E]: 다주 민족의 다르푸르 이주를 이끌기" # 14064618090567975433
   RICE_nubia_aspiration_daju_migration_into_darfur_desc: "#italic 귀하의 지도 아래, 다주 부족들은 누비아에서 서쪽으로 이주를 시작했습니다. 때가 되면 다르푸르가 귀하 백성의 새로운 고향이 될 것입니다!#!$RICE_nubia_aspiration_kusbur_desc$\n\n" # 11904065306926124024
-  RICE_nubia_aspiration_revive_nubia: "[aspiration|E]: 누비아 부흥" # 5478450467690493032
+  RICE_nubia_aspiration_revive_nubia: "[RICE_aspiration|E]: 누비를 부흥시키기" # 5886235668819027878
   RICE_nubia_aspiration_revive_nubia_desc: "#italic 모세스 게오르기오스의 왕국은 이집트의 최근 공격으로 황폐해졌으며, 누비아는 외부 및 내부의 적으로부터 위협받고 있습니다. 그는 누비아가 재건되고 다음 위기에 대비해야 한다는 것을 절실히 알고 있습니다.#!$RICE_nubia_aspiration_moses_georgios_desc$\n\n" # 981183893612259319
-  RICE_nubia_aspiration_look_after_nubia_frontier: "[aspiration|E]: 누비아 변경 지키기" # 9977072856747544823
+  RICE_nubia_aspiration_look_after_nubia_frontier: "[RICE_aspiration|E]: 누비아의 변경 지대를 돌보다" # 565027012049912691
   RICE_nubia_aspiration_look_after_nubia_frontier_desc: "#italic 파티마 왕조의 멸망과 최근 이집트와 누비아 간의 전쟁으로 인해 누비아의 북부 국경이 약해졌습니다. 새로 임명된 노바티아의 에파르크로서, 아담의 임무는 누비아의 북부 국경을 수호하고 이집트와의 누비아의 경제적, 외교적 관계를 강화하는 것입니다.#!$RICE_nubia_aspiration_eparch_adam_desc$\n\n" # 12204874356562441603
-  RICE_nubia_aspiration_spread_stories_tribe_of_dan: "[aspiration|E]: 단 부족에 대한 전설을 퍼뜨리기" # 9042737266552091012
+  RICE_nubia_aspiration_spread_stories_tribe_of_dan: "[RICE_aspiration|E]: 단 부족에 대한 전설을 퍼뜨리기" # 219401399003223978
   RICE_nubia_aspiration_spread_stories_tribe_of_dan_desc: "#italic 일부 유대인들은 엘다드가 아프리카 깊은 곳에 정착한 단 지파의 후손이라고 전하는 그의 이야기를 믿지만, 다른 이들은 그를 사기꾼이라며 회의적입니다. 어찌 되었든 그는 전 세계의 많은 유대인 공동체를 방문하여 자신의 영감을 주고 매혹적인 이야기들을 들려주기를 희망합니다.!#$RICE_nubia_aspiration_eldad_desc$\n\n" # 7574564080038662986
-  RICE_nubia_aspiration_become_egypts_military_dictator_nasir_al_dawla: "[aspiration|E]: 이집트의 군사 독재자가 되기" # 9642134722186376590
+  RICE_nubia_aspiration_become_egypts_military_dictator_nasir_al_dawla: "[RICE_aspiration|E]: 이집트의 군사 독재자가 되기" # 13909486994790996713
   RICE_nubia_aspiration_become_egypts_military_dictator_nasir_al_dawla_desc: "#italic 파티마 왕국은 라이벌 군대와 파벌들이 이집트를 두고 싸우면서 붕괴하고 있습니다. 나시르 알다울라의 동기가 명예롭든 아니든, 튀르크 군대의 주요 지휘관으로서 그는 라이벌들을 제거하고, 나일강 유역에 질서를 회복하며, 칼리프의 전능한 섭정이 되기 위해 필요한 모든 것을 할 것입니다.#!$RICE_nubia_aspiration_nasir_al_dawla_desc$\n\n" # 16403938775194184247
-  RICE_nubia_aspiration_become_egypts_military_dictator_yaldakush: "[aspiration|E]: 이집트의 군사 독재자가 되기" # 9642134722186376590
+  RICE_nubia_aspiration_become_egypts_military_dictator_yaldakush: "[RICE_aspiration|E]: 이집트의 군사 독재자가 되기" # 13909486994790996713
   RICE_nubia_aspiration_become_egypts_military_dictator_yaldakush_desc: "#italic 파티마 왕조가 이집트를 두고 경쟁하는 군대와 파벌들로 인해 붕괴하고 있습니다. 얄다쿠쉬의 동기가 명예로운지 여부와 관계없이, 투르크 군대의 주요 지휘관으로서 그는 경쟁자들을 제거하고, 나일강을 따라 질서를 회복하며, 칼리프의 전능한 섭정이 되기 위해 필요한 모든 것을 할 것입니다.#!$RICE_nubia_aspiration_yaldakush_desc$\n\n" # 15278343931832141773
-  RICE_nubia_aspiration_become_egypts_military_dictator_ildekuz: "[aspiration|E]: 이집트의 군사 독재자가 되기" # 9642134722186376590
+  RICE_nubia_aspiration_become_egypts_military_dictator_ildekuz: "[RICE_aspiration|E]: 이집트의 군사 독재자가 되기" # 13909486994790996713
   RICE_nubia_aspiration_become_egypts_military_dictator_ildekuz_desc: "#italic 파티마 왕국은 라이벌 군대와 파벌들이 이집트를 두고 싸우면서 붕괴하고 있습니다. 일데쿠즈가 명예로운 동기를 가졌든 아니든, 투르크 군대의 주요 지휘관으로서 그는 라이벌들을 제거하고, 나일강을 따라 질서를 회복하며, 칼리프의 전능한 섭정이 되기 위해 필요한 모든 조치를 취할 것입니다.#!$RICE_nubia_aspiration_ildekuz_desc$\n\n" # 5473649049552001462
-  RICE_nubia_aspiration_become_egypts_military_dictator_nahid_al_dawla: "[aspiration|E]: 아프리카 병력의 힘을 보존하기" # 14625027614275395889
+  RICE_nubia_aspiration_become_egypts_military_dictator_nahid_al_dawla: "[RICE_aspiration|E]: 아프리카 병력의 힘을 보존하십시오" # 11454319464316505746
   RICE_nubia_aspiration_become_egypts_military_dictator_nahid_al_dawla_desc: "#italic 파티마 왕조의 영역이 무너지고 있으며, 라이벌 군대와 파벌들이 이집트를 두고 싸우고 있습니다. 나히드 알다울라의 동기가 명예롭든 아니든, 아프리카 군대의 주요 지휘관으로서 그는 나일강을 따라 질서를 회복할 뿐만 아니라 아프리카 군대와 그들의 동맹인 왕대비 라사드에 대한 모든 위협을 제거하기 위해 필요한 모든 조치를 취할 것입니다.#\"$RICE_nubia_aspiration_nahid_al_dawla_desc$\n\n" # 8112281579187291592
-  RICE_nubia_aspiration_become_egypts_military_dictator_badr_al_jamali: "[aspiration|E]: 이집트의 군사 독재자가 되기" # 9642134722186376590
+  RICE_nubia_aspiration_become_egypts_military_dictator_badr_al_jamali: "[RICE_aspiration|E]: 이집트의 군사 독재자가 되기" # 13909486994790996713
   RICE_nubia_aspiration_become_egypts_military_dictator_badr_al_jamali_desc: "#italic 파티마 왕국이 이집트를 두고 경쟁하는 군대와 파벌들이 싸우면서 붕괴하고 있습니다. 바드르 알자말리의 동기가 명예로운 것인지 아닌지와는 상관없이, 레반트의 주요 지휘관으로서 그는 자신의 경쟁자들을 제거하고, 나일강을 따라 질서를 회복하며, 칼리프의 전능한 섭정이 되기 위해서라면 무엇이든 할 것입니다.#!$RICE_nubia_aspiration_badr_al_jamali_desc$\n\n" # 18276969611521079192
   activity_RICE_nubia_banganarti_pilgrimage_host_an_a: "$host_activity_a$" # 13713790857143020716
   activity_RICE_nubia_banganarti_pilgrimage: "방가나르티 성지 순례" # 16938987295373546986
@@ -1737,7 +1741,7 @@
   nubia.0066.t: "$nubia.0065.t$" # 14181914330957155429
   nubia.0066.desc: "$nubia.0065.desc$" # 1414339644856908142
   nubia.0066.desc.niuty: "어리석은 숙부 [georgios.GetFirstName] 같으니.\n\n부유함에 현혹되었든, 혹은 전략적 고려 때문이든, [umari.GetFirstNameNoTooltip]가 우리의 휴전을 깨고 숙부의 세력과 동맹을 맺기로 결정했소! 그 도적을 너무 믿지 말았어야 했는데, 비록 [umari.GetSheHe]가 내가 예상했던 것보다 더 빨리 나를 배신했지만 말이오. 적어도 [umari.GetSheHe]가 언젠가는 내 숙부에게 등을 돌릴 것이라는 사실에 위안을 얻을 뿐이오." # 12152196207501649772
-  nubia.0066.desc.georgios: "배신자인 조카 [niuty.GetFirstName]로군.\n\n재물의 유혹에 넘어갔든, 전략적 고려 때문이든, [umari.GetFirstName]가 내 조카와의 휴전을 깨고 나를 직접 지원하기로 결정했다! 나는 [umari.GetFirstNameNoTooltip]가 배신자라는 것을 알고 있으며, 우리 둘 다 각자의 목표를 위해 서로를 이용하고 있다는 것도 알고 있다. 하지만, 내 삼촌만 처리하고 나면 이 약탈자 군벌도 처리할 수 있으리라 확신한다." # 4713192545246082002
+  nubia.0066.desc.georgios: "배신자 조카 [niuty.GetFirstName]로군.\n\n재물의 유혹에 넘어갔든, 혹은 전략적 고려 때문이든, [umari.GetFirstName]가 내 조카와의 휴전을 깨고 나를 직접 지원하기로 결정했소! 나는 [umari.GetFirstNameNoTooltip]가 배신자라는 것을 알고 있고, 우리 둘 다 각자의 목표를 위해 서로를 이용하고 있다는 것도 알고 있소. 하지만 내 조카만 처리하고 나면, 이 약탈자 군벌 녀석도 처리할 수 있을 것이라 확신하오." # 10825108336194744318
   nubia.0066.a: "$nubia.0065.a$" # 14218846887103753458
   nubia.0067.t: "$nubia.0065.t$" # 14181914330957155429
   nubia.0067.desc: "[umari.GetFullName]으로부터 소식이 도착했습니다! [umari.GetSheHe]께서 저와 저의 적 사이의 전쟁에 참전하기로 결정한 것 같습니다." # 17203765853500458733
@@ -2053,7 +2057,7 @@
   nubia.0152.b: "이곳에 정착한다면 당신의 자유를 사겠습니다." # 17104314847770751778
   nubia.0152.c: "내 임무는 당신 둘을 당신들의 주인에게 돌려보내는 것이다." # 4320990372484138306
   nubia.0153.t: "$nubia.0149.t$" # 15436151533480378205
-  nubia.0153.desc: "이상하게도 [mena.GetFirstNameNoTooltip]가 노예들을 사로잡는 데는 성공했지만, 그들이 다시 탈출하여 이제는 우리 관할 밖으로 벗어났습니다.\n\n실망스럽지만, [mena.GetFirstNamePossessive]의 보고에는 뭔가 미심쩍은 점이 있다고 느낍니다. 노예들이 탈출한 세부 사항이 이상하며, 다른 신하들은 [mena.GetFirstNameNoTooltip]가 노예들을 너무 느슨하게 관리했을 수도 있다고 언급했습니다. [mena.GetSheHe]가 고의로 그들이 쉽게 탈출하도록 내버려 두었을 리는... 없겠죠?\n\n음, 이 불일치들은 [mena.GetFirstNameNoTooltip]가 [mena.GetHerHis]의 실패를 축소하려는 시도 때문이라고 생각하겠습니다. 나중에 [mena.GetHerHim]를 질책해야겠지만, 가장 먼저 [teniellasi.GetFirstNameNoTooltip]에게 무슨 일이 있었는지 알려야겠습니다." # 652820748410115353
+  nubia.0153.desc: "이상하게도 [mena.GetFirstNameNoTooltip]은 노예들을 붙잡는 데는 성공했지만, 그들이 다시 탈출하여 이제는 우리 관할 밖으로 벗어났습니다.\n\n실망스럽지만, [mena.GetFirstNamePossessive]의 보고에는 뭔가 석연치 않은 점이 있다고 느낍니다. 노예들이 탈출한 세부 사항이 이상하며, 다른 관리들 중 일부는 [mena.GetFirstNameNoTooltip]이 노예들을 너무 느슨하게 감시했을 수도 있다는 의견을 보였습니다. [mena.GetSheHe]가 고의로 그들이 탈출하기 쉽게 만들었을 리는 없을 겁니다... 그렇죠?\n\n음, 저는 이 불일치들을 [mena.GetFirstNameNoTooltip]이 자신의 실패를 축소하려는 시도로 치부하겠습니다. 나중에 [mena.GetHerHim]을 질책해야겠지만, 제 최우선 관심사는 무슨 일이 있었는지 [teniellasi.GetFirstNameNoTooltip]에게 알리는 것입니다." # 17324574822577773883
   nubia.0154.t: "성공... 그럭저럭이군?" # 16207788215793280743
   nubia.0154.desc: "[mena.GetFirstNameNoTooltip]가 노예들을 붙잡긴 했지만, 이야기는 이상하지만 용납할 만한 방향으로 흘러갑니다.\n어떤 이유에서인지 [mena.GetFirstNameNoTooltip]는 이 두 노예들에게 동정심을 느껴 그들의 자유를 사주고 [mena.GetHerHis] 영지에 정착하도록 허락했습니다. [teniellasi.GetFirstNameNoTooltip]는 재산 손실에 대한 보상을 받으니, 그 돈으로 더 나은 노예를 살 수 있을 것이기에 마지못해 이에 동의했습니다." # 18402528459442617802
   nubia.0154.a: "모든 것이 잘 끝났으니 다행이겠지?" # 11012392199294813677

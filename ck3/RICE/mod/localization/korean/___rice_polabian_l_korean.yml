@@ -3,7 +3,7 @@
   sorbian_prefix: "소르브족" # 7519793205204291373
   sorbian_collective_noun: "소르브족" # 13506655454750045903
   name_list_sorbian: "소르브족" # 7519793205204291373
-  RICE_nemesis_reason_krutoj_murder: "[CHARACTER.GetShortUIName|U] 께서는 [TARGET_CHARACTER.GetShortUINamePossessive] 아버지인 고트샬크를 폐위하고 살해한 이교도 반란에 연루되었으며, 이후 [CHARACTER.GetHerselfHimself]를 위해 왕좌를 차지했습니다. 이제 양측은 서로를 제거하려는 [aspirations|E]를 품고 있습니다." # 5353084666882255455
+  RICE_nemesis_reason_krutoj_murder: "[CHARACTER.GetShortUIName|U]께서는 이교도 반란에 연루되어 [TARGET_CHARACTER.GetShortUINamePossessive] 아버지인 고트샬크를 폐위시키고 살해한 후, [CHARACTER.GetHerselfHimself]를 위해 왕좌를 차지하셨습니다. 이제 양측은 서로를 제거하려는 [RICE_aspirations|E]를 품고 있습니다." # 10324252285360212666
   RICE_polabian_near_rugen_req: "귀하의 [capital|E]는 [GetTitleByKey('c_rugen').GetNameNoTier] 근처에 있습니다." # 9497925940534568578
   RICE_marzanna_loc_polish: "마잔나" # 2940704637915179624
   RICE_marzanna_loc_czech: "모라나" # 4262628565328524334
@@ -91,9 +91,9 @@
   RICE_polabian_temple_of_arkona_modifier_desc: "#EMP [idol_of_svetovit|E]는 근처의 이교도 [faith|E]를 따르는 모든 [landed|E] [rulers|E]가 $RICE_polabian_gift_to_svetovit_decision$ 결정을 내릴 수 있도록 합니다. 이 [modifier|E]는 매년 시작 시 이 [county|E]의 통치자가 이교도인지 비이교도인지에 따라 #P 긍정적#! 및 #N 부정적#! 변형으로 전환됩니다. 비이교도는 [decision|E]를 통해 이를 철거할 수 있습니다.#!\n\n" # 14278086712388133476
   RICE_polabian_temple_of_arkona_modifier_non_pagan: "$RICE_polabian_temple_of_arkona_modifier$" # 7287185735533114229
   RICE_polabian_temple_of_arkona_modifier_non_pagan_desc: "$RICE_polabian_temple_of_arkona_modifier_desc$" # 8686490045890203993
-  RICE_polabian_aspiration_gottschalk_sons_revenge: "[aspiration|E]: 성 고트샬크의 복수" # 2821758397011179891
+  RICE_polabian_aspiration_gottschalk_sons_revenge: "[RICE_aspiration|E]: 성 고트샬크의 복수" # 17021258383822019933
   RICE_polabian_aspiration_gottschalk_sons_revenge_desc: "#italic 부디보이와 헨리의 아버지 고트샬크가 이교도 반란군에게 살해당했습니다. 그들은 아버지를 복수하기 위해, 반란군이 새로운 지도자로 선출한 귀족 크루토이를 능가해야 합니다.#!$RICE_polabian_aspiration_budivoj_henry_desc$\n\n" # 7391171909290990816
-  RICE_polabian_aspiration_krutoj_finish_job: "[aspiration|E]: 고트샬크의 아들들 제거하기" # 8403442659895215208
+  RICE_polabian_aspiration_krutoj_finish_job: "[RICE_aspiration|E]: 고트샬크의 아들들 제거" # 18230817658692731122
   RICE_polabian_aspiration_krutoj_finish_job_desc: "#italic 크루토이가 이교도 오보트리트 귀족들이 기독교도 고트샬크를 축출했을 때 권력을 잡았지만, 고트샬크의 생존한 아들인 부디보이와 헨리를 처단하여 임무를 완수해야 합니다.#!$RICE_polabian_aspiration_krutoj_desc$\n\n" # 9375547231556522079
   RICE_polabian_scions_of_saint_gottschalk: "성 고트샬크의 후예들" # 4276357196757149046
   RICE_polabian_scions_of_saint_gottschalk_desc: "이 왕조의 일원인, [GetTitleByKey('d_nordmark').GetNameNoTier]의 정당한 통치자 성 고트샬크가 반역적인 이교도들에게 축출당했습니다. 그의 아들 부디보이와 헨리는 이교도 경쟁자인 크루토이에게서 조상의 봉토를 되찾아 아버지의 복수를 이루었습니다." # 5592612975120961842
@@ -200,11 +200,11 @@
   polabian.0010.t: "성 [gottschalk.GetFirstNameNoTooltip]의 아들들" # 7594897315503706514
   polabian.0010.desc: "불과 몇 달 전, [gottschalk.GetFirstName] 님, 즉 [christian.GetAdjective] 오보트리트 공작이 [gottschalk.GetHerHis] [slavic.GetAdjective] 이교도 부족민들의 봉기 중에 살해당했습니다. 반란군은 그들 중에서 [krutoj.GetFirstName]을 선출하여 오보트리트의 새로운 공작으로 삼았습니다.\n\n[christian.GetAdjectiveNoTooltip] 오보트리트인들에게 희망은 혼란 속에서 살아남아 망명한 [gottschalk.GetFirstNamePossessiveNoTooltip] 두 아들인 [budivoj.GetFirstName]과 [henry.GetFirstName]에게 남아 있습니다. 그들은 돌아가신 아버지를 복수하기 위해 피를 갈망하고 있지만, 자신들이 약세에 있음을 깨닫고 작센의 통치자인 [ordulf.GetFirstName]과 [ordulf.GetHerHis]의 아들 [magnus.GetFirstName]과 동맹을 맺고 때를 기다리고 있습니다. 한편, [krutoj.GetFirstNameNoTooltip]은 이 형제들이 [krutoj.GetHerselfHimself]와 [christian.GetName]에 굳건히 반대하는 오보트리트인들에게 장기적인 위협이 된다는 것을 알고 있습니다.\n\n양측이 전쟁, 책략 또는 다른 수단을 통해서든 자신들의 염원을 이루고 상대를 제거하려 하는 것은 시간문제일 뿐입니다." # 12217775903603282528
   polabian.0010.a: "아버지, 저희가 땅을 되찾고 아버님의 원수를 갚겠습니다!" # 11019728490066170944
-  polabian.0010.tooltip: "#bold 부디보이와 헨리크의 [aspiration|E]: 성 고트샬크를 복수하라#!$RICE_polabian_aspiration_budivoj_henrik_desc$\n" # 11724118405622852950
+  polabian.0010.tooltip: "#bold 부디보이와 헨리크의 [RICE_aspiration|E]: 성 고트샬크의 복수#!$RICE_polabian_aspiration_budivoj_henry_desc$\n" # 15341386769181746105
   polabian.0011.t: "[krutoj.GetFirstNameNoTooltip] 웬족" # 8773225084344862528
   polabian.0011.desc: "$polabian.0010.desc$" # 4648794470274219960
   polabian.0011.a: "[gottschalk.GetFirstNamePossessiveNoTooltip]의 아들들은 우리가 무시할 수 없는 위협입니다!" # 5127264507507652025
-  polabian.0011.tooltip: "#bold 크루토이의 [aspiration|E]: 고트샬크의 아들들 제거#!$RICE_polabian_aspiration_krutoj_desc$\n" # 5778064877330242909
+  polabian.0011.tooltip: "#bold 크루토이의 [RICE_aspiration|E]: 고트샬크의 아들들 제거#!$RICE_polabian_aspiration_krutoj_desc$" # 14976412895808423840
   polabian.0012.t: "$RICE_historical_aspiration_fulfilled_title$" # 6312590152546762382
   polabian.0012.desc: "저는 아직도 우리의 사랑하는 아버지, [gottschalk.GetTitledFirstName]께서 광신적인 이단 반란군에게 암살당하시고, 그들이 역겨운 [krutoj.GetFirstName]를 [GetTitleByKey('d_nordmark').GetNameNoTier]의 새로운\"통치\"로 선출했던 때를 기억합니다. 저와 [brother.GetFirstName]는 도망쳐야만 했었죠.\n\n이제 저희는 이 땅의 통치자로서의 정당한 권리를 되찾을 뿐만 아니라, 아버지의 복수를 하기 위해 개선장군이 되어 돌아왔습니다." # 16292013373654228972
   polabian.0012.desc.alive: "운명의 기묘한 장난으로, 이제 겁쟁이인 [krutoj.GetFirstNameNoTooltip]가 망명길에 올랐습니다." # 3226517618610128056

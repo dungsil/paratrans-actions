@@ -520,6 +520,7 @@
   TRAVEL_NAME_FOR_activity_RICE_sri_lanka_sri_pada_pilgrimage: "[Character.GetFirstNamePossessiveNoTooltip] $activity_RICE_sri_lanka_sri_pada_pilgrimage$" # 12829218353739876769
   activity_RICE_sri_lanka_sri_pada_pilgrimage_owner: "순례자" # 384073485693042227
   RICE_sri_pada_guest_modifier_tooltip: "이 [local_pilgrimage|E]의 모든 참가자는 #V 10#년 동안 유익한 [modifier|E]를 받으며, 그 효과는 그들의 [faith|E]와 [religion|E]에 따라 달라집니다." # 15096175167093332436
+  activity_RICE_sri_lanka_ramasetu_pilgrimage_host_an_a: "$host_activity_a$" # 13713790857143020716
   activity_RICE_sri_lanka_ramasetu_pilgrimage: "라마세투 성지 순례" # 7698078386498384204
   activity_RICE_sri_lanka_ramasetu_pilgrimage_desc: "라마세투, 혹은 아담의 다리는 [GetGeographicalRegion('RICE_sri_lanka_alt_region').GetName]과 인도 본토를 잇는 얇은 육지입니다. 이곳은 일부 힌두교 종파 신도들의 순례지이며, 위대한 산스크리트 서사시인 #italic 라마야나#!와 관련이 있습니다." # 6605153770374816816
   activity_RICE_sri_lanka_ramasetu_pilgrimage_selection_tooltip: "[GetTitleByKey('c_madurai').GetNameNoTier]에 있는 라마세투, 즉 아담의 다리로 [local_pilgrimage|E]를 떠나십시오.\n\n$activity_RICE_sri_lanka_ramasetu_pilgrimage_context_tooltip$" # 4590484796991542016
@@ -719,7 +720,7 @@
   RICE_sri_lanka_precious_gems: "아프가니스탄의 귀한 보석들" # 10701890415371681394
   RICE_sri_lanka_glazed_ceramics: "중국산 유약 도자기" # 18015626693230656482
   RICE_sri_lanka_generous_to_villagers: "영민들에게 관대함" # 16636428496841259512
-  RICE_sri_lanka_aspiration_rule_sri_lanka: "[aspiration|E]: 폴론나루와 왕국 수립" # 11954932296503821590
+  RICE_sri_lanka_aspiration_rule_sri_lanka: "[RICE_aspiration|E]: 폴론나루와 왕국을 세우다" # 15406207270970439407
   RICE_sri_lanka_aspiration_rule_sri_lanka_desc: "#italic 비자야바후는 수십 년간 싱할라 군벌들과 촐라 군대에 의해 쟁탈당했던 $k_lanka$ 섬에 질서를 회복하고 평화를 되찾아 새로운 왕국을 세우고자 합니다.#!$RICE_sri_lanka_aspiration_vijayabahu_desc$\n\n" # 273396893644636087
   RICE_sri_lanka_bappa_beary: "바파나드의 건설자" # 9315503287099368322
   RICE_sri_lanka_bappa_beary_desc: "비록 무슬림 출신이지만, 이 상인은 힌두 여신 두르가에게 바파나드라는 사원을 세운 것으로 남인도에서 유명합니다. 그가 난파를 겪었을 때 두르가에게 감사하는 마음으로 이 사원을 세웠으며, 두르가 여신이 그를 파멸에서 구하기 위해 나타났다고 전해집니다." # 2523473014977327201
@@ -958,7 +959,7 @@
   sri_lanka.0001.desc.non_buddhist: "우리 비불교도들은 종종 불교의 #italic 상가#와 협력하거나 심지어 후원하기도 합니다. 우리는 그들이 단결하여 [ROOT.Char.GetHouse.GetNameNoTooltip] 가문을 더 잘 섬기도록 도울까요, 아니면 이 성가신 수도승들을 제거해 버릴까요?" # 8190757070068012930
   sri_lanka.0001.a: "#italic 업보#!가 너무나도 많이, 이제 뒤얽혔으니...." # 406276023136074763
   sri_lanka.0001.b: "이 섬의 운명은 어떻게 될 것인가?" # 8179640961811514878
-  sri_lanka.0001.vijayabahu.tooltip: "#bold 비자야바후의 [aspiration|E]: 폴론나루와 왕국 건립#!$RICE_sri_lanka_aspiration_vijayabahu_desc$\n" # 14507745647741170893
+  sri_lanka.0001.vijayabahu.tooltip: "#bold 비자야바후의 [RICE_aspiration|E]: 폴론나루와 왕국 건국#!$RICE_sri_lanka_aspiration_vijayabahu_desc$" # 16165609175370110505
   sri_lanka.0002.t: "xxxxx" # 1951045980481827005
   sri_lanka.0002.desc: "xxxxx" # 1951045980481827005
   sri_lanka.0002.a: "xxxxx" # 1951045980481827005
