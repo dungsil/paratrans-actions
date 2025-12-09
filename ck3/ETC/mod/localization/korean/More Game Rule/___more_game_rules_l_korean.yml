@@ -1,13 +1,13 @@
 ﻿l_korean:
   rule_matrilineal_marriage: "#G MGR: #! 모계 결혼" # 4242289240187482462
   setting_default_matri: "기본" # 8341519292606584866
-  setting_default_matri_desc: "모계 결혼은 완전히 허용됩니다."
+  setting_default_matri_desc: "[matrilineal|E] 혼인은 항상 활성화됩니다." # 18217013159747208917
   setting_restricted_matri: "#high 제한됨 #!" # 7276141821690804883
-  setting_restricted_matri_desc: "모계 결혼은 평등 혹은 여성 우위의 신앙에서만 허용됩니다. #N 여성 통치자로 플레이할 시 게임 오버될 수 있습니다!#!"
+  setting_restricted_matri_desc: "[matrilineal|E] 혼인은 평등하거나 여성 우위적인 신앙을 따르는 인물에게만 활성화됩니다. #N 이 설정은 여성 통치자로서 게임 오버를 피하기 어렵게 만들 수 있습니다!#" # 3241802105003880738
   setting_more_restricted_matri: "#high 크게 제한됨 #!" # 7672120939999754803
-  setting_more_restricted_matri_desc: "모계 결혼은 여성 우위의 신앙에서만 허용됩니다. #N 여성 통치자로 플레이할 시 게임 오버될 수 있습니다!#!"
+  setting_more_restricted_matri_desc: "[matrilineal|E] 혼인은 여성 우위 성별 교리가 있는 신교에서만 활성화됩니다. #N 이 설정은 여성 통치자로서 게임 오버를 피하기 어렵게 만들 수 있습니다!#!" # 9191870760497085646
   setting_never_matri: "#high 금지됨 #!" # 15616138515344205332
-  setting_never_matri_desc: "모계 결혼은 금지됩니다. #N 여성 통치자로 플레이할 시 게임 오버될 수 있습니다!#!"
+  setting_never_matri_desc: "[matrilineal|E] 결혼은 항상 비활성화됩니다. #N 이 설정은 여성 통치자로서 게임 오버를 피하기 어렵게 만들 수 있습니다!#!" # 16078054664149223440
   rule_matrilineal_marriages: "#high 모계 결혼 (AI)#!" # 3610903971191977919
   rule_secret_bastards: "#G MGR: #! 숨겨진 사생아" # 1302486626793585747
   setting_default_secret_bastards: "기본" # 8341519292606584866
