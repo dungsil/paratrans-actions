@@ -42,10 +42,10 @@ export interface RetranslationContext {
 export async function translateAI (text: string, gameType: GameType = 'ck3', retranslationContext?: RetranslationContext, useTransliteration: boolean = false) {
   return new Promise<string>((resolve, reject) => {
     try {
-      return translateAIByModel(resolve, gemini('gemini-flash-lite-latest', gameType, useTransliteration), text, retranslationContext)
+      return translateAIByModel(resolve, reject, gemini('gemini-flash-lite-latest', gameType, useTransliteration), text, retranslationContext)
     } catch (e) {
       try {
-        return translateAIByModel(resolve, gemini('gemini-flash-latest', gameType, useTransliteration), text, retranslationContext)
+        return translateAIByModel(resolve, reject, gemini('gemini-flash-latest', gameType, useTransliteration), text, retranslationContext)
       } catch (ee) {
         reject(ee)
       }
@@ -67,7 +67,7 @@ function isRefusalReason(finishReason: FinishReason | undefined): boolean {
   ].includes(finishReason)
 }
 
-async function translateAIByModel (resolve: (value: string | PromiseLike<string>) => void, model: GenerativeModel, text: string, retranslationContext?: RetranslationContext): Promise<void> {
+async function translateAIByModel (resolve: (value: string | PromiseLike<string>) => void, reject: (reason?: any) => void, model: GenerativeModel, text: string, retranslationContext?: RetranslationContext): Promise<void> {
   return addQueue(
     text,
     async () => {
@@ -90,33 +90,40 @@ ${retranslationContext.failureReason}
 Please provide a corrected translation that addresses the issue mentioned above. Remember to strictly follow all translation guidelines from the system instruction.`
       }
 
-      const { response } = await model.generateContent(prompt)
+      try {
+        const { response } = await model.generateContent(prompt)
 
-      // 프롬프트 차단 확인
-      const promptFeedback = response.promptFeedback
-      if (promptFeedback?.blockReason) {
-        throw new TranslationRefusedError(
-          text,
-          `프롬프트 차단됨: ${promptFeedback.blockReason}${promptFeedback.blockReasonMessage ? ` - ${promptFeedback.blockReasonMessage}` : ''}`
-        )
+        // 프롬프트 차단 확인
+        const promptFeedback = response.promptFeedback
+        if (promptFeedback?.blockReason) {
+          throw new TranslationRefusedError(
+            text,
+            `프롬프트 차단됨: ${promptFeedback.blockReason}${promptFeedback.blockReasonMessage ? ` - ${promptFeedback.blockReasonMessage}` : ''}`
+          )
+        }
+
+        // 응답 완료 사유 확인 (안전 필터, 콘텐츠 정책 등)
+        const candidate = response.candidates?.[0]
+        if (candidate && isRefusalReason(candidate.finishReason)) {
+          throw new TranslationRefusedError(
+            text,
+            `응답 거부됨: ${candidate.finishReason}${candidate.finishMessage ? ` - ${candidate.finishMessage}` : ''}`
+          )
+        }
+
+        const translated = response.text()
+          .replaceAll(/\n/g, '\\n')
+          .replaceAll(/[^\\]"/g, '\\"')
+          .replaceAll(/#약(하게|화된|[화한])/g, '#weak')
+          .replaceAll(/#강조/g, '#bold')
+
+        resolve(translated)
+      } catch (error) {
+        // TranslationRefusedError나 다른 에러를 promise의 reject로 전달
+        reject(error)
+        // 큐 처리를 중단하기 위해 에러를 다시 throw
+        throw error
       }
-
-      // 응답 완료 사유 확인 (안전 필터, 콘텐츠 정책 등)
-      const candidate = response.candidates?.[0]
-      if (candidate && isRefusalReason(candidate.finishReason)) {
-        throw new TranslationRefusedError(
-          text,
-          `응답 거부됨: ${candidate.finishReason}${candidate.finishMessage ? ` - ${candidate.finishMessage}` : ''}`
-        )
-      }
-
-      const translated = response.text()
-        .replaceAll(/\n/g, '\\n')
-        .replaceAll(/[^\\]"/g, '\\"')
-        .replaceAll(/#약(하게|화된|[화한])/g, '#weak')
-        .replaceAll(/#강조/g, '#bold')
-
-      resolve(translated)
     },
   )
 }

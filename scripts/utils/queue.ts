@@ -1,3 +1,4 @@
+import { TranslationRefusedError } from './ai'
 import { delay } from './delay'
 import { log } from './logger'
 
@@ -43,12 +44,13 @@ async function executeTaskWithRetry (task: Queue, retryCount = 0): Promise<void>
   try {
     await task.queue()
   } catch (error) {
+    // TranslationRefusedError는 재시도 없이 즉시 전파
+    if (error instanceof TranslationRefusedError) {
+      throw error
+    }
+
     const message = (error as Error).message
     if (message) {
-      if (message.includes('PROHIBITED_CONTENT')) {
-        throw new Error("번역 거부: " + task.key)
-      }
-
       if (!message.includes('429 Too Many Requests')) {
         log.warn('[', task.key ,']요청 실패:', (error as Error).message)
         log.debug('\t', error)
