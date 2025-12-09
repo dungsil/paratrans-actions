@@ -1655,12 +1655,12 @@ describe('음역 검증', () => {
   })
 
   describe('decisions/desc/event 키 제외', () => {
-    it('decision 키워드가 포함된 키는 음역 검증을 건너뛰어야 함', () => {
+    it('desc 키워드로 끝나는 키는 음역 검증을 건너뛰어야 함 (예: *_desc)', () => {
       const sourceEntries = {
         roman_culture_decision_desc: ['Very long decision description', '']
       }
       const translationEntries = {
-        roman_culture_decision_desc: ['매우긴결정설명문장입니다', 'hash1'] // 긴 텍스트지만 decision이므로 OK
+        roman_culture_decision_desc: ['매우긴결정설명문장입니다', 'hash1'] // 긴 텍스트지만 desc로 끝나므로 OK
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1783,7 +1783,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghij', ''] // 정확히 10자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커', 'hash1'] // 정확히 30자
+        test_name: ['가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허고노', 'hash1'] // 정확히 30자
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
