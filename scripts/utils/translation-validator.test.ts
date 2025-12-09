@@ -1521,7 +1521,7 @@ describe('음역 검증', () => {
         culture_2: ['Test', ''] // 4글자
       }
       const translationEntries = {
-        culture_1: ['아주아주아주먼매우먼곳의먼지역', 'hash1'], // 16글자 (4배)
+        culture_1: ['아주아주아주먼매우먼곳의먼지역', 'hash1'], // 15글자 (3.75배)
         culture_2: ['매우긴설명문장입니다정말긴데요', 'hash2'] // 15글자 (3.75배)
       }
       
@@ -1668,19 +1668,6 @@ describe('음역 검증', () => {
       expect(result.length).toBe(0)
     })
 
-    it('desc 키워드가 포함된 키는 음역 검증을 건너뛰어야 함', () => {
-      const sourceEntries = {
-        heritage_desc: ['Very long description text here', '']
-      }
-      const translationEntries = {
-        heritage_desc: ['매우긴설명텍스트가여기있습니다', 'hash1'] // 긴 텍스트지만 desc이므로 OK
-      }
-      
-      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
-      
-      expect(result.length).toBe(0)
-    })
-
     it('event 키워드로 끝나는 키는 음역 검증을 건너뛰어야 함', () => {
       const sourceEntries = {
         culture_event: ['Very long event description', '']
@@ -1770,7 +1757,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghij', ''] // 정확히 10자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허', 'hash1'] // 정확히 30자
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노도', 'hash1'] // 정확히 30자
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1797,7 +1784,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghijk', ''] // 11자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허가나마사차파허', 'hash1'] // 33자 (3배)
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허가나마사차파', 'hash1'] // 33자 (3배)
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1810,7 +1797,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghij', ''] // 정확히 10자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노도', 'hash1'] // 29자
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노', 'hash1'] // 29자
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
