@@ -7,12 +7,15 @@
   nick_RICE_fahai_desc: "이 승려는 법의 바다를 의미하는 법해(Fǎhǎi)라는 법명을 받았는데, 이는 붓다 가르침의 광대함을 뜻합니다. [CHARACTER.GetSheHe|U]께서는 크게 존경받는 불교의 대가이자 금욕주의자이십니다." # 16782238498474259034
   RICE_hangzhou_west_lake_visit: "#V $activity_RICE_hangzhou_sightsee_at_west_lake$#! [activity|E]를 최소 #V 3#!회 완료했습니다 (주최자[host|E]로서든 [activity_guest|E]로서든 상관없이)" # 3741030080295863797
   EVERY_ACTIVITY_PARTICIPANT_POET_EFFECT: "$trait_lifestyle_poet$ [trait|E] 특성을 가진 모든 참가자" # 16747919531073855255
+  RICE_opinion_qiantang_tides: "#bold 전당 조수해(錢塘潮)를 함께 지켜보았다#!" # 14081043240981116713
   Ziyu_5B50_865E: "쯔위" # 16817198864875364648
   Zilong_5B50_9F8D: "즈룽" # 8011315570041811274
-  Zixiu_5B50_4FEE: "자수" # 7839295534846958361
   Zibu_5B50_5E03: "즈부" # 8067629795842703062
   Ziyu_5B50_807F: "자위" # 11358979659279364068
   Toutuo_982D_9640: "투투오" # 378286224216955498
+  Bukuri_Yongson: "부쿠리 용선" # 5654503023458463060
+  Fekulen: "페쿨렌" # 1540243833231211170
+  dynn_Hurha: "허르하" # 7320594501967580010
   RICE_poetry_gathering_poem_diplomacy_01: "가문 관계" # 14020582689290359763
   RICE_poetry_gathering_poem_diplomacy_02: "부모와 자식 간의 관계" # 15031535785851968310
   RICE_poetry_gathering_poem_diplomacy_03: "형제자매 관계" # 9678750874702749891
@@ -172,7 +175,7 @@
   game_concept_RICE_ten_scenes_of_west_lake: "서호십경" # 2250075755980691825
   game_concept_RICE_ten_scenes_of_west_lake_desc: "$game_concept_RICE_ten_scenes_of_west_lake$ 서호의 십경 xxxx [RICE_west_lake|E]" # 5523319889130173122
   RICE_hangzhou_legend_qian_liu_tidal_bore_name: "조수 해일 뚫기" # 15429571322153654585
-  RICE_hangzhou_legend_qian_liu_tidal_bore_desc: "치안강 주변에 사는 백성들을 보호하기 위해 [ruler.GetTitledFirstName]께서는 거대한 방파제 건설을 명하셨습니다. 흉흉한 소문에 따르면, 조수의 파도가 제방을 부수려 했을 때 [ruler.GetSheHe]께서 [ruler.GetFirstNameNoTooltip]의 궁수들을 시켜 화살 세례를 퍼부어 파도를 되돌려 보냈다고 합니다." # 17818060354265130746
+  RICE_hangzhou_legend_qian_liu_tidal_bore_desc: "치안탕 강 주변에 사는 백성들을 보호하기 위해, [ruler.GetTitledFirstName]께서는 거대한 방파제 건설을 명하셨습니다. 소문에 따르면, 밀물 거인의 정령이 둑을 파괴하려 했을 때, [ruler.GetSheHe]께서는 [ruler.GetFirstNameNoTooltip]께서 궁수들에게 명하여 화살 세례를 퍼부어 밀물을 되돌려 보냈다고 합니다." # 9250593053006669558
   RICE_hangzhou_legend_qian_liu_tidal_bore_chapter_opening_new_title: "xxxxx" # 1951045980481827005
   RICE_hangzhou_legend_qian_liu_tidal_bore_chapter_motivation_new_title: "xxxxx" # 1951045980481827005
   RICE_hangzhou_legend_qian_liu_tidal_bore_chapter_famous_deed_new_title: "[ROOT.Legend.GetProtagonist.GetFirstNameNoTooltip]께서는 밀려드는 파도의 기세에 굴복하지 않고 행동에 나서기로 결심하셨습니다. 음력 8월 18일, 조수간만의 차가 가장 심할 때, [ROOT.Legend.GetProtagonist.GetSheHe]께서는 쇠뇌로 무장한 만 명 이상의 궁수들을 모아 강을 포위했습니다. 파도가 거세게 밀려오자, [ROOT.Legend.GetProtagonist.GetFirstNameNoTooltip]께서는 현지인들이 환호하는 가운데 궁수들에게 강물 속으로 맹렬한 화살 세례를 퍼부으라는 명령을 내리셨습니다. 이 의로운 힘을 과시하는 모습에 위축된 파도는 기적처럼 물러났고, 건설 중이던 둑은 무사했습니다." # 10575773814757780754
@@ -208,6 +211,7 @@
   activity_RICE_hangzhou_sightsee_at_west_lake: "서호 관광" # 2604973710487822078
   activity_RICE_hangzhou_sightsee_at_west_lake_desc: "중국에는 경이로운 볼거리가 많지만, [RICE_west_lake|E]의 아름다움에 비할 바는 못 됩니다. 호수 자체와 그 주변의 명소들은 여러 세대에 걸쳐 사람들을 매료시켜 왔기에, 이곳은 인기 있는 관광지입니다." # 10794285837497833164
   activity_RICE_hangzhou_sightsee_at_west_lake_selection_tooltip: "[RICE_west_lake|E]에 있는 [GetTitleByKey('b_qiantang').GetNameNoTier]으로 가십시오\n$RICE_hangzhou_sightsee_at_west_lake_context_tooltip$" # 8726631562335203502
+  RICE_hangzhou_sightsee_at_west_lake_context_tooltip: "#emphasis 역사적 배경:#! 항저우에서 가장 유명한 랜드마크 중 하나는 서호입니다. 당나라 이래로 그 아름다움과 역사적 유산으로 찬양받아 왔으며, 수많은 학자, 시인, 종교인들에게 영감을 주었습니다." # 6403582995984812858
   activity_RICE_hangzhou_sightsee_at_west_lake_host_desc: "$BULLET_WITH_TAB$ [stress_loss_i|E] [stress|E] 감소\n$BULLET_WITH_TAB$ [opinion_i|E] [opinion|E]\n$BULLET_WITH_TAB$ [prestige_i|E] [prestige|E]\n$BULLET_WITH_TAB$ [influence_i|E] [influence|E]\n$BULLET_WITH_TAB$영감을 얻어 [merit_i|E] [merit|E], #P 긍정적#!인 [modifiers|E]를 얻거나 [GetTrait('confucian_education').GetName(GetNullCharacter)] [trait|E]에서 [trait_level_track_xp|E]를 얻을 확률" # 16186875013172004818
   activity_RICE_hangzhou_sightsee_at_west_lake_guest_desc: "$activity_RICE_hangzhou_sightsee_at_west_lake_host_desc$" # 7434777377235063200
   activity_RICE_hangzhou_sightsee_at_west_lake_province_desc: "[RICE_west_lake|E]가 이곳에 위치해 있습니다." # 3497887284607605405
@@ -231,33 +235,51 @@
   RICE_hangzhou_sightsee_at_west_lake_indulgence_intent_desc: "[RICE_west_lake|E]의 감각적인 쾌락을 경험하십시오. 추가 [prestige_i|E] [prestige|E]를 얻습니다. 웨스트 레이크에서 #V 소풍#에 집중할 경우 추가 [stress_loss_i|E] [stress|E]를 잃을 기회가 있습니다." # 12696526981777985079
   RICE_hangzhou_sightsee_at_west_lake_completed_log_title: "[RICE_west_lake|E] 방문을 마쳤습니다" # 2585926000764678435
   RICE_hangzhou_sightsee_at_west_lake_completed_log: "[CHARACTER.GetShortUIName|U]께서 [RICE_west_lake|E] 방문을 마치셨습니다." # 9719206829457388609
+  RICE_hangzhou_west_lake_bought_guide_log_title: "안내서를 구매했습니다." # 12933760327986502135
+  RICE_hangzhou_west_lake_bought_guide_log: "[CHARACTER.GetShortUIName|U]께서 유람객이라면 누구나 봐야 할 [RICE_west_lake|E]의 주요 명소를 담은 안내서를 구매했습니다." # 10924743936285492710
+  RICE_hangzhou_west_lake_relaxation_log_title: "탐험" # 2219605389171111452
+  RICE_hangzhou_west_lake_relaxation_log: "모두가 서호의 정원과 공원을 거닐며 즐거운 시간을 보냈습니다." # 14301895311804489665
+  RICE_hangzhou_west_lake_socialization_log_title: "사교 활동" # 205151057255517141
+  RICE_hangzhou_west_lake_socialization_log: "모두들 서호에서 즐겁게 교류하는 시간을 가졌습니다." # 17337870723767284361
+  RICE_hangzhou_west_lake_reflection_log_title: "방문" # 3820905783252309220
+  RICE_hangzhou_west_lake_reflection_log: "모두 서호의 사찰들을 방문하며 성찰의 시간을 가졌습니다." # 7081055235497359016
+  RICE_hangzhou_west_lake_indulgence_log_title: "소풍" # 17093215270656434902
+  RICE_hangzhou_west_lake_indulgence_log: "모두들 서호(西湖) 옆에서 한가로운 피크닉을 즐겼습니다." # 18123190004318976323
+  RICE_hangzhou_west_lake_enjoyed_ten_scenes_log_title: "열 가지 장면" # 13093581281589172246
+  RICE_hangzhou_west_lake_enjoyed_ten_scenes_log: "[CHARACTER.GetShortUIName|U]는 [RICE_ten_scenes_of_west_lake|E] 중 가능한 한 많은 것을 관찰하는 것을 즐겼습니다." # 18324457145301304078
   TRAVEL_NAME_FOR_activity_RICE_hangzhou_sightsee_at_west_lake: "[Character.GetFirstNamePossessiveNoTooltip] $activity_RICE_hangzhou_sightsee_at_west_lake$" # 7318655480490532308
   activity_RICE_hangzhou_watch_qiantang_tide_host_an_a: "$host_activity_a$" # 13713790857143020716
-  activity_RICE_hangzhou_watch_qiantang_tide: "치엔탕 조수 관람" # 5506863588573888161
-  activity_RICE_hangzhou_watch_qiantang_tide_desc: "치안탕 강의 조수 해일은 세계적으로 가장 거대한 것 중 하나입니다. 위험에도 불구하고, 사람들은 수세기 동안 이 장관을 보기 위해 모여들었으며, 특히 음력 8월경에는 조수 해일을 상징하는 은룡에게 헌정된 축제가 열립니다." # 3823987946867997643
-  activity_RICE_hangzhou_watch_qiantang_tide_selection_tooltip: "[GetTitleByKey('b_qiantang').GetNameNoTier]의 치안강 조수해일을 관람하십시오\n$RICE_hangzhou_watch_qiantang_tide_context_tooltip$" # 1996349022902164926
+  activity_RICE_hangzhou_watch_qiantang_tide: "첨당 조수 관람" # 13073093186136185169
+  activity_RICE_hangzhou_watch_qiantang_tide_desc: "저강(錢塘江)의 조수해일은 세계에서 가장 거대한 것 중 하나입니다. 위험에도 불구하고, 사람들은 수세기 동안 이 장관을 보기 위해 모여들었으며, 특히 음력 8월 경에는 해일 자체를 상징하는 은룡(銀龍)에게 봉헌하는 축제가 열립니다." # 7823568916848617954
+  activity_RICE_hangzhou_watch_qiantang_tide_selection_tooltip: "[GetTitleByKey('b_qiantang').GetNameNoTier]의 첨탄강 조수해를 관찰하십시오\n$RICE_hangzhou_watch_qiantang_tide_context_tooltip$" # 16941584599647422826
+  RICE_hangzhou_watch_qiantang_tide_context_tooltip: "#emphasis 역사적 배경:#! 항저우를 가로지르는 전당강은 독특한 지리적 상황 덕분에 세계에서 가장 큰 조수 해일이 발생하는 곳입니다. 이 놀라운 현상은 수세기 동안 인기가 있었으며, 특히 음력 8월경에는 조수 해일 자체의 정령인 용왕에게 헌정된 축제와 함께 절정을 이룹니다. 중세 시대에는 현지인들이 의례적인 관습의 일환으로 이 파도를 타기도 했습니다." # 14264511644560996459
   activity_RICE_hangzhou_watch_qiantang_tide_host_desc: "$BULLET_WITH_TAB$ [stress_loss_i|E] [stress|E] 감소\n$BULLET_WITH_TAB$ [opinion_i|E] [opinion|E]\n$BULLET_WITH_TAB$ [prestige_i|E] [prestige|E]\n$BULLET_WITH_TAB$@warning_icon! #X 부상이나 @death_icon! 사망으로 인한 보너스 감소의 아주 희박한 가능성#!\n$BULLET_WITH_TAB$ 용왕 축제 기간인 #V 8월#!이나 #V 9월#!에 도착할 경우 #P 추가#! 보너스" # 7664710358776864014
   activity_RICE_hangzhou_watch_qiantang_tide_guest_desc: "$activity_RICE_hangzhou_watch_qiantang_tide_host_desc$" # 10246282129241791114
-  activity_RICE_hangzhou_watch_qiantang_tide_province_desc: "치안탕강 조류를 이곳에서 볼 수 있습니다." # 4100989831122796904
+  activity_RICE_hangzhou_watch_qiantang_tide_province_desc: "전당강의 조류(潮溜)를 이곳에서 볼 수 있습니다." # 15874161341661939449
   activity_RICE_hangzhou_watch_qiantang_tide_destination_selection: "$activity_RICE_hangzhou_watch_qiantang_tide_province_desc$" # 1465326915934533128
   activity_RICE_hangzhou_watch_qiantang_tide_guest_help_text: "$activity_RICE_hangzhou_watch_qiantang_tide$" # 12102558174260866086
   activity_RICE_hangzhou_watch_qiantang_tide_predicted_cost: "이 방문의 비용은 주로 귀하의 [income|E]에 따라 결정됩니다." # 8882918087865338503
   activity_RICE_hangzhou_watch_qiantang_tide_conclusion_desc: "[GetActivityType( 'activity_RICE_hangzhou_watch_qiantang_tide' ).GetName]이 종료되었습니다. 정말 경이로운 광경이었군요!" # 2017430221362857493
   RICE_hangzhou_watch_qiantang_tide_observation_phase: "관찰" # 7303273556588128642
-  RICE_hangzhou_watch_qiantang_tide_observation_phase_desc: "치안탕 강의 조수 해일은 직접 보면 정말 경이롭다." # 1298813138519562599
+  RICE_hangzhou_watch_qiantang_tide_observation_phase_desc: "첨장강의 조수해일은 직접 보면 정말 장관이다." # 14379685109944315349
   RICE_hangzhou_watch_qiantang_tide_fun_intent_header: "재미:" # 14619476848063890036
   RICE_hangzhou_watch_qiantang_tide_fun_intent: "재미:" # 488089071180702662
   RICE_hangzhou_watch_qiantang_tide_fun_intent_desc: "밀려드는 조수의 장엄한 광경을 만끽하십시오. 추가 [stress_loss_i|E] [stress|E]를 잃으며, 만약 그대가 #weak [GetTrait('brave').GetName( GetNullCharacter )|U]#이거나 #weak [GetTrait('gregarious').GetName( GetNullCharacter )]#라면 훨씬 더 많이 잃게 될 것입니다." # 4022536967471843027
   RICE_hangzhou_watch_qiantang_tide_ritual_intent_header: "의식:" # 13781907821707693583
   RICE_hangzhou_watch_qiantang_tide_ritual_intent: "의식:" # 15674658978138415862
   RICE_hangzhou_watch_qiantang_tide_ritual_intent_desc: "우리는 조수 간만의 차와 관련된 의식에서 용의 왕을 존중해야 합니다. 추가 [piety_i|E] [piety|E]를 얻습니다. 만약 당신이 [GetTrait('zealous').GetName( GetNullCharacter )|U]이거나 [GetTrait('diligent').GetName( GetNullCharacter )]라면 추가 [stress_loss_i|E] [stress|E]를 잃습니다." # 4321490910798750547
-  RICE_hangzhou_watch_qiantang_tide_completed_log_title: "치안탕 해일을 보는 것을 마쳤습니다" # 9804665560486777576
-  RICE_hangzhou_watch_qiantang_tide_completed_log: "[CHARACTER.GetShortUIName|U] 께서 전당의 파도 보기를 마쳤습니다." # 15365016293266623388
+  RICE_hangzhou_watch_qiantang_tide_completed_log_title: "전당의 조수를 모두 보았습니다" # 16847418840817886009
+  RICE_hangzhou_watch_qiantang_tide_completed_log: "[CHARACTER.GetShortUIName|U] 님이 전당의 조수를 보는 것을 마쳤습니다." # 4096182170357193548
+  RICE_hangzhou_watch_qiantang_tide_injury_log_title: "부상" # 5006687505982534511
+  RICE_hangzhou_watch_qiantang_tide_injury_log: "[CHARACTER.GetShortUIName|U]께서 조수간만의 차로 인해 휩쓸릴 뻔하며 부상을 입으셨습니다." # 3887550857143804806
+  RICE_hangzhou_watch_qiantang_tide_death_log_title: "죽음" # 14184817095105934107
+  RICE_hangzhou_watch_qiantang_tide_death_log: "[CHARACTER.GetShortUIName|U]는 조수로 인해 휩쓸려 익사했습니다." # 14933286932775931130
   TRAVEL_NAME_FOR_activity_RICE_hangzhou_watch_qiantang_tide: "[Character.GetFirstNamePossessiveNoTooltip] $activity_RICE_hangzhou_watch_qiantang_tide$" # 16014779246667485819
   activity_RICE_east_asian_poetry_gathering_host_an_a: "$host_activity_a$" # 13713790857143020716
   activity_RICE_east_asian_poetry_gathering: "시 낭송회" # 10637109253613202952
   activity_RICE_east_asian_poetry_gathering_desc: "재치와 웅변술, 학문적 기질을 지닌 이들을 모아 세련되고 즐거운 자리에서 시와 예술의 향연을 누려봅시다!" # 16607035658370024126
   activity_RICE_east_asian_poetry_gathering_selection_tooltip: "지역의 문인 및 고상한 인사들과 모여 시를 축하하십시오.\n\n$RICE_east_asian_poetry_gathering_context_tooltip$" # 16377832857926700425
+  RICE_east_asian_poetry_gathering_context_tooltip: "#emphasis 역사적 배경:#! 역사적으로 [Glossary( 'Sinosphere', 'SINOSPHERE_GLOSS' )]에서는 시나 문학을 주제로 한 사교 행사가 관습처럼 존재했습니다. 참석자들, 주로 문인이나 다른 교육받은 남녀들은 주어진 주제에 대해 즉석에서 시를 짓는 것이 기대되었습니다. 일부는 상당히 장대했는데, 예를 들어 1201년에 열린 전설적인 일본의 시 대회는 1500회가 넘는 라운드로 진행되었으며, [Glossary( 'winding stream parties', 'WINDING_STREAM_PARTY_GLOSS' )]와 같은 다양한 종류의 놀이나 대회가 열리기도 했습니다." # 3127713932565765888
   activity_RICE_east_asian_poetry_gathering_host_desc: "$BULLET_WITH_TAB$ [stress_loss_i|E] [stress|E] 감소\n$BULLET_WITH_TAB$ [opinion_i|E] [opinion|E]\n$BULLET_WITH_TAB$ [prestige_i|E] [prestige|E]\n$BULLET_WITH_TAB$ [merit_i|E] [merit|E]\n$BULLET_WITH_TAB$시 [artifacts|E] 또는 숙련된 [courtiers|E]를 얻을 기회\n$BULLET_WITH_TAB$ [GetTrait('lifestyle_poet').GetName(GetNullCharacter)] 및 [GetTrait('confucian_education').GetName(GetNullCharacter)] [trait|E]에서 [trait_level_track_xp|E] 획득\n$BULLET_WITH_TAB$귀하의 [traits|E]와 [diplomacy_i|E] [diplomacy|E], [learning_i|E] [learning|E]에 따라 추가 보상을 위한 시 대회에서 승리할 기회" # 8863848864423090672
   activity_RICE_east_asian_poetry_gathering_guest_desc: "$activity_RICE_east_asian_poetry_gathering_host_desc$" # 1337498379109259291
   activity_RICE_east_asian_poetry_gathering_province_desc: "시 낭송회를 이곳에서 개최할 수 있습니다." # 11952462862502735562
@@ -287,7 +309,7 @@
   RICE_east_asian_poetry_gathering_fame_intent_desc: "모두가 당신의 시에 대해 알게 될 것이며, 적어도 당신이 훌륭한 시인들과 안면이 있다는 것을 알게 될 것입니다. 추가 [prestige_i|E] [prestige|E]와 [influence_i|E] [influence|E]를 얻습니다. 만약 당신이 [GetTrait('ambitious').GetName( GetNullCharacter )|U]이거나 [GetTrait('arrogant').GetName( GetNullCharacter )]라면 추가 [stress_loss_i|E] [stress|E]를 잃습니다." # 922693631610062128
   RICE_east_asian_poetry_gathering_erudition_intent_header: "지성:" # 11738694375308834302
   RICE_east_asian_poetry_gathering_erudition_intent: "지성:" # 5869831447450646696
-  RICE_east_asian_poetry_gathering_erudition_intent_desc: "시 그 자체를 즐기십시오! 승리 확률 증가. [GetTrait('lifestyle_poet').GetName(GetNullCharacter)] 및 [GetTrait('confucian_education').GetName(GetNullCharacter)] [traits|E]에서 추가 [trait_level_track_xp|E] 획득. [GetTrait('humble').GetName( GetNullCharacter )|U]이거나 [GetTrait('calm').GetName( GetNullCharacter )]일 경우 추가 손실." # 6658328192087478906
+  RICE_east_asian_poetry_gathering_erudition_intent_desc: "시 자체를 즐기십시오! 승리 확률이 증가합니다. [GetTrait('lifestyle_poet').GetName(GetNullCharacter)] 및 [GetTrait('confucian_education').GetName(GetNullCharacter)] [traits|E]에서 추가 [trait_level_track_xp|E]를 얻습니다. [GetTrait('humble').GetName( GetNullCharacter )|U]이거나 [GetTrait('calm').GetName( GetNullCharacter )]인 경우 추가 [stress_loss_i|E] [stress|E]를 잃습니다." # 14850250497309666999
   RICE_east_asian_poetry_gathering_recognize_literati_intent_header: "문인 인식:" # 16222663335839582264
   RICE_east_asian_poetry_gathering_recognize_literati_intent: "문인 인식:" # 8713496367293080040
   RICE_east_asian_poetry_gathering_recognize_literati_intent_desc: "지역 문인들을 존중하고 지원하십시오. [courtier|E]를 [GetTrait('lifestyle_poet').GetName( GetNullCharacter )] [trait|E] 특성을 가진 인물로 영입할 수 있는 이벤트를 보장합니다. 만약 당신이 [GetTrait('trusting').GetName( GetNullCharacter )|U]이거나 [GetTrait('diligent').GetName( GetNullCharacter )]라면 추가적인 [stress_loss_i|E] [stress|E]를 잃게 됩니다." # 718792099395552151
@@ -317,8 +339,8 @@
   RICE_east_asian_fraternized_with_poets: "문인 시인들과 친분을 맺음" # 11226872105384807116
   RICE_opinion_poetry_gathering: "즐거운 시회" # 17270455401817506332
   RICE_opinion_grand_poetry_gathering: "성대한 시 낭송회에 저를 초대했습니다." # 5634169638156391823
-  RICE_hangzhou_qiantang_river_embankment_modifier: "치안탕 강 제방" # 8008932964011188046
-  RICE_hangzhou_qiantang_river_embankment_modifier_desc: "치안탕 강의 유명한 조수해일로부터 이 땅을 보호하기 위해 최근 거대한 제방이 건설되었습니다. 이 위업을 이끈 지도자들의 용맹함에 대한 전설이 퍼지고 있습니다." # 15857661266655120522
+  RICE_hangzhou_qiantang_river_embankment_modifier: "치안탕 강 제방" # 11731531576710896390
+  RICE_hangzhou_qiantang_river_embankment_modifier_desc: "치안탕 강의 유명한 조수 해일에 맞서 이 땅을 지키기 위해 최근 웅장한 제방이 건설되었습니다. 이 위업을 이끈 지도자들의 용맹함에 대한 전설이 퍼지고 있습니다." # 4649257535216460753
   RICE_hangzhou_liberated_old_man: "해방된 노인" # 11917487526609662582
   RICE_hangzhou_liberated_old_man_desc: "은둔하며 물러난, 이제는 제멋대로인 한가로운 루 유(Lù Yóu)는 '자유로운 늙은이'를 뜻하는 방옹(Fàngwēng)의 [Glossary( 'art name', 'ART_NAME_GLOSS' )]을 따랐습니다." # 287460890631457702
   RICE_hangzhou_su_causeway_modifier: "서호의 대수로" # 12218393610532108485
@@ -329,20 +351,48 @@
   RICE_hangzhou_west_lake_socialization_modifier: "서호에서 사교 활동을 했습니다." # 17153840182330770495
   RICE_hangzhou_west_lake_reflection_modifier: "서호의 사찰들을 방문했음" # 9250267673521657369
   RICE_hangzhou_west_lake_indulgence_modifier: "서호에서의 소풍" # 3547144057969537674
+  RICE_opinion_travel_while_lying_at_ease: "편안하게 누워 이동함" # 15919286455698404682
+  RICE_hangzhou_recent_travel_while_lying_at_ease: "$RICE_opinion_travel_while_lying_at_ease$" # 12493619664687362543
+  RICE_hangzhou_recent_travel_while_lying_at_ease_desc: "이 인물은 최근 몇몇과 함께 모임에 참석하여 [Glossary( '편안하게 누워 여행하기', 'WO_YOU_GLOSS' )]를 즐겼습니다. 이는 관광객이 되는 것과는 달리, 잠시 모든 것을 잊고 여행하는 기분을 만끽할 수 있는 좋은 방법이었습니다." # 6996684390740705804
+  RICE_hangzhou_longjing_tea: "용정차 공급" # 11857124617324198935
+  RICE_hangzhou_victory_cakes: "승리의 케이크를 즐기다" # 3757820273107353180
+  RICE_hangzhou_victory_cakes_desc: "이 인물은 최근에 [Glossary('dìngshèng gāo', 'GLOSS_DING_SHENG_GAO')] 케이크 선물을 받았습니다." # 13398709487901823669
+  RICE_hangzhou_idolizes_past_chinese_poets: "역사적인 중국 시인을 숭배함" # 3637043195744180904
+  RICE_hangzhou_appreciates_modern_poetry: "현대 시를 감상함" # 8783439394823627798
+  RICE_hangzhou_prefers_moral_endings: "도덕적인 결말이 있는 이야기를 선호함" # 7570836514947659826
+  RICE_hangzhou_prefers_positive_endings: "#bold 행복한 결말#을 선호함" # 17980708627712895904
+  RICE_hangzhou_prefers_tragic_endings: "비극적인 결말의 이야기를 선호함" # 12715870287113259330
+  RICE_hangzhou_unconventional_white_snake_story: "백사전설의 비정통적인 결말을 선호함" # 14565669141383924433
+  RICE_hangzhou_unconventional_white_snake_story_desc: "다른 사람들과 달리, 이 인물은 유명한 백사(白蛇) 전설이 뱀 요괴를 주인공인 영웅적이고 동정심 많은 여성으로 바꾸고, 퇴마승을 악의에 찬 증오심 가득한 광신도로 바꿀 때 더 나은 이야기가 된다고 믿습니다. 대부분의 다른 사람들은 이 인물이 어리석으며 그의 생각이 결코 인기를 얻지 못할 것이라고 생각합니다." # 3609345466131483241
+  RICE_opinion_west_lake_fun_outing: "서호에서의 즐거운 나들이" # 4818232572827010485
+  RICE_hangzhou_expelled_youshou: "유수 추방됨" # 18225932367563043081
+  RICE_hangzhou_expelled_youshou_desc: "지역 시장에서 발견되는 모든 [Glossary( 'yóushǒu', 'YOU_SHOU_GLOSS' )]는 그들의 한가한 생활 방식을 막기 위해 해당 장소에서 추방되도록 지역 관리들이 명령했습니다." # 14851929269677877314
+  RICE_hangzhou_punished_youshou: "유수 추방됨" # 18225932367563043081
+  RICE_hangzhou_punished_youshou_desc: "지역 시장에서 발견된 [Glossary( '유수', 'YOU_SHOU_GLOSS' )]는 그들의 나태한 생활 방식을 막기 위해 체포되어 가혹하게 처벌하라는 명령이 지방 관리들에 의해 내려졌습니다." # 1891645607400529460
+  RICE_hangzhou_agriculture_youshou: "농업 장려를 통한 유수(遊首) 감소" # 15746506992100005582
+  RICE_hangzhou_agriculture_youshou_desc: "지역 관료들이 이 지역의 [Glossary( 'yóushǒu', 'YOU_SHOU_GLOSS' )]들이 근면한 농부로 일자리를 찾도록 돕고 장려하며, 그들의 나태한 생활 방식을 단념시키기 위한 다양한 노력을 시작했습니다." # 618688220457406624
+  RICE_hangzhou_ignore_youshou: "관리들이 유수를 무시함" # 6470753045118148118
+  RICE_hangzhou_ignore_youshou_desc: "지역 관리들은 이 지역의 [Glossary( '유수', 'YOU_SHOU_GLOSS' )]가 야기하는 사회 문제(실제든 인식상의 문제든)에 거의 관심을 기울이지 않고 있습니다." # 5863064191715670171
+  RICE_hangzhou_comfortable_around_all_commoners: "모두와 편안하게 지냄" # 17942315908073085942
+  RICE_hangzhou_avoiding_suspicious_people: "의심스러운 자들 피하기" # 5977199833504935463
+  RICE_hangzhou_ten_scenes_enjoyer: "저명한 서호 감정가" # 3254727349301879792
+  RICE_hangzhou_ten_scenes_enjoyer_desc: "이 교양 있고 글을 읽을 줄 아는 여행자는 [RICE_west_lake|E]의 경이로움과 볼거리에 대한 최고의 전문가 중 한 명으로 여겨집니다. 많은 문인들은 그를 [RICE_ten_scenes_of_west_lake|E]라는 개념을 대중화한 중요한 인물로 보고 있습니다." # 5467171903309188172
+  RICE_hangzhou_honored_yue_fei: "악비 사당을 건설했습니다" # 7644279603100208873
+  RICE_hangzhou_honored_yue_fei_desc: "이 인물은 그의 무덤 근처에 영웅 악비(Yuè Fēi)를 기리는 사원을 세워, 충성과 용맹과 같은 이 위대한 장군의 미덕을 드높였습니다." # 9987707745361607551
   RICE_hangzhou_improve_west_lake: "서호 개발" # 13308211766697488301
   RICE_hangzhou_improve_west_lake_tooltip: "[RICE_west_lake|E] 지역은 그 아름다움을 유지하거나 개선하는 데 많은 노력이 필요합니다." # 8078677509935009331
   RICE_hangzhou_improve_west_lake_desc: "[RICE_west_lake|E]는 오랫동안 [GetTitleByKey('c_hangzhou').GetNameNoTier]의 유명한 명소였으며, 수질과 아름다움을 유지하거나 심지어 개선하기 위해 정기적인 관리가 필요합니다." # 5777064882566310319
   RICE_hangzhou_improve_west_lake_effect_tooltip_1: "이 [decision|E]의 [county_modifiers|E]가 활성화되어 있는 동안, [activity|E]인 [GetActivityType( 'activity_RICE_hangzhou_sightsee_at_west_lake' ).GetName] 활동으로 인한 [stress_loss_i|E] [stress_loss|E]가 증가할 것입니다." # 5924597427584825964
   RICE_hangzhou_improve_west_lake_effect_tooltip_2: "[RICE_west_lake|E]에 이루어지는 모든 #V 새로운 개선#!은 [RICE_ten_scenes_of_west_lake|E]가 정식으로 인정받을 확률을 약간 높여줍니다." # 8595281664177894444
   RICE_hangzhou_improve_west_lake_confirm: "서호의 아름다움은 영원할 것이다!" # 3461011775225051864
-  RICE_hangzhou_improve_west_lake_context_tooltip: "#emphasis 역사적 배경:#! xxxxxxxx" # 14932428209633311872
+  RICE_hangzhou_improve_west_lake_context_tooltip: "$RICE_hangzhou_sightsee_at_west_lake_context_tooltip$ 수년 동안 지방 관료들은 이 지역을 아름답게 꾸미거나 개조하기 위해 다양한 사업을 주도해야 했습니다. 이러한 사업의 유명한 예시로는 8세기의 유명한 지사(이자 시인)인 백거이와 11세기의 소식(蘇軾)이 건설한 둑길이 있습니다." # 13023010153081019692
   RICE_hangzhou_recently_improved_west_lake_req: "[GetTitleByKey('c_hangzhou').GetNameNoTier]는 현재 이 [decision|E]에서 제공하는 [county_modifiers|E] 중 어느 것도 보유하고 있지 않습니다." # 6884957799045442583
   RICE_HANGZHOU_IMPROVE_WEST_LAKE_PICK_TYPE: "$RICE_hangzhou_improve_west_lake_confirm$" # 17498630058776921938
   RICE_hangzhou_improve_west_lake_type: "[RICE_west_lake|E]를 유지하거나 개선하기 위해 무엇을 해야 할까요?" # 2963404424327176987
   RICE_hangzhou_improve_west_lake_select_text: "$RICE_hangzhou_improve_west_lake_type$\n$select_one_of_the_available_option_step_one_top_text$" # 9726062495139577241
   RICE_hangzhou_improve_west_lake_dredge_silt_name: "#bold 침전토 준설#! #weak (일상적인 임무)#!" # 3936661604076888266
   RICE_hangzhou_improve_west_lake_dredge_silt_desc: "$RICE_hangzhou_improve_west_lake_dredge_silt_name$" # 15434107427846375371
-  RICE_hangzhou_improve_west_lake_dredge_silt_tooltip: "#italic 시간이 흐르면서 전당강(Qiantang River)에서 많은 양의 퇴적물이 쌓여 서호(West Lake) 유적지의 조화에 영향을 미치고 있습니다. 이 퇴적물을 제거해야 합니다.#!" # 17932087161862328367
+  RICE_hangzhou_improve_west_lake_dredge_silt_tooltip: "#italic 시간이 지남에 따라 전당강에서 많은 양의 토사가 퇴적되어 서호 유적지의 조화에 영향을 미치고 있습니다. 이 토사를 제거해야 합니다#!" # 16354335204503409669
   RICE_hangzhou_improve_west_lake_patrols_name: "#bold 순찰 강화#! #weak (일상적인 임무)#!" # 5534794271846414546
   RICE_hangzhou_improve_west_lake_patrols_desc: "$RICE_hangzhou_improve_west_lake_patrols_name$" # 9313873525787530691
   RICE_hangzhou_improve_west_lake_patrols_tooltip: "#italic 서호는 매일 순찰을 통해 서호를 찾는 군중이 소란, 쓰레기 투기, 외래 식물 불법 식재 등으로 호수의 온전함을 해치지 않도록 보장해야 합니다#!" # 16945008664234579581
@@ -351,35 +401,35 @@
   RICE_hangzhou_improve_west_lake_repairs_tooltip: "#italic 다리부터 정자, 예배당에 이르기까지 서호에는 건축미와 안전을 유지하기 위해 끊임없는 관리가 필요한 건물들로 가득합니다#!" # 11599369420029015021
   RICE_hangzhou_improve_west_lake_landscaping_name: "#bold 조경 작업 수행#! #weak (새로운 개선점)#!" # 4099880213401962178
   RICE_hangzhou_improve_west_lake_landscaping_desc: "$RICE_hangzhou_improve_west_lake_landscaping_name$" # 18223202014470717260
-  RICE_hangzhou_improve_west_lake_landscaping_tooltip: "#italic 비록 서호가 이미 아름답지만, 세심하게 계획된 조경 사업을 통해 그 아름다움은 언제나 더욱 다듬어질 수 있노라#!" # 3127859216133431210
+  RICE_hangzhou_improve_west_lake_landscaping_tooltip: "이 선택지는 추가로 [treasury_i|E] [treasury|E] (혹은 [gold_i|E] [gold|E])가 소모됩니다.\n\n#italic 서호는 이미 아름답지만, 세심하게 계획된 조경 사업을 통해 그 아름다움을 언제나 더욱 다듬을 수 있습니다!#" # 17808910778172297329
   RICE_hangzhou_improve_west_lake_religious_structures_name: "#bold 종교 구조물 건설#! #weak (새로운 개선점)#!" # 2360709782460356702
   RICE_hangzhou_improve_west_lake_religious_structures_desc: "$RICE_hangzhou_improve_west_lake_religious_structures_name$" # 5608341894490264954
-  RICE_hangzhou_improve_west_lake_religious_structures_tooltip: "#italic 서호에는 크기와 기능이 다양한 여러 종교 건축물들이 점점이 박혀 있습니다. 상서로운 장소에 하나를 더 짓는 것은 호수의 분위기를 더욱 고조시킬 뿐입니다!#" # 15463794674212729242
-  RICE_hangzhou_erect_embankment_on_qiantang_river: "치안탕 강에 주요 해안 방벽 건설" # 12055144770679613388
-  RICE_hangzhou_erect_embankment_on_qiantang_river_tooltip: "치안탕 강의 조수 해일은 통제되어야 한다." # 4362546271549887940
-  RICE_hangzhou_erect_embankment_on_qiantang_river_desc: "치안탕 강의 조수 해일은 수년 동안 지역 주민들에게 문제를 일으켜 왔습니다. 이전의 노력들은 미흡했으니, 이제는 조수 해일을 관리하기 위한 대규모 제방을 건설할 때입니다!" # 3612612660269780116
+  RICE_hangzhou_improve_west_lake_religious_structures_tooltip: "이 선택지는 추가로 [treasury_i|E] [treasury|E] (또는 [gold_i|E] [gold|E])의 비용이 듭니다.\n\n#italic 서호에는 크기와 기능이 다양한 여러 종교 시설들이 점점이 박혀 있습니다 – 상서로운 장소에 하나를 더 추가하는 것은 호수의 분위기를 더욱 고양시킬 뿐입니다!#" # 10264812349605952088
+  RICE_hangzhou_erect_embankment_on_qiantang_river: "치안탕 강에 대규모 해안 방벽 건설" # 9013987887496141570
+  RICE_hangzhou_erect_embankment_on_qiantang_river_tooltip: "첨강의 조수해일은 통제되어야만 한다" # 5629403875510928177
+  RICE_hangzhou_erect_embankment_on_qiantang_river_desc: "전당강의 조수 해일은 수년 동안 지역 주민들에게 문제를 일으켜 왔습니다. 이전의 노력들은 미흡했으니, 이제 조수 해일을 관리하기 위한 거대한 제방을 건설할 때입니다!" # 104275642844956780
   RICE_hangzhou_erect_embankment_on_qiantang_river_effect_tooltip_1: "xxxxx" # 1951045980481827005
   RICE_hangzhou_erect_embankment_on_qiantang_river_confirm: "밀물은 우리를 막지 못할 것이다!" # 6021339643325317339
-  RICE_hangzhou_erect_embankment_on_qiantang_river_context_tooltip: "#emphasis 역사적 배경:#! xxxxxxxx" # 14932428209633311872
+  RICE_hangzhou_erect_embankment_on_qiantang_river_context_tooltip: "#emphasis 역사적 배경:#! 항저우를 가로지르는 전당강은 독특한 지리적 상황으로 인해 세계에서 가장 큰 조수 해일이 발생하는 곳입니다. 이 놀라운 현상은 수세기 동안 인기를 끌었지만, 동시에 많은 고통과 파괴의 원인이 되기도 했습니다. 조수 해일을 통제하려는 유명한 시도는 10세기 초 오월의 왕 전류(Qián Liú) 치하에서 해안 제방을 건설한 것입니다. 전설에 따르면, 이 공사가 조수로 인해 위협받았을 때, 왕은 만 명의 궁수들을 모아 화살로 조수를 쏘게 했습니다. 그러자 물이 즉시 물러났으며, 이는 그 힘의 과시에 겁을 먹은 결과였다고 합니다." # 1152377363439746034
   RICE_hangzhou_dedicate_temple_to_yue_fei: "악비에게 사원을 봉헌하십시오" # 2452972487142937952
   RICE_hangzhou_dedicate_temple_to_yue_fei_tooltip: "악비는 우리 모두에게 영감을 주는 영웅이다" # 6250760030658657129
   RICE_hangzhou_dedicate_temple_to_yue_fei_desc: "위대한 영웅이자 장군이었던 악비(Yue Fei)가 복권되었으니, 이제 그의 묘소가 있는 [GetTitleByKey('c_hangzhou').GetNameNoTier]에 사원을 세우는 것이 마땅하오. 그리하여 후세들이 그를 기리고 그의 유산을 기억할 수 있을 것이오." # 12036700304029231086
   RICE_hangzhou_dedicate_temple_to_yue_fei_effect_tooltip_1: "xxxxx" # 1951045980481827005
   RICE_hangzhou_dedicate_temple_to_yue_fei_confirm: "웨이 페이의 용맹함이 우리에게 계속 영감을 주기를!" # 11189055014405423949
-  RICE_hangzhou_dedicate_temple_to_yue_fei_context_tooltip: "#emphasis 역사적 배경:#! xxxxxxxx" # 14932428209633311872
+  RICE_hangzhou_dedicate_temple_to_yue_fei_context_tooltip: "#emphasis 역사적 배경:#! 악비는 송나라의 장군으로, 북중국을 정복했던 여진족과의 전쟁에서 송나라를 이끌었습니다. 정치적 적들에 의해 반역죄로 몰려 처형당했으나, 수년 후 복권되어 오늘날 중국의 위대한 영웅 중 한 명으로 추앙받고 있습니다. 닝종 황제는 1221년 항저우에 악비를 위한 특별 사당을 봉헌했습니다." # 14770005133931590816
   RICE_hangzhou_build_su_causeway: "서호에 대운하를 건설합니다" # 13584781585132875409
   RICE_hangzhou_build_su_causeway_tooltip: "웨스트 레이크에 또 다른 둑길이 필요합니다." # 2419607397687706059
   RICE_hangzhou_build_su_causeway_desc: "수년 전, 위대한 시인이자 당시 [GetTitleByKey('c_hangzhou').GetNameNoTier]의 태수였던 백거이(Bǎi Jūyì)는 호수의 미관과 수질 개선을 위해 [RICE_west_lake|E]를 가로지르는 둑길 건설을 명했습니다. 우리도 이제 비슷한 노력을 기울일 때입니다." # 6005325745660893236
   RICE_hangzhou_build_su_causeway_effect_tooltip_1: "xxxxx" # 1951045980481827005
   RICE_hangzhou_build_su_causeway_confirm: "서호가 이것으로 더욱 좋아질 것이다!" # 10575969350540664670
-  RICE_hangzhou_build_su_causeway_context_tooltip: "#emphasis 역사적 배경:#! xxxxxxxx" # 14932428209633311872
+  RICE_hangzhou_build_su_causeway_context_tooltip: "$RICE_hangzhou_improve_west_lake_context_tooltip$" # 2184871929259401101
   RICE_hangzhou_ten_scenes_west_lake_decision: "서호 십경을 대중화하라" # 8391690650988612817
   RICE_hangzhou_ten_scenes_west_lake_decision_tooltip: "웨스트 레이크에 또 다른 둑길이 필요합니다." # 2419607397687706059
   RICE_hangzhou_ten_scenes_west_lake_decision_desc: "[RICE_west_lake|E]는 [GetTitleByKey('c_hangzhou').GetNameNoTier]에서 인기 있는 관광지이지만, 대부분은 그곳을 최대한 즐기는 방법을 모릅니다. 저와 같은 [RICE_west_lake|E]의 진정한 애호가들 사이에서는 호수의 아름다움을 대표하는 [RICE_ten_scenes_of_west_lake_ten_scenes|E]에 대한 이야기가 오가는데, 제가 그것들을 홍보하기 위한 무언가를 해야겠습니다!" # 10970182866302740434
   RICE_hangzhou_ten_scenes_west_lake_decision_effect_tooltip_1: "당신은 책이나 그림 [artifact|E] 중 하나를 선택해야 합니다." # 8237373383839108072
   RICE_hangzhou_ten_scenes_west_lake_decision_effect_tooltip_2: "[activity|E] 유형인 [GetActivityType( 'activity_RICE_hangzhou_sightsee_at_west_lake' ).GetName] 활동이 더 넓은 지리적 범위에서 가능해지며, [activity|E] 참가자들은 영감을 얻을 확률이 더 높아질 것입니다." # 5924436016276162469
   RICE_hangzhou_ten_scenes_west_lake_decision_confirm: "모두가 열 가지 장면을 알게 될 것이다!" # 2862304558220943069
-  RICE_hangzhou_ten_scenes_west_lake_decision_context_tooltip: "#emphasis 역사적 배경:#! xxxxxxxx" # 14932428209633311872
+  RICE_hangzhou_ten_scenes_west_lake_decision_context_tooltip: "$RICE_hangzhou_sightsee_at_west_lake_context_tooltip$ 송나라 때부터 문인들은 서호에서 꼭 봐야 할 열 가지 명승지 목록을 만들었는데, 이는 너무나 유명해져 [Glossary( 'Sinosphere', 'SINOSPHERE_GLOSS' )] 내의 다른 도시들도 지역 랜드마크에 대한 자신들만의 십경(十景)을 갖게 되었습니다. 이는 중국 문화에서 너무나 진부한 것이어서, 중국의 가장 위대한 20세기 작가 중 한 명인 루쉰(Lǔ Xùn)은 냉소적으로 이렇게 썼습니다.\"우리 중국인들 중 다수는 일종의 '십경 증후군'을 가지고 있는데 (...) 이는 청나라 때 유행병 수준에 이르렀습니다\"" # 15444285960563944536
   hangzhou.0000.t: "xxxxx" # 1951045980481827005
   hangzhou.0000.desc: "xxxxx" # 1951045980481827005
   hangzhou.0000.a: "xxxxx" # 1951045980481827005
@@ -444,14 +494,14 @@
   hangzhou.0020.desc: "전당강의 조수해일은 황홀한 광경이지만, 끝없는 세대에 걸쳐 사람들의 삶을 파괴해 온 큰 고통의 원인이기도 합니다.\n\n이전의 제방들은 역부족임이 증명되었기에, 저는 이전의 둑보다 강물의 횡포를 더 잘 견딜 수 있는 강력한 제방 건설을 명령했습니다. 강의 정령의 순응을 보장하고, 이 제방이 시대를 견디지 못할 것이라는 현지 주민들의 걱정을 달래기 위해, 저는 강의 정령을 되돌리도록 궁수들에게 상징적으로 물에 화살을 쏘게 했습니다.\n\n강물의 위협에 끊임없이 맞서야 하더라도, 이 새로운 제방은 미래 세대가 수행할 유사한 작업에 훌륭한 토대가 될 것입니다." # 14237771841347403477
   hangzhou.0020.a: "강물이 날뛰도록 내버려 둘 수는 없다." # 3006091253345233635
   hangzhou.0021.t: "서호 개선하기" # 1689087349750519546
-  hangzhou.0021.desc: "[GetTitleByKey('c_hangzhou').GetNameNoTier]의 서호는 대대로 수많은 유람객이 찾았으며 그 인기는 시들 줄 모릅니다.\n\n비록 자연미의 전형으로 여겨지지만, 사실 서호의 유명한 미관을 보존하고 기존 시설과 아름다움을 확장하거나, 사려 깊지 못한 유람객들의 훼손과 낭비로부터 보호하기 위해 보이지 않는 곳에서 끊임없는 노력이 이루어지고 있습니다.\n\n#bold [ROOT.Char.GetTitleAsNameNoTooltip]#으로서, 저는 저의 관리들에게 이러한 사업 중 하나를 시작하도록 명령했습니다." # 8923632560633626623
+  hangzhou.0021.desc: "[GetTitleByKey('c_hangzhou').GetNameNoTier]의 서호는 대대로 많은 관광객이 찾았으며, 그 인기는 시들 줄 모르는 듯합니다.\n\n비록 자연미의 정수로 여겨지지만, 사실 서호의 유명한 미관을 보존하고 기존 시설과 아름다움을 확장하며, 사려 깊지 못한 관광객들의 훼손과 낭비로부터 보호하기 위해 보이지 않는 곳에서 끊임없이 노력이 이루어지고 있습니다.\n\n#bold [ROOT.Char.GetTitleAsNameNoTooltip]#으로서, 저는 저의 관리들에게 이러한 사업 중 하나를 시작하도록 명했고, 이 노력을 위해 많은 노동자와 자원을 모았습니다." # 13052348741262994708
   hangzhou.0021.a: "서호가 계속 번성하기를!" # 12308660816999035589
-  hangzhou.0022.t: "xxxxx" # 1951045980481827005
-  hangzhou.0022.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0022.a: "xxxxx" # 1951045980481827005
-  hangzhou.0023.t: "xxxxx" # 1951045980481827005
-  hangzhou.0023.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0023.a: "xxxxx" # 1951045980481827005
+  hangzhou.0022.t: "[ROOT.Char.GetDynasty.GetNameNoTooltip] 둑길" # 13704157720509904520
+  hangzhou.0022.desc: "[RICE_west_lake|E]는 여전히 [GetTitleByKey('c_hangzhou').GetNameNoTier]에서 최고로 손꼽히는 관광지이지만, 최근에는 퇴적, 무지한 현지인들의 밤나무 식재, 그리고 기타 생태계 파괴로 인해 그 아름다움이 훼손되고 있습니다. 옛날에는 역대 태수들이 이러한 문제를 완화하기 위해 둑길 건설 사업을 벌이곤 했습니다.\n\n이제 제가 그러한 노력을 이끌 차례입니다. 저는 준설된 토사로 가장 위대한 둑길을 건설하도록 현지 노동자들에게 명령했습니다. 이 둑길에는 호수의 여러 부분을 연결하는 여섯 개의 다리도 포함될 것입니다. 이는 호수의 아름다움을 보존하고 #italic 더욱#! 고양시켜 후세 사람들이 계속 감탄하게 만들 것입니다.\n\n흥미롭게도, 일부 현지인들은 이 둑길을 저의 이름을 따서 [ROOT.Char.GetDynasty.GetName] 둑길이라고 부르기 시작한 것 같습니다!" # 10525563204047124362
+  hangzhou.0022.a: "[ROOT.Char.GetDynasty.GetName] 대로(大路)는 듣기 좋군." # 15147406392937619206
+  hangzhou.0023.t: "#월비 사당#" # 17817325619117268867
+  hangzhou.0023.desc: "수년 전, 위대한 장군 악비(Yuè Fēi)께서는 송(Sòng) 왕조의 군대를 이끌고 북쪽의 가짜 금(Jīn) 왕조에 맞서 싸웠으나, 특히 진회(Qín Huì)와 같은 간신들의 모함과 거짓 혐의로 인해 투옥되고 처형당하셨습니다. 다행히도, 의로운 간수 위순(Wěi Shùn)께서는 목숨을 걸고 악비 장군의 시신을 몰래 빼내 한 사원 아래에 묻어주셨습니다.\n\n그 후 악비 장군의 시신이 재발견되었고, 그의 명예는 회복되었습니다. 이제 이 배신당한 영웅에게 마땅히 받아야 할 존경을 돌려야 한다는 목소리가 더욱 커지고 있습니다!\n\n이에 본인은 [GetTitleByKey('c_hangzhou').GetNameNoTier]에 있는 그의 묘소 주변에 사원을 건립하도록 명을 내렸습니다. 또한, 방문객들이 영원히 저주를 퍼부을 수 있도록 악당 진회와 그의 공모자들의 철제 조각상들이 묘소 앞에 무릎 꿇은 자세로 세워졌습니다. 이제 덕과 용기를 지닌 이들은 악비 장군의 고귀한 정신을 기리며 그분을 올바르게 추앙할 것입니다!" # 10118709569211783195
+  hangzhou.0023.a: "유 비 장군의 영혼이 이 시련의 시기에 우리를 인도하시기를!" # 8952074545747092133
   hangzhou.0024.t: "xxxxx" # 1951045980481827005
   hangzhou.0024.desc: "xxxxx" # 1951045980481827005
   hangzhou.0024.a: "xxxxx" # 1951045980481827005
@@ -537,23 +587,33 @@
   hangzhou.0049.t: "xxxxx" # 1951045980481827005
   hangzhou.0049.desc: "xxxxx" # 1951045980481827005
   hangzhou.0049.a: "xxxxx" # 1951045980481827005
-  hangzhou.0050.t: "xxxxx" # 1951045980481827005
-  hangzhou.0050.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0050.a: "xxxxx" # 1951045980481827005
-  hangzhou.0051.t: "xxxxx" # 1951045980481827005
-  hangzhou.0051.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0051.a: "xxxxx" # 1951045980481827005
-  hangzhou.0052.t: "xxxxx" # 1951045980481827005
-  hangzhou.0052.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0052.a: "xxxxx" # 1951045980481827005
-  hangzhou.0053.t: "xxxxx" # 1951045980481827005
-  hangzhou.0053.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0053.a: "xxxxx" # 1951045980481827005
-  hangzhou.0054.t: "xxxxx" # 1951045980481827005
-  hangzhou.0054.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0054.a: "xxxxx" # 1951045980481827005
-  hangzhou.0055.t: "xxxxx" # 1951045980481827005
-  hangzhou.0055.desc: "xxxxx" # 1951045980481827005
+  hangzhou.0050.t: "전당강으로" # 8273967389242323604
+  hangzhou.0050.desc: "세상은 경이로운 자연 현상으로 가득하지만, [GetTitleByKey('c_hangzhou').GetNameNoTier]의 첨당강 조수해일만큼 매혹적인 것은 드뭅니다.\n\n그리하여 우리는 조수해일을 직접 보기 위해 [GetTitleByKey('c_hangzhou').GetNameNoTierNoTooltip]로 여행을 떠나려 합니다. 일부에서는 조수해일에 휩쓸려 사망자가 발생했기에 위험하다고 말하지만, 저는 그것이 #italic 그렇게# 위험하지는 않으리라 확신합니다!" # 15227430723809014789
+  hangzhou.0050.a: "이 스릴 넘치는 광경을 빨리 보고 싶군요!" # 11766139061700295926
+  hangzhou.0051.t: "강변에서 기다리며" # 1640299710097240272
+  hangzhou.0051.desc: "마침내 우리는 전당강에 도착했습니다. 때맞춰 도착했군요! 곧 조수가 밀려올 것입니다.\n\n강가에는 이 장관을 보기 위해 모인 수많은 인파가 있습니다. 대부분은 현지인들이지만, 이 소식을 듣고 찾아온 먼 곳의 여행자들도 많습니다." # 6322032641655622988
+  hangzhou.0051.desc.festival: "음력으로 8월경이라, 강의 수호신인 용왕을 기리는 축제를 위해 평소보다 더 많은 이들이 모여들었습니다. 온갖 오락거리와 맛있는 음식, 흥겨움이 가득한 축제의 날입니다." # 12189409384026403032
+  hangzhou.0051.a: "강이 곧 눈을 즐겁게 하는 장관으로 변할까요?" # 17460300638056072825
+  hangzhou.0052.t: "조수 간만의 차" # 1598071566605392857
+  hangzhou.0052.desc: "전당강이 우리 앞에 펼쳐져 있네, 마치 거대하고 강력하며 역동적인 물길처럼. 우리 모두는 조수의 홍수가 시작되기를 간절히 기다리고 있다. 그때, 더 먼 곳에서 외침이 들려온다. 오고 있다!\n\n그것이 시작되자 군중 전체가 환호, 숨 막히는 소리, 흥분된 수다로 들끓는다. 더 상류에서부터 거대한 파도가 밀려 내려오며 질주한다. 곧 조수의 홍수가 부서지며, 두렵고 장엄한 광경을 연출한다.\n\n용왕, 강의 수호신에게 바치는 전통 의식의 일환으로 몇몇 용감한 청년들이 널빤지를 들고 파도를 타자 군중은 격려하며 소리친다." # 8650114894839442165
+  hangzhou.0052.a: "경이롭군! 실로 경이롭도다!" # 8769661421780782329
+  hangzhou.0052.a.nothing: "아무 일도 일어나지 않습니다." # 14546250741874380918
+  hangzhou.0052.a.injury: "누군가 #N 만큼 다쳤습니다#!" # 12071755254466022021
+  hangzhou.0052.a.death: "누군가 #N 사망했습니다#!" # 11926010899680060999
+  hangzhou.0053.t: "결론" # 3822412533199628403
+  hangzhou.0053.desc: "밀물은 시작되었을 때만큼이나 빨리 멎어버린 듯하군.\n전당강은 평소의 모습으로 돌아가고 있고, 모두들 집으로 돌아가고 있다. 우리도 집으로 돌아가야겠지만, 오늘 우리가 목격한 일에 대한 즐겁고 짜릿한 기억을 안고 돌아갈 수 있겠지. 가장 좋은 점은 이것이 일생에 한 번뿐인 희귀한 광경이 아니라는 것이다. 앞으로도 우리는 이 광경을 몇 번이고 더 볼 수 있을 테니까." # 4091658924541227811
+  hangzhou.0053.a: "언젠가 다시 볼 수 있기를 바라네." # 4807291887574079671
+  hangzhou.0054.t: "부상" # 5006687505982534511
+  hangzhou.0054.desc.intro: "해일은 끝났지만, 사건 없이 마무리되지는 않았습니다." # 17692985430597267427
+  hangzhou.0054.desc.injury_self: "아, 구경하던 중에 부상을 당했군." # 6395308146807076187
+  hangzhou.0054.desc.injury_other: "[victim.GetTitledFirstName]가 관람 중 부상을 입었습니다." # 6478271411959173624
+  hangzhou.0054.desc: "밀물이 너무 가까이 다가와 우리 중 일부를 휩쓸었을 때 말입니다.\n\n적어도 사망자는 없었습니다. 그런 일은 흔하지는 않지만 아예 없는 일도 아니기에, 우리는 [Qiántáng 강]과 그 밀물 조수가 꽤 위험할 수 있다는 것을 뼈저리게 배웠습니다..." # 16961161165218841584
+  hangzhou.0054.a: "부디 곧 다른 불행한 일은 없기를 바라야겠군." # 7585511951763627444
+  hangzhou.0055.t: "죽음" # 14184817095105934107
+  hangzhou.0055.desc.intro: "$hangzhou.0054.desc.intro$ 처음에는 신나고 즐거웠던 하루가 원치 않는 비극으로 변해버렸습니다." # 13585010054645787231
+  hangzhou.0055.desc.death_self: "관전하는 동안 무언가가 나를 휩쓸어가는 것을 느꼈다. 바로 전당강의 물살이었다!\n\n나는 물살에 맞서 필사적으로 무언가를 붙잡으려 했지만 소용이 없었다. 파도가 나를 압도했고, 순식간에 의식을 잃었다." # 16374977094737299746
+  hangzhou.0055.desc.death_other: "관람하는 동안 [victim.GetTitledFirstName]가 파도에 휩쓸려 익사했습니다. 저희는 [victim.GetHerHim]를 물 밖으로 끌어내기 위해 최선을 다했지만, 때는 늦었습니다.\n\n나중에 현지인들이 하류에서 [victim.GetFirstNamePossessive] 시신을 발견했습니다." # 15879223153224007128
+  hangzhou.0055.desc: "어째서 이런 일이 일어나야만 했단 말인가!?!?" # 2467894297475420710
   hangzhou.0055.a: "xxxxx" # 1951045980481827005
   hangzhou.0056.t: "xxxxx" # 1951045980481827005
   hangzhou.0056.desc: "xxxxx" # 1951045980481827005
@@ -600,6 +660,7 @@
   hangzhou.0070.t: "슬픔의 심장" # 18058625851376855969
   hangzhou.0070.desc: "지금도 당신, [tang_wan.GetFirstName]을 생각하면 가슴이 아픕니다.\n\n제 인생은 성공과는 거리가 멀었습니다. 결혼 생활의 성공은 어머니께서 당신, 저의 첫 번째 아내와 이혼하게 하시면서 수포로 돌아갔습니다. 관료로서의 성공은 [GetTitleByKey('c_hangzhou').GetNameNoTier]에서 쾌락에 빠져 허송세월하는 부도덕하고 무기력한 자들 때문에 매번 좌절되었습니다. 정작 [jurchen.GetCollectiveNoun]은 마땅히 [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetNameNoTier]의 소유여야 할 중국 북부 땅을 여전히 지배하고 있습니다.\n\n어쩌면 저는 늙어가는 것인지도 모릅니다. 예전처럼 젊고 활력이 넘치며 사랑이 가득했던 때가 아닙니다, [tang_wan.GetFirstNameNoTooltip]. 어쩌면 평생 관료로 살아온 제가 할 수 있는 일은 많지 않은지도 모릅니다. 어쩌면 이제 쉬면서 남은 세월을 조용히 보내야 할지도 모릅니다. 어쩌면… 어쩌면 이 세상의 혹독한 현실을 받아들여야 할 때가 온 것 같습니다…." # 2645477355054422814
   hangzhou.0070.a: "탕 완, 헤어진 지 너무 오랜 세월이 흘러 내 마음은 슬픔으로 가득 찼소." # 125556550751728876
+  hangzhou.0070.info: "#emphasis 역사적 배경:#! 육유(陸游, 1125–1210)는 송나라의 가장 저명한 시인 중 한 명이었습니다. 그는 실망으로 가득 찬 삶을 살았습니다. 예를 들어, 젊은 시절 그의 어머니는 그에게 그의 첫 번째 아내이자 동료 시인이었던, 그가 사랑했던 여인과 이혼하도록 강요했습니다. 두 사람 모두 재혼해야 했으며, 비록 그의 첫 번째 아내는 몇 년 후 상심으로 인해 사망했다고 전해집니다. 이후 그는 관료로서 송나라 정부가 여진족을 공격하고 잃어버린 북쪽 영토를 되찾도록 애썼으나 헛수고였습니다. 이러한 상황에 염증을 느낀 육유는 자신의 시와 글에 집중했습니다. 그러나 노년이 되어서도 육유는 첫 번째 아내를 큰 슬픔 속에서 기억했으며, 그들의 비극적인 사랑 이야기는 중국 오페라로까지 불멸화되었습니다." # 15081678044223127921
   hangzhou.0071.t: "$RICE_historical_aspiration_fulfilled_title$" # 6312590152546762382
   hangzhou.0071.desc.not_reclaimed: "우리는 [jurchen.GetCollectiveNoun]에게 중원(中原)을 빼앗겼으며, 권력을 가진 자들 중 북쪽을 되찾을 용기와 결단력을 가진 이는 거의 없습니다! 그들은 [Glossary( 'Jingkang incident', 'JINGKANG_INCIDENT_GLOSS' )]의 잔혹 행위나 [jurchen.GetCollectiveNounNoTooltip]의 오만함을 잊었단 말입니까? 그들에게 조상에 대한 사랑은 없단 말입니까?" # 15724572019794794781
   hangzhou.0071.desc.reclaimed: "우리가 [jurchen.GetCollectiveNoun]에 대해 진격하여 중원 땅을 되찾기 시작했지만, 권력을 쥔 자들은 이 땅을 지키고 장기적으로 성공을 이어나갈 용기나 결단력이 부족합니다. 우리가 다시 북방을 잃고 미래에 또 다른 [Glossary( 'Jingkang incident', 'JINGKANG_INCIDENT_GLOSS' )]을 겪을지도 모른다는 생각에 슬픕니다." # 6109367877260917113
@@ -698,33 +759,49 @@
   hangzhou.0099.t: "xxxxx" # 1951045980481827005
   hangzhou.0099.desc: "xxxxx" # 1951045980481827005
   hangzhou.0099.a: "xxxxx" # 1951045980481827005
-  hangzhou.0100.t: "xxxxx" # 1951045980481827005
-  hangzhou.0100.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0100.a: "xxxxx" # 1951045980481827005
-  hangzhou.0101.t: "xxxxx" # 1951045980481827005
-  hangzhou.0101.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0101.a: "xxxxx" # 1951045980481827005
-  hangzhou.0102.t: "xxxxx" # 1951045980481827005
-  hangzhou.0102.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0102.a: "xxxxx" # 1951045980481827005
-  hangzhou.0103.t: "xxxxx" # 1951045980481827005
-  hangzhou.0103.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0103.a: "xxxxx" # 1951045980481827005
-  hangzhou.0104.t: "xxxxx" # 1951045980481827005
-  hangzhou.0104.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0104.a: "xxxxx" # 1951045980481827005
-  hangzhou.0105.t: "xxxxx" # 1951045980481827005
-  hangzhou.0105.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0105.a: "xxxxx" # 1951045980481827005
-  hangzhou.0106.t: "xxxxx" # 1951045980481827005
-  hangzhou.0106.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0106.a: "xxxxx" # 1951045980481827005
-  hangzhou.0107.t: "xxxxx" # 1951045980481827005
-  hangzhou.0107.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0107.a: "xxxxx" # 1951045980481827005
-  hangzhou.0108.t: "xxxxx" # 1951045980481827005
-  hangzhou.0108.desc: "xxxxx" # 1951045980481827005
-  hangzhou.0108.a: "xxxxx" # 1951045980481827005
+  hangzhou.0100.t: "게으름뱅이들의 문제" # 13830969459742652897
+  hangzhou.0100.desc: "오늘, 제가 [ROOT.Char.GetTitleAsNameNoTooltip]으로서 무엇을 할 수 있을지 신하들에게 의견을 구하자, [courtier.GetTitledFirstName]이 열정적으로 응답했습니다.\n\\\"[ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier]의 시장에 [Glossary( 'yóushǒu', 'YOU_SHOU_GLOSS' )]가 너무 많다고 생각합니다\" [courtier.GetTitledFirstName]이 말합니다.\"저 한량들은 사회에 아무런 기여도 하지 않습니다! 그들의 부도덕한 행동 성향은 올곧은 시민들에게 위험을 초래합니다. 우리는 그들에 대해 무언가 조치를 취해야 합니다\"\n\n일부는 동의하며 고개를 끄덕이며, 그들을 시장에서 추방하거나 심지어 처벌해야 한다고 제안하거나, 적어도 농사와 같은 정직한 일을 찾도록 장려해야 한다고 주장합니다. 다른 이들은 이러한 조치가 우리의 자원을 낭비하는 것이라며 덜 열광적인 반응을 보입니다." # 10846907241380389700
+  hangzhou.0100.a: "그들을 시장에서 추방하는 것만으로 충분할 것입니다." # 11623333175578604370
+  hangzhou.0100.b: "그들의 태만을 징벌해야 합니다!" # 237230479950418752
+  hangzhou.0100.c: "지역 관리들에게 농업 활동을 장려하도록 명령하십시오." # 829661025429821057
+  hangzhou.0100.d: "이 문제는 무시하십시오. 그리 중요하지 않습니다." # 5013948264171718530
+  hangzhou.0101.t: "시장 속 한량들" # 6890834011691814537
+  hangzhou.0101.desc: "“저기 있는 [Glossary( 'yóushǒu', 'YOU_SHOU_GLOSS' )]들을 조심하시오,” [traveler.GetFirstName]가 우리가 [ROOT.Char.GetCurrentLocation.GetName]의 거리를 지날 때 내게 경고합니다.\n\n“그 사람들에게 무슨 문제가 있소?” 내가 [traveler.GetHerHim]에게 물었습니다. “그냥 게으른 부랑자들 같아 보이는데.”\n\n“게을러 보이지만, 그런 종류의 한량들은 올곧은 시민들에게 골칫거리라는 것을 나는 알 수 있소.” [courtier.GetFirstNameNoTooltip]이 강조합니다. “게으르긴 해도, 일부 한량들은 더… 범죄적인 성향을 품고 있을 수 있소. 저들이 주변을 둘러보는 것을 보시오? 그들이 입은 옷을 보시오? 저들과 멀리 떨어져 있는 것이 최선이오.”" # 11298573315005413861
+  hangzhou.0101.a: "만약 그들이 게으르다면, 우리를 해칠 만큼 게으르지 않을 것이다." # 13033471222527621699
+  hangzhou.0101.b: "좋은 생각이군... 저런 한량들은 피해야겠어." # 2849729678016469288
+  hangzhou.0102.t: "실제 여행은 과대평가되었지!" # 5339952060033664490
+  hangzhou.0102.desc: "\"마치 우리가 그곳에 있는 것 같은 기분이 드는군\" [courtier.GetFirstName]이 [courtier.GetSheHe]가 자리에서 편안하게 기대앉으며 말합니다.\"여행할 필요가 있겠어, 안 그래\"\n\n오늘 몇몇이 휴식을 취하기 위해 내 거처에 모였고, 재미 삼아 우리는 [Glossary( '편안히 누워 여행하기', 'WO_YOU_GLOSS' )]를 하기로 했습니다.\n\n우리는 이 분야에 능숙한 현지 문인(文人)이 그린 아름다운 풍경화를 감상하며, 이 그림들이 얼마나 생생하고 활기차며 생동감과 세부 묘사로 가득 차 있는지에 대해 생각합니다. 마치 직접 그곳에 가보는 듯한 경이로움과 감탄을 느끼게 하는군요." # 2481203490293196353
+  hangzhou.0102.a: "이렇게 편안하게 '여행'하는 것도 재미있군!" # 1695432952949885742
+  hangzhou.0102.b: "실제 여행보다는 못하지만 괜찮군요." # 15949259627060869029
+  hangzhou.0103.t: "용정차" # 6340783731140342609
+  hangzhou.0103.desc: "[GetTitleByKey('c_hangzhou').GetNameNoTier]의 유명한 서호 남서쪽에 위치한 룽징(Lóngjǐng) 주변 지역은 꽤 많은 차를 생산합니다. 비록 이 지역 밖에서는 알려져 있지 않지만, 현지인들은 이곳의 차를 자신들이 맛본 것 중 최고라고 여깁니다.\n\n저는 현지 생산자들에게서 이 차를 조달할 수 있는 적절한 인맥을 가지고 있습니다. 최근 저는 이 차를 좀 비축해서 제가 직접 즐기거나, 여러 사교 모임에서 손님들에게 대접할 수 있을 것 같다는 생각이 들었습니다." # 8036266454769754872
+  hangzhou.0103.a: "이 저평가된 차를 좀 사야겠군." # 1545983189022307689
+  hangzhou.0103.b: "그것은 알려지지 않은 이유가 있기 때문입니다. 절대로 인기를 얻지 못할 겁니다!" # 10846567925122818056
+  hangzhou.0103.info: "#emphasis 역사적 배경:#! 용정차(龍井茶, Dragon Well Tea)는 중국에서 가장 유명한 녹차 품종 중 하나로, [RICE_west_lake|E]의 남서쪽 지역에서 유래했습니다. 수백 년 동안 그 존재가 확인되었지만, 명나라와 청나라 시대에 이르러서야 더욱 유명해졌습니다. 예를 들어, 18세기 중국 황제 건륭제가 용정차와 관련되었다는 여러 전설이 전해집니다." # 9776213123345482239
+  hangzhou.0104.t: "황홀하게 따뜻한 바람" # 9758183242676168191
+  hangzhou.0104.desc: "제가 [courtier.GetTitledFirstName]가 꽤나 언짢고 괴로워 보이는 것을 보고 무슨 일이냐고 물었습니다.\n\\\"[RICE_west_lake|E]에 대해 사람들이 이야기하는 것을 들었는데 정말 짜증이 나더군요\" [courtier.GetHerHim]가 말했습니다. [courtier.GetSheHe]는 마치 밖에 있는 무언가가 [courtier.GetHerHim]를 격분시키는 것처럼 밖을 노려보며 말을 이었습니다.\"당신이 무슨 생각을 하는지 알아요. 그곳이 사람들이 즐거움을 누리는 평화롭고 아름다운 장소 아니냐고요? 음, #italic 바로 그것#!이 문제라니까요\"\n\n제가 무언가 말을 하려고 하자 [courtier.GetSheHe]는 계속해서 재잘거렸습니다.\"야만인들과 부패한 관리들이 문명화된 세상을 안팎으로 파괴하겠다고 위협하는데, 사람들이 어찌 그곳에 가서 아무것도 하지 않을 수 있겠습니까? 아니, [RICE_west_lake|E]의 방탕아들은 아무것도 하지 않는 것보다 더 나쁜 짓을 합니다. 그들은 무기력하고, 무능하며, 서툽니다. 그들은 우리 조상과 과거에 대해 아무런 존중도 보이지 않습니다. 그들은 우리가 직면한 진정으로 중요한 문제에 집중하기보다 덧없는 쾌락을 즐기려는 겁쟁이들입니다\"" # 4801760338817787459
+  hangzhou.0104.a: "당신은 참으로 올바른 [courtier.GetWomanMan]이시며, [courtier.GetFirstNameNoTooltip]이십니다." # 12942723321401332905
+  hangzhou.0104.b: "좋소. 이제 실례 좀 해야겠소..." # 8821572721406874855
+  hangzhou.0104.info: "#emphasis 역사적 배경:#! 항저우의 [RICE_west_lake|E]는 수세기 동안 유명한 관광지였지만, 특히 항저우가 수도였던 남송 시대에 큰 인기를 얻었습니다. 번화한 도시의 문화와 한가로운 활동의 상징으로서, 이는 린성(Lín Shēng)과 같은 일부 논평가들의 비판을 불러일으켰는데, 그는 사람들이 쾌락에 빠져 북쪽 중국과 옛 수도인 변주(Biànzhōu, 즉 개봉(Kāifēng))를 여진족으로부터 되찾으려는 의지가 부족하다고 여긴 것에 대해 다음과 같은 풍자 시를 썼습니다:\n\n#italic산 너머에 또 산이 있고, 누각 너머에 또 누각이 있네.\n서호의 노래와 춤은 언제나 끝날 것인가?\n따뜻한 바람이 나그네를 취하게 하니,\n항저우를 변주로 착각하게 만드네.#!" # 18174767064064944218
+  hangzhou.0105.t: "승리의 케이크" # 10874963315938148111
+  hangzhou.0105.desc: "오늘 작은 모임에서 [courtier.GetTitledFirstName]가 [GetTitleByKey('c_hangzhou').GetNameNoTier]에서 갓 만든 [Glossary('dìngshèng gāo', 'GLOSS_DING_SHENG_GAO')] 케이크를 제게 선물로 주었습니다.\n\n“모든 면에서 많은 승리를 거두시길 바랍니다.” [courtier.GetFirstNameNoTooltip]가 제게 건배하며 말했고, 우리는 케이크를 맛보기 시작했습니다." # 4586053268695022414
+  hangzhou.0105.a: "친절한 행동이로군, 고맙소!" # 6172182503938969395
+  hangzhou.0106.t: "백사전설" # 13363534480355450080
+  hangzhou.0106.desc: "최근 들어 [GetTitleByKey('c_hangzhou').GetNameNoTier]의 백사(白蛇) 전설이 점점 더 인기를 얻고 있으며, 문인들이 모임에서 즉흥적으로 읊는 시에 맞춰 거리의 연예인들과 극단들이 이 이야기를 다시 전하고 있습니다.\n\n이야기의 전개 방식은 사람마다 다르지만, 주로 아름답고 매혹적인 백사 요괴가 젊은 선비를 유혹하는 내용입니다. 이야기의 일부 버전에서는 선비가 죽거나 적어도 끔찍한 병을 앓게 되지만, 다른 버전에서는 의롭고 용감한 승려가 [RICE_west_lake|E]의 유명한 [GetTitleByKey('c_hangzhou').GetNameNoTier] 아래에 뱀을 가두어 그 요괴를 퇴마함으로써 그를 구원합니다." # 5656741250860020196
+  hangzhou.0106.a: "나는 학자가 자신의 색욕 때문에 벌을 받는 버전의 이야기가 마음에 드는군." # 14366510978005288364
+  hangzhou.0106.b: "저는 뱀의 유혹자가 패배하는 행복한 결말을 선호합니다." # 7150207072686933942
+  hangzhou.0106.c: "만약 그 뱀이 영웅적인 여성이었고, 그 수도승이 증오심에 가득 찬 광신도였다면 어땠을까요?" # 9212664691116818507
+  hangzhou.0106.info: "#emphasis 역사적 배경:#! 중국의 가장 유명한 민담 중 하나는 백사(白蛇) 전설입니다. 현대 버전의 이야기에서 아름다운 젊은 여성의 모습으로 변신할 수 있는 백사 요괴는 젊은 학자의 연인이자 나중의 아내로서 동정적으로 묘사되지만, 그 둘은 그녀를 파괴하려는 승려이자 퇴마사인 법해(Fǎhǎi)에 의해 방해받습니다. 반대로, 청나라 이전까지의 옛 버전에서는 역할이 뒤바뀌어, 뱀이 살인마 악당이었고 법해가 영웅적인 요괴 사냥꾼이었습니다. 사실, 이 이야기의 가장 초기에 알려진 버전에서는 뱀은 그저 지역 가축과 사람들에게 해를 끼치는 성가신 괴물이었으며, 한 승려에 의해 제압되었습니다." # 14396507475706215174
+  hangzhou.0107.t: "과수원 정자 모임" # 9774152516513508807
+  hangzhou.0107.desc: "저는 최근 위대한 정치가이자 서예가였던 왕희지가 수백 년 전에 주최했던 [Glossary( 'winding stream parties', 'WINDING_STREAM_PARTY_GLOSS' )]에 대해 읽었습니다. 이 모임 중 가장 유명한 것은 아마도 [GetTitleByKey('b_kuaiji').GetNameNoTier] 근처에서 열렸던 전설적인 난정회(蘭亭會)일 것입니다. 그곳에서 그는 당대의 가장 위대하고 뛰어난 신사들을 초대하여 술을 마시며 시를 짓고 뽐냈습니다.\n\n마치 천둥구름에서 비가 쏟아지듯, 옛 시인들이 꺾이지 않는 열정과 속도로 비할 데 없는 시를 계속해서 읊어대는, 타의 추종을 불허하는 지적이고 예술적인 세련미가 넘쳤던 그 분위기를 상상만 할 수 있군요." # 18280124407657064968
+  hangzhou.0107.a: "오늘날의 시인들은 우리의 선조들에 비하면 초라할 뿐이오." # 14080099754952696532
+  hangzhou.0107.b: "모든 시대는, 심지어 우리 시대까지도, 그 시대만의 천재들을 배출합니다." # 15639744071849918091
+  hangzhou.0108.t: "서시" # 9346725493432678110
+  hangzhou.0108.desc: "오늘 나는 시를 좀 읽다가 중국 역사 속 전설적인 [Glossary( '사대미인', 'FOUR_BEAUTIES_GLOSS' )] 중 한 명인 서시(Xī Shī)의 비극적인 삶과 운명을 애도하는 시를 접했다네. 그녀는 [GetTitleByKey('b_kuaiji').GetNameNoTier] 출신이었지. 수백 년 전, 월(Yuè) 왕 구천(Gōujiàn)의 명재상 범려(Fàn Lǐ)가 오(Wú)나라 왕 부차(Fuchāi)를 유혹하기 위해 서시를 등용했고, 그 결과 오나라가 월나라에 정복당하며 멸망했다는 전설은 많은 이들이 알고 있을 걸세.\n\n그 후의 이야기에 대해서는 여러 가지 설이 있다네. 어떤 설에 따르면, 서시는 오나라 군중이나 구천, 혹은 죄책감에 시달린 그녀 스스로에 의해 익사당했다고 하지. 전설의 더 행복한 버전에서는, 사랑에 빠진 범려와 서시가 위험한 정치 세계를 피해 월나라 조정을 떠나, 호수에서 은거하며 남은 생을 근심 없이 보냈다고 전해진다네." # 15503733635385438132
+  hangzhou.0108.a: "비극적인 결말이 아마도 일어났던 일일 것입니다." # 5903815200163119351
+  hangzhou.0108.a.flavor: "세상은 잔혹한 곳일 수 있으며, 아름다움은 그것을 지닌 자와 주변 사람 모두에게 큰 고통의 원천이 될 수 있습니다…" # 3686307723535299224
+  hangzhou.0108.b: "나는 행복한 결말이 있었다고 생각하고 싶네." # 15967222704888974303
+  hangzhou.0108.b.flavor: "다른 네 명의 미녀들은 모두 행복한 결말을 맞이하지 못했으니, 부디 그중 적어도 한 명이라도 행복한 결말을 맞이했기를 바랄 뿐이다…." # 11952062139370172110
   hangzhou.0109.t: "xxxxx" # 1951045980481827005
   hangzhou.0109.desc: "xxxxx" # 1951045980481827005
   hangzhou.0109.a: "xxxxx" # 1951045980481827005

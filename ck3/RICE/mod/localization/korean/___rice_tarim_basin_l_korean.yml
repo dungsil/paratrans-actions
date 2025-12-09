@@ -1134,7 +1134,7 @@
   tarim_basin.0059.b: "[ROOT.Char.GetFaith.HouseOfWorshipPlural]으로 가야겠군!" # 2045274413222210427
   tarim_basin.0059.c: "호숫가에서 먼저 휴식을 취하고 싶군요!" # 7454521709932958894
   tarim_basin.0060.t: "$RICE_historical_aspiration_fulfilled_title$" # 6312590152546762382
-  tarim_basin.0060.desc: "For years, [GetTitleByKey('k_hexi').GetNameNoTier] has suffered under incompetent rulers and the petty squabbling and intrigues of the so-called elite clans of Dunhuang.\n\nI thus had to seize control of the Guiyi circuit, in order to ensure that we can survive the chaotic landscape of the Western Regions. With my experience and skills, I have started taking steps to stabilize our internal affairs, control the rowdy Dunhuang clans, reinforce ties with friendly neighbors, and secure our borders. Through my leadership, we will serve as a bulwark of civilization in this turbulent frontier.\n\nThe Tang Dynasty cannot guide us anymore. Now it is time for us to take destiny into our own hands!"
+  tarim_basin.0060.desc: "수년 동안 [GetTitleByKey('k_hexi').GetNameNoTier]는 무능한 통치자들과 소위 둔황의 엘리트 가문들의 사소한 다툼과 음모 아래 고통받아 왔습니다.\n\n그리하여 저는 서역의 혼란스러운 정세 속에서 우리가 생존할 수 있도록 보장하기 위해 귀의(Guiyi) 순무(circuit)의 통제권을 장악해야만 했습니다. 저의 경험과 기술로 내부 사정을 안정시키고, 난폭한 둔황 가문들을 통제하며, 우호적인 이웃들과의 관계를 강화하고, 국경을 확보하기 위한 조치들을 시작했습니다. 저의 지도력 아래, 우리는 이 격동적인 변경 지대에서 문명의 보루 역할을 할 것입니다.\n\n당나라는 더 이상 우리를 인도할 수 없습니다. 이제 우리가 스스로 운명을 개척해야 할 때입니다!" # 2118137016620632420
   tarim_basin.0060.a: "내가 이 지역을 평정했지만, 우리의 임무는 계속된다." # 6731569487041226080
   tarim_basin.0061.t: "xxxxx" # 1951045980481827005
   tarim_basin.0061.desc: "xxxxx" # 1951045980481827005
