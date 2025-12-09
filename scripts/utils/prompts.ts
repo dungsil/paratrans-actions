@@ -493,3 +493,30 @@ export function shouldUseTransliteration(filename: string): boolean {
     }
   })
 }
+
+/**
+ * 키 이름을 기반으로 해당 키가 음역 모드를 사용해야 하는지 판단합니다.
+ * _adj, _name 등으로 끝나는 키는 고유명사일 가능성이 높아 음역 모드를 사용합니다.
+ * 단, 일반 번역 컨텍스트를 나타내는 키(decision, desc, event 등으로 끝나는 키)는 제외합니다.
+ * 
+ * @param key 검사할 키 이름
+ * @returns 음역 모드를 사용해야 하면 true
+ */
+export function shouldUseTransliterationForKey(key: string): boolean {
+  const lowerKey = key.toLowerCase()
+  
+  // 일반 번역 컨텍스트를 나타내는 키는 제외
+  // decision, desc, event로 끝나는 키는 일반 번역이 필요한 컨텍스트
+  // 예: heritage_desc (유산 설명), culture_event (문화 이벤트), decision (결정)
+  const isRegularTranslationContext = /(?:^|_)(decision|desc|event)$/.test(lowerKey)
+  if (isRegularTranslationContext) {
+    return false
+  }
+  
+  // 고유명사를 나타내는 접미사 패턴
+  // _adj: 형용사형 고유명사 (예: dyn_c_pingnan_guo_adj - 핑난, 왕조 형용사)
+  // _name: 이름 (예: dynasty_name, culture_name)
+  const properNounSuffixes = ['_adj', '_name']
+  
+  return properNounSuffixes.some(suffix => lowerKey.endsWith(suffix))
+}
