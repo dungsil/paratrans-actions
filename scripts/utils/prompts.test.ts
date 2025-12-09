@@ -117,4 +117,61 @@ describe('shouldUseTransliteration', () => {
       expect(shouldUseTransliteration('')).toBe(false)
     })
   })
+
+  describe('키 패턴에 따른 음역 모드 제외', () => {
+    const transliterationFile = 'culture_l_english.yml'
+    
+    it('키가 제공되지 않으면 파일명만으로 판단해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile)).toBe(true)
+    })
+
+    it('일반 키는 음역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'culture_name_anglo_saxon')).toBe(true)
+      expect(shouldUseTransliteration(transliterationFile, 'culture_name_bolghar')).toBe(true)
+      expect(shouldUseTransliteration(transliterationFile, 'dynasty_test')).toBe(true)
+    })
+
+    it('_loc 패턴을 가진 키는 번역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'culture_name_loc')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'some_text_loc')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'test_loc_key')).toBe(false)
+    })
+
+    it('_desc 패턴을 가진 키는 번역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'culture_name_desc')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'some_culture_desc')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'test_desc')).toBe(false)
+    })
+
+    it('tradition_ 패턴을 가진 키는 번역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'tradition_name')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'tradition_test')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'some_tradition_key')).toBe(false)
+    })
+
+    it('culture_parameter 패턴을 가진 키는 번역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'culture_parameter_1')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'culture_parameter_test')).toBe(false)
+    })
+
+    it('_interaction 패턴을 가진 키는 번역 모드를 사용해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'some_interaction')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'test_interaction_name')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'culture_interaction')).toBe(false)
+    })
+
+    it('대소문자 구분 없이 키 패턴을 감지해야 함', () => {
+      expect(shouldUseTransliteration(transliterationFile, 'TEST_LOC')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'TEST_DESC')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'TRADITION_NAME')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'CULTURE_PARAMETER')).toBe(false)
+      expect(shouldUseTransliteration(transliterationFile, 'TEST_INTERACTION')).toBe(false)
+    })
+
+    it('음역 대상이 아닌 파일에서는 키와 관계없이 false를 반환해야 함', () => {
+      const nonTransliterationFile = 'events_l_english.yml'
+      expect(shouldUseTransliteration(nonTransliterationFile, 'any_key')).toBe(false)
+      expect(shouldUseTransliteration(nonTransliterationFile, 'test_desc')).toBe(false)
+    })
+  })
 })
