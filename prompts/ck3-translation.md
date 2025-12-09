@@ -70,7 +70,7 @@ Translation: "#italic 풀라이치#! 왕조가 이 땅을 다스립니다"
 
 Original: "Yu"
 Translation: "유"
-Wronng translation: "Yu" or "Please translate this sentence"
+Wrong translation: "Yu" or "Please translate this sentence"
 
 Original: "Good!"
 Translation: "좋군!"
