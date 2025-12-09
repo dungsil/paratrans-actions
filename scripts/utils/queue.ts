@@ -2,45 +2,56 @@ import { TranslationRefusedError } from './ai'
 import { delay } from './delay'
 import { log } from './logger'
 
-type Queue = { key: string, queue: () => Promise<void> }
-const translationQueue: Queue[] = []
+type QueueTask = { key: string, queue: () => Promise<void>, resolve: () => void, reject: (reason?: any) => void }
+const translationQueue: QueueTask[] = []
 
 const MAX_RETRIES = 5
 const RETRY_DELAYS = [0, 1_000, 2_000, 8_000, 10_000, 60_000] // 밀리초 단위
 
 let lastRequestTime = 0
+let isProcessing = false
 
-export async function addQueue (key: string, newQueue: () => Promise<void>) {
-  translationQueue.push({ key, queue: newQueue })
-
-  processQueue()
+export function addQueue (key: string, newQueue: () => Promise<void>) {
+  return new Promise<void>((resolve, reject) => {
+    translationQueue.push({ key, queue: newQueue, resolve, reject })
+    void processQueue()
+  })
 }
 
-async function processQueue () {
-  // 큐가 없으면 종료
-  if (translationQueue.length === 0) {
+async function processQueue (): Promise<void> {
+  if (isProcessing) {
     return
   }
 
-  // 초당 최대 4개까지만 요청을 보낼 수 있도록 제한
-  const now = Date.now()
-  const timeSinceLastRequest = now - lastRequestTime
-  if (timeSinceLastRequest < 100) {
-    setTimeout(processQueue, 100 - timeSinceLastRequest)
-    return
+  isProcessing = true
+
+  while (translationQueue.length > 0) {
+    const now = Date.now()
+    const timeSinceLastRequest = now - lastRequestTime
+    if (timeSinceLastRequest < 100) {
+      await delay(100 - timeSinceLastRequest)
+    }
+
+    const task = translationQueue.shift()
+    if (!task) {
+      break
+    }
+
+    lastRequestTime = Date.now()
+    try {
+      await executeTaskWithRetry(task)
+      task.resolve()
+    } catch (error) {
+      task.reject(error)
+      isProcessing = false
+      return
+    }
   }
 
-  const task = translationQueue.shift()
-  if (task?.queue != null) {
-    lastRequestTime = now
-    await executeTaskWithRetry(task)
-
-    // 처리 완료후 세로운 큐 실행
-    processQueue()
-  }
+  isProcessing = false
 }
 
-async function executeTaskWithRetry (task: Queue, retryCount = 0): Promise<void> {
+async function executeTaskWithRetry (task: QueueTask, retryCount = 0): Promise<void> {
   try {
     await task.queue()
   } catch (error) {
