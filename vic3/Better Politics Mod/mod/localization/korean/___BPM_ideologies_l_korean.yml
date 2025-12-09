@@ -39,8 +39,7 @@
   ideology_dop_metropole_loyalist: "본토 충성파" # 14654157555453275990
   ideology_dop_metropole_loyalist_desc: "#lore 이 집단은 본국에 충성하고 있습니다. #!" # 7333314738123359310
   ideology_reconstructionist: "급진적 재건주의자" # 15034994630155635835
-  ideology_reconstructionist_desc: "#lore 이 지도자는 남부 재건과 진정한 평등을 지지합니다. #!" # 1254238120426181533
-  ideology_dove: "비둘기파의" # 11902076839668782977
   ideology_dove_desc: "#lore 이 지도자는 외교적 접근 방식을 선호합니다. #!" # 1303158306652376666
+  ideology_dove: "비둘기파의" # 11902076839668782977
   ideology_revolutionary_hawk: "혁명 매파" # 723839848633317317
   ideology_revolutionary_hawk_desc: "#lore 이 지도자는 진보적인 정책을 필요하다면 무력을 사용해서라도 전 세계에 선제적으로 시행해야 한다고 믿고 있습니다. #!" # 17818492642978913974

@@ -56,11 +56,11 @@
   bpm_law_effect_tt_politics_great_terror: "@information! #blue 모든 [Concept('concept_in_opposition', 'Opposition')] 내 [Concept('concept_interest_group', 'Interest Groups')]에 대한 [Concept('concept_clout', 'Clout')], [Concept('concept_interest_group_attraction', 'Attraction')], 및 [Concept('concept_approval', 'Approval')]를 감소시키며, 이는 [Concept('concept_bpm_ig_is_ideological', 'Ideological')] [Concept('concept_interest_group', 'Interest Groups')]에 적용됩니다." # 12448315387261569269
   bpm_repeatable_law_great_terror_result: "대공포정" # 2744360367423415257
   bpm_repeatable_law_great_terror_result_ig: "테러의 희생자들" # 4332836978945994338
-  bpm_repeatable_politics_terror_name_liberal: "자코뱅 테러 ($bpm_repeatable_politics_terror_name_great$)" # 8525719485697612957
+  bpm_repeatable_politics_terror_name_liberal: "#bold 자코뱅 테러#" # 16993212260658271390
   bpm_repeatable_politics_terror_target_liberal: "인민의 적들" # 9207800227294100444
-  bpm_repeatable_politics_terror_name_white: "백색 테러 ($bpm_repeatable_politics_terror_name_great$)" # 6282828166298089995
+  bpm_repeatable_politics_terror_name_white: "백색 공포" # 14265077439628105148
   bpm_repeatable_politics_terror_target_white: "[GetPlayer.GetName]의 적들" # 4819002693997318570
-  bpm_repeatable_politics_terror_name_red: "적색 테러 ($bpm_repeatable_politics_terror_name_great$)" # 10246528595219777430
+  bpm_repeatable_politics_terror_name_red: "적색 공포" # 2905066996502795999
   bpm_repeatable_politics_terror_target_red: "혁명의 적들" # 16029704875947665864
   bpm_repeatable_politics_terror_name_great: "대공포정" # 2744360367423415257
   bpm_repeatable_politics_terror_target_great: "[GetPlayer.GetName]의 적들" # 4819002693997318570
@@ -125,18 +125,10 @@
   law_repeatable_culture_promote_absolutist_values: "절대주의 가치를 고양하십시오" # 208381505203805343
   law_repeatable_culture_promote_absolutist_values_desc: "우리 국가의 안녕을 위해 강력하고 전통적인 전제 정치에 대한 우리의 의지를 더욱 공고히 합시다." # 932370659975929501
   bpm_repeatable_law_promote_absolutist_values_result: "절대주의 가치 고양" # 7428992337729208545
-  law_repeatable_culture_promote_patriotic_values: "[GetPlayer.GetCustom('bpm_repeatable_culture_promote_patriotic_values_name')]" # 4579453056207381536
+  law_repeatable_culture_promote_patriotic_values: "애국적 가치 증진" # 9655624180377683655
   law_repeatable_culture_promote_patriotic_values_desc: "우리 국민들에게 애국심을 고취하고 민족 정체성을 강화하기 위한 정책을 시행하십시오." # 12766887544154320454
   bpm_law_effect_tt_repeatable_promote_patriotic_values_assimilation: "#v [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_promote_patriotic_values_assimilation_percent')]%#만큼의 #bold 차별받는 집단#!을 [Concept('concept_incorporated_state', '편입된 주')]에서 [GetPlayer.GetPrimaryCulturesDesc]로 동화시킵니다. 단, [ROOT.GetCountry.GetName]이(가) [GetLawType('law_cultural_exclusion').GetName]을(를) 가지고 있을 경우에만 해당됩니다." # 12639536753334271086
-  bpm_law_effect_tt_repeatable_promote_patriotic_values: "귀국의 모든 차별받는 문화권에 대해 [Concept('concept_fervor', '열정')]을(를) #variable [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_promote_patriotic_values_power_fervor')|R0]#만큼 증가시키고, [Concept('concept_acceptance', '수용도')]을(를) #variable [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_promote_patriotic_values_power_acceptance')|R0]#만큼 감소시킵니다. 귀국의 모든 주류 문화권에 대해 [Concept('concept_fervor', '열정')]을(를) #variable [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_promote_patriotic_values_power_fervor')|G0]#만큼 증가시킵니다." # 1841127322258326901
   bpm_repeatable_law_promote_patriotic_values_result: "애국적 가치관 고취" # 1009729410102353047
-  bpm_repeatable_culture_promote_patriotic_values_name_default: "애국적 가치 고취" # 9655624180377683655
-  bpm_repeatable_culture_promote_patriotic_values_name_russian: "러시아화 ($bpm_repeatable_culture_promote_patriotic_values_name_default$)" # 16839191129150323088
-  law_repeatable_culture_affirmative_action: "[GetPlayer.GetCustom('bpm_repeatable_culture_affirmative_action_name')]" # 3169797857825468634
-  law_repeatable_culture_affirmative_action_desc: "우리 국가 내 다양한 소수 집단에 대한 할당량과 문화적 특권을 제공하며, 교육 및 미디어 투자를 통한 소수 언어 장려 방안을 마련하십시오." # 13623137613310262473
-  bpm_law_effect_tt_repeatable_culture_affirmative_action: "귀국의 모든 차별받는 문화권에 대해 [Concept('concept_fervor', '열정')]을 #variable [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_affirmative_action_power_fervor')]#!만큼 증가시키고, [Concept('concept_acceptance', '수용도')]를 #variable [GetPlayer.MakeScope.ScriptValue('bpm_repeatable_law_affirmative_action_power_acceptance')|G0]#!만큼 증가시킵니다." # 7275938249651171985
-  bpm_repeatable_culture_affirmative_action_name_default: "소수 문화 지원" # 17559822857697268306
-  bpm_repeatable_culture_affirmative_action_name_soviet: "코레니자치야 ($bpm_repeatable_culture_affirmative_action_name_default$)" # 14518042002812234116
   law_repeatable_culture_promote_socialist_values: "사회주의적 가치 증진" # 11179067961120357297
   law_repeatable_culture_promote_socialist_values_desc: "만민에게 자유와 평등을 수호하겠다는 우리의 헌신을 재확인합니다." # 4027959495308375447
   bpm_repeatable_law_promote_socialist_values_result: "사회주의적 가치 진흥" # 15001041869468105164

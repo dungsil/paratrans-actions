@@ -20,4 +20,4 @@
   bpm_super_extremist_reason_fascist: "이는 집권하지 않은 파시스트 [concept_interest_group]입니다." # 15441471438653383217
   bpm_super_extremist_reason_radical_socialist_in_non_cr: "이는 비사회주의 [concept_country] 내의 급진적 사회주의 [concept_interest_group]입니다." # 3776519903722138789
   bpm_super_extremist_reason_radical_democrat_in_undemocratic: "이는 선거권이 없는 [concept_country] 내의 급진 민주주의 [concept_interest_group]입니다." # 11174867861056657147
-  bpm_super_extremist_reason_market_lib_in_cr: "이것은 사회주의 [concept_국가] 내의 시장 자유주의 [concept_이익집단]입니다."
+  bpm_super_extremist_reason_market_lib_in_cr: "이는 사회주의 [concept_country] 내의 시장 자유주의 [concept_interest_group]입니다." # 8339410720154571675

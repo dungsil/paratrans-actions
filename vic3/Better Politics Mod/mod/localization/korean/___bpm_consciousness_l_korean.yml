@@ -4,19 +4,17 @@
   bpm_consciousness_labor_change_limited_labor_unions_desc: "노동조합의 인기" # 6755744742752018233
   bpm_consciousness_labor_change_agitator_desc: "노동 선동가들의 인기" # 4839719432490386255
   bpm_consciousness_labor_change_urbanization_desc: "도시화" # 4593463032447361573
-  bpm_consciousness_labor_change_states_divide_desc: "주(State)의 수" # 16897763895901779890
-  bpm_consciousness_labor_change_extraction_desc: "집중 채광 건물 레벨 수" # 4322681792838164932
-  bpm_consciousness_labor_change_service_desc: "집중 서비스 건물 레벨 수" # 12613741778584361734
-  bpm_consciousness_labor_change_manufacturing_desc: "집중 생산 건물 레벨 수" # 7612511827645511513
-  bpm_consciousness_liberal_change_findist_desc: "집중화된 #tooltippable;tooltip:bpm_liberal_buildings 자유주의# 건물 레벨 수" # 3657157334509046110
-  bpm_liberal_buildings: "금융 지구, 대학교, 그리고 무역 중심지." # 1416835875636503337
+  bpm_consciousness_labor_change_extraction_desc: "추출 건물 레벨 수" # 12778421203179158229
+  bpm_consciousness_labor_change_service_desc: "서비스 건물 레벨 수" # 15072218667397989395
+  bpm_consciousness_labor_change_manufacturing_desc: "제조업 건물 레벨 수" # 15782633939614182772
+  bpm_consciousness_liberal_change_findist_desc: "금융 지구 건물 수준 수" # 7462175073807660441
   bpm_consciousness_labor_change_loyalty_multiplier_desc: "콘텐츠 팝업" # 8152894647313488859
   BPM_LABOR_CONSCIOUSNESS: "[GetPlayer.MakeScope.Var('bpm_consciousness_liberal').GetValue|v1]의 노동자 의식" # 3829114855381838233
-  country_bpm_labor_consciousness_target_mult: "노동자 의식 목표" # 9092023663865592908
-  country_bpm_labor_consciousness_target_mult_desc: "노동자 의식 목표 배율" # 12289854046355521291
-  bpm_consciousness_labor_tooltip: "#header;gold 노동자 의식#!: [GetPlayer.MakeScope.Var('bpm_consciousness_labor').GetValue|v1] @arrow_right! [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_target')|v1] ([GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_change')|v+=2]/월)\n$TOOLTIP_DELIMITER$\n#lore;i 노동자 의식은 얼마나 많은 노동자가 노동 및 사회주의 운동에 이끌릴지를 결정합니다.#!\n\n#lore 다음으로부터의 목표치 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_target')|v0]:#!\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_labor_target')]\n\n#lore 다음으로부터의 변화율 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_change')|v+=2]:\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_labor_change')]\n\n곱하기: [GetPlayer.GetModifier.GetValueFor('country_bpm_labor_consciousness_target_mult')|v=+%0]\n[GetPlayer.GetModifier.GetDescFor('country_bpm_labor_consciousness_target_mult')]" # 7936353369163489975
+  bpm_consciousness_labor_tooltip: "#header;gold 노동자 의식#!: [GetPlayer.MakeScope.Var('bpm_consciousness_liberal').GetValue|v1] @arrow_right! [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_target')|v1] ([GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_change')|v+=2]/월)\n$TOOLTIP_DELIMITER$\n#lore;i 노동자 의식은 얼마나 많은 노동자가 노동 및 사회주의 운동에 이끌릴지를 결정합니다.#!\n\n#lore 목표치 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_target')|v0] 출처:#!\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_labor_target')]\n\n#lore 변화율 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_labor_change')|v+=2] 출처:\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_labor_change')]" # 656509716649674481
   bpm_consciousness_liberal_tooltip: "#header;gold 자유주의적 각성#!: [GetPlayer.MakeScope.Var('bpm_consciousness_liberal').GetValue|v1] @arrow_right! [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_liberal_target')|v1] ([GetPlayer.MakeScope.ScriptValue('bpm_consciousness_liberal_change')|v+=2]/월)\n$TOOLTIP_DELIMITER$\n#lore;i 자유주의적 각성은 반동주의 운동에 대한 근대 자유주의 운동의 영향력을 결정합니다.#!\n\n#lore 목표치 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_liberal_target')|v0] 달성 원인:#!\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_liberal_target')]\n\n#lore 변화율 [GetPlayer.MakeScope.ScriptValue('bpm_consciousness_liberal_change')|v+=2] 달성 원인:\n[GetPlayer.MakeScope.GetScriptValueDesc('bpm_consciousness_liberal_change')]" # 12605765261793821234
-  bpm_consciousness_liberal_change_manor_houses_desc: "분산된 영주관 건물의 층수" # 10052672050318933440
+  bpm_consciousness_liberal_change_universities_desc: "대학교 건물 수준 수" # 7022422522088549480
+  bpm_consciousness_liberal_change_trade_centers_desc: "무역 중심지 건물 단계 수" # 11077903457283230960
+  bpm_consciousness_liberal_change_manor_houses_desc: "장원 건물의 층수" # 1815010694950257884
   bpm_consciousness_liberal_change_literacy_rate_desc: "문맹률" # 8873791844775859341
   bpm_consciousness_liberal_change_modifier_desc: "수식어들" # 12101186678468821762
   BPM_LIBERAL_CONSCIOUSNESS: "[GetPlayer.MakeScope.Var('bpm_consciousness_liberal').GetValue|v1]의 자유주의적 의식" # 7065503444090766229
@@ -28,7 +26,6 @@
   bpm_consciousness_labor_target_anarchism_tech_desc: "#yellow 무정부주의#를 연구했습니다!" # 9376972204421150263
   bpm_consciousness_labor_target_first_intl_desc: "제1인터내셔널 미완성" # 2799686922143629036
   bpm_consciousness_labor_target_second_intl_desc: "제2인터내셔널 미완료" # 7924125266329427428
-  bpm_consciousness_labor_target_public_schools_law_desc: "공립학교 내 선전 활동" # 1484481286729193869
   bpm_consciousness_liberal_target_academia_tech_desc: "#yellow 아카데미#를 연구했습니다!" # 11955200330919631961
   bpm_consciousness_liberal_target_democracy_tech_desc: "#yellow 민주주의#를 연구했습니다!" # 7067367765704778940
   bpm_consciousness_liberal_target_rationalism_tech_desc: "#yellow 합리주의#를 연구했습니다!" # 8016013572499099348

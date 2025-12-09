@@ -1,6 +1,6 @@
 ﻿l_korean:
   children_rights_events.1.t: "보이지 않는 울부짖음" # 7083966055794094640
-  children_rights_events.1.d: "[SCOPE.sbpm_legislature_name$의 나머지 의원들을 설득하기 위해, [SCOPE.sCharacter('children_wrongs_ig_leader_scope').GetFullName]는 [SCOPE.sState('child_labor_state').GetName]의 아동 노동 환경을 깊이 파고들었습니다. 그는 그곳에서 아동들이 작업장에서 겪는 비인간적인 환경으로 인해, [SCOPE.sState('child_labor_state').GetName]의 많은 가정이 자식들을 숨겨 노동 현장에 보내지 않으려 한다는 사실을 발견했습니다."
+  children_rights_events.1.d: "[SCOPE.sCharacter('children_wrongs_ig_leader_scope').GetFullName]은 $bpm_legislature_name$의 나머지 의원들을 설득하려는 시도로서, [SCOPE.sState('child_labor_state').GetName]의 아동 노동 환경에 대해 파헤쳤습니다. 그곳에서 그는 아동들이 작업장에서 겪는 비인간적인 환경으로 인해 [SCOPE.sState('child_labor_state').GetName]의 많은 가정이 아이들을 일터로 보내지 않기 위해 자녀들을 숨기는 선택을 했다는 사실을 발견했습니다." # 11849595977052691785
   children_rights_events.1.f: "\"어머니께서 조용히 있으라고 하셨습니다, 나리, 그래서 저희는 그리했습니다. 저와 제 동생은 무덤처럼 조용히 서 있었지요, 아시다시피, 저는 숨을 최대한 참았지만, 너무 어두워서 건달들은 이미 떠난 줄 알았습니다. 그들은 여기에서 우리를 찾지 못할 거라고, 어머니께서 그렇게 말씀하셨지요, 하지만 너무 어둡고, 추웠습니다, 나리.\"" # 18212927193468464480
   children_rights_events.1.a: "이 정보는 $bpm_legislature_name$ 내 일부 인사들의 마음을 움직일 것입니다." # 2372290016763261676
   children_rights_events.1.b: "이 이야기는 [SCOPE.sCharacter('children_wrongs_ig_leader_scope').GetFullName] 덕분에 밖으로 알려지지 않았을 것입니다!" # 9764864108144340482
@@ -105,7 +105,7 @@
   rights_of_women_laws.5.c: "언론에서 폭력에 대한 언급을 금지하시오." # 12208387836013281491
   slavery_law_events.1.a: "[SCOPE.sCharacter('slaver_ig_leader_scope').GetFullName]만큼 웅변적으로 논쟁할 수 있는 이는 드뭅니다." # 7345460133740095265
   slavery_law_events.1.b: "[SCOPE.gsInterestGroup('slaver_ig_scope').GetName]은 참으로 위대한 정신들의 함양자입니다." # 17956555404944184814
-  slavery_law_events.2.d: "[SCOPE.sCharacter('slaver_ig_leader_scope').GetFullName], [SCOPE.gsInterestGroup('slaver_ig_scope').GetName]의 지도자가 공개 토론에서 노예제 옹호에 대한 자신의 관심을 표명했습니다. 그러나 이 이론적인 토론이 [SCOPE.sCharacter('slaver_ig_leader_scope').GetSheHe]가 바라는 대로 잘 풀리지는 않을 수도 있습니다."
+  slavery_law_events.2.d: "[SCOPE.sCharacter('slaver_ig_leader_scope').GetFullName], [SCOPE.gsInterestGroup('slaver_ig_scope').GetName]의 지도자는 공개 토론에서 노예제를 옹호하는 데 [SCOPE.sCharacter('slaver_ig_leader_scope').GetHerHis] 관심을 표명했습니다. 하지만 이 이론적인 토론은 [SCOPE.sCharacter('slaver_ig_leader_scope').GetSheHe]가 바라는 만큼 잘 풀리지 않을 수도 있습니다." # 8523100378278889866
   slavery_law_events.2.a: "[SCOPE.sCharacter('slaver_ig_leader_scope').GetHerHim]에게 공개 토론에 맞설 조언을." # 14949282116001916485
   slavery_law_events.2.b: "[SCOPE.sCharacter('slaver_ig_leader_scope').GetFullName]은 공개 토론을 가질 수 있으며, 그 과정에서 [SCOPE.sCharacter('slaver_ig_leader_scope').GetHerHis]의 의견이 제시될 것입니다." # 10168085998998387839
   slavery_law_events.3.c: "그 서적을 금지하라." # 13678982859591241518
