@@ -669,7 +669,7 @@ function validateTransliteration(
       translationLength > sourceLength * MAX_TRANSLITERATION_LENGTH_RATIO) {
     return {
       isValid: false,
-      reason: `의미 번역 가능성: 문자 수 불균형 (원본: ${sourceLength}자, 번역: ${translationLength}자)`
+      reason: `의미 번역 가능성: 문자 수 불균형 (원본: ${sourceLength}문자, 번역: ${translationLength}음절)`
     }
   }
 
