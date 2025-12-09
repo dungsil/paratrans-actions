@@ -26,6 +26,13 @@ function loadPromptFromFile(filename: string, gameType: GameType): string {
     
     return content
   } catch (error: any) {
+    if (error && error.code === 'ENOENT') {
+      throw new Error(
+        `프롬프트 파일이 존재하지 않습니다: ${filename}\n` +
+        `예상 경로: ${filePath}\n` +
+        `프롬프트 파일을 생성하거나 올바른 위치에 복사해 주세요.`
+      )
+    }
     throw new Error(`프롬프트 로드 실패: ${filename}: ${error.message}\n예상 경로: ${filePath}`)
   }
 }
