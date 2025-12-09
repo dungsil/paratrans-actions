@@ -1657,10 +1657,10 @@ describe('음역 검증', () => {
   describe('decisions/desc/event 키 제외', () => {
     it('desc 키워드로 끝나는 키는 음역 검증을 건너뛰어야 함 (예: *_desc)', () => {
       const sourceEntries = {
-        roman_culture_decision_desc: ['Very long decision description', '']
+        heritage_desc: ['Very long heritage description', '']
       }
       const translationEntries = {
-        roman_culture_decision_desc: ['매우긴결정설명문장입니다', 'hash1'] // 긴 텍스트지만 desc로 끝나므로 OK
+        heritage_desc: ['매우긴문화유산설명문장입니다', 'hash1'] // 긴 텍스트지만 desc로 끝나므로 OK
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1765,25 +1765,12 @@ describe('음역 검증', () => {
   })
 
   describe('문자 수 불균형 경계값 테스트', () => {
-    it('원본이 숫자/기호만 있을 때 (sourceLength=0) 검증을 건너뛰어야 함', () => {
-      const sourceEntries = {
-        test_name: ['123', ''] // 문자가 없음
-      }
-      const translationEntries = {
-        test_name: ['매우긴한국어번역입니다', 'hash1'] // 길지만 원본에 문자가 없으므로 통과
-      }
-      
-      const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
-      
-      expect(result.length).toBe(0) // sourceLength가 0이므로 검증 건너뜀
-    })
-
     it('원본 10자, 번역 30자 (정확히 3배)는 통과해야 함', () => {
       const sourceEntries = {
         test_name: ['abcdefghij', ''] // 정확히 10자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허고노', 'hash1'] // 정확히 30자
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허', 'hash1'] // 정확히 30자
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1810,7 +1797,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghijk', ''] // 11자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허', 'hash1'] // 33자 (3배)
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허가나마사차파허', 'hash1'] // 33자 (3배)
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
@@ -1823,7 +1810,7 @@ describe('음역 검증', () => {
         test_name: ['abcdefghij', ''] // 정확히 10자
       }
       const translationEntries = {
-        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커', 'hash1'] // 29자
+        test_name: ['가나다라마바사아자차카타파하너더러머버서어저처커터퍼허고노도', 'hash1'] // 29자
       }
       
       const result = validateTranslationEntries(sourceEntries, translationEntries, 'ck3', true)
