@@ -91,13 +91,15 @@ export function getSystemPrompt(gameType: GameType, useTransliteration: boolean 
 }
 
 /**
- * 파일명을 기반으로 음역 모드를 사용해야 하는지 판단합니다.
+ * 파일명과 키를 기반으로 음역 모드를 사용해야 하는지 판단합니다.
  * culture, dynasty, names 등의 키워드가 포함된 파일은 음역 모드를 사용합니다.
+ * 단, 특정 패턴을 가진 키는 음역 대상에서 제외됩니다.
  * 
  * @param filename 검사할 파일명
+ * @param key 검사할 키 (선택적). 제공되면 키 패턴도 함께 검사
  * @returns 음역 모드를 사용해야 하면 true
  */
-export function shouldUseTransliteration(filename: string): boolean {
+export function shouldUseTransliteration(filename: string, key?: string): boolean {
   const lowerFilename = filename.toLowerCase()
   
   // 음역 대상 키워드 목록
@@ -122,7 +124,7 @@ export function shouldUseTransliteration(filename: string): boolean {
   // 각 키워드에 대해:
   // 1. 단일 단어 키워드(culture, cultures, dynasty, dynasties, names)는 세그먼트와 정확히 일치해야 함
   // 2. 복합 키워드(character_name, name_list)는 원본 파일명에 포함되어 있으면 매치
-  return transliterationKeywords.some(keyword => {
+  const filenameMatchesTransliteration = transliterationKeywords.some(keyword => {
     if (keyword.includes('_')) {
       // 복합 키워드는 원본 파일명에 포함되어 있는지 확인
       return lowerFilename.includes(keyword)
@@ -131,4 +133,36 @@ export function shouldUseTransliteration(filename: string): boolean {
       return segments.includes(keyword)
     }
   })
+  
+  // 파일명이 음역 대상이 아니면 false 반환
+  if (!filenameMatchesTransliteration) {
+    return false
+  }
+  
+  // 키가 제공되지 않으면 파일명만으로 판단
+  if (!key) {
+    return true
+  }
+  
+  // 키에 다음 패턴이 포함되면 음역 모드를 사용하지 않음 (일반 번역 사용)
+  // - '_loc': 현지화된 설명 텍스트
+  // - '_desc': 설명(description) 텍스트  
+  // - 'tradition_': 전통(tradition) 관련 텍스트
+  // - 'culture_parameter': 문화 파라미터 텍스트
+  // - '_interaction': 상호작용 텍스트
+  const translationOnlyPatterns = [
+    '_loc',
+    '_desc',
+    'tradition_',
+    'culture_parameter',
+    '_interaction',
+  ]
+  
+  const lowerKey = key.toLowerCase()
+  const shouldSkipTransliteration = translationOnlyPatterns.some(pattern => 
+    lowerKey.includes(pattern)
+  )
+  
+  // 제외 패턴에 해당하면 음역 모드 사용 안 함
+  return !shouldSkipTransliteration
 }
