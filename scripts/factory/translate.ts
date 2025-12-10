@@ -282,10 +282,10 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
     log.verbose(`[${mode}/${file}:${key}] 번역파일 문자열: ${targetHash} | "${targetValue}"`)
 
     // 음역 모드 결정: 파일 레벨 우선, 그 다음 키 레벨 검사
-    const shouldTransliterate = shouldUseTransliterationForKey(file, key)
+    const shouldTransliterate = isTransliterationFile || shouldUseTransliterationForKey(key)
     
     // 키 레벨 음역 모드가 활성화된 경우 로그 출력
-    if (shouldTransliterate) {
+    if (!isTransliterationFile && shouldTransliterate) {
       log.verbose(`[${mode}/${file}:${key}] 키 레벨 음역 모드 활성화됨 (키가 _adj 또는 _name으로 끝남)`)
     }
 
