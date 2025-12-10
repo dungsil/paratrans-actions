@@ -269,7 +269,7 @@
   culture_parameter_unlock_rice_aslian_blood_decision: "#bold $RICE_aslian_blood_sacrifice_decision$#에 대한 [decision|E]을 [faith|E]에 상관없이 잠금 해제합니다!" # 14725297750698336173
   culture_parameter_unlock_rice_southeast_asian_gather_tropical_goods_decision: "[decision|E] #bold $RICE_SEA_harvest_rare_tropical_goods_decision$# 결정을 활성화합니다!" # 15006870207663465604
   culture_parameter_unlock_rice_southeast_asian_gather_tropical_goods_interaction: "$culture_parameter_unlock_rice_southeast_asian_gather_tropical_goods_decision$" # 16704523555166942538
-  culture_parameter_unlock_rice_southeast_asian_trade_tropical_goods_interaction: "Unlocks the [interaction|E] to #bold Exchange Rare Tropical Goods#! with other [rulers|E]"
+  culture_parameter_unlock_rice_southeast_asian_trade_tropical_goods_interaction: "[interaction|E]을(를) 사용하여 다른 [rulers|E]와 #bold 희귀 열대 상품 교환#!을(를) 해금합니다!" # 18141884912026154596
   tradition_RICE_tropical_purveyors_name: "트로피컬 퍼베이어스" # 10723481843907282969
   tradition_RICE_tropical_purveyors_desc: "#F 수 세대에 걸쳐 이들은 동남아시아의 열대 우림에 대한 지식을 연마해 왔습니다. 이들은 향신료와 약용 식물과 같은 희귀한 열대 산물을 찾고 수확하는 데 특히 능하며, 인도양의 해상 무역로를 따라 이러한 상품을 수출하는 데 중요한 역할을 합니다.#!" # 1627589962756354269
   tradition_RICE_fear_of_spirits_name: "영혼에 대한 두려움" # 5794761433995075606
