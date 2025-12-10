@@ -1,0 +1,12 @@
+name: 'Close Translation Issues'
+description: 'Automatically close translation-refused issues when all items are translated'
+inputs:
+  game:
+    description: 'Game identifier (ck3, vic3, stellaris)'
+    required: true
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+runs:
+  using: 'node20'
+  main: 'index.js'
