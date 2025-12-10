@@ -33,13 +33,13 @@
   heritage_sulawesi_collective_noun: "술라웨시인" # 10699601045078850965
   heritage_yamato_name: "일본의" # 15648773786937392156
   heritage_yamato_collective_noun: "일본계" # 9990092891454569309
-  heritage_melanesian: "멜라네시아인" # 2283096840114600477
+  heritage_melanesian_name: "멜라네시아인" # 2283096840114600477
   heritage_melanesian_collective_noun: "멜라네시아인" # 2337195737297045498
-  heritage_micronesian: "미크로네시아인" # 4637487619618017596
+  heritage_micronesian_name: "미크로네시아인" # 4637487619618017596
   heritage_micronesian_collective_noun: "미크로네시아인" # 4832907714353236959
-  heritage_papuan: "파푸안" # 10204060446723167988
+  heritage_papuan_name: "파푸안" # 10204060446723167988
   heritage_papuan_collective_noun: "파푸안스" # 17546467121497594108
-  heritage_polynesian: "폴리네시안" # 12891295094908296745
+  heritage_polynesian_name: "폴리네시안" # 12891295094908296745
   heritage_polynesian_collective_noun: "폴리네시아인" # 12579286192584543535
   iranian_hun_history_loc: "[DATE.GetYear]년에 $iranian_group$와 $turkic_group$ [heritage|E]의 다양한 문화에서 형성됨" # 8854136089565772115
   elymaean_history_loc: "기원전 첫 천 년 동안 페르시아의 지배하에 있던 네오-[CULTURE.GetName] 잔존 세력으로부터 내려왔습니다." # 5976613218247425862

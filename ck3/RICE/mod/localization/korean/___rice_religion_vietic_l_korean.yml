@@ -66,5 +66,9 @@
   viet_pagan_afterlife: "지옥" # 6004375176333440231
   viet_pagan_bishop: "추장 짜이 꿍" # 2455449154947674320
   viet_pagan_bishop_plural: "추장 짜이 꿍" # 2455449154947674320
+  viet_pagan_priest_male: "$viet_pagan_priest$" # 15312407841664170141
+  viet_pagan_priest_male_plural: "$viet_pagan_priest_plural$" # 5137782124895510992
+  viet_pagan_priest_female: "$viet_pagan_priest$" # 15312407841664170141
+  viet_pagan_priest_female_plural: "$viet_pagan_priest_plural$" # 5137782124895510992
   viet_pagan_witch_god_name: "탄" # 9325609097576007814
   viet_pagan_witch_god_name_possessive: "탄 마우의" # 11187030879051367307

@@ -8,6 +8,10 @@
   RICE_hangzhou_west_lake_visit: "#V $activity_RICE_hangzhou_sightsee_at_west_lake$#! [activity|E]를 최소 #V 3#!회 완료했습니다 (주최자[host|E]로서든 [activity_guest|E]로서든 상관없이)" # 3741030080295863797
   EVERY_ACTIVITY_PARTICIPANT_POET_EFFECT: "$trait_lifestyle_poet$ [trait|E] 특성을 가진 모든 참가자" # 16747919531073855255
   RICE_opinion_qiantang_tides: "#bold 전당 조수해(錢塘潮)를 함께 지켜보았다#!" # 14081043240981116713
+  EVERY_ACTIVITY_PARTICIPANT_RELAXATION_EFFECT: "모든 [guest|E] 중 [GetTrait('calm').GetName( GetNullCharacter )], [GetTrait('content').GetName( GetNullCharacter )], 또는 [GetTrait('shy').GetName( GetNullCharacter )] [traits|E]를 가진 자" # 16516253500289464078
+  EVERY_ACTIVITY_PARTICIPANT_SOCIALIZATION_EFFECT: "[GetTrait('gregarious').GetName( GetNullCharacter )], [GetTrait('ambitious').GetName( GetNullCharacter )], 혹은 [GetTrait('trusting').GetName( GetNullCharacter )] [traits|E]를 가진 모든 [guest|E]" # 4168302801944711215
+  EVERY_ACTIVITY_PARTICIPANT_REFLECTION_EFFECT: "모든 [guest|E] 중 [GetTrait('patient').GetName( GetNullCharacter )], [GetTrait('temperate').GetName( GetNullCharacter )], 또는 [GetTrait('zealous').GetName( GetNullCharacter )] [traits|E]를 가진 자" # 6662764718992278070
+  EVERY_ACTIVITY_PARTICIPANT_INDULGENCE_EFFECT: "[GetTrait('gluttonous').GetName( GetNullCharacter )], [GetTrait('lazy').GetName( GetNullCharacter )], 혹은 [GetTrait('lustful').GetName( GetNullCharacter )] [traits|E]를 가진 모든 [guest|E]" # 11224636468673619016
   Ziyu_5B50_865E: "쯔위" # 16817198864875364648
   Zilong_5B50_9F8D: "즈룽" # 8011315570041811274
   Zibu_5B50_5E03: "즈부" # 8067629795842703062

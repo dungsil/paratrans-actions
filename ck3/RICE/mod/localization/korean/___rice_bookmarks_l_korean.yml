@@ -202,6 +202,7 @@
   bookmark_RICE_1178_wo_daochong_desc: "수년 전, 헌효제(Renxiao)의 재상이던 염덕경(Ren Dejing)은 권력을 남용하며 야심을 키웠고, 서하(Xixia)를 내부에서부터 파괴하려는 음모를 꾸몄습니다. 이 음모는 뛰어난 유학자인 오도충(Wo Daochong)의 도움으로 좌절되었고, 그는 다음 재상이 되어 제국이 다시 힘과 활력을 되찾는 것을 이끌었습니다.\n\n#bold 서하가 회복했음에도 불구하고, 초원에는 위협이 다가오고 있습니다. 과연 도충과 그의 후계자들이 또다시 위기를 구해낼 수 있을까요?#!\n\n#italic RICE 풍미 팩 중점 지역: 마가다, 타림 분지#!" # 6427642058591704297
   bookmark_RICE_1178_wo_daochong_alt_zhakui: "자쿠이" # 15025083939565566399
   bookmark_RICE_1178_wo_daochong_alt_renxiao: "런샤오" # 1580885499949640578
+  bookmark_RICE_1178_wo_daochong_alt_wotela: "보텔라" # 7130706338984444007
   bookmark_RICE_1178_michael_scot: "마이클 스콧" # 10792744480605638574
   bookmark_RICE_1178_michael_scot_subheading: "$BOOKMARK_SUBHEADING_ADVENTURER$" # 17036965201935904007
   bookmark_RICE_1178_michael_scot_desc: "중세 전설에서 마이클 스콧은 너무나 유명한 마법사이자 점성가여서 단테의 『지옥편』에 등장하는 유일한 스코틀랜드인이었습니다. 현실에서 그는 성공적인 박식가이자 학자였으며, 황제 프리드리히 2세의 궁정을 비롯하여 유럽 전역을 돌아다니며 여러 궁정에서 일했습니다.\n\n#bold 기회는 잡지 않으면 놓치는 법이라고들 하죠. 당신은 세계 최고의 떠돌이 학자가 되기 위한 올바른 기회를 포착할 능력이 있습니까?#!\n\n#italic RICE 풍미 팩 집중 지역: 북대서양, 요크셔#!" # 18404520721749261621
@@ -321,7 +322,7 @@
   bookmark_RICE_1066_ly_thuong_kiet_alt_than_canh_phuc: "탄깐푹" # 17233794956112923113
   bookmark_RICE_1066_song_jiang: "송강" # 3760334945484841467
   bookmark_RICE_1066_song_jiang_subheading: "$BOOKMARK_SUBHEADING_ADVENTURER$" # 17036965201935904007
-  bookmark_RICE_1066_song_jiang_desc: "[Glossary( '수호전', 'WATER_MARGIN_GLOSS' )]은 중국의 [Glossary( '4대 기서', 'FOUR_GREAT_CLASSIC_NOVELS_GLOSS' )] 중 하나로, 의적 송강과 그의 107명의 동료들의 이야기를 다룹니다. 역사적으로 그는 나중에 송나라에 투항하여 그들을 위해 싸웠으며 민간 영웅으로 추앙받은 반란군이었습니다.\n\n#bold 사해형제, 의로운 영웅들을 모아 부당함에 맞서 동아시아 최고의 전설이 되라!#!\n\n#italic RICE 풍미 팩 중점 지역: 항저우, 타림 분지#!" # 7347385040887887895
+  bookmark_RICE_1066_song_jiang_desc: "[Glossary( '수호전', 'WATER_MARGIN_GLOSS' )]은 중국의 [Glossary( '4대 고전 소설', 'FOUR_GREAT_CLASSIC_NOVELS_GLOSS' )] 중 하나로, 의적 송강과 그의 107명의 동료들의 이야기를 다룹니다. 역사적으로 그는 나중에 송나라에 투항하여 그를 위해 싸웠으며, 민간의 영웅으로 변모한 반란군이었습니다.\n\n#bold 사해형제, 의로운 영웅들을 모아 부당함에 맞서 동아시아 최고의 전설이 되라!#!\n\n#italic RICE 맛보기 팩 중점 지역: 항저우, 타림 분지#!" # 17814081386081295568
   bookmark_RICE_1178_jayavarman_vii: "자야바르만 7세" # 1017860195086048677
   bookmark_RICE_1178_jayavarman_vii_subheading: "$BOOKMARK_SUBHEADING_DEFAULT$" # 1849679257833897438
   bookmark_RICE_1178_jayavarman_vii_desc: "크메르 찬탈자 왕 트리부바나디티야의 재앙적인 통치는 그의 왕인 자야 인드라바르만 4세가 이끄는 참족의 침공으로 막을 내렸습니다. 크메르 제국은 참족을 격퇴하고, 앙코르를 재건했으며, 복지 국가를 도입하고, 불교를 널리 퍼뜨려 역사상 가장 위대한 캄보디아 통치자가 된 자야바르만 7세 덕분에 겨우 명맥을 유지할 수 있었습니다.\n\n#bold 앙코르가 참족 약탈자들에게 황폐화되었습니다. 지금이야말로 영웅적인 행동을 할 때입니다. 지금이야말로 위대한 업적을 이룰 때입니다. 지금이야말로 계몽된 통치자가 크메르를 구할 때입니다!#!\n\n#italic RICE 풍미 팩 집중 지역: 아슬란, 마가다, 스리랑카#!" # 12472732488748972959
