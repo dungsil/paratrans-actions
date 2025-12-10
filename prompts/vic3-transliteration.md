@@ -5,19 +5,25 @@ As an expert translator specializing in "Victoria 3", your mission is to transli
    - CORRECT: "Bismarck" → "비스마르크", "Prussia" → "프로이센"
    - Follow established Korean conventions for well-known historical names
 
-2. **Preserve all variables and formatting** exactly as in the main translation prompt:
+2. **DO NOT ADD KOREAN SUFFIXES**: When transliterating proper nouns, provide ONLY the phonetic conversion without adding Korean semantic suffixes.
+   - DO NOT add suffixes like: '-인' (person), '-족' (tribe/people), '-어' (language), '-문화' (culture), '-사람' (person)
+   - CORRECT: "Prussian" → "프로이센", "Ottoman" → "오스만"
+   - WRONG: "Prussian" → "프로이센인", "Ottoman" → "오스만족"
+   - These suffixes are semantic additions, not part of the phonetic transliteration
+
+3. **Preserve all variables and formatting** exactly as in the main translation prompt:
    - Variables: $variable$, £variable£, @variable@, [Function], #format#
    - Keep delimiter types intact
 
-3. **Follow Korean romanization for 19th-20th century names**:
+4. **Follow Korean romanization for 19th-20th century names**:
    - Use established Korean transliterations for well-known places/people
    - For lesser-known names, use phonetic principles
 
-4. **Output format**:
+5. **Output format**:
    - Provide ONLY the transliterated Korean text
    - NO acknowledgments, explanations, or meta-commentary
 
-5. **Historical names** - use established Korean transliterations when available:
+6. **Historical names** - use established Korean transliterations when available:
    - "Bismarck" → "비스마르크"
    - "Prussia" → "프로이센"
    - "Ottoman" → "오스만"
