@@ -147,10 +147,20 @@ GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
 │   ├── factory/                 # 번역 처리 로직
 │   ├── parser/                  # 파일 파싱 유틸리티
 │   └── utils/
-│       ├── dictionary.ts        # 단어사전
+│       ├── dictionary.ts        # 단어사전 로더
+│       ├── prompts.ts           # 프롬프트 로더
 │       ├── ai.ts                # AI 통합
 │       ├── cache.ts             # 캐싱 시스템
 │       └── logger.ts            # 로깅 유틸리티
+├── dictionaries/                # 단어사전 파일 (TOML 형식)
+│   ├── ck3-glossary.toml       # CK3 일반 용어
+│   ├── ck3-proper-nouns.toml   # CK3 고유명사
+│   ├── stellaris.toml          # Stellaris 사전
+│   └── vic3.toml               # VIC3 사전
+├── prompts/                     # AI 프롬프트 파일 (Markdown 형식)
+│   ├── ck3-translation.md      # CK3 번역 프롬프트
+│   ├── ck3-transliteration.md  # CK3 음역 프롬프트
+│   └── ...                     # 기타 게임 프롬프트
 └── package.json
 ```
 
@@ -202,9 +212,9 @@ vs.
 
 ### 단어사전 자동 무효화
 
-`scripts/utils/dictionary.ts` 파일이 업데이트되면 자동으로 다음 작업을 수행합니다:
+단어사전 파일(`dictionaries/*.toml`)이 업데이트되면 자동으로 다음 작업을 수행합니다:
 
-1. **자동 트리거**: `main` 브랜치에 `dictionary.ts` 파일이 변경되면 GitHub Actions 워크플로우가 자동 실행
+1. **자동 트리거**: `main` 브랜치에 `dictionaries/` 디렉토리의 파일이 변경되면 GitHub Actions 워크플로우가 자동 실행
 2. **캐시 무효화**: 각 게임(CK3, Stellaris, VIC3)에 대해 단어사전 기반 번역 무효화 (`update-dict`)
 3. **재번역**: 잘못 번역된 항목 재번역 (`retranslate`)
 4. **자동 커밋**: 변경사항 자동 커밋 및 푸시

@@ -190,17 +190,13 @@ async function findUpstreamEnglishFile(koreanFilePath: string, gameType: string)
 
 /**
  * 딕셔너리 파일에 새로운 항목들을 추가합니다.
+ * TOML 파일로 직접 추가합니다.
  */
 async function addEntriesToDictionary(entries: DictionaryEntry[]): Promise<void> {
   if (entries.length === 0) {
     log.info('추가할 딕셔너리 항목이 없습니다.')
     return
   }
-  
-  const dictionaryPath = join(import.meta.dirname, 'utils', 'dictionary.ts')
-  log.info(`딕셔너리 파일 읽는 중: ${dictionaryPath}`)
-  
-  let content = await readFile(dictionaryPath, 'utf-8')
   
   // 게임 타입별로 항목을 그룹화
   const entriesByGameType = entries.reduce((acc, entry) => {
@@ -215,29 +211,35 @@ async function addEntriesToDictionary(entries: DictionaryEntry[]): Promise<void>
   for (const [gameType, gameEntries] of Object.entries(entriesByGameType)) {
     log.info(`[${gameType.toUpperCase()}] ${gameEntries.length}개 항목 추가 중...`)
     
-    // 해당 게임 타입의 딕셔너리 섹션 찾기
-    const dictionaryVarName = `${gameType}Dictionaries`
-    const sectionStart = content.indexOf(`const ${dictionaryVarName}`)
+    // TOML 파일 경로 결정
+    let tomlFilePath: string
     
-    if (sectionStart === -1) {
-      log.warn(`[${gameType.toUpperCase()}] 딕셔너리 섹션을 찾을 수 없습니다.`)
-      continue
+    if (gameType === 'ck3') {
+      // CK3는 glossary와 proper-nouns로 구분
+      // 여기서는 모든 항목을 glossary에 추가 (사용자가 필요시 proper-nouns로 수동 이동)
+      tomlFilePath = join(import.meta.dirname, '..', 'dictionaries', 'ck3-glossary.toml')
+      log.info(`[CK3] 항목들을 ck3-glossary.toml에 추가합니다. 고유명사는 수동으로 ck3-proper-nouns.toml로 이동해주세요.`)
+    } else {
+      tomlFilePath = join(import.meta.dirname, '..', 'dictionaries', `${gameType}.toml`)
     }
     
-    // 딕셔너리 닫는 괄호 찾기
-    const closingBraceIndex = content.indexOf('}', sectionStart)
+    log.info(`TOML 파일 읽는 중: ${tomlFilePath}`)
     
-    if (closingBraceIndex === -1) {
-      log.warn(`[${gameType.toUpperCase()}] 딕셔너리 닫는 괄호를 찾을 수 없습니다.`)
+    let content: string
+    try {
+      content = await readFile(tomlFilePath, 'utf-8')
+    } catch (error) {
+      log.error(`TOML 파일을 읽을 수 없습니다: ${tomlFilePath}`)
       continue
     }
     
     // 기존 항목 중복 체크를 위해 현재 딕셔너리의 키들을 추출
     const existingKeys = new Set<string>()
-    const dictionarySection = content.substring(sectionStart, closingBraceIndex)
-    const keyRegex = /['"]([^'"]+)['"]\s*:/g
+    // TOML 키 패턴: "key" = "value" 또는 key = "value"
+    // 주석 라인(#로 시작)은 제외
+    const keyRegex = /^(?!#)\s*"?([^"=]+)"?\s*=/gm
     let match
-    while ((match = keyRegex.exec(dictionarySection)) !== null) {
+    while ((match = keyRegex.exec(content)) !== null) {
       existingKeys.add(match[1].toLowerCase())
     }
     
@@ -255,30 +257,46 @@ async function addEntriesToDictionary(entries: DictionaryEntry[]): Promise<void>
       continue
     }
     
-    // 마지막 항목 뒤에 새 항목들 추가
-    // 닫는 괄호 바로 앞 위치에 삽입
+    // TOML 형식으로 새 항목 생성
     const newEntriesText = newEntries
       .map(entry => {
-        // 값에 있는 작은따옴표를 이스케이프
-        const escapedValue = entry.value.replace(/'/g, "\\'")
-        // 키에 특수문자가 있거나 공백이 있으면 따옴표로 감싸기
-        const needsQuotes = /[^a-zA-Z0-9_$]/.test(entry.key)
-        const formattedKey = needsQuotes ? `'${entry.key}'` : entry.key
-        return `  ${formattedKey}: '${escapedValue}',`
+        // TOML 문자열 이스케이프: 백슬래시, 따옴표, 개행, 탭, 캐리지 리턴, 폼 피드, 백스페이스
+        const escapedValue = entry.value
+          .replace(/\\/g, '\\\\')
+          .replace(/"/g, '\\"')
+          .replace(/\n/g, '\\n')
+          .replace(/\t/g, '\\t')
+          .replace(/\r/g, '\\r')
+          .replace(/\f/g, '\\f')
+          .replace(/\b/g, '\\b')
+        // 키도 항상 따옴표로 감싸기 (특수문자, 공백 등 안전하게 처리)
+        const escapedKey = entry.key
+          .replace(/\\/g, '\\\\')
+          .replace(/"/g, '\\"')
+          .replace(/\n/g, '\\n')
+          .replace(/\t/g, '\\t')
+          .replace(/\r/g, '\\r')
+          .replace(/\f/g, '\\f')
+          .replace(/\b/g, '\\b')
+        return `"${escapedKey}" = "${escapedValue}"`
       })
       .join('\n')
     
-    // 딕셔너리의 마지막 항목 뒤에 새 항목 추가
-    content = content.substring(0, closingBraceIndex) + 
-              '\n' + newEntriesText + '\n' +
-              content.substring(closingBraceIndex)
+    // 파일 끝에 새 항목 추가 (빈 줄 하나 추가)
+    content = content.trimEnd() + '\n' + newEntriesText + '\n'
+    
+    // 파일에 쓰기
+    await writeFile(tomlFilePath, content, 'utf-8')
     
     log.success(`[${gameType.toUpperCase()}] ${newEntries.length}개 항목 추가 완료`)
+    
+    // 추가된 항목 출력
+    for (const entry of newEntries) {
+      log.info(`  + "${entry.key}" = "${entry.value}"`)
+    }
   }
   
-  // 파일에 쓰기
-  await writeFile(dictionaryPath, content, 'utf-8')
-  log.success(`딕셔너리 파일 업데이트 완료: ${dictionaryPath}`)
+  log.success('딕셔너리 파일 업데이트 완료')
 }
 
 async function main() {
@@ -294,10 +312,17 @@ async function main() {
       설명:
         Git 커밋의 *_l_korean.yml 변경사항을 파싱하여
         업스트림 영어 파일과 매핑하여 단어사전 항목들을
-        현재 dictionary.ts에 추가합니다.
+        TOML 딕셔너리 파일에 추가합니다.
         
         키: 업스트림 영어 파일의 원문
         값: 커밋에서 변경된 한국어 번역
+        
+        대상 파일:
+        - CK3: dictionaries/ck3-glossary.toml
+        - Stellaris: dictionaries/stellaris.toml
+        - VIC3: dictionaries/vic3.toml
+        
+        참고: CK3 고유명사는 수동으로 ck3-proper-nouns.toml로 이동 필요
       
       예시:
         pnpm add-dict abc123
@@ -307,6 +332,7 @@ async function main() {
         - CK3, Stellaris, VIC3 모든 게임 타입 지원
         - 자동 중복 검사 (기존 항목은 건너뜀)
         - 업스트림 파일 자동 탐색 및 매핑
+        - TOML 형식으로 자동 포맷팅
       `)
       process.exit(0)
     }
@@ -322,7 +348,7 @@ async function main() {
     Git 커밋에서 딕셔너리 추가
     - 커밋 ID: ${commitId}
     - *_l_korean.yml 파일의 변경사항을 추출합니다
-    - 업스트림 영어 파일과 매핑하여 딕셔너리에 추가합니다
+    - 업스트림 영어 파일과 매핑하여 TOML 딕셔너리에 추가합니다
     `)
     
     // 1. 커밋에서 딕셔너리 변경사항 추출

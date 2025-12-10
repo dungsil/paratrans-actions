@@ -5,6 +5,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - "dictionaries/**"
       - "scripts/utils/dictionary.ts"
 
 concurrency:

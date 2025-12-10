@@ -135,7 +135,14 @@ language = "english"                          # Source language
 - Retry logic for API failures
 - Translation refusal detection and error handling
 
-**Prompt Management** (`scripts/utils/prompts.ts`):
+**Prompt Management** (`scripts/utils/prompts.ts` and `prompts/` directory):
+- **External prompt files**: All AI prompts are stored as Markdown files in the `prompts/` directory
+  - `prompts/ck3-translation.md` - CK3 translation prompt
+  - `prompts/ck3-transliteration.md` - CK3 transliteration prompt
+  - Similar files for Stellaris and VIC3
+- **Dynamic loading**: Prompts are loaded from files at runtime and support template substitution
+  - `{{TRANSLATION_MEMORY}}` - Replaced with glossary dictionary
+  - `{{PROPER_NOUNS_DICTIONARY}}` - Replaced with proper nouns dictionary
 - Dual-mode system: translation prompts vs transliteration prompts
 - `getSystemPrompt(gameType, useTransliteration)` - selects appropriate prompt
 - `shouldUseTransliteration(filename)` - detects files by keywords: culture, dynasty, names, character_name, name_list
@@ -160,13 +167,27 @@ language = "english"                          # Source language
 - Checks for unwanted LLM responses in translations
 - Used by retranslation script to find items that need re-translation
 
-**Dictionary Management** (`scripts/utils/dictionary.ts` and `scripts/add-dict-from-commit.ts`):
+**Dictionary Management** (`scripts/utils/dictionary.ts`, `dictionaries/` directory, and `scripts/add-dict-from-commit.ts`):
+- **External dictionary files**: All dictionaries are stored as TOML files in the `dictionaries/` directory
+  - `dictionaries/ck3-glossary.toml` - CK3 general terms (~33 entries)
+  - `dictionaries/ck3-proper-nouns.toml` - CK3 proper nouns (~700 entries)
+  - `dictionaries/stellaris.toml` - Stellaris dictionary (~10 entries)
+  - `dictionaries/vic3.toml` - VIC3 dictionary (~2 entries)
+- **TOML format**: Simple key-value pairs with support for comments
+  - Example: `"duke" = "공작"` or `"high king" = "고왕"`
+  - Comments use `#` (not `//`)
+  - Keys with special characters or spaces must be quoted
+- **Dynamic loading**: Dictionaries are loaded from TOML files at runtime using `@iarna/toml` parser
 - Manual translation dictionary for game-specific terms and proper nouns
 - Separate dictionaries for each game type (CK3, Stellaris, VIC3)
 - Two dictionary types: general glossary (for translation) and proper nouns (for transliteration)
-- `add-dict-from-commit.ts` script extracts dictionary entries from git commits and adds them to the dictionary file
+- `add-dict-from-commit.ts` script extracts dictionary entries from git commits and adds them to TOML dictionary files
+  - Automatically writes to the appropriate TOML file based on game type
+  - CK3 entries are added to `ck3-glossary.toml` (proper nouns can be manually moved to `ck3-proper-nouns.toml`)
+  - Stellaris entries go to `stellaris.toml`, VIC3 entries to `vic3.toml`
 - Supports automatic duplicate detection when adding entries
 - Usage: `pnpm add-dict <commit-id>` to import dictionary changes from a specific commit
+- **Editing**: Dictionary files can be edited directly without code changes, just restart the application
 
 ### Transliteration Mode
 
@@ -273,11 +294,88 @@ ck3/                    # CK3 mods to translate
     ├── upstream/      # Original English files
     └── mod/           # Generated Korean translations
 
+dictionaries/           # Translation dictionaries (TOML format)
+├── ck3-glossary.toml          # CK3 general terms
+├── ck3-proper-nouns.toml      # CK3 proper nouns (names, places)
+├── stellaris.toml             # Stellaris dictionary
+└── vic3.toml                  # VIC3 dictionary
+
+prompts/                # AI translation prompts (Markdown format)
+├── ck3-translation.md         # CK3 translation prompt
+├── ck3-transliteration.md     # CK3 transliteration prompt
+├── stellaris-translation.md   # Stellaris translation prompt
+├── stellaris-transliteration.md
+├── vic3-translation.md        # VIC3 translation prompt
+└── vic3-transliteration.md
+
 scripts/
 ├── ck3.ts            # Main entry point
 ├── factory/          # Translation processing
 ├── parser/           # File parsing (TOML, YAML)
 └── utils/            # AI, caching, logging utilities
+    ├── dictionary.ts      # Dictionary loader
+    └── prompts.ts         # Prompt loader
+```
+
+## Editing Dictionaries and Prompts
+
+### Editing Dictionaries
+
+Dictionaries are stored as TOML files in the `dictionaries/` directory and can be edited directly without modifying code.
+
+**TOML Format Rules**:
+```toml
+# Comments start with # (not //)
+"key" = "value"
+"key with spaces" = "번역값"
+"key-with-special-chars" = "번역값"
+
+# Empty values are allowed
+"the" = ""
+```
+
+**Important Notes**:
+- Keys with spaces, special characters, or Unicode must be quoted
+- Values must always be quoted
+- Use `#` for comments, not `//`
+- After editing, the application will load the new values on next run
+
+**Example edits**:
+```bash
+# Edit CK3 glossary
+nano dictionaries/ck3-glossary.toml
+
+# Add a new term
+echo '"new_term" = "새 용어"' >> dictionaries/ck3-glossary.toml
+
+# Verify TOML syntax (if needed)
+pnpm test scripts/utils/dictionary.test.ts
+```
+
+### Editing Prompts
+
+Prompts are stored as Markdown files in the `prompts/` directory and support template substitution.
+
+**Template Variables**:
+- `{{TRANSLATION_MEMORY}}` - Automatically replaced with glossary dictionary
+- `{{PROPER_NOUNS_DICTIONARY}}` - Automatically replaced with proper nouns dictionary
+
+**Example edits**:
+```bash
+# Edit CK3 translation prompt
+nano prompts/ck3-translation.md
+
+# Edit CK3 transliteration prompt
+nano prompts/ck3-transliteration.md
+```
+
+**Testing Changes**:
+```bash
+# Run tests to verify changes
+pnpm test
+
+# Run a translation to test the new dictionary/prompt
+pnpm ck3
 ```
 
 ## Development Notes
