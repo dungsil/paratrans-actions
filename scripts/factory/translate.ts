@@ -5,7 +5,7 @@ import { hashing } from '../utils/hashing'
 import { log } from '../utils/logger'
 import { translate, TranslationRetryExceededError, TranslationRefusedError } from '../utils/translate'
 import { updateAllUpstreams } from '../utils/upstream'
-import { type GameType, shouldUseTransliteration } from '../utils/prompts'
+import { type GameType, shouldUseTransliteration, shouldUseTransliterationForKey } from '../utils/prompts'
 
 // 번역 거부 항목 출력 파일 이름 접미사
 const UNTRANSLATED_ITEMS_FILE_SUFFIX = 'untranslated-items.json'
@@ -281,16 +281,21 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
 
     log.verbose(`[${mode}/${file}:${key}] 번역파일 문자열: ${targetHash} | "${targetValue}"`)
 
-    // 키를 기반으로 음역 모드 결정 (파일명과 키 모두 확인)
-    const useTransliteration = shouldUseTransliteration(file, key)
+    // 음역 모드 결정: 파일 레벨 우선, 그 다음 키 레벨 검사
+    const shouldTransliterate = isTransliterationFile || shouldUseTransliterationForKey(key)
     
+    // 키 레벨 음역 모드가 활성화된 경우 로그 출력
+    if (!isTransliterationFile && shouldTransliterate) {
+      log.verbose(`[${mode}/${file}:${key}] 키 레벨 음역 모드 활성화됨 (키가 _adj 또는 _name으로 끝남)`)
+    }
+
     // 번역 요청 (음역 모드 플래그 전달)
-    log.verbose(`[${mode}/${file}:${key}] ${useTransliteration ? '음역' : '번역'} 요청: ${sourceHash} | "${sourceValue}"`)
+    log.verbose(`[${mode}/${file}:${key}] ${shouldTransliterate ? '음역' : '번역'} 요청: ${sourceHash} | "${sourceValue}"`)
     let translatedValue: string
     let hashForEntry: string | null = sourceHash
 
     try {
-      translatedValue = await translate(sourceValue, gameType, 0, undefined, useTransliteration)
+      translatedValue = await translate(sourceValue, gameType, 0, undefined, shouldTransliterate)
     } catch (error) {
       if (error instanceof TranslationRetryExceededError) {
         log.warn(`[${mode}/${file}:${key}] 번역 재시도 초과, 원문을 유지합니다.`)
