@@ -2,7 +2,7 @@ import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { join, parse } from 'pathe'
 import { parseToml, parseYaml, stringifyYaml } from '../parser'
 import { log } from './logger'
-import { type GameType, shouldUseTransliteration, shouldUseTransliterationForKey } from './prompts'
+import { type GameType, shouldUseTransliteration } from './prompts'
 import { validateTranslationEntries } from './translation-validator'
 
 interface ModMeta {
