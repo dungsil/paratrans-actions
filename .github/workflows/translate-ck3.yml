@@ -118,11 +118,11 @@ jobs:
 
                 // 기존 본문에서 마지막 업데이트 시간 부분과 footer 제거
                 let updatedBody = existingBody.replace(/\*\*마지막 업데이트\*\*:.*?\n+/s, '');
-                updatedBody = updatedBody.replace(/\n---\n이 이슈는 자동으로 생성되었습니다\..*$/s, '');
+                updatedBody = updatedBody.replace(/\n---\n[\s\S]*$/s, '');
 
                 // 테이블 끝 위치 찾기 (| 또는 <details>로 시작하는 모든 연속된 줄을 테이블로 간주)
                 const lines = updatedBody.split('\n');
-                let tableEndLine = 0;
+                let tableEndLine = 1; // 최소한 구분선(line 1) 이후에 삽입
                 // 테이블 헤더(최소 2줄: 헤더와 구분선) 이후부터 검사
                 for (let i = 2; i < lines.length; i++) {
                   const line = lines[i].trim();
