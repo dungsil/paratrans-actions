@@ -1,0 +1,10 @@
+{
+  "name": "close-translation-issues",
+  "version": "1.0.0",
+  "description": "Close translation-refused issues when all items are translated",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^6.0.0"
+  }
+}

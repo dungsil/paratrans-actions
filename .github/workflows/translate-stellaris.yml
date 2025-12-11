@@ -57,6 +57,12 @@ jobs:
           default_author: github_actor
           commit_message: "chore(stellaris): 번역 파일 업데이트 [skip ci]"
           pull_options: '--rebase --autostash'
+      - name: Close translation-refused issues if all items translated
+        if: always()
+        uses: ./.github/actions/close-translation-issues
+        with:
+          game: 'stellaris'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create issue for untranslated items
         if: always()
         uses: actions/github-script@v8
