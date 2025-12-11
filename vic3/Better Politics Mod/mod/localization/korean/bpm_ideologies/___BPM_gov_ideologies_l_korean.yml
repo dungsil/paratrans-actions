@@ -15,3 +15,5 @@
   ideology_gov_theocrat_desc: "#lore 이 집단은 정부가 종교 권위와 분리될 수 없다고 믿습니다. #!" # 17071838302606692029
   ideology_gov_anarchist: "무정부주의 운동" # 4987265835071551785
   ideology_gov_anarchist_desc: "#lore 이 집단은 국가가 본질적으로 억압적이므로 폐지되어야 한다고 믿습니다. #!" # 4026665190213061937
+  ideology_gov_anti_proletarian: "반프롤레타리아" # 11058081335948611728
+  ideology_gov_anti_proletarian_desc: "#lore 이 집단은 프롤레타리아 독재를 두려워하며, 그것이 결코 달성되지 않도록 보장하고자 합니다.!#" # 12067206822852077689
