@@ -78,6 +78,9 @@ async function run() {
     }
   } catch (error) {
     core.setFailed(error.message);
+    if (error.stack) {
+      core.debug(error.stack);
+    }
   }
 }
 
