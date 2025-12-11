@@ -86,6 +86,12 @@ pnpm stellaris:retranslate
 # Add dictionary entries from a git commit
 pnpm add-dict <commit-id>
 
+# Sort all dictionary files alphabetically (within comment groups)
+pnpm sort-dict
+
+# Sort dictionaries in dry-run mode (preview changes without modifying files)
+pnpm sort-dict -- --dry-run
+
 # Run tests (run before and after script modifications)
 pnpm test
 
@@ -348,9 +354,21 @@ nano dictionaries/ck3-glossary.toml
 # Add a new term
 echo '"new_term" = "새 용어"' >> dictionaries/ck3-glossary.toml
 
+# Sort all dictionaries alphabetically (recommended after manual edits)
+pnpm sort-dict
+
 # Verify TOML syntax (if needed)
 pnpm test scripts/utils/dictionary.test.ts
 ```
+
+**Dictionary Sorting**:
+- Dictionary files should be kept sorted alphabetically for better maintainability
+- Use `pnpm sort-dict` to sort all dictionary files within their comment groups
+- The sorting preserves:
+  - Comment block groupings (entries between blank lines)
+  - Inline comments (e.g., `"key" = "value" # comment`)
+  - File structure and formatting
+- After adding new dictionary entries, always run `pnpm sort-dict` to maintain consistent ordering
 
 ### Editing Prompts
 

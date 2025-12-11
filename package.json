@@ -6,6 +6,7 @@
   "scripts": {
     "upstream": "jiti scripts/upstream.ts",
     "add-dict": "jiti scripts/add-dict-from-commit.ts",
+    "sort-dict": "jiti scripts/sort-dict.ts",
     "check-proper-nouns": "jiti scripts/check-proper-nouns.ts",
     "ck3": "jiti scripts/ck3.ts",
     "ck3:update-hash": "jiti scripts/ck3.ts onlyHash",

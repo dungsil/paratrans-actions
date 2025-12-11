@@ -6,33 +6,33 @@
 "character" = "인물"
 "duke" = "공작"
 "high king" = "고왕"
+"hoftag" = "궁중의회"
 "king" = "왕"
 "landless" = "비지주"
 "senate" = "원로원"
 "stewardship" = "관리력"
 "watchposts" = "감시 초소"
-"hoftag" = "궁중의회"
 
 # 정부체제
-"nomad" = "유목"
-"meritocracy" = "관료제"
 "celestial" = "천조"
-"mandala" = "만다라"
 "hegemony" = "패권국"
+"mandala" = "만다라"
+"meritocracy" = "관료제"
+"nomad" = "유목"
 
 # 일반 표현
-"the" = "" # "The" 값만 있을 때 "그"로 번역해버리는 문제 처리
 "excellent" = "훌륭하군"
 "excellent!" = "훌륭하군!"
+"fraternal love" = "형제애"
+"historical context:" = "역사적 배경:"
+"i look forward to seeing the final result!" = "최종 결과물이 기대되는 군!"
+"let's get started!" = "시작해보지!"
 "ok" = "네"
+"the" = "" # "The" 값만 있을 때 "그"로 번역해버리는 문제 처리
 "very good" = "아주 좋군"
 "very good!" = "아주 좋군!"
-"let's get started!" = "시작해보지!"
-"i look forward to seeing the final result!" = "최종 결과물이 기대되는 군!"
-"historical context:" = "역사적 배경:"
-"fraternal love" = "형제애"
 
 # 플레이스홀더
-"xxxxx" = "xxxxx" # RICE, VIET 에서 사용하는 플레이스 홀더로 API 요청 되지 않도록 사전에 추가
 "RICE" = "RICE"
 "VIET" = "VIET"
+"xxxxx" = "xxxxx" # RICE, VIET 에서 사용하는 플레이스 홀더로 API 요청 되지 않도록 사전에 추가
