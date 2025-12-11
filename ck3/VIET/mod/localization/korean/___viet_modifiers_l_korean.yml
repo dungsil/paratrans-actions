@@ -799,3 +799,203 @@
   VIET_befriending_rooks: "갈가마귀와 친구 되기" # 13922183488005028922
   VIET_hoopoe_curse: "불길한 후투티 새들" # 12981506671095576403
   VIET_hoopoe_curse_desc: "이 인물의 집 근처에 모여드는 오색딱따구리들이 흉조라고들 하더군." # 4697655880149949813
+  VIET_hoopoe_blessing: "후투티새의 축복을 받다" # 14852283113447866057
+  VIET_hoopoe_blessing_desc: "이 인물의 집 근처에 모여드는 오색딱따구리들이 행운의 징조라고들 합니다." # 13403697543002477895
+  VIET_hoopoe_medicine: "후투티로 만든 약재" # 17108883607544710580
+  VIET_eating_chamois: "샤무아 고기 먹기" # 15405550685469711703
+  VIET_threatened_hunters: "위협받는 평범한 사냥꾼들" # 8820745092986136848
+  VIET_listened_to_yellowhammer: "황새참새에게서 영감을 받아" # 9071692697337053042
+  VIET_house_bunting_blessing: "#집안 장식물과 거처 공유하기#" # 6734130606761150116
+  VIET_house_bunting_blessing_desc: "집울새는 북서아프리카 토착 새로, 행운의 징조로 여겨집니다. 그런 이유로 이 인물은 그러한 새 한 마리, 혹은 어쩌면 여러 마리가 자신의 집에 깃들도록 허락했습니다." # 8699119843125229749
+  VIET_guard_goose: "경비 거위를 소유하고 있음" # 1671258767484291707
+  VIET_guard_goose_desc: "이 인물의 거주지에 감히 침범하거나 위협하는 자는 분노하여 울부짖는 거위의 지옥 같은 소리를 듣게 될 것이다: #W #bold\"꽥, 꽥\"#!#!" # 879018908467193471
+  VIET_bear_attacks: "최근 곰의 습격" # 11038824940254825559
+  VIET_bear_attacks_desc: "이곳에서 발생한 여러 폭력적인 죽음의 배후에는 무시무시한 곰이 있다고 믿어집니다." # 14142569795227379398
+  VIET_bear_attacks_ended: "곰의 습격이 끝났습니다" # 11472941401156043489
+  VIET_bear_attacks_ended_desc: "지역 당국이 최근 그 지역 주민들을 공포에 떨게 하던 곰을 처리했습니다." # 10178496003516814823
+  VIET_feathered_locusts: "깃털 달린 메뚜기" # 1152232342407150970
+  VIET_feathered_locusts_desc: "이 백작령은 작물에 피해를 주는 것으로 악명 높은 '깃털 메뚜기'라는 별명을 가진 붉은부리 퀘레아 떼로 인해 고통받고 있습니다." # 565310542294828933
+  VIET_rooks_here: "갈까마귀들 등장" # 8978634773683230167
+  VIET_rooks_here_desc: "어떤 이들은 까마귀와 닮은 갈가마귀가 행운의 징조라고 말합니다. 또 다른 이들은 불운의 징조라고 말하죠. 하지만 이 지역이 번성하고 있다면, 어쩌면 갈가마귀는 정말로 유익하고 도움이 되는 존재일지도 모르겠습니다." # 7336972418276906743
+  VIET_culling_rooks: "까마귀 처치" # 14619457601627053554
+  VIET_culling_rooks_desc: "지역 당국은 이 지역 주민들에게 발견되는 모든 까마귀(까마귀와 유사한 새의 일종)를 없애도록 장려하고 있습니다. 이들은 해충으로 간주되어 그에 맞게 처리되어야 합니다." # 2854513120480399889
+  VIET_rooks_crows: "갈까마귀의 총애를 받음" # 12625579404991758293
+  VIET_rooks_crows_desc: "이곳에 사는 까마귀(까마귀와 닮은 새)들이 현지인들과 사이가 좋으며, 이곳의 영주가 그들과 어떤 깊은, 심지어는 이계의 연결고리를 가지고 있다는 사실 덕분에 현지인들에게 많은 행운을 가져다준다고들 합니다." # 9428500335021845852
+  VIET_reliable_donkeys: "믿음직한 당나귀들" # 2709048065496869815
+  VIET_reliable_donkeys_desc: "이 [county|E]에서 사육되는 당나귀들은 거의 모든 면에서 다른 곳의 당나귀들보다 뛰어나기로 유명합니다.\n\n이 [county|E]의 [ruler|E]는 [decision|E]를 내려 #V 믿을 수 있는 당나귀 구매#를 할 수 있습니다." # 11824145058703349576
+  VIET_small_herd_donkeys: "최근 작은 당나귀 떼를 구입했습니다" # 16121010435000875893
+  VIET_small_herd_donkeys_desc: "\"히이이잉! 히이이잉\"" # 2256925798671371458
+  VIET_medium_herd_donkeys: "최근 중간 크기의 당나귀 떼를 구입했습니다" # 1675050733273262758
+  VIET_medium_herd_donkeys_desc: "$VIET_small_herd_donkeys_desc$" # 12411194524101616797
+  VIET_large_herd_donkeys: "최근에 거대한 당나귀 떼를 구입했습니다" # 15298930691069563368
+  VIET_large_herd_donkeys_desc: "$VIET_small_herd_donkeys_desc$" # 12411194524101616797
+  VIET_dovecote_interest: "더 많은 비둘기집 건설에 관심이 있습니다" # 5721291373031013023
+  VIET_dovecote_interest_desc: "[decision|E]를 사용하여 #V 더 많은 비둘기집 건설#!을 진행할 수 있습니다." # 6603984175421802775
+  VIET_opinion_dovecote_approve: "비둘기집 건설 제안에 동의함" # 10170801821375949753
+  VIET_opinion_dovecote_heeded: "비둘기집 건설에 대한 나의 제안에 동의함" # 9150154593703613283
+  VIET_opinion_dovecote_disapprove: "비둘기집 추가 건설 제안에 대해 확신이 서지 않음" # 3140504928218674613
+  VIET_opinion_dovecote_not_heeded: "비둘기집 건설 제안에 대한 확신이 없다네" # 11999842639884914497
+  VIET_built_dovecotes_small: "새로운 비둘기집 몇 개" # 5067456927739994322
+  VIET_built_dovecotes_small_desc: "이 인물은 최근 거처에 몇 채의 비둘기집을 새로 지으라고 명령했습니다. 더 많은 비둘기를 통제하는 것은 자신의 지위, 위신, 그리고 힘을 과시하는 것이지요!" # 11598541884618427123
+  VIET_built_dovecotes_medium: "새로운 비둘기집 여러 채" # 8311728925187275492
+  VIET_built_dovecotes_medium_desc: "이 인물은 최근 거주지에 여러 개의 새로운 비둘기집 건설을 명령했습니다. 더 많은 비둘기를 통제하는 것은 자신의 지위, 위신, 그리고 힘을 과시하는 것이지요!" # 3348475203738951636
+  VIET_built_dovecotes_large: "새로운 비둘기집 다수" # 11793952638642882695
+  VIET_built_dovecotes_large_desc: "이 인물은 최근 거처에 많은 비둘기집을 새로 지으라고 명령했습니다. 더 많은 비둘기를 통제하는 것은 자신의 지위, 위신, 그리고 권력을 과시하는 수단이니까요!" # 200504843581580883
+  VIET_songbird_average_fan: "#bold 명금에 대한 스쳐 지나가는 관심#!" # 8926387601407607736
+  VIET_songbird_enjoyer: "새소리 듣기를 즐김" # 2321986557384249100
+  VIET_songbird_enjoyer_desc: "이 인물은 야생에서 노래하는 모든 새들의 경이로운 가창력을 감상하기 위해 황야로 나가는 것을 좋아합니다.\n\n[decision|E]를 통해 #V 야생의 노래하는 새 듣기#!를 실행하여 [stress|E]를 잃을 수 있습니다." # 9306580276801386457
+  VIET_inspired_by_songbird_diplomacy: "#bold 명금#이 웅변에 영감을 불어넣다" # 8751333374582922148
+  VIET_inspired_by_songbird_martial: "#bold 노래하는 새들#은 용기와 대담함을 고취합니다" # 1272520736005469045
+  VIET_inspired_by_songbird_stewardship: "#bold 노래하는 새들이 근면함을 고취시키다#" # 9144153142449119657
+  VIET_inspired_by_songbird_intrigue: "노래하는 새들이 자연에 대한 감상을 불러일으키다" # 16878273276406128446
+  VIET_inspired_by_songbird_learning: "#bold 노래하는 새들#은 영적인 헌신을 고취합니다" # 5966468188910012886
+  VIET_swimming_camels: "인도산 수영 낙타 몇 마리를 소유하고 있음" # 7958588286476655272
+  VIET_listened_to_saint_francis: "동물들과 함께 설교를 들었습니다." # 16109964202185841621
+  VIET_opinion_rejected_my_gift: "선물을 거절당함" # 2333454704468978756
+  VIET_opinion_accepted_my_gift: "내 선물을 받아들였다네" # 5537605519793800386
+  VIET_veterans_anecdotes: "노병의 일화 듣기" # 16696177453673826584
+  VIET_resolved_peasant_argument: "두 농민 사이의 다툼을 해결함" # 10396968333302173815
+  VIET_charity_to_servant: "하인에게 자선을 베풀다" # 18247740371467568929
+  VIET_spunky_girl: "활력이 넘치는" # 6320481612155063932
+  VIET_infamously_loud_sneezer: "악명 높은 큰 재채기꾼" # 1537247836249474559
+  VIET_opinion_shares_my_opinions: "내 의견에 동의함" # 12416087754425023759
+  VIET_smuggling_ring_arrested: "밀수 조직 검거" # 8919781931316786037
+  VIET_haunted_fortress: "#bold 유령 들린 버려진 요새#!" # 12506629307630181082
+  VIET_haunted_fortress_desc: "지역 전설에 따르면, 이 백작령에 버려진 요새는 오래전 잔혹하고 무자비했으며 변덕스러웠던 한 미치광이 왕이 지었다고 합니다. 그 왕과 그의 섬뜩한 병사들이 아직도 그곳에 출몰한다고 전해집니다. 지역 주민들은 복수심에 불타는 피에 굶주린 미치광이의 유령이 이 지역에 머무르는 것에 대해 분명히 불안해하겠지만, 이는 지나가는 다른 침략자들을 포함한 모든 외국인들에게도 위협이 될 것입니다. 게다가, 그 요새는 상태가 좋지 않음에도 불구하고 여전히 전초기지로 활용될 수 있습니다." # 5759644086855216125
+  VIET_famous_flower_meadows: "유명한 꽃밭" # 3656191075790095651
+  VIET_famous_flower_meadows_desc: "이 땅의 초원과 들판은 봄이 되면 수많은 꽃들이 만개하여 그 아름다움이 지역 전체에 명성이 자자합니다. 멀고 가까운 곳에서 많은 이들이 이 눈부신 광경을 보기 위해 찾아옵니다.\n\n이 [county|E]의 [ruler|E]는 [GetActivityType( 'activity_VIET_view_flower_meadows_in_bloom' ).GetName] [activity|E]에 참여할 수 있습니다." # 4220355636265833934
+  VIET_defended_servants_honor: "종복의 명예를 지키다" # 6496320617991781324
+  VIET_positive_mindset: "긍정적 사고방식" # 8141863755786794940
+  VIET_positive_mindset_desc: "\"어리석은 소리 마시오, 냉소주의는 바보들을 위한 것이오\"" # 1511963482570958907
+  VIET_realist_mindset: "현실주의적 사고방식" # 8601958006888440622
+  VIET_realist_mindset_desc: "\"예전에는 이상주의자였지 않았습니까\"" # 18337258200526824544
+  VIET_benevolently_intervened_locals: "#bold 지역민의 삶에 자비롭게 개입함#!" # 11902883715694687629
+  VIET_staying_inside: "더 머무르기" # 3662810261655202454
+  VIET_staying_inside_desc: "이 인물은 최근에 독서와 글쓰기, 그리고 자신과 우주에 대한 성찰을 위해 실내에 머물러야겠다는 영감을 받았습니다." # 195780820323925627
+  VIET_opinion_encouragement: "긍정적 격려" # 5821545279939672544
+  VIET_opinion_suspects_ulterior_motives: "숨겨진 의도를 의심함" # 11085652814828663946
+  VIET_opinion_awkward_silence: "어색한 침묵" # 18167498739197961084
+  VIET_encouraged_by_others: "타인의 격려" # 10702553771710259746
+  VIET_suspicious_of_praise: "타인의 칭찬을 의심함" # 1336487010431847521
+  VIET_positive_inspiring_dream: "긍정적인 영감의 꿈" # 13533114639075813635
+  VIET_opinion_struggle_discussion_agree: "인생의 고난에 대해 나와 뜻을 같이하다" # 342372677535586529
+  VIET_opinion_struggle_discussion_disagree: "삶의 고난에 대해 나와 의견이 다르다" # 13765545507252858060
+  VIET_opinion_love_discussion_agree: "사랑에 대해 나와 뜻을 같이하다" # 9208129322583613191
+  VIET_opinion_love_discussion_disagree: "사랑에 대해 나와 의견이 달랐다" # 5542591229098559066
+  VIET_opinion_doesnt_like_me_talking: "내 수다를 좋아하지 않음" # 3842107243908828442
+  VIET_liege_awkward_talk: "불쾌한 영주와 어색한 대화" # 1385453296629250434
+  VIET_thinks_love_is_struggle: "사랑은 숭고한 투쟁이라고 생각한다" # 13709720261415728115
+  VIET_thinks_love_is_struggle_desc: "이 인물은 진정한 사랑은 험난한 투쟁을 통해서만 얻을 수 있다는 연애담을 너무 많이 들었는지, 그 개념을 낭만적으로 여기고 이러한 공상적인 이야기를 현실에 투영하는 듯합니다." # 10802119722251018854
+  VIET_thinks_pragmatic_on_love: "#실용적인 사랑관#" # 2920891187322639158
+  VIET_thinks_pragmatic_on_love_desc: "이 인물은 사랑에 대한 자신의 견해가 매우 이성적인 것이거나, 누군가에게 거절당한 후 그 씁쓸한 감정을 짐짓 실용적인 태도로 숨기고 있는 것 같습니다." # 11472893586303811167
+  VIET_new_young_foreign_servant: "새로운 젊은 이방인 시종" # 3604565195466310976
+  VIET_new_young_foreign_servant_desc: "이 인물은 최근 먼 곳에서 온 아이를 새로운 하인(혹은 노예)으로 맞이했습니다. 이 아이는 아직 이 인물이 사용하는 언어를 배우는 중이라 유용성이 다소 떨어지지만, 외국어 지식은 도움이 될 수도 있을 것입니다." # 3681327069737904577
+  VIET_awkward_laughter: "어색한 예의 바른 웃음" # 12127336216889111743
+  VIET_awkward_laughter_desc: "\"아, 음... 그래... 하... 하하... 하하하! 당신의 농담은 정말 재미있었소! 그래서 내가 웃고 있는 것이오! 그래.... 아주 웃겼소...\"" # 6980922638440559311
+  VIET_opinion_didnt_like_my_joke: "내 농담이 마음에 들지 않았군" # 17361654853873130416
+  VIET_liege_didnt_like_joke: "#bold 주군께서 불쾌해하셨다#!" # 8793198865295166168
+  VIET_liege_didnt_like_joke_desc: "이 인물은 당시 자신의 봉주가 전혀 재미있어하지 않은 농담을 했습니다. 사실 봉주는 아무 말도 하지 않았습니다. 그 어색했던 순간은 오늘날까지도 모두가 기억하고 있습니다." # 5643261101992568351
+  VIET_struggles_everywhere: "무엇이든 투쟁이 될 수 있다고 믿음" # 15900117604225119332
+  VIET_struggles_everywhere_desc: "이 인물은 삶의 모든 것이 투쟁이라고 믿지만, 이것이 나쁜 일은 아니며 단지 우리가 견디고 이해해야 할 현실일 뿐이라고 생각합니다." # 13575277024330713913
+  VIET_struggles_skepticism: "도처의 고난에 대한 회의론" # 9689246820796552179
+  VIET_struggles_skepticism_desc: "이 인물은 삶의 모든 것이 투쟁이라는 개념에 의문을 제기합니다. 그들은 '투쟁'이 무엇을 의미하는지 이해하지 못하는 자들만이 품는 터무니없는 생각이라고 여깁니다." # 9776019168791151214
+  VIET_murderer_execution: "악명 높은 살인자 최근 처형됨" # 7779574067840940297
+  VIET_shy_hermit: "수줍은 은둔자" # 10467563459619928316
+  VIET_shy_hermit_desc: "이 지역에 위대한 성인이나 성녀가 살고 있다는 소문이 돌고 있습니다. 많은 이들이 그들을 찾아가려 하지만, 은둔자를 찾을 때마다 그들은 그저 달아나 다른 곳에 숨어버립니다. 그럼에도 불구하고 이러한 상황(그리고 이 은둔자가 실제로 존재하는지조차 불분명하다는 사실)에도 불구하고, 이 은둔자에 대한 이야기는 지역 주민들이 더욱 덕망 있고 경건해지도록 고무하고 있습니다." # 4395996585834075174
+  VIET_cave_art: "고대 동굴 벽화" # 11851415790523102248
+  VIET_cave_art_desc: "최근 이 지역 주민들이 흥미로운 동굴을 발견했는데, 그곳에는 오래전 멸망한 미지의 종족이 만든 예술품이 있었습니다." # 15063816343352268682
+  VIET_investigated_cave_art: "동굴 벽화 조사 완료" # 16968464667952883787
+  VIET_opinion_physically_attacked_me: "신체적으로 나를 공격했다" # 5323437818666191436
+  VIET_opinion_dislikes_singing: "내 노래를 싫어함" # 12433314703235549381
+  VIET_baklava_nightmare: "바클라바 없는 악몽의 세계" # 9629790413070707916
+  VIET_teddy_roosevelt_assassination: "#bold 용감하고 침착하게# 암살 시도를 극복했습니다" # 834222995543445415
+  VIET_teddy_roosevelt_assassination_desc: "누군가 최근 이 인물을 암살하려 했으나 실패했습니다. 기적적으로 암살자는 실패했고, 많은 이들이 이 인물이 그 악당에게 대처하는 용기와 침착함에 찬사를 보냈습니다." # 1109541245765806044
+  VIET_opinion_praised_me: "나를 찬양하라" # 8827479939833315950
+  VIET_mummy_medicine: "미라로 만든 의약품" # 14480232642998692769
+  VIET_traditionalist_intellectual: "전통주의 지식인" # 6371918620523401906
+  VIET_traditionalist_intellectual_desc: "이 인물은 자신의 종교의 정통 해석을 옹호하는 것으로 잘 알려진 학자입니다." # 17296058909433394738
+  VIET_innovative_intellectual: "혁신적인 지식인" # 21940795956724971
+  VIET_innovative_intellectual_desc: "이 인물은 그들의 종교에 대한 혁신적인 해석을 옹호하는 것으로 잘 알려진 학자입니다." # 4984499115877616458
+  VIET_opinion_agrees_intellectual: "내 지적 견해에 동의함" # 3128964768177610149
+  VIET_opinion_disagrees_intellectual: "내 지적 견해에 동의하지 않음" # 17531806263938424969
+  VIET_robber_baron: "강도 귀족" # 9467565162171457251
+  VIET_robber_baron_desc: "이 인물은 과거에 영주였거나 현재 영주이며, 악명 높은 약탈 영주로 알려져 있습니다." # 10561060587926532100
+  VIET_lenient_robber_baron: "강도 귀족에게 관대하게 대하기" # 14111576814724560758
+  VIET_punished_robber_baron: "강도 귀족을 정당하게 처벌함" # 8804926622969461831
+  VIET_improper_court_behavior: "#왕궁에서의 부적절한 행위#" # 5759983926027724952
+  VIET_improper_court_behavior_desc: "이 인물은 적절한 궁정 예절과 의전을 지키지 않는 것으로 악명이 높으며, 잦은 실수를 저지릅니다. 이것이 무지 때문이든, 오만함 때문이든, 태만 때문이든, 혹은 이 모든 것의 조합 때문이든 간에, 그들의 행동은 많은 이들의 경멸과 조롱거리가 됩니다." # 15028464761269017827
+  VIET_opinion_doesnt_care_about_inapproriate_courtiers: "부적절한 궁정 신하에게 신경 쓰지 않음" # 6987756556950199181
+  VIET_opinion_improper_court_behavior: "$VIET_improper_court_behavior$" # 3575141255909245244
+  VIET_opinion_chastised_me_in_private: "#bold 사적인 질책#!" # 9570013600544225183
+  VIET_blunder_court_ceremony: "궁정 의식에서 큰 실수를 저지르다" # 6186649471894285220
+  VIET_opinion_didnt_chastise_me: "나를 꾸짖지 않았네" # 7141468383373852662
+  VIET_recently_spruced_up_court: "최근에 단장한 왕실 궁정" # 4836499666185833657
+  VIET_opinion_rude_envoy: "무례한 사절을 보냈습니다" # 3292644263877878583
+  VIET_opinion_court_advice_good: "궁정 조언에 귀 기울였습니다" # 6557604443668770910
+  VIET_opinion_court_advice_bad: "궁정 조언 무시함" # 10807401003484494298
+  VIET_reduce_royal_ceremonies: "불필요한 의례 줄이기" # 13918492559288231445
+  VIET_reduce_royal_ceremonies_desc: "이 인물은 궁정에서 행해지는 불필요한 의례의 횟수를 줄이고 있습니다." # 2996058274182185748
+  VIET_increase_royal_ceremonies: "경박한 의례의 수 증가" # 15046271843615384491
+  VIET_increase_royal_ceremonies_desc: "이 인물은 자신의 궁정에서 불필요한 궁정 의례의 횟수를 늘리고 있습니다." # 2907854769497349998
+  VIET_opinion_ceremony_advice_good: "경박한 궁정 의례에 대한 나의 조언을 경청함" # 14395135984529870060
+  VIET_opinion_ceremony_advice_bad: "경박한 궁정 의례에 대한 내 조언을 무시함" # 2387679242408311471
+  VIET_opinion_ceremony_advice_very_bad: "불필요한 궁정 의식에 자원을 낭비함" # 17612238232991389999
+  VIET_distractingly_attractive: "정신을 산만하게 할 정도로 매력적인" # 5492237420042781447
+  VIET_distractingly_attractive_desc: "이 인물은 본래 군주의 궁정에서 봉사하던 미천한 종이었습니다. 하지만 그의 눈에 띄게 뛰어난 외모 덕분에 관심을 끌어 신분이 상승하게 되었습니다." # 14626930097908371106
+  VIET_opinion_stupid_sexy_flanders: "지나치게 매력적인 것은 좋지 않은 일입니다" # 2872743479150468915
+  VIET_admits_mistakes: "실수를 인정하다" # 3341710411966313396
+  VIET_admits_mistakes_desc: "이 인물은 높은 사회적 지위에도 불구하고, 진심에서 우러나오든 혹은 그저 남들에게 잘 보이기 위해서든 자신이 저지른 실수를 서슴지 않고 인정하는 경향이 있습니다. 물론, 그렇다고 해서 그 실수를 반드시 고치는 것은 아닙니다." # 12297054041104095949
+  VIET_recognizes_mistakes: "실수를 인정하지 않음" # 5992443623992419564
+  VIET_recognizes_mistakes_desc: "이 인물은 다음과 같은 조언을 굳게 믿고 있습니다.\"실수를 했다면 인정하고 바로잡되, 절대로 누구에게도 인정하지 마라\"" # 4212169248517761386
+  VIET_more_stairs: "최근 계단 추가 건설됨" # 18308314716804258312
+  VIET_overworks_servants: "하인들을 혹사시키기" # 2520414002620617177
+  VIET_opinion_spoiled_child: "나의 응석받이 자식" # 8304977726397721353
+  VIET_opinion_nagging_parent: "잔소리하는 부모" # 8210368255955435029
+  VIET_obedient_child: "부모님께 지나치게 순종적임" # 4589980068163545882
+  VIET_obedient_child_desc: "이 인물은 공개적으로 부모에게 지나치게 순종하는 것으로 알려져 있습니다. 일부는 이를 올바르고 효도하는 행동으로 볼 수도 있지만, 다른 이들은 이 인물이 다소 한심하고 부모의 그늘에 가려져 있다고 생각합니다." # 14889923980806388112
+  VIET_caught_corrupt_official: "부패한 관리를 붙잡다" # 7171154044604272889
+  VIET_opinion_reward_corrupt_official: "부패한 관리를 붙잡은 것에 대한 보상" # 5198752424716299781
+  VIET_opinion_didnt_punish_corrupt_official: "부패한 관리를 처벌하지 않음" # 10608782496904658685
+  VIET_didnt_punish_corrupt_official: "$VIET_opinion_didnt_punish_corrupt_official$" # 1838402572038337588
+  VIET_punished_corrupt_official: "부패한 관리를 징계함" # 6580075011287577523
+  VIET_strict_towards_servants: "하인들에게 엄격함" # 8070172493449422563
+  VIET_opinion_lax_servants: "하인들에게 너무 관대함" # 17777725938893171297
+  VIET_ominous_incidents_at_court: "궁정의 불길한 사건들" # 8625008680308217003
+  VIET_rumors_bad_courtier: "존재하지 않는 나쁜 궁신에 대한 소문" # 18171505951578839698
+  VIET_rumors_good_courtier: "존재하지 않는 훌륭한 궁신에 대한 소문" # 10445593912872196046
+  VIET_songs_good_courtier: "존재하지 않는 훌륭한 궁신에 대한 노래" # 3936319708886001989
+  VIET_nasty_rumors: "불쾌한 소문" # 9778718369099339355
+  VIET_nasty_rumors_desc: "이 인물에 대한 지도자로서의 능력에 대한 불미스러운 소문이 많습니다. 이 소문들이 사실인지는 누가 알겠습니까?" # 5495999970618754503
+  VIET_attacked_peasant_leader: "존경받는 농민 지도자를 공격함" # 225364348593434910
+  VIET_opinion_forced_compensate_peasant: "농민을 공격한 것에 대한 배상을 강요당했다" # 5852857652714399736
+  VIET_opinion_agreed_peasant: "무례한 농부에 대한 내 이야기를 믿어주었군" # 1471574322183552957
+  VIET_vassals_attacked_peasant: "봉신이 존경받는 농민 지도자를 공격했습니다" # 329591826277342160
+  VIET_vassals_attacked_peasant_desc: "이 인물은 자신의 봉신 중 한 명이 마을의 존경받는 구성원을 공격하도록 내버려 두었습니다. 봉신은 자신이 모욕당하고 이 농민에게 위협을 받았다고 주장했지만, 이 인물이 상황에 대해 아무런 조치도 취하지 않은 것이 평민들 사이에 큰 소란을 일으키고 있습니다." # 16553885314347914012
+  VIET_opinion_cares_about_me: "나를 아낌" # 17107918659324648275
+  VIET_opinion_really_cares_about_me: "정말로 나를 아낀다" # 12251965655393616193
+  VIET_opinion_stealing_my_thunder: "내 번개를 훔치다니" # 11199124677158013843
+  VIET_good_vassal_rumors: "대봉신으로 알려져 있다" # 12054978909319551565
+  VIET_vulgar_music: "저속한 음악 작곡을 좋아함" # 16913842277274316986
+  VIET_opinion_supports_vulgar_music: "저속한 음악을 지원합니다" # 2923716108805532165
+  VIET_opinion_composes_vulgar_music: "상스러운 음악을 작곡한다" # 16111415511602910688
+  VIET_opinion_dislikes_my_music: "내 음악을 싫어함" # 14479978273156214776
+  VIET_opinion_fellow_prude: "동지인 금욕주의자여" # 13137705417057077107
+  VIET_opinion_supports_music: "내 음악적 취미를 지원함" # 8562015133297053736
+  VIET_opinion_discreet_vulgar_music: "내\"저속\" 음악에 대해 좀 더 신중하라고 내게 말했다네" # 7235797911674401316
+  VIET_opinion_off_the_hook: "나를 면책해 주시오" # 7537459578718312405
+  VIET_opinion_made_me_pay_fine: "벌금을 내게 만들었소" # 8667751443768717489
+  VIET_opinion_imprisoned_me: "강도 귀족이라는 이유로 나를 투옥했군" # 4424984089089672656
+  VIET_opinion_poached_official: "내 관리를 빼앗다니" # 8792178718239017403
+  VIET_opinion_helped_my_debt_problems: "내 빚 문제를 해결해 주셨습니다" # 11386334415032303826
+  VIET_opinion_refused_to_help_my_debt_problems: "내 빚 문제를 해결해 주지 않았군" # 3503241234005007634
+  VIET_opinion_gracious: "지극히 자비로우신" # 16279758848101736865
+  VIET_opinion_rudely_rejected_my_gift: "내 선물을 무례하게 거절함" # 16813550236348556023
+  VIET_shadowy_mysterious_woman: "그림자 속의 신비로운 여인을 보았다" # 10213834584919624232
+  VIET_opinion_forced_stay_meeting: "몸이 좋지 않은데도 회의에 계속 머물도록 강요당했다네" # 16183758691611142842
+  VIET_opinion_let_leave_meeting: "몸이 좋지 않아 회의를 마치고 나가야겠습니다." # 5650386039661134561
+  VIET_frequent_light_headedness: "가벼운 현기증" # 15516843211165098611
+  VIET_opinion_didnt_chastise_tardy_councilor: "꾸물거리는 평의원 징책에 실패했음" # 11984424028429274425
+  VIET_opinion_chastise_tardy: "지각했다고 나를 꾸짖었네" # 17339765969895335510
+  VIET_tardy_to_meetings: "회의 지각" # 15137892489878641789
+  VIET_tardy_to_meetings_desc: "이 인물은 중요한 회의에 다소 늦는 경향이 있습니다. 몇 분이나 심지어 한 시간 정도 늦는 것이 아니라, 때로는 몇 시간씩 늦습니다. 이는 명백히 용납할 수 없는 행동이지만, 그들은 계속해서 저지르고 있습니다!" # 9405699900972384674
+  VIET_mysterious_child: "신비로운 아이" # 15593709772506227202
