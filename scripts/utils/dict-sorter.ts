@@ -14,6 +14,14 @@ export interface CommentBlock {
   entries: DictionaryEntry[]
 }
 
+// TOML 키-값 쌍을 매칭하는 정규식
+// 형식: "key" = "value" 또는 key = value (따옴표 선택적)
+// 선택적으로 # 인라인 주석 포함
+// 그룹 1: 키 (따옴표 포함 가능)
+// 그룹 2: 값 (따옴표 포함 가능)
+// 그룹 3: 인라인 주석 (선택적)
+const TOML_KEY_VALUE_PATTERN = /^("(?:[^"\\]|\\.)*"|[^=]+)\s*=\s*("(?:[^"\\]|\\.)*"|[^#]+)(#.*)?$/
+
 /**
  * TOML 파일을 파싱하여 주석 블록으로 그룹화합니다.
  * @param content TOML 파일 내용
@@ -43,8 +51,7 @@ export function parseTomlWithComments(content: string): CommentBlock[] {
     }
     
     // TOML 키-값 쌍 파싱
-    // 패턴: "key" = "value" 또는 key = value, 선택적으로 # 인라인 주석
-    const match = trimmedLine.match(/^("(?:[^"\\]|\\.)*"|[^=]+)\s*=\s*("(?:[^"\\]|\\.)*"|[^#]+)(#.*)?$/)
+    const match = trimmedLine.match(TOML_KEY_VALUE_PATTERN)
     if (match) {
       const key = match[1].trim()
       const value = match[2].trim()
@@ -81,18 +88,27 @@ export function normalizeKeyForSorting(key: string): string {
 
 /**
  * 주석 블록 내의 엔트리를 알파벳 순으로 정렬합니다.
+ * Schwartzian transform을 사용하여 성능을 최적화합니다.
  * @param blocks 주석 블록 배열
  * @returns 정렬된 주석 블록 배열
  */
 export function sortBlocks(blocks: CommentBlock[]): CommentBlock[] {
-  return blocks.map(block => ({
-    ...block,
-    entries: [...block.entries].sort((a, b) => {
-      const keyA = normalizeKeyForSorting(a.key)
-      const keyB = normalizeKeyForSorting(b.key)
-      return keyA.localeCompare(keyB, 'en')
-    })
-  }))
+  return blocks.map(block => {
+    // Schwartzian transform: 정규화된 키를 미리 계산하여 중복 호출 방지
+    const entriesWithKeys = block.entries.map(entry => ({
+      entry,
+      normalizedKey: normalizeKeyForSorting(entry.key)
+    }))
+    
+    entriesWithKeys.sort((a, b) => 
+      a.normalizedKey.localeCompare(b.normalizedKey, 'en')
+    )
+    
+    return {
+      ...block,
+      entries: entriesWithKeys.map(item => item.entry)
+    }
+  })
 }
 
 /**
