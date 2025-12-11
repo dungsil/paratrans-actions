@@ -62,13 +62,10 @@
   BPM_VALUE_FROM_PEASANT_RADICALS: "[concept_radical] [GetPopType('peasants').GetName]로부터" # 1628276716099335503
   BPM_VALUE_FROM_LABORER_RADICALS: "[concept_radical] [GetPopType('laborers').GetName]로부터" # 15630439224457726586
   BPM_VALUE_FROM_MACHINIST_RADICALS: "[concept_radical] [GetPopType('machinists').GetName]로부터" # 16597426101365578148
-  BPM_VALUE_FROM_LABORER_LOYALISTS: "[concept_loyalist] [GetPopType('laborers').GetName]로부터" # 69739404931403483
-  BPM_VALUE_FROM_MACHINIST_LOYALISTS: "[concept_loyalist] [GetPopType('machinists').GetName]으로부터" # 17205081138549728686
   BPM_VALUE_FROM_SYNDICALISM_DEVELOPMENT: "#yellow $je_bpm_syndicalism$#! 일지 항목 진행 상황" # 12263823700701350921
   BPM_VALUE_FROM_AGRARIAN_SOCIALISM_DEVELOPMENT: "#yellow $je_bpm_agrarian_socialism$#! 일지 항목 진척도" # 18257236578972870278
   BPM_VALUE_FROM_SOCS_POPULARITY: "[GetInterestGroupVariant('ig_socialists', GetPlayer).GetName]의 인기" # 3535345396433656716
   BPM_VALUE_FROM_REVSOCS_POPULARITY: "[GetInterestGroupVariant('ig_revolutionist_socialists', GetPlayer).GetName]의 인기" # 13933097892387407981
-  BPM_VALUE_FROM_REFSOCS_POPULARITY: "[GetInterestGroupVariant('ig_reformist_socialists', GetPlayer).GetName]의 인기" # 7107874388092625801
   BPM_VALUE_FROM_TRADE_UNIONS_POPULARITY: "[GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetName]의 인기" # 13438588993707985666
   BPM_VALUE_FROM_RURAL_FOLK_POPULARITY: "[GetInterestGroupVariant('ig_rural_folk', GetPlayer).GetName]의 인기" # 3358306623276086816
   BPM_VALUE_FROM_INTELLIGENTSIA_POPULARITY: "[GetInterestGroupVariant('ig_intelligentsia', GetPlayer).GetName]의 인기" # 1836774201159600494
@@ -109,8 +106,8 @@
   BPM_VALUE_FROM_POPULAR_ANGRY_TRADE_UNIONS: "$ig_approval_angry$ [GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetName]" # 10782787989926166125
   BPM_VALUE_FROM_ONGOING_LIBERAL_REVOLUTION: "진행 중인 [concept_bpm_ig_is_liberal] [concept_revolution]" # 13442789178792672018
   BPM_VALUE_FROM_ONGOING_SOCIALIST_REVOLUTION: "진행 중인 [concept_bpm_ig_is_socialist] [concept_revolution]" # 17774569338852156063
-  BPM_VALUE_FROM_law_corporatized_unions: "[GetLawType('law_corporatized_unions').GetName]" # 8817373650135988639
-  BPM_VALUE_FROM_law_anti_strike_laws: "[GetLawType('law_anti_strike_laws').GetName]" # 3442352733321146323
+  BPM_VALUE_FROM_LAW_STATE_CONTROLLED_LABOR_UNIONS: "[GetLawType('law_state_controlled_labor_unions').GetName]" # 7311307755091813267
+  BPM_VALUE_FROM_LAW_LIMITED_LABOR_UNIONS: "[GetLawType('law_limited_labor_unions').GetName]" # 4909707884292024368
   BPM_VALUE_REVOLUTIONIST_SOCIALISTS_IN_GOVERNMENT: "[GetInterestGroupVariant('ig_revolutionist_socialists', GetPlayer).GetName] [concept_in_government]" # 15436785559473680102
   BPM_VALUE_REFORMIST_SOCIALISTS_IN_GOVERNMENT: "[GetInterestGroupVariant('ig_reformist_socialists', GetPlayer).GetName] [concept_in_government]" # 10873750897746789515
   BPM_VALUE_SOCIALISTS_IN_GOVERNMENT: "[GetInterestGroupVariant('ig_socialists', GetPlayer).GetName] [concept_in_government]" # 4939100837152946367

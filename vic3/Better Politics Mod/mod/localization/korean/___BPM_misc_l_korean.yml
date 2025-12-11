@@ -35,10 +35,3 @@
   alert_bpm_must_pick_cabinet_desc: "현재 내각에 공석이 존재합니다. 국가를 이끌 내각을 임명하는 것이 지극히 중요합니다." # 10535905559543651353
   alert_bpm_must_pick_cabinet_hint: "내각(Institutions) 탭에서 내각을 임명할 수 있습니다." # 5301767800846095291
   alert_bpm_must_pick_cabinet_action: "내각 현황판" # 12967714270511906565
-  bpm_idle_legislature_setting_name: "#idle legislature#" # 15859960602224521099
-  bpm_law_will_fail_vote_setting_name: "[GetPlayer.GetLawBeingEnacted.GetName]이 부결될 것입니다!" # 5570593405043948491
-  bpm_must_appoint_headofgov_setting_name: "$bpm_hog_title_default$ 없음" # 4336801374285297884
-  bpm_must_pick_cabinet_setting_name: "#bold 채워지지 않은 내각 직책#" # 15817161340064849999
-  country_definition_equal: "귀국의 정의는 #v [TARGET_COUNTRY_DEFINITION.GetName]#입니다! (상황별 변형 모두 포함)" # 16778682010465143153
-  scripted_bar_progress_greater_than: "진행률 표시줄은 $COMPARATOR$ #v $NUM|0v$#! (현재: $CURRENT_VALUE|0v$)입니다." # 4737420364887045681
-  country_var_greater_or_equal: "#v The Country variable#!가 #v $NUM|0v$#! 이상입니다" # 8480364017706002574

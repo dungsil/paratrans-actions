@@ -2,6 +2,3 @@
   gui_sidebar_example_button: "gui_sidebar_example_button" # 16827161175787099519
   gui_sidebar_example_button_desc: "예시" # 1513857641461741027
   gui_sidebar_example_button_tooltip: "이 버튼을 클릭하면 아무것도 일어나지 않습니다" # 4152568696005216116
-  gui_character_opinion_example: "예시 의견" # 7562110352757794886
-  com_gui_total_building: "[Building.GetName] 규모:" # 4781107405660026246
-  com_no_sandbox_warning: "@red_cross! $SANDBOX$는 목표가 선택된 상태에서는 허용되지 않습니다" # 13636822750393792706

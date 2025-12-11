@@ -1,6 +1,4 @@
 ﻿l_korean:
-  ideology_eco_artisan: "장인" # 8140128347613935060
-  ideology_eco_artisan_desc: "#lore 이 집단은 지역의 숙련된 생산에 중점을 둔 수공업 경제를 신봉합니다. #!" # 1098068997347136731
   ideology_eco_laissez_faire: "자유방임주의" # 5218776488555828248
   ideology_eco_laissez_faire_desc: "#lore 이 집단은 국가의 개입이 적을 때 시장 경제가 최적으로 작동한다고 믿습니다. #!" # 7235903754905252914
   ideology_eco_interventionist: "개입주의" # 4672596646265323101

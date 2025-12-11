@@ -1,4 +1,5 @@
 ﻿l_korean:
+  bpm_schools_attraction_modifier: "교육 대신" # 9376263642099745338
   bpm_schools_fallback_modifier: "교육 대신" # 9376263642099745338
   bpm_schools_agpops_modifier: "교육 대신" # 9376263642099745338
   bpm_schools_anarchists_modifier: "교육 대신" # 9376263642099745338
@@ -119,7 +120,6 @@
   bpm_diplomacy_capis_modifier: "외무 대신" # 4286040881973002323
   bpm_diplomacy_rf_modifier: "외무 대신" # 4286040881973002323
   bpm_diplomacy_tu_modifier: "외무 대신" # 4286040881973002323
-  bpm_schools_attraction_modifier: "교육 대신" # 9376263642099745338
   bpm_colonial_affairs_attraction_modifier: "식민지 사무 대신" # 4785523556165147165
   bpm_social_security_attraction_modifier: "사회 보장 장관" # 3390356715852177606
   bpm_police_attraction_modifier: "경찰청장" # 9930558593018803093
@@ -204,7 +204,6 @@
   bpm_economy_tu_modifier_desc: "[GetStaticModifier('bpm_economy_tu_modifier').GetDesc]" # 3604237906703666877
   bpm_economy_landies_modifier_desc: "[GetStaticModifier('bpm_economy_landies_modifier').GetDesc]" # 14375285069496974004
   bpm_economy_capis_modifier_desc: "[GetStaticModifier('bpm_economy_capis_modifier').GetDesc]" # 15961885750017276762
-  bpm_economy_christdem_modifier_desc: "[GetStaticModifier('bpm_economy_christdem_modifier').GetDesc]" # 15488106493119527124
   bpm_economy_council_modifier_desc: "[Scope.GetCharacter.GetCustom('bpm_minister_of_economy_modifier_cr')]" # 12805647407848812674
   bpm_economy_noncr_modifier_desc: "[Scope.GetCharacter.GetCustom('bpm_minister_of_economy_modifier_noncr')]" # 2681003597634305053
   bpm_schools_fallback_modifier_desc: "[GetStaticModifier('bpm_schools_fallback_modifier').GetDesc]" # 16759417764784924926
@@ -223,7 +222,6 @@
   bpm_schools_intel_modifier_desc: "[GetStaticModifier('bpm_schools_intel_modifier').GetDesc]" # 9713486024449639194
   bpm_schools_ruries_modifier_desc: "[GetStaticModifier('bpm_schools_ruries_modifier').GetDesc]" # 11070799191431665299
   bpm_schools_unions_modifier_desc: "[GetStaticModifier('bpm_schools_unions_modifier').GetDesc]" # 9412374569233438857
-  bpm_schools_christdem_modifier_desc: "[GetStaticModifier('bpm_schools_christdems_modifier').GetDesc]" # 12040529409254353064
   bpm_schools_attraction_modifier_desc: "[GetStaticModifier('bpm_schools_attraction_modifier').GetDesc]" # 7031623672909923579
   bpm_colonial_affairs_cons_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_cons_modifier').GetDesc]" # 11189948240213271600
   bpm_colonial_affairs_fash_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_fash_modifier').GetDesc]" # 9990869165810968849
@@ -235,7 +233,6 @@
   bpm_colonial_affairs_devout_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_devout_modifier').GetDesc]" # 10261761732527325356
   bpm_colonial_affairs_neutraling_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_neutraling_modifier').GetDesc]" # 4685957753535879263
   bpm_colonial_affairs_attraction_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_attraction_modifier').GetDesc]" # 4865685037130259900
-  bpm_colonial_affairs_chd_modifier_desc: "[GetStaticModifier('bpm_colonial_affairs_christdem_modifier').GetDesc]" # 18089959338930394406
   bpm_social_security_rursocs_modifier_desc: "[GetStaticModifier('bpm_social_security_rursocs_modifier').GetDesc]" # 1001661973954790588
   bpm_social_security_cons_modifier_desc: "[GetStaticModifier('bpm_social_security_cons_modifier').GetDesc]" # 9383215573062415574
   bpm_social_security_liberals_modifier_desc: "[GetStaticModifier('bpm_social_security_liberals_modifier').GetDesc]" # 14001166763620440879
@@ -247,7 +244,6 @@
   bpm_social_security_capis_modifier_desc: "[GetStaticModifier('bpm_social_security_capis_modifier').GetDesc]" # 264389990726923430
   bpm_social_security_ruries_modifier_desc: "[GetStaticModifier('bpm_social_security_ruries_modifier').GetDesc]" # 17235021250403808832
   bpm_social_security_unions_modifier_desc: "사회보장 조합의 영향력으로 인해 [GetStaticModifier('bpm_social_security_unions_modifier').GetDesc]" # 8972585295675994510
-  bpm_social_security_chd_modifier_desc: "[GetStaticModifier('bpm_social_security_christdems_modifier').GetDesc]" # 15688941904667305590
   bpm_social_security_attraction_modifier_desc: "[GetStaticModifier('bpm_social_security_attraction_modifier').GetDesc]" # 10819186215277605659
   bpm_police_agpops_modifier_desc: "[GetStaticModifier('bpm_police_agpops_modifier').GetDesc]" # 10462133755068218070
   bpm_police_cons_modifier_desc: "[GetStaticModifier('bpm_police_cons_modifier').GetDesc]" # 18040263785622522320
@@ -262,7 +258,6 @@
   bpm_police_aris_modifier_desc: "[GetStaticModifier('bpm_police_aris_modifier').GetDesc]" # 1558453581996818379
   bpm_police_intel_modifier_desc: "[GetStaticModifier('bpm_police_intel_modifier').GetDesc]" # 10130704375021916556
   bpm_police_ruries_modifier_desc: "[GetStaticModifier('bpm_police_ruries_modifier').GetDesc]" # 15955414869492045235
-  bpm_police_chd_modifier_desc: "[GetStaticModifier('bpm_police_christdem_modifier').GetDesc]" # 16986641731586228916
   bpm_police_unions_modifier_desc: "[GetStaticModifier('bpm_police_unions_modifier').GetDesc]" # 16397379643553545665
   bpm_police_attraction_modifier_desc: "[GetStaticModifier('bpm_police_attraction_modifier').GetDesc]" # 9523400232785423125
   bpm_workplace_safety_agpops_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_agpops_modifier').GetDesc]" # 11656044221382658807
@@ -271,7 +266,6 @@
   bpm_workplace_safety_commies_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_commies_modifier').GetDesc]" # 15732595207490233441
   bpm_workplace_safety_ruries_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_ruries_modifier').GetDesc]" # 15003744525822266775
   bpm_workplace_safety_unions_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_unions_modifier').GetDesc]" # 17292659224276730719
-  bpm_workplace_safety_christdem_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_christdem_modifier').GetDesc]" # 8420795667036241849
   bpm_workplace_safety_neutraling_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_neutraling_modifier').GetDesc]" # 4798340158074300304
   bpm_workplace_safety_attraction_modifier_desc: "[GetStaticModifier('bpm_workplace_safety_attraction_modifier').GetDesc]" # 5718242122111367259
   bpm_home_affairs_agpops_modifier_desc: "[GetStaticModifier('bpm_home_affairs_agpops_modifier').GetDesc]" # 8939705182645315956
@@ -287,7 +281,6 @@
   bpm_home_affairs_intel_modifier_desc: "[GetStaticModifier('bpm_home_affairs_intel_modifier').GetDesc]" # 11158756950488532665
   bpm_home_affairs_attraction_modifier_desc: "[GetStaticModifier('bpm_home_affairs_attraction_modifier').GetDesc]" # 7224418264441088708
   bpm_centralization_agpops_modifier_desc: "[GetStaticModifier('bpm_centralization_agpops_modifier').GetDesc]" # 3760151959440612206
-  bpm_centralization_christdems_modifier_desc: "[GetStaticModifier('bpm_centralization_christdems_modifier').GetDesc]" # 13773172679165488543
   bpm_centralization_cons_modifier_desc: "[GetStaticModifier('bpm_centralization_cons_modifier').GetDesc]" # 17021695998122899277
   bpm_centralization_libs_modifier_desc: "[GetStaticModifier('bpm_centralization_libs_modifier').GetDesc]" # 17949879388070939116
   bpm_centralization_neutralidg_modifier_desc: "[GetStaticModifier('bpm_centralization_neutralidg_modifier').GetDesc]" # 166666634188290662
@@ -313,7 +306,6 @@
   bpm_health_system_capis_modifier_desc: "[GetStaticModifier('bpm_health_system_capis_modifier').GetDesc]" # 12988000846254383065
   bpm_health_system_ruries_modifier_desc: "[GetStaticModifier('bpm_health_system_ruries_modifier').GetDesc]" # 3590583264579238860
   bpm_health_system_unions_modifier_desc: "[GetStaticModifier('bpm_health_system_unions_modifier').GetDesc]" # 13688735778971292067
-  bpm_health_system_chd_modifier_desc: "[GetStaticModifier('bpm_health_system_christdem_modifier').GetDesc]" # 11585964079152157179
   bpm_health_system_attraction_modifier_desc: "[GetStaticModifier('bpm_health_system_attraction_modifier').GetDesc]" # 1745948752391308366
   bpm_suffrage_agpops_modifier_desc: "[GetStaticModifier('bpm_suffrage_agpops_modifier').GetDesc]" # 14613281923654281695
   bpm_suffrage_anarchists_modifier_desc: "[GetStaticModifier('bpm_suffrage_anarchists_modifier').GetDesc]" # 12059116140487702339
@@ -353,7 +345,7 @@
   bpm_hog_antagonism_modifier_ultra: "[GetStaticModifier('bpm_hog_antagonism_ultra_modifier').GetDesc]" # 16863371094686623510
   bpm_hog_synergy_modifier_low: "#v 낮은 시너지 (#N < 60%#!) 효과:#!\n[GetStaticModifier('bpm_low_synergy_modifier').GetDesc]" # 17742544761873352102
   bpm_hog_synergy_modifier_mid: "#v 중간 수준(#YB 60% ~ 80%#!) 시너지로부터의 시너지 효과:#!\n[GetStaticModifier('bpm_mid_synergy_modifier').GetDesc]" # 1842854574100787044
-  bpm_hog_synergy_modifier_high: "#v 높은 시너지 효과# (#P => 80%#!)#!\n[GetStaticModifier('bpm_high_synergy_modifier').GetDesc]" # 10609770833440570297
+  bpm_hog_synergy_modifier_high: "#v 높은 시너지(#P > 80%#!)로부터:#!\n[GetStaticModifier('bpm_high_synergy_modifier').GetDesc]" # 13935284711664342117
   bpm_hog_antagonism_modifier: "[concept_bpm_antagonism]" # 14148578215335003907
   bpm_hog_antagonism_double_modifier: "[concept_bpm_antagonism]" # 14148578215335003907
   bpm_hog_antagonism_triple_modifier: "[concept_bpm_antagonism]" # 14148578215335003907
