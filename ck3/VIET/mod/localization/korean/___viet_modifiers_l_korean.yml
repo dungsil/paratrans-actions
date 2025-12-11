@@ -1399,3 +1399,149 @@
   VIET_quality_henna_desc: "이 인물은 개인적인 용도로 #weak [Glossary( 'henna', 'HENNA_GLOSS' )]#을(를) 충분히 비축해 두었습니다." # 5016234623515430035
   VIET_trade_information: "국제 무역에 대해 통보받음" # 18275314993174566112
   VIET_redhead_fascination: "이국적이고 낯선 붉은 머리에 매료됨" # 2986810134067484971
+  VIET_opinion_similar_preferences: "비슷한 선호도" # 7549012163432267757
+  VIET_divine_approval_of_good_deed: "선행에 대한 신의 승인" # 13104674647393274755
+  VIET_embarrassing_incident_rumors: "#bold 당황스러운 사건#에 대한 소문" # 5656986916816327415
+  VIET_embarrassing_incident_rumors_suppression_fail: "당황스러운 사건에 대한 소문을 억누르는 데 실패했습니다" # 16501468059513465528
+  VIET_earwax_relief: "귀지 완화" # 11305364535482327460
+  VIET_earwax_relief_desc: "이 인물은 최근 귀에 귀지가 많이 쌓여 고통받고 있었습니다. 다행히도 귀지가 전문적으로 제거되어 갑자기 청력이 향상되었습니다!" # 9818601968953230864
+  VIET_buzzing_noise: "이상한 윙윙거리는 소리" # 523932483064293320
+  VIET_buzzing_noise_desc: "이 인물이 가는 곳마다 기묘하고 거의 들리지 않는 윙윙거리는 소리가 그를 따라다닙니다." # 10973850966084042430
+  VIET_showed_sympathy_to_jews: "유대인에게 동정심을 보임" # 17673321399749400845
+  VIET_distrusts_jews: "#bold 유대인#을 경계하라" # 8815951542920030899
+  VIET_eradicator_of_bad_history: "역사 파괴자" # 5080181587826301870
+  VIET_eradicator_of_bad_history_desc: "이 인물은 역사에 대한 지식으로 유명하며, 다른 이들이 문제가 될 소지가 있는, 심지어 틀린 역사적 이해를 답습하지 않도록 열정적으로 노력합니다." # 2172109256136062786
+  VIET_rosemary_flower_tonic: "로즈마리 꽃 추출액" # 4654004980979756296
+  VIET_candied_flowers: "설탕에 절인 꽃" # 9492104399662096249
+  VIET_candied_flowers_desc: "이 인물은 설탕에 절인 꽃으로 유명한 제과업자에게 연락하여 이 달콤한 과자를 공급받기로 했습니다." # 3916321432105672151
+  VIET_wildflowers_gift: "연인의 야생화 선물" # 17172850650373642983
+  VIET_wildflowers_gift_desc: "#italic “이 꽃들은 세상의 쾌락과도 같구나.”#!" # 501287540873663656
+  VIET_obsessed_with_eating_snow: "눈의 포식자" # 17695385967411736913
+  VIET_obsessed_with_eating_snow_desc: "이 인물은 무슨 이유에서인지 눈을 먹는 데 집착하고 있습니다. 이는 건강에 전혀 도움이 되지 않습니다." # 11254311638169299322
+  VIET_destructive_snowfall: "파괴적인 눈보라" # 53413145667400282
+  VIET_snowfall_relief: "눈보라로 인한 파괴 이후 통치자들의 도움" # 349822772899057742
+  VIET_good_snowmelt: "눈 녹는 소리가 좋군" # 1232115930028436090
+  VIET_snow_festival_idea: "눈 축제 아이디어" # 14392035896976942132
+  VIET_snow_festival_idea_desc: "이 통치자(혹은 전임 통치자)는 얼마 전 수도에서 눈 축제를 열어, 사람들이 겨울에 대한 불만과 걱정을 눈 조각이라는 창의적인 배출구를 통해 털어놓게 하자는 생각을 품었었습니다.\n\n#EMP #V $VIET_decision_snow_festival$#이라는 [decision|E]를 내려 다양한 이점을 얻을 수 있습니다! 이 [modifier|E]는 [decision|E]를 내리면 제거됩니다!" # 11550897053800337091
+  VIET_snow_festival_result_county_naughty: "추문을 일으키는 눈 축제" # 13789359656192104420
+  VIET_snow_festival_result_county_naughty_desc: "최근 겨울철을 맞아 눈 축제가 열렸는데, 사람들은 눈으로 조각품을 만들어 혹독한 겨울 날씨에 대한 답답함과 걱정을 털어낼 수 있었습니다. 그 조각품들 중 일부는 상당히 음란하기까지 했지요!" # 2076070247569680827
+  VIET_snow_festival_result_county_wholesome: "#bold 존경받는 설날 축제#" # 3345293795644352297
+  VIET_snow_festival_result_county_wholesome_desc: "최근 겨울철에는 이곳에서 눈 축제가 열렸는데, 사람들은 눈으로 조각품을 만들어 혹독한 겨울 날씨에 대한 답답함과 걱정을 달랠 수 있었습니다. 조각품들 중 상당수가 감명 깊었습니다!" # 15855116580648507568
+  VIET_snow_festival_result_naughty_1: "추문을 일으키는 눈 축제" # 13789359656192104420
+  VIET_snow_festival_result_naughty_1_desc: "최근 겨울 동안 이 인물은 자신의 영지에서 눈 축제를 열었습니다. 사람들은 혹독한 겨울 날씨에 대한 불만과 걱정을 눈으로 조각상을 만들며 해소할 수 있었죠. 그 조각상들 중 일부는 꽤나 음란한 것이었다고 합니다!" # 17906661359135615758
+  VIET_snow_festival_result_naughty_2: "$VIET_snow_festival_result_naughty_1$" # 6953075470841079681
+  VIET_snow_festival_result_naughty_2_desc: "$VIET_snow_festival_result_naughty_1_desc$" # 6773125120367760056
+  VIET_snow_festival_result_naughty_3: "$VIET_snow_festival_result_naughty_1$" # 6953075470841079681
+  VIET_snow_festival_result_naughty_3_desc: "$VIET_snow_festival_result_naughty_1_desc$" # 6773125120367760056
+  VIET_snow_festival_result_naughty_4: "$VIET_snow_festival_result_naughty_1$" # 6953075470841079681
+  VIET_snow_festival_result_naughty_4_desc: "$VIET_snow_festival_result_naughty_1_desc$" # 6773125120367760056
+  VIET_snow_festival_result_naughty_5: "$VIET_snow_festival_result_naughty_1$" # 6953075470841079681
+  VIET_snow_festival_result_naughty_5_desc: "$VIET_snow_festival_result_naughty_1_desc$" # 6773125120367760056
+  VIET_snow_festival_result_wholesome_1: "#bold 존경받는 설날 축제#" # 3345293795644352297
+  VIET_snow_festival_result_wholesome_1_desc: "최근 겨울철에 이 인물은 영지에서 눈 축제를 열어, 혹독한 겨울 날씨에 대한 사람들의 답답함과 걱정을 눈으로 조각품을 만들어 해소할 수 있도록 했습니다. 조각품들 중 상당수가 감명 깊었습니다!" # 7030131223540917484
+  VIET_snow_festival_result_wholesome_2: "$VIET_snow_festival_result_wholesome_1$" # 8747086134487498150
+  VIET_snow_festival_result_wholesome_2_desc: "$VIET_snow_festival_result_wholesome_1_desc$" # 17933091626329655267
+  VIET_snow_festival_result_wholesome_3: "$VIET_snow_festival_result_wholesome_1$" # 8747086134487498150
+  VIET_snow_festival_result_wholesome_3_desc: "$VIET_snow_festival_result_wholesome_1_desc$" # 17933091626329655267
+  VIET_snow_festival_result_wholesome_4: "$VIET_snow_festival_result_wholesome_1$" # 8747086134487498150
+  VIET_snow_festival_result_wholesome_4_desc: "$VIET_snow_festival_result_wholesome_1_desc$" # 17933091626329655267
+  VIET_snow_festival_result_wholesome_5: "$VIET_snow_festival_result_wholesome_1$" # 8747086134487498150
+  VIET_snow_festival_result_wholesome_5_desc: "$VIET_snow_festival_result_wholesome_1_desc$" # 17933091626329655267
+  VIET_enjoying_coconut_milk: "코코넛 밀크를 즐기는 중" # 15945009311332975536
+  VIET_coconut_head_injury: "코코넛 부상" # 3976536407316573687
+  VIET_coconut_head_injury_desc: "이 인물은 매우 창피하게도 코코넛이 머리 위로 떨어져 부상을 입었습니다." # 10377835204214285459
+  VIET_coconut_injury_supported_courtier: "코코넛 부상 사건: 신하 지원" # 13001381103273661203
+  VIET_coconut_injury_supported_courtier_desc: "궁정인물 중 한 명이 머리 위로 떨어지는 코코넛에 맞아 다치자, 이 통치자는 코코넛 나무를 소유한 농부들에게 보상을 강제하기로 결정했습니다." # 12728686773018771871
+  VIET_coconut_injury_supported_locals: "코코넛 부상 사례: 농민 지원" # 11281788922443505185
+  VIET_coconut_injury_supported_locals_desc: "궁정 신하 중 한 명이 머리 위로 떨어진 코코넛에 맞아 다친 후, 이 통치자는 해당 신하가 코코넛 나무 소유주인 농부들에게 보상을 요구하는 것을 중단하도록 압력을 가했습니다." # 1615234565005149721
+  VIET_coconut_injury_paid_compensation: "코코넛 부상 사건: 보상금 지급 완료" # 17453735976397629336
+  VIET_coconut_injury_paid_compensation_desc: "궁정인물 중 한 명이 머리 위로 떨어진 코코넛에 맞아 다치자, 이 통치자는 코코넛 나무 소유주인 농부들에게 보상금을 지불했습니다. 이로써 농부들이 스스로 보상금을 물어야 할 상황을 막아주었습니다." # 10265510887797348113
+  VIET_octopus_military_ideas: "문어에게서 영감을 받아" # 10285629776889976130
+  VIET_octopus_military_ideas_desc: "이 인물은 흥미로운 문어를 관찰한 후, 그 문어가 코코넛 껍데기를 이용해 자신을 방어하는 모습에서 영감을 받아 흥미로운 군사적 아이디어를 떠올렸습니다." # 2725300541812563382
+  VIET_safer_coconut_harvesting_methods: "더 안전한 코코넛 수확 방법" # 3927483158092631383
+  VIET_safer_coconut_harvesting_methods_desc: "이 지역에 외부로부터 더 새롭고 안전한 코코넛 수확 방식이 도입되어, 코코넛 수확자들이 부상을 입거나 심지어 사망할 가능성이 줄어들었습니다." # 4652575962634624762
+  VIET_hagaer_modifier: "독서광" # 2439472922454703742
+  VIET_hagaer_modifier_desc: "이 책벌레는 책, 책 찾기, 책 읽기에 집착하여 사교 생활과 기술에 소홀하고 있습니다." # 11202018131028690034
+  VIET_supports_bookworms: "책벌레를 지원합니다" # 15255052630981170625
+  VIET_ate_excellent_cheese: "훌륭한 치즈를 먹었군" # 167746751376561244
+  VIET_grave_of_the_fireflies: "화염의 무덤" # 7886332758803644176
+  VIET_grave_of_the_fireflies_desc: "이 인물은 반딧불이로 둘러싸인 죽은 숲에서 휴식을 취한 후 깊은 영적 체험을 했습니다." # 14769552282681549852
+  VIET_todd_howard_merchant: "부지런한 상인" # 16504943567022039864
+  VIET_todd_howard_merchant_desc: "이 인물은 이전에는 상인으로, 비록 일부는 그를 거짓말쟁이라고 비난했지만, 꽤나 매력적이고 설득력 있는 판매원으로 잘 알려져 있었습니다. 사실 그는 어떤 상황에서든 일만 할 뿐입니다." # 3782730485114928667
+  VIET_peach_and_goma_cute: "귀여운 고양이들을 보았다" # 12417415332007599355
+  VIET_peach_and_goma_cute_desc: "여행 중 이 인물은 복숭아를 가지고 노는 귀여운 고양이 두 마리를 보았고, 그 광경이 참으로 사랑스럽다고 생각했습니다." # 2849755872180387942
+  VIET_peach_and_goma_spiritual: "길조: 귀여운 고양이들" # 5620950903809898467
+  VIET_peach_and_goma_spiritual_desc: "여행 중 이 인물은 복숭아를 가지고 노는 귀여운 고양이 두 마리를 보았고, 이를 어떤 종류의 길조라고 믿었습니다." # 13518181674601892446
+  VIET_traveling_without_unnecessary_distractions: "불필요한 방해 없이 여행하기" # 7673550621204446664
+  VIET_peach_industry_1: "소박한 복숭아 산업" # 14060791897693278533
+  VIET_peach_industry_1_desc: "지역 통치자들이 이곳에서 성장하는 복숭아 산업을 지원했습니다. 그 결과는 엇갈렸습니다." # 3534795830548544420
+  VIET_peach_industry_2: "복숭아 산업 육성" # 17557301853876776837
+  VIET_peach_industry_2_desc: "지역 통치자들이 이곳의 성장하는 복숭아 산업을 지원했습니다. 그 결과 이곳의 복숭아 재배자들은 꽤 괜찮은 성공을 거두었습니다." # 9681639042386464115
+  VIET_peach_industry_3: "번성하는 복숭아 산업" # 3715319462266200033
+  VIET_peach_industry_3_desc: "지역 통치자들이 이곳에서 성장하는 복숭아 산업을 지지하고 있습니다. 비록 더 따뜻한 지역의 복숭아 생산량과는 경쟁할 수 없지만, 이 지역은 지역 복숭아 생산의 중심지로 변모하고 있습니다." # 18145977480620614096
+  VIET_enjoys_peasant_folklore: "농민 설화를 즐김" # 15198989982657593970
+  VIET_enjoys_peasant_folklore_desc: "이 인물은 평민들의 민속이 그들의 저속함에도 불구하고 (혹은 그 저속함 때문에) 꽤나 매력적이라고 생각합니다." # 13585806808091578297
+  VIET_scoffs_at_peasant_folklore: "농민들의 속설을 비웃음" # 7044795884506544753
+  VIET_scoffs_at_peasant_folklore_desc: "이 인물은 평민들의 민속 설화를 천하게 여기며, 그것들을 조잡하고 진부한 이야기 짓기로 여깁니다." # 13762095988943753026
+  VIET_silent_peach_tree_legend: "침묵의 전설적인 복숭아나무" # 934191477551259965
+  VIET_silent_peach_tree_legend_desc: "이곳에는 전설적인 기사가 은둔자로 변신하여 정결 서약을 깨지 않기 위해 침묵의 맹세를 했던 곳과 관련된 복숭아나무가 있습니다. 그가 죽자, 그 무덤에서 복숭아나무가 자라났다고 전해집니다. 이 이야기가 사실이든 아니든, 많은 현지인들이 이 영적으로 굳건했던 인물의 이야기에 감명받았습니다." # 8919442435913281533
+  VIET_peach_juice: "복숭아 즙 마시기를 즐김" # 9532829402523636624
+  VIET_dongfang_shuo: "복숭아를 훔치는 선인" # 9406019967402680899
+  VIET_dongfang_shuo_desc: "이 인물이 전생에 불멸자였으며, [Glossary( '불로불사(不老不死)의 복숭아', 'PEACHES_OF_IMMORTALITY_GLOSS' )] 몇 개를 훔쳐 벌로 지상에 추방당했다는 소문이 돌고 있습니다." # 18434081548450981937
+  VIET_opinion_annoying_lame_jokes: "짜증 나는 시시한 농담" # 6658425077052326031
+  VIET_opinion_amused_by_lame_jokes: "재미없는 농담에 즐거워함" # 4382417413612382084
+  VIET_opinion_dislikes_my_lame_jokes: "내 시시한 농담을 싫어함" # 14622512963107359116
+  VIET_opinion_likes_my_lame_jokes: "내 시시한 농담을 좋아함" # 8025128097742542839
+  VIET_opinion_nascent_spiritual_powers: "흥미로운 태동하는 영적 힘" # 8260568060039536114
+  VIET_opinion_thinks_i_have_spiritual_powers: "내 영적 능력을 믿는다" # 5636363096706080570
+  VIET_36_stratagems_peach_military: "삼십육계: 군사 응용편" # 9446434734322024538
+  VIET_36_stratagems_peach_military_desc: "이 인물은 [Glossary( 'Thirty-Six Stratagems', 'THIRTY_SIX_STRATEGEMS_GLOSS' )]을 군사 문제에 적용할 방법을 모색하고 있습니다." # 15524061827840247174
+  VIET_36_stratagems_peach_intrigue: "삼십육계: 정치적 활용법" # 4677894684774606809
+  VIET_36_stratagems_peach_intrigue_desc: "이 인물은 외교, 개인 관계, 궁정 암투와 관련된 다양한 상황에 [Glossary( 'Thirty-Six Stratagems', 'THIRTY_SIX_STRATEGEMS_GLOSS' )]를 적용할 방법을 찾고 있습니다." # 8563373896862757807
+  VIET_healthy_peaches: "건강을 위해 복숭아 먹기" # 1135291764619644630
+  VIET_healthy_peaches_desc: "그들의 의사들의 권고에 따라, 이 인물은 자신의 위장 건강을 개선하기 위해 복숭아를 많이 먹고 있습니다." # 2138618506795716678
+  VIET_peach_wood_talismans: "집안 곳곳에 복숭아나무 부적 걸기" # 7485339978118231635
+  VIET_doesnt_like_lame_jokes: "재미없는 농담을 싫어함" # 12116348344454166477
+  VIET_likes_lame_jokes: "재미없는 농담을 좋아함" # 8955304353463038703
+  VIET_suspicious_of_envoys_attendants: "사절의 하급자들에 대한 신중함" # 11727957093641822922
+  VIET_suspicious_of_envoys_attendants_desc: "통치자로서 이 인물은 외교 사절단과 동행하는 하인들과 수행원들에게 다소 신중하고 불신하는 태도를 취합니다. 그들은 이들이 낮은 신분을 이용하여 알아서는 안 될 정보를 습득할까 봐 걱정합니다." # 16474815666637864963
+  VIET_generous_towards_envoys_attendants: "사절의 하수인에게 관대함" # 11438992304892689931
+  VIET_generous_towards_envoys_attendants_desc: "통치자로서 이 인물은 외교 사절단뿐만 아니라 그 사절단 아래에서 일하는 하인과 수행원들에게까지 환대를 베푸는 것으로 알려져 있습니다. 일부는 이러한 하급자들이 첩자 활동을 할 수도 있기에 이러한 관대함에 대해 경고할 수도 있지만, 이 인물은 그럼에도 불구하고 환대하는 것이 중요하다고 믿습니다." # 6836763004804700709
+  VIET_opinion_envoys_advice_good: "외교 사절단에 대한 내 조언을 경청함" # 4175645385767454503
+  VIET_opinion_envoys_advice_bad: "외교 사절단에 대한 내 조언을 무시했군" # 709145230158634730
+  VIET_skeptical_of_military_diviners: "군사 점술에 대한 회의감" # 4288022095101688144
+  VIET_diviners_boost_military_morale: "점술가를 이용해 군사 사기 증진" # 9953410797086433056
+  VIET_opinion_tax_advice_good: "세금에 대한 나의 조언을 들었다" # 8790308135243094546
+  VIET_opinion_tax_advice_bad: "세금에 대한 내 조언을 무시했군" # 1757868446811012339
+  VIET_closing_tax_loopholes: "전통적인 세금 감면 수단에 대한 단속" # 3715025167469911871
+  VIET_closing_tax_loopholes_desc: "이 지역의 통치자들이 최근 이 지역 귀족들이 대대로 이용해 오던 전통적인 세금 허점을 폐쇄했습니다." # 16060279719167805211
+  VIET_opinion_espionage_advice_good: "첩보 활동에 대한 나의 조언을 들었다네" # 1786171353409018614
+  VIET_opinion_espionage_advice_bad: "첩보에 관한 내 조언을 무시했군" # 9294479936404751865
+  VIET_espionage_network_of_commoners: "평민들의 첩보망" # 1441170871914655634
+  VIET_espionage_network_of_commoners_desc: "이 인물이 #italic 다른#! 귀족들의 하인들로 이루어진 비밀 첩보망을 운영하고 있다는 소문이 있습니다." # 14971934210291641773
+  VIET_refuses_bribes_from_lessers: "하위 계층의 뇌물 수수를 거부함" # 18043990811989167235
+  VIET_refuses_bribes_from_lessers_desc: "그들은 이 인물이 뇌물을 받는 것을 싫어한다고 말합니다. 적어도 사회에서 자신의 위치를 모르는 자들에게서 받는 뇌물은 말이죠." # 455851986735616758
+  VIET_strict_military_discipline: "#bold 군 지휘관에 대한 엄격한 군율#" # 15621223826984106455
+  VIET_strict_military_discipline_desc: "이 인물은 군 지휘관들에게 군기를 매우 엄격하게 집행하는 것으로 알려져 있습니다. 심지어 명령에 기술적으로는 복종하지만 미숙하게 수행하는 자들조차 처벌받거나 강등될 것입니다." # 2537444345358321918
+  VIET_good_relationship_with_military_officers: "군사 장교들과의 좋은 관계" # 3492540308780776686
+  VIET_undisciplined_military_officers: "군관 징계 불가" # 4496445062450637868
+  VIET_angered_military_officers: "격분한 군 장교들" # 9298093020726682773
+  VIET_dutiful_but_overworked: "성실하지만 과로에 시달리는" # 4633102384676391820
+  VIET_pathetic_assassination_unfazed: "#bold 미약한 암살 시도에도 흔들림 없이#!" # 459775847872744229
+  VIET_pathetic_assassination_unfazed_desc: "무능한 암살자가 이 인물을 암살하려 했으나 형편없이 실패했습니다. 이 인물은 그 모든 상황에 전혀 동요하지 않았다고 합니다." # 15170788027444488884
+  VIET_pathetic_assassination_paranoid: "#bold 한심한 암살 시도# 이후 알림" # 12505302491442984426
+  VIET_pathetic_assassination_paranoid_desc: "무능한 암살자가 이 인물을 암살하려 했으나, 형편없는 솜씨를 보였습니다. 하지만 이 인물은 그것이 방심하게 만들려는 계략이라고 의심하고 있습니다." # 10394870566893242929
+  VIET_lenient_towards_local_religious_customs: "지역 종교 관습에 관대한" # 4194176910306275360
+  VIET_enforcing_religious_discipline_among_clergy: "성직자에 대한 종교적 규율 강화" # 13424348968238377304
+  VIET_lacking_intellectual_self_esteem: "지적 자존감 부족" # 16488412009505575849
+  VIET_possessed_by_a_dead_monk: "죽은 수도사에게 빙의됨" # 11346236697057444913
+  VIET_possessed_by_a_dead_monk_desc: "그들이 이상한 사고를 당해 잠시 의식을 잃은 이후로, 이 인물은 자신이 사실은 은둔 생활과 영적인 성찰을 선호하는 수도승이라고 주장하고 있습니다. 일부 사람들은 그들이 그 사고 시점에 사망한 수도승의 영혼에 빙의되었다고 믿고 있습니다." # 7486467570056822703
+  VIET_sheepskin_rebirth: "이상한 머리 뭉치" # 6856791110172238732
+  VIET_sheepskin_rebirth_desc: "이 인물은 몸에 특이하게 작은 털 뭉치를 가지고 있습니다. 소문에 따르면, 그가 전생에 저지른 죄 때문에 양으로 환생할 운명이었으나, 마지막 순간에 누군가의 목숨을 구한 덕분에 여성으로 환생할 수 있었다고 합니다. 하지만 저승 관리들이 양가죽의 모든 부분을 제거하지 못한 모양입니다." # 11847907989755061868
+  VIET_respects_cunning: "교활함 존중" # 15122983287979513742
+  VIET_respects_cunning_desc: "이 인물은 뛰어난 교활함을 지닌 자들을 알아보며, 그들에게서 배울 점이 많다고 생각합니다." # 5604243690620455271
+  VIET_unimpressed_ruler: "쉽게 감동하지 않음" # 4842631601502149258
+  VIET_unimpressed_ruler_desc: "쳇! 누구나 할 수 있었을 텐데." # 4251930365927208917
+  VIET_dragon_dormant: "용의 잠" # 1275384928186905751
+  VIET_dragon_dormant_desc: "이 인물이 최근 자신의 거처에서 신비로운 작은 용을 만났다는 소문이 돌고 있습니다." # 1635073465173550512
+  xxxxxxxxxx: "xxx" # 4339025660404407451
