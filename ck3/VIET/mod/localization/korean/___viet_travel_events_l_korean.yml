@@ -1,377 +1,201 @@
 ﻿l_korean:
-  VIET_every_entourage_tt_dislikes_rations: "[GetTrait('temperate').GetName( GetPlayer )] 또는 [GetTrait('content').GetName( GetPlayer )]이 아닌 모든 수행원"
+  VIET_every_entourage_tt_dislikes_rations: "[GetTrait('temperate').GetName( GetPlayer )]도 아니고 [GetTrait('content').GetName( GetPlayer )]도 아닌 모든 수행원들" # 11533953056509025022
   every_entourage_tt_attracted_to_women: "여성에게 끌리는 모든 수행원" # 11288211120162855002
-  VIET_every_entourage_tt_laughing: "상황이 재미있다고 생각한 모든 수행원"
+  VIET_every_entourage_tt_laughing: "상황이 재미있다고 생각한 모든 수행원들" # 3507501385361318901
   VIET_every_entourage_tt_relaxing: "그저 쉬고 싶어하는 모든 수행원 단원" # 1083748569740553728
-  VIET_every_entourage_tt_religious: "모든 독실한 수행원"
-  VIET_every_entourage_tt_likes_cute: "귀여운 것을 좋아하는 모든 수행원"
-  VIET_every_entourage_tt_dislikes_cute: "귀여운 것들을 경계하는 모든 수행원"
-  VIETmisc.7001.t: "$travel_event_prefix$ 음식이 상했음"
-  VIETmisc.7001.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 길을 가던 중, 우리는 끔찍하게도 식량의 상당수가 상했다는 것을 알게 되었습니다. 여행 초반에 실수로 음식에 물이 많이 섞였고, 지금은 곰팡이가 슬었습니다.\n\n근처에 정착지가 없으므로 시간을 낭비하더라도 음식을 찾아 사냥해야 합니다. 반면에, 남은 음식을 배급하고 가장 가까운 정착지로 서둘러 갈 수도 있습니다."
-  VIETmisc.7001.a: "천천히 시간을 들여 채집하고 사냥하자."
-  VIETmisc.7001.b: "지금은 적은 배급량을 참아내겠다."
-  VIETmisc.7002.t: "$travel_event_prefix$ 친절한 현지인들"
-  VIETmisc.7002.desc: "여행 중에 [ROOT.Char.GetCurrentLocation.GetName]에 있는 꽤 친절한 마을에 들렀습니다. 현지인들은 예의 바르고 친절하게 우리에게 물자를 제공했습니다. 내 여행단의 몇몇 사람들은 의심스러워했지만, 특이한 일은 일어나지 않았습니다."
-  VIETmisc.7002.a: "정말 좋은 사람들이 많네!"
-  VIETmisc.7003.t: "$travel_event_prefix$ 지름길"
-  VIETmisc.7003.desc: "[master.GetHerHis] 부지런한 노력 덕분에 제 대상 호위대장 [master.GetTitledFirstName]께서 [ROOT.Char.GetCurrentLocation.GetName]에서 안전한 지름길을 찾아냈습니다. 덕분에 여정 시간을 꽤나 단축할 수 있게 되었습니다. 정말 운이 좋군요!"
-  VIETmisc.7003.a: "잘했군!"
-  VIETmisc.7004.t: "$travel_event_prefix$ 여가"
-  VIETmisc.7004.desc: "저희는 빠른 휴식을 위해 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀습니다.\n\n이 마을은 편의 시설과 레저 중심지로 지역에 알려져 있으며, 제 수행원 경비병 중 몇 명이 예쁜 현지 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 아가씨들에게 정신이 팔렸습니다. 곧 떠나야 하지만, 조금 더 쉬는 것도 나쁘지 않을 것 같습니다…."
-  VIETmisc.7004.a: "현지인들과 재미 좀 봐야겠어."
-  VIETmisc.7004.b: "이런 사소한 일에 시간을 낭비할 수는 없지!"
-  VIETmisc.7005.t: "$travel_event_prefix$ 길가 신사"
-  VIETmisc.7005.desc: "오늘 우연히 [ROOT.Char.GetCurrentLocation.GetName]에 들렀는데, 이곳은 유명한 길가 성당이 있는 곳입니다.\n\n현지인들은 여행자들이 며칠씩 기도하는 것도 드물지 않다고 말합니다. 그렇게 하면 여행의 안전을 보장받을 수 있다고 합니다.\n\n이곳에서 기도를 드리는 것이 얼마나 도움이 될지는 모르겠지만, 그래도 이곳에 온 김에 [ROOT.Char.GetFaith.HighGodName]께 경의를 표해야겠습니다."
-  VIETmisc.7005.a: "간단히 기도하고 넘어가십시오."
-  VIETmisc.7005.b: "며칠 동안 기도하십시오."
-  VIETmisc.7005.c: "길가의 성소에 작은 공물을 바치십시오."
-  VIETmisc.7006.t: "$travel_event_prefix$ 대상단 약탈"
-  VIETmisc.7006.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]에서 무역 대상의 잔해를 발견했습니다. 화살이 박힌 상인, 경비병, 말들의 시체, 전복된 마차, 망가진 상품들은 모두 이 일이 산적의 공격으로 일어났음을 보여줍니다.\n\n어쨌든 길에서 이러한 위험은 드문 일이 아닙니다. 우리가 시신을 묻은 후, 동료들과 함께 산적들이 가져가지 않은 상품들을 어떻게 처리해야 할지 논의합니다. 이 물건들을 회수하면 꽤 큰 돈을 벌 수 있지만 시간이 좀 걸릴 것입니다."
-  VIETmisc.7006.a: "물건은 우리끼리 나누도록 하지."
-  VIETmisc.7006.b: "내 권리대로 사자 몫을 차지하겠다."
-  VIETmisc.7006.c: "망자에게서 훔쳐서는 안 돼."
-  VIETmisc.7006.d: "그 지역의 통치자인 [ROOT.Char.GetCurrentLocation.GetTitle.GetDeJureLiege.GetHolder.GetFirstName]에게 주십시오."
-  VIETmisc.7007.t: "$travel_event_prefix$ 지역 순례"
-  VIETmisc.7007.desc: "여행 중에 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀는데, 마을 사람들이 나를 매우 존경하는 눈치다.\n\n이곳 사람들은 나 같은 사람이 자신들의 보잘것없는 마을을 방문할 거라고는 예상하지 못했고, 일부 지역 지도자들은 내가 며칠 머물다 가기를 제안하고 있다. 이들은 나에게 이 지역을 구경시켜주고, 자신들의 마을과 그 주변, 그리고 이곳에 사는 사람들에 대해 좋은 인상을 심어주고 싶어한다."
-  VIETmisc.7007.a: "좋군! 약간의 우회는 상관없습니다."
-  VIETmisc.7007.b: "아아, 갈 길이 멀군요."
-  VIETmisc.7008.t: "$travel_event_prefix$ 늦잠"
-  VIETmisc.7008.desc: "어제 [ROOT.Char.GetCurrentLocation.GetName]에서의 여정은 몹시 고되었고, 너무 지쳐서 늦잠을 잤습니다. 수행원들은 제가 충분히 휴식을 취하지 못하면 정신이 온전치 못할까 봐 걱정되어 깨우고 싶지 않았다고 합니다."
-  VIETmisc.7008.a: "다시는 늦잠 자지 않도록 조심해야지."
-  VIETmisc.7008.b: "감사합니다! 이제 #italic 그걸#! 잘 잤다."
-  VIETmisc.7009.t: "$travel_event_prefix$ 거짓말쟁이"
-  VIETmisc.7009.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 야영을 하던 중, 마침 대상들이 우리와 아주 가까운 곳에서 야영하고 있었습니다. 대상들은 반대 방향으로 여행하고 있었고, 우리는 각자의 여정에 대한 도로 상황에 대한 정보를 교환했습니다.\n\n어쨌든, 대상들은 며칠 전 \"거짓말쟁이\"라는 별명을 가진 매우 이상한 사람을 만났다고 말했습니다. 그는 다소 엉뚱한 조언을 해주었는데, 어쩐지... 말이 되는 것 같기도 했습니다. 그들은 그를 어떻게 생각해야 할지 모르겠지만, 베테랑 상인들은 그가 지금까지 만난 사람 중 가장 이상한 사람이라고 말합니다."
-  VIETmisc.7009.a: "그는 좀 특이한 사람처럼 들리는군."
-  VIETmisc.7009.b: "그 거짓말쟁이 치마 말인가? 만난 적 있지."
-  VIETmisc.7010.t: "$travel_event_prefix$ 하인의 죽음"
-  VIETmisc.7010.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중, 저의 측근 하인 중 한 명이 사망했습니다. 이러한 여행에서 자연사하는 경우는 드물지 않지만, 하인이 저와 가까웠기에 안타까운 일입니다.\n\n그렇다 하더라도, 우리는 고인의 시신을 어떻게 처리할지 결정해야 합니다. 그들이 하인이라고 해서 시체를 길가에 버리는 것은 부적절할 것입니다. 대신 장례식을 위해 그들의 시신을 집으로 가져갈 수도 있습니다."
-  VIETmisc.7010.a: "시체를 길가에 버려라."
-  VIETmisc.7010.b: "이곳에 간소하지만 정중한 매장을 치르시오."
-  VIETmisc.7010.c: "그들을 우리와 함께 데려오십시오. 그들은 그럴 자격이 충분합니다."
-  VIETmisc.7011.t: "$travel_event_prefix$ 야생 동물 공격"
-  VIETmisc.7011.desc: "어젯밤, 저희가 [ROOT.Char.GetCurrentLocation.GetName]에 머무는 동안 야생 동물이 야영지에 침입했습니다. 다친 사람은 없었지만, 식량 보급품을 일부 약탈당했습니다."
-  VIETmisc.7011.a: "우리는 손실을 감수해야 할 것입니다."
-  VIETmisc.7011.b: "현지인에게 물자를 구매하십시오."
-  VIETmisc.7011.c: "현지인들에게 강제로 물자를 징발합니다."
-  VIETmisc.7012.t: "$travel_event_prefix$ 끔찍한 여관"
-  VIETmisc.7012.desc: "어젯밤 [ROOT.Char.GetCurrentLocation.GetName]에 묵었던 여관은 최악이었습니다. 침구의 질과 분위기 때문에 어젯밤 잠을 청하려던 우리 대부분(저를 포함해서)은 불편함을 느꼈습니다. 오늘 다시 길을 떠나면서 제 수행원 모두가 눈에 띄게 지쳐 있습니다."
-  VIETmisc.7012.a: "감수해야 할 겁니다."
-  VIETmisc.7012.b: "며칠 동안 더 좋은 여관에서 쉬도록 하지."
-  VIETmisc.7013.t: "$travel_event_prefix$ 훌륭한 여관"
-  VIETmisc.7013.desc: "어젯밤 [ROOT.Char.GetCurrentLocation.GetName]에 머물렀던 여관은 놀랍도록 훌륭한 곳이었습니다. 여관이나 직원들이 무엇을 잘했는지는 모르겠지만, 여관의 어떤 점이 우리 대부분이 밤새도록 평화롭게 잠들 수 있게 했습니다. 오늘 아침, 우리가 떠날 준비를 하는 동안 내 수행원들의 얼굴에는 미소가 가득합니다."
-  VIETmisc.7013.a: "얼마나 아름다운 곳인가!"
-  VIETmisc.7013.b: "며칠 더 머물러야 할지도 몰라…."
-  VIETmisc.7014.t: "$travel_event_prefix$ 논쟁"
-  VIETmisc.7014.desc: "길을 따라 힘겹게 걷는 동안 [traveler_1.GetTitledFirstName] 님과 [traveler_2.GetTitledFirstName] 님께서 몇 시간째 다투고 계십니다. 이제 이 멍청한 논쟁이 어떻게 시작되었는지조차 모르겠고, 관여하고 싶지도 않습니다. 반면에, 수행원 중 일부는 저를 쳐다보며 [ROOT.Char.GetTitleAsNameNoTooltip]으로서 제가 무언가를 해야 한다고 묵묵히 말하고 있습니다."
-  VIETmisc.7014.a: "단체 여행을 이상화하는 사람들이 있다니 믿을 수 없군."
-  VIETmisc.7014.b: "이 두 바보 녀석들을 설득해서 입을 다물게 할 수 있을지도 모르겠군."
-  VIETmisc.7014.b.success: "그들은 어리석은 다툼을 멈추기로 합의합니다"
-  VIETmisc.7014.b.failure: "그들은 당신의 말다툼을 멈춰달라는 간청을 무시합니다"
-  VIETmisc.7015.t: "$travel_event_prefix$ 우정"
-  VIETmisc.7015.desc: "[traveler_1.GetTitledFirstName]과 [traveler_2.GetTitledFirstName]은 여행이 계속되는 동안 몇 시간 동안이나 정답게 이야기를 나누고 있습니다. 두 사람은 서로 아주 잘 지내는 것 같습니다."
-  VIETmisc.7015.a: "금세 친해지는군!"
-  VIETmisc.7016.t: "$travel_event_prefix$ 진흙탕 길"
-  VIETmisc.7016.desc: "최근 [ROOT.Char.GetCurrentLocation.GetName] 지역은 평소보다 비가 많이 내렸습니다. 비는 그쳤지만, 길은 진흙탕이 되었습니다. 대부분은 감당할 만했지만, 오늘 일부 짐마차가 진흙에 빠져 동물과 물자를 진흙에서 꺼내 건조한 땅으로 옮기는 데 상당한 노력과 시간을 들여야 했습니다."
-  VIETmisc.7016.a: "여행은 질색이야…."
-  VIETmisc.7017.t: "$travel_event_prefix$ 우연한 꿈?"
-  VIETmisc.7017.desc: "\"맹세컨대, 이 장소를 꿈에서 본 적이 있소\" [dreamer.GetTitledFirstName]가 외칩니다.\"너무나 익숙하군! 그래, 그래, 꿈에서 지형과 풍경이 꼭 이랬어\"\n\n오늘 우리는 몇 시간 동안 [ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중이었는데, [dreamer.GetFirstNameNoTooltip]이 갑자기 흥분했습니다.\n\\\"[dreamer.GetSheHe]가 말을 잇습니다.\"정말 경이롭군! 이것은 분명 [dreamer.GetFaith.HighGodName]께서 주신 징조일 거요\""
-  VIETmisc.7017.a: "좋은 징조이길 바라자."
-  VIETmisc.7017.b: "네 꿈에 대해 더 말씀해 주세요."
-  VIETmisc.7018.t: "$travel_event_prefix$ 지역 결혼식"
-  VIETmisc.7018.desc: "정말 우연이군! 우리가 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀는데, 마침 현지인들이 그곳에 사는 두 유력 가문의 결혼식을 올리고 있었어.\n\n신부는 전통적인 [culture.GetName] 결혼 의상을 입고 아름답고 우아하며, 신랑도 그 못지않게 잘생기고 매력적이야. 더욱 중요한 것은 이것이 엄청나게 활기찬 대규모 연회의 시작일 뿐이라는 거야. 현지인들은 우리를 초대해 함께 즐기자고 했어. 낯선 사람들에게도 충분한 음식과 음료가 있으며, 축제는 며칠 동안 계속될 것 같아."
-  VIETmisc.7018.a: "재밌겠는데! 왜 안 되겠어?"
-  VIETmisc.7018.b: "갈 길이 바쁘다. 지체할 수 없다."
-  VIETmisc.7019.t: "$travel_event_prefix$ 떠돌이 음유시인"
-  VIETmisc.7019.desc: "우리가 [ROOT.Char.GetCurrentLocation.GetName]의 길가에서 쉬고 있을 때, 한 떠돌이 [culture.GetName] 음유시인이 우연히 지나갔다. [bard.GetSheHe|U]는 [bard.GetHerselfHimself]를 [bard.GetFullName](이)라고 소개했다.\n\n내 경호원 중 한 명이 약간의 여흥을 대가로 [bard.GetWomanMan]에게 몇 푼의 동전을 제안했다. [bard.GetFirstNameNoTooltip]는 현지 [culture.GetLanguage.GetName] 방언으로 여러 곡을 불렀는데, [bard.GetHerHis] 재능에는 의심의 여지가 없었다. 구슬픈 노래는 우리의 마음을 깊이 울렸고, 흥겨운 노래는 우리의 기운을 북돋아 주었다."
-  VIETmisc.7019.a: "훌륭한 연기였소!"
-  VIETmisc.7019.b: "노래 몇 곡 더 부르게 동전 좀 주시오!"
-  VIETmisc.7019.c: "내가 좋아하는 노래들을 적어 두려고 노력할게."
-  VIETmisc.7020.t: "$travel_event_prefix$ 썩은 물"
-  VIETmisc.7020.desc: "여행 중 휴식을 취하던 중, [drinker.GetFirstName]이 물을 찾아 나섰습니다. [drinker.GetSheHe]은 정말 목이 말랐던 것 같고, [drinker.GetHerHis] 물통에 물이 충분히 남아있지 않았습니다!\n\n불행히도, 우리는 [drinker.GetFirstNameNoTooltip]이 길어 온 물이 고인 물처럼 보인다는 것을 너무 늦게 깨달았습니다. 늪이나 습지에서 발견되는 고인 물은 종종 마시기에 위험하다는 것을 많은 사람들이 알고 있습니다. 아마도 [drinker.GetSheHe]은 너무 조급하거나 목이 말라서 제대로 생각하지 못했던 것 같습니다.\n\n어쨌든, [drinker.GetFirstNameNoTooltip]은 이미 약간 아픈 것을 느끼고 있습니다."
-  VIETmisc.7020.a: "[drinker.GetFirstNameNoTooltip], 이 멍청아!"
-  VIETmisc.7020.b: "도움이 될 만한 약초를 몇 가지 알고 있습니다."
-  VIETmisc.7020.c: "$VIETmisc.7020.b$"
-  VIETmisc.7020.info: "#emphasis 역사적 배경:#! 중세 사람들은 당시 물의 품질이 매우 나빴기 때문에 물 대신 알코올이나 다른 음료만 마셨다는 고정관념이 있습니다. 하지만 중세 사람들은 안전하게 마실 수 있는 물과 마시기에 부적합한 물을 구별할 줄 알았습니다. 따라서 그들은 예를 들어 도시 지역이나 습지 근처의 물은 피하고, 다른 곳에서 더 깨끗한 물을 찾았습니다."
-  VIETmisc.7021.t: "$travel_event_prefix$ 드디어 물이다!"
-  VIETmisc.7021.desc: "우리는 하루 종일 지치고 피곤한 몸을 이끌고 여행하고 있었다. 몇 시간 동안 제대로 쉴 만한 곳이 없었기 때문이다. 이곳이 사람들이 많이 다니는 길이라고 하지 않았던가?\n\n하지만 마침내 작은 물줄기를 발견했고, 게다가 낡고 닳은 청동 컵들이 쇠사슬에 매달려 근처 바위에 걸려 있었다. 이 지역을 책임지는 사람이든, 현지인들이든, 여행자들이 물을 더 쉽게 마실 수 있도록 관대하게 컵을 제공한 것 같다."
-  VIETmisc.7021.a: "[ROOT.Char.GetFaith.HighGodName]시여, 이 상쾌한 물에 감사드립니다!"
-  VIETmisc.7022.t: "$travel_event_prefix$ 사막의 소녀"
-  VIETmisc.7022.desc: "[ROOT.Char.GetCurrentLocation.GetName] 사막을 여행하던 중 [culture.GetName] 혈통의 사랑스러운 아가씨를 만났는데, 자신을 [trickster.GetFirstName]라고 소개하더군.\n\n우리가 그녀에게 다가가자 그녀는 노래와 춤을 추기 시작했는데, 그 지방 노래 같았어. 그녀는 우리에게 합류하라고 손짓하며 우리를 유혹적인 눈빛으로 바라봤지. 하지만 내가 손을 뻗어 그녀를 만지려 하자, 우리 모두는 우리 앞에 모래 더미밖에 없다는 것을 깨달았어.\n\n우리는 신기루를 본 거야.\n\n아마도."
-  VIETmisc.7022.a: "다음 목적지는 그리 멀지 않으니, [ROOT.Char.GetFaith.HighGodName]께 감사드려야겠군."
-  VIETmisc.7022.tooltip: "#weak 바람에 실려오는 웃음소리가 들리는 것 같소....#!"
-  VIETmisc.7023.t: "$travel_event_prefix$ 사막의 희생자"
-  VIETmisc.7023.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 척박한 사막 한가운데에서 얼마 전에 세상을 떠난 듯한 여행자들의 유해를 발견했습니다. [ROOT.Char.GetFaith.HighGodName]께서 이 불운한 영혼들을 축복하시길 바랍니다.\n\n애석하게도 그들의 운명은 드문 일이 아닙니다. 이런 종류의 사막이 용서치 않는다는 사실을 의심할 사람은 거의 없을 것입니다. 결국, 그러한 지형과 환경에 익숙한 사람들조차 운이 나쁘면 이 불모지에서 때이른 종말을 맞이할 수 있습니다.\n\n아직 많은 보급품이 남아 있다는 것이 다행입니다."
-  VIETmisc.7023.a: "목적지를 향해 계속 나아가자."
-  VIETmisc.7023.b: "고인에게 합당한 장례를 치를 시간을 가지십시오."
-  VIETmisc.7024.t: "$travel_event_prefix$ 신기루?"
-  VIETmisc.7024.desc: "저희는 휴식도 없이 몇 시간 동안 [ROOT.Char.GetCurrentLocation.GetName] 사막을 헤매고 있습니다. 저 앞에 오아시스 신기루가 보이자, 아직 상황이 그렇게 나쁘지도 않은데 속수무책인 저희 자신이 너무나 한심해서 씁쓸하게 웃었습니다. 신기루가 너무나도 그럴듯해서 물과 동물 소리까지 들렸습니다!\n\n\"아악!\" [person.GetFirstName]이 식물에 걸려 넘어지면서 물속으로 첨벙 빠집니다.\n\n이런. 신기루가 진짜였던 것 같군요. [ROOT.Char.GetFaith.HighGodName]께 찬사를!"
-  VIETmisc.7024.a: "우리는 [person.GetFirstNameNoTooltip]을 오아시스 물 밖으로 끌어내면서 마음껏 웃었다."
-  VIETmisc.7025.t: "$travel_event_prefix$ 오로라"
-  VIETmisc.7025.desc: "밤새 [ROOT.Char.GetCurrentLocation.GetName]의 황무지 어딘가에 야영한 후, 우리는 가장 장엄한 광경인 오로라를 보는 축복을 받았습니다.\n\n우리 머리 위, 칠흑같이 어두웠던 밤하늘이 생생한 색깔로 바뀌었습니다. 온갖 색깔의 커튼이나 햇살처럼 지평선 위로 솟아올라 장엄한 광경으로 우리를 현혹시킵니다."
-  VIETmisc.7025.a: "정말 놀랍군."
-  VIETmisc.7025.info: "#emphasis 역사적 배경:#! 우리가 이해하는 #italic 오로라#!라는 용어는 불과 몇 세기 전에 생겨났습니다(새벽의 로마 여신에서 유래). 하지만 로마와 중국의 기록 등 오로라를 묘사한 역사적 자료는 풍부하며, 오로라는 전 세계 특정 민족의 신화에 두드러지게 등장합니다. 예를 들어, 1세기 로마 철학자, 정치가, 작가인 세네카는 그의 #italic 자연에 대한 탐구#!에서 티베리우스 황제 통치 기간 동안 로마 근처의 오스티아 상공에서 목격된 오로라를 묘사했습니다."
-  VIETmisc.7026.t: "$travel_event_prefix$ 덧없는 유적"
-  VIETmisc.7026.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 여행하던 중, 우리는 오래된 유적을 발견했습니다. 너무나 오래된 유적이라 처음에는 그냥 아무렇게나 놓인 돌덩이로 생각했을 정도였습니다.\n\n이러한 유적에 대한 지식이 있는 [scholar.GetTitledFirstName]이 다가와서야 그곳이 사람이 만든 곳임을 알아차렸습니다. [scholar.GetSheHe]의 말에 따르면, 이 구조물은 풍화 작용으로 심하게 닳았다고 합니다.\n\n이 유적 옆에서 잠시 쉬면서 [scholar.GetFirstNameNoTooltip]은 한숨을 쉬며 말합니다. \"인생은 정말 덧없지 않나요? 한때는 화려한 건물이었을 텐데 말이죠. 언젠가는 우리도 이 유적보다 더 나쁜 모습이 될 겁니다.\""
-  VIETmisc.7026.a: "우리 삶은 덧없지만, [ROOT.Char.GetFaith.HighGodName](이)는 그렇지 않습니다."
-  VIETmisc.7026.b: "그렇다면 살아있는 동안 위대하고 용맹한 업적을 남겨야 하오!"
-  VIETmisc.7026.c: "그렇기에 더욱 인생을 즐기고 스트레스받지 않아야 한다."
-  VIETmisc.7027.t: "$travel_event_prefix$ 허풍"
-  VIETmisc.7027.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중, 저희는 현지 선술집에서 휴식을 취하며 현지 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 음식을 즐기고 [ROOT.Char.GetCurrentLocation.GetCulture.GetLanguage.GetName] 언어로 불리는 흥겨운 민속 음악을 들었습니다.\n\n쾌활한 분위기는 키가 크고 덩치가 크고 술에 취한 남자가 지금까지 본 것 중 가장 능글맞은 미소를 지으며 방해했습니다. 그는 자신이 죽인 모든 적이나 자신이 잠자리를 같이 한 여자들과 같은 터무니없는 말을 했습니다.\n\n그가 다른 손님들을 괴롭히기 시작하자 선술집 직원들은 그를 쫓아냈습니다. 그는 결국 그렇게 강하지 않았습니다! 제 수행원들은 키득거렸고, 어떤 사람들은 그를 보는 것이 재미있다고 말했고, 다른 사람들은 선술집에서 그를 더 일찍 쫓아냈어야 했다고 말했습니다."
-  VIETmisc.7027.a: "나는 저런 바보들을 비웃는 게 즐거워."
-  VIETmisc.7027.b: "조용히 여기서 밥 좀 먹고 싶을 뿐인데."
-  VIETmisc.7028.t: "$travel_event_prefix$ 저주받은 집"
-  VIETmisc.7028.desc: "저희는 [ROOT.Char.GetCurrentLocation.GetName](을)를 지나가던 중 불에 타 텅 빈 폐허가 된, 일종의 거주지였던 것으로 보이는 곳을 보았습니다. 제 수행원들과 저는 이곳이 약간 흥미로운 곳인지, 아니면 다소 걱정스러운 곳인지 확신할 수 없었습니다.\n\n마침 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 현지인이 지나가고 있었고, 저희는 그에게 그 건물에 대해 아는 것이 있는지 물었습니다.\n\n\"아, 안타까운 사건입니다.\" 그는 고개를 저으며 설명했습니다. \"농부 가족이 그곳에 살았습니다. 최근 사고로 집이 불에 탔습니다. 사람들은 이 지역이 어떤 악마의 힘에 의해 저주받았다고 말합니다. 저희 [ROOT.Char.GetLadyLord]께서는 만약을 위해 너무 오래 머물지 않는 것이 좋겠습니다.... 폐허를 보기만 해도 몸이 떨립니다.\""
-  VIETmisc.7028.a: "경고해 주셔서 감사합니다. 조심하겠습니다."
-  VIETmisc.7028.b: "하! 엉뚱한 미신처럼 들리는군."
-  VIETmisc.7029.t: "$travel_event_prefix$ 길치신가요?"
-  VIETmisc.7029.desc: "오늘 아침, 우리는 [ROOT.Char.GetCurrentLocation.GetName] 길을 지나가는 현지인에게 다음 목적지 방향을 물었습니다. 우리가 그랬어야 했는지 지금은 확신이 서지 않습니다.\n\n다시 말해, 우리는 길을 잃었습니다.\n\n우리가 따르려고 했던 이 방향들은.... 처음부터 잘못된 방향이었을까요, 아니면 우리가 그저 오해한 걸까요?"
-  VIETmisc.7029.a: "어쩌면… 저쪽으로 가야 할지도 모르겠어?"
-  VIETmisc.7030.t: "$travel_event_prefix$ 좋은 지름길"
-  VIETmisc.7030.desc: "오늘 아침, 우리는 [ROOT.Char.GetCurrentLocation.GetName] 길을 지나가던 현지인에게 다음 목적지 가는 길을 물었습니다. 현지인은 우리가 가려던 길이 이 지역을 통과하는 가장 빠른 길이 아니며, 지름길이 있다고 알려주었습니다.\n\n다행히도 현지인의 말이 옳았고 우리는 그가 알려준 길을 이해했습니다. 덕분에 우리는 꽤 많은 이동 시간을 절약할 수 있었습니다."
-  VIETmisc.7030.a: "다행히 이 지름길을 알게 되었군!"
-  VIETmisc.7031.t: "$travel_event_prefix$ 지방 춤"
-  VIETmisc.7031.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 [ROOT.Char.GetCurrentLocation.GetCulture.GetCollectiveNoun] 풍습은 정말이지 특이하군. 이 지역을 지나가는 길에 선술집에 몇 군데 들렀소.\n\n내리는 곳마다 운 좋게도 현지 음악과 춤을 볼 수 있었는데, 내 수행원들은 흥미진진하지는 않더라도 꽤 매력적이라고 생각하는 것 같소.\n\n예를 들어 [traveler.GetTitledFirstName]는 현지 춤을 배우려고 시도하기도 했는데, 꽤 잘 추는 것 같소!"
-  VIETmisc.7031.a: "나도 춤을 좀 배워볼까!"
-  VIETmisc.7031.b: "소위 \"춤\"이라는 것들은 내 시간을 들일 가치가 없지."
-  VIETmisc.7032.t: "$travel_event_prefix$ 아름다운 경치"
-  VIETmisc.7032.desc: "저희는 [ROOT.Char.GetCurrentLocation.GetName]에서 매우 아름다운 경치를 발견했습니다. 저희가 본 다른 어떤 것과도 달리 아름다운 경치이며, 진정으로 우리 세계의 영광을 보여주는 그림 같은 풍경입니다.\n\n제 수행원 중 몇몇은 경치를 감상할 시간을 가질 수 있도록 이곳에 하루나 이틀 정도 머물자고 주장했습니다."
-  VIETmisc.7032.a: "너무 오래 지체할 수 없어, 이런 일에도 말이야."
-  VIETmisc.7032.b: "여기서 시간을 좀 보내는 것도 나쁘지 않겠지!"
-  VIETmisc.7032.c: "여기서 쉬면서 [ROOT.Char.GetFaith.HighGodName]께 감사를 드립시다."
-  VIETmisc.7033.t: "$travel_event_prefix$ 험난한 강 건너기"
-  VIETmisc.7033.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 강을 건너는 동안, 보급품 일부가 풀려 강물에 빠졌습니다. 저희는 속수무책으로 물이 보급품을 휩쓸어가는 것을 지켜볼 수밖에 없었습니다. 다행히 많은 보급품이 아직 저희와 함께 있지만, 상당 부분을 잃었습니다.\n\n제 동료들은 무엇을 해야 할지에 대해 서로 다른 의견을 제시합니다. 일부는 하류로 가서 보급품 일부를 회수할 수 있는지 확인해야 한다고 말합니다. 특히 보급품이 강둑에 쓸려왔을 경우 더욱 그렇습니다. 다른 사람들은 손실을 감수하고 다음 마을에서 대체 보급품을 구매해야 한다고 말합니다. 또 다른 사람들은 불운을 감내하고 계속 가야 한다고 말합니다."
-  VIETmisc.7033.a: "강 하류에서 보급품을 되찾도록 노력하십시오."
-  VIETmisc.7033.b: "다음 마을에서 물자를 구매하십시오."
-  VIETmisc.7033.c: "인내심을 가지고 우리 여정을 계속합시다."
-  VIETmisc.7034.t: "$travel_event_prefix$ 희귀 약초"
-  VIETmisc.7034.desc: "우리가 [ROOT.Char.GetCurrentLocation.GetName]을 지나가던 중, [herbalist.GetTitledFirstName]께서 길가에서 [herbalist.GetSheHe]가 발견한 식물 몇 가지에 대해 제 관심을 끌었습니다.\n\n[herbalist.GetFirstNameNoTooltip]께서는 흥분하여 제게 말씀하셨습니다. \"저기 약초들 보이십니까? 흔치 않은 종류입니다. [ROOT.Char.GetCurrentLocation.GetNameNoTooltip]에서도 가끔 발견된다고는 들었지만 이렇게 무더기로 있다니요? 허락하신다면 근처에 야영지를 세우고 제가 좀 채집해야겠습니다. 의사라면 누구든, 폐하의 의관까지도 아주 유용하게 쓸 수 있을 겁니다.\""
-  VIETmisc.7034.a: "내가 허영심이 있는 건 아냐. 그냥 좋은 게 좋을 뿐이지!"
-  VIETmisc.7034.b: "안타깝게도, 낭비할 시간이 없소."
-  VIETmisc.7035.t: "$travel_event_prefix$ 함께 노래 부르기"
-  VIETmisc.7035.desc: "어느 날, [ROOT.Char.GetCurrentLocation.GetName]을 지나가던 중 [cheerful.GetTitledFirstName]이 갑자기 기운을 차립니다. [cheerful.GetSheHe]이 무슨 생각을 하는지 물어보기도 전에, [cheerful.GetSheHe]은 [ROOT.Char.GetCurrentLocation.GetName]의 아름다움에 대한 민요를 기억하는지 모두에게 묻습니다.\n\n\"[cheerful.GetFirstNameNoTooltip]은 \"며칠 전에 선술집에서 마을 사람들이 부르는 것을 들었던 노래요.\"라고 상기시켜줍니다. [cheerful.GetSheHe]이 가사를 부르기 시작하자, 모두들 노래를 기억해내고, 다양한 수준의 가창력으로 함께 부르기 시작합니다.\n\n명랑한 곡조에 모두의 마음이 따뜻해지면서, 갑자기 여정이 덜 암울하게 느껴집니다."
-  VIETmisc.7035.a: "저도 노래에 참여할게요!"
-  VIETmisc.7035.b: "모두가 즐거워하는 모습을 지켜보겠어."
-  VIETmisc.7036.t: "$travel_event_prefix$ 편자와 안장"
-  VIETmisc.7036.desc: "이런, 말굽과 안장을 수리해야 할 것 같습니다. 길을 따라 여행한 사람이라면 누구나 겪는 일이지요. 말을 타고 이동하려면 항상 이런 소모품을 관리해야 합니다.\n\n[ROOT.Char.GetCurrentLocation.GetName] 마을에는 합리적인 가격으로 말굽과 안장을 수리해 줄 장인들이 있습니다. 물론 돈을 아끼기 위해 말굽과 안장이 실제로 고장날 때까지 수리하지 #italic 않을 수도#! 있습니다만...."
-  VIETmisc.7036.a: "장인들에게 돈을 지불하겠소. 후회하는 것보단 안전한 게 낫지."
-  VIETmisc.7036.b: "에, 감수하고 조심하면 되겠지."
-  VIETmisc.7037.t: "$travel_event_prefix$ 친절한 통행세 경비병"
-  VIETmisc.7037.desc: "저희는 [ROOT.Char.GetCurrentLocation.GetName]의 통행료 징수소에 도착했고, 수행원들은 통행료를 지불할 준비를 했습니다. 통행료는 여행자 보호 자금을 마련하기 위해 모든 통치자가 부과할 수 있는 권리이므로, 이 통행료 징수소는 특별한 것이 없었습니다.\n\n그러나 경비병들은 꽤 친절한 사람들이었습니다. 모든 경비병이 끔찍한 사람이라는 것은 아니지만, 일반적으로 좋은 경비병조차도 이들처럼 사교적이고 말이 많은 것보다는 의무적이고 진지한 편입니다.\n\n\"여기에는 별일이 없습니다.\" 경비대장이 말하며 제 수행원들이 금화를 지불합니다. \"그래서 저희는 존경받는 [ROOT.Char.GetTitleAsNameNoTooltip]께서 지나가시는 것을 영광으로 생각합니다, 저의 [ROOT.Char.GetLadyLord] 폐하. 말씀하신 대로, 길을 따라 다음 몇 개의 통행료 징수소에 알려서 폐하께서 받으셔야 할 존경으로 대하도록 상기시키겠습니다.\""
-  VIETmisc.7037.a: "어… 감사합니다. 영광입니다."
-  VIETmisc.7038.t: "$travel_event_prefix$ 무단 거주자"
-  VIETmisc.7038.desc: "[ROOT.Char.GetCurrentLocation.GetName]에 머무는 동안 고대 유적을 발견했습니다. 갈 곳 없는 빈민과 부랑자들이 그곳에 모여 살고 있었습니다.\n\n제 수행원 중 일부는 이 절박하고 위험한 부랑자들이 무슨 짓을 할지 모르니 떠나야 한다고 말합니다. 하지만 다른 사람들은 그들이 해를 끼치지 않는 것 같으니 자비의 표시로 돈을 좀 줘야 한다고 말합니다."
-  VIETmisc.7038.a: "어서 가자. 저들은 날 불안하게 해."
-  VIETmisc.7038.b: "네, 이 불쌍한 영혼들을 도와야 합니다."
-  VIETmisc.7039.t: "$travel_event_prefix$ 대화의 불꽃"
-  VIETmisc.7039.desc: "저희는 [ROOT.Char.GetCurrentLocation.GetName]에서 고대 유적을 발견했습니다. 밖에서 보기에는 그리 웅장하지 않았고, 규모도 크지 않아 야영을 할 수도 없었습니다. 하지만 그럼에도 불구하고, 꽤 볼 만했습니다!\n\n저와 수행원들은 음울한 길을 따라 하루 종일 여행하는 것에 다소 지루해하고 있었는데, 이 유적 덕분에 이야깃거리가 생겼습니다. 다른 화제들 가운데, 우리는 고대인들이 왜 이 유적을 지었는지, 혹은 어느 고대인들이 이곳에 살았는지, 그리고 전성기에는 어떤 모습이었을지에 대해 열정적으로 추측했습니다."
-  VIETmisc.7039.a: "흥미로운 논의가 끊이지 않았습니다."
-  VIETmisc.7040.t: "$travel_event_prefix$ 선원들"
-  VIETmisc.7040.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 여관에서, 우리는 다소 소란스럽지만 친절한 선원들을 만났습니다. 그들의 배는 근처 항구에 정박해 있었습니다. 배의 소유주인 상인들은 마을에서 상품을 팔려고 애쓰고 있었습니다. 그들이 그렇게 하는 동안, 선원들은 [sailor.Custom('RegionalAlcoholicDrink')]에 돈을 쓰는 것 외에는 할 일이 없었습니다.\n\n그들은 그들의 모험과 고용주가 무엇을 하고 있는지에 대해 열정적으로 나와 이야기를 나누었습니다. \"[sailor.GetFirstName]라는 선원은 \"우리는 불과 일주일 전에 [sailor.Custom('GetTribalTradegoods')]과 다른 물건들을 수송하고 있었는데, 갑자기 바람이 멈춰버렸어!\"라고 말했습니다. \"우리는 계속하기 전에 바람을 기다려야 했지. 우리는 더 이상 이 상인들을 위해 일하고 싶지 않은 것 같아. 그들이 거래를 잘하는 방법을 모르는 것 같아. 그들이 이 상품을 팔기 위해 고군분투하는 이유지!\""
-  VIETmisc.7040.a: "해당 상품에 대해 더 자세히 알려주시겠습니까?"
-  VIETmisc.7040.b: "무역풍에 대해 알려주십시오."
-  VIETmisc.7040.c: "만약 내가 너희들을 고용한다면?"
-  VIETmisc.7040.d: "행운을 빌지. 이제 자러 가야겠어."
-  VIETmisc.7041.t: "$travel_event_prefix$ 작은 [ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip] 성지"
-  VIETmisc.7041.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 우리는 치유력이 있다고 알려진 작은 [ROOT.Char.GetFaith.GetReligion.GetAdjective] 성소에 대한 소문을 듣습니다. 이곳은 주요 순례지가 아니므로 이 지역 외부 사람들은 거의 알지 못합니다.\n\n그러나 이 성소는 끊임없이 지역 방문객들을 끌어들입니다. 이곳의 많은 사람들은 이 성소에서 [ROOT.Char.GetFaith.HighGodName]을 숭배하는 것이 많은 질병에서 회복하는 데 도움이 되었다고 맹세합니다.\n\n저와 제 여행 동반자들은 이 성소에 들러 그곳에서 시간을 보내며 [ROOT.Char.GetFaith.HighGodName]에게 기도하고 제물을 바칠 가치가 있는지에 대해 토론합니다."
-  VIETmisc.7041.a: "거기서 [ROOT.Char.GetFaith.HighGodName]께 기도하는 것도 나쁘지 않겠어."
-  VIETmisc.7041.a.toast: "축복받으셨습니다!"
-  VIETmisc.7041.b: "이런 소풍을 즐길 시간은 없어."
-  VIETmisc.7042.t: "$travel_event_prefix$ 거짓된 역사, 거짓된 유물"
-  VIETmisc.7042.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 선술집에 들렀다가 [innkeeper.GetFirstName]라는 친절한 주인을 만나 [innkeeper.GetHerHim]와 이야기를 나누었습니다. [innkeeper.GetSheHe|U]는 이 지역에서 순진한 [ROOT.Char.GetFaith.GetReligion.GetAdjective] 순례자들과 여행자들에게 가짜 유물을 파는 사기꾼 행상인들을 조심하라고 말했습니다. 요즘 점점 더 흔해지고 있다고 합니다.\n\n“[ROOT.Char.GetFaith.GetReligion.GetName]에 대해 잘 모르는 쉽게 속는 사람들을 속여 많은 이익을 얻을 수 있습니다. #italic 진짜#! 이 땅의 역사에 대해서요.” [innkeeper.GetFirstNameNoTooltip]가 설명합니다. “사람들이 존재하지 않았던 신성한 [ROOT.Char.GetFaith.PriestNeuterPlural]과 다른 신성한 인물에 대해 얼마나 터무니없는 이야기를 믿을지 믿을 수 없을 겁니다! 그들이 저에게 그 이야기를 할 때, 저는 그들의 흥분을 망치면서 그들을 바로잡아야 합니다. 하지만 누군가는 해야 합니다.”"
-  VIETmisc.7042.a: "이곳의 \"진짜\" 역사에 대해 알려주세요!"
-  VIETmisc.7042.b: "사기꾼들은 어떤 종류의 #italic 거짓말#!을 하는 거지?"
-  VIETmisc.7043.t: "$travel_event_prefix$ 폐마"
-  VIETmisc.7043.desc: "정말 큰 불행이 닥쳤습니다! [ROOT.Char.GetCurrentLocation.GetName]의 길을 달리던 중 [traveler.GetFirstNamePossessive] 말이 다리 힘이 풀려 쓰러져 즉사했습니다.\n\n\"저주받을!\" [traveler.GetFirstNameNoTooltip]이(가) 쉿 소리를 냈고, 우리 모두 말의 시체 주위에 모여 어떻게 처리해야 할지 고민했습니다. 이 말은 며칠 전부터 지친 기색을 보였지만, 그렇게 심각해 보이지는 않았습니다. 이제 우리는 제대로 알게 되었습니다.\n\n다행히 멀지 않은 곳에 마을이 있습니다. 그곳에서 [traveler.GetFirstNameNoTooltip]을(를) 위해 새 말을 구하거나, 시간이 촉박하다면 짐을 나르는 당나귀 중 하나를 [traveler.GetHerHim]에게 주고 짐을 재분배할 수도 있습니다."
-  VIETmisc.7043.a: "[traveler.GetFirstNameNoTooltip]님을 위해 새 말을 사십시오"
-  VIETmisc.7043.b: "[traveler.GetSheHe|U]는 여분의 당나귀를 탈 수 있습니다."
-  VIETmisc.7044.t: "$travel_event_prefix$ 관광객의 실망"
-  VIETmisc.7044.desc: "\"[traveler.GetFirstName]께서 실망한 듯 한숨을 쉬며 말합니다. “이 폐허에 대해 전에 읽어본 적이 있었지. 그런데… 여기 있었군, 그렇다고 치지.”\n\n우리는 밤에 야영하기 위해 거대한 폐허 옆에 멈춰 섰습니다. 아마도 그것은 고대인들이 지은 요새나 꽤 큰 규모의 [ROOT.Char.GetFaith.HouseOfWorship]였을 것입니다. 엄청나게 크지는 않지만 무시할 수도 없지.\n\n“[traveler.GetFirstNameNoTooltip]께서는 “나는 책에서 이 폐허에 대해 읽었지.”라고 주장합니다. “아주 오래전, 이곳에 웅장한 수도가 있었다고. 폐허는 수 마일에 걸쳐 뻗어 있다고 전해지더군. 정말 영감을 주는 이야기였어! 하지만… 이게 전부인가? 요즘은 읽는 모든 것을 믿을 수 없어….”"
-  VIETmisc.7044.a: "이제 적어도 이 장소에 대한 진실을 알게 되었겠지."
-  VIETmisc.7044.b: "내 생각에 이 지역은 여전히 어떤 잊을 수 없는 아름다움을 지니고 있는 것 같아."
-  VIETmisc.7044.c: "이 유적 말인가? 첫눈에 보이는 것보다 더 많은 것이 숨겨져 있는 듯하군…."
-  VIETmisc.7045.t: "$travel_event_prefix$ 나이 든 농부"
-  VIETmisc.7045.desc: "우리는 사람이 살 만한 곳이 없는 [ROOT.Char.GetCurrentLocation.GetName](으)로 들어섰습니다. 해가 지기 시작할 무렵, 우리는 [elder.GetFirstName]라는 노인 [elder.GetWomanMan]이 소유한 농가에 도착했습니다.\n\n\"[elder.GetFirstNameNoTooltip](이)여, 편히 쉬다가 밤에 묵어도 좋소.\" [elder.GetFirstNameNoTooltip](이)가 우리를 안으로 맞아들인 후 말했습니다. \"마침 식사를 준비하고 있었소. 마음껏 드시오!\"\n\n이야기를 나누면서 [elder.GetFirstNameNoTooltip]은 몇 년 전 성인이 된 자녀들이 병으로 세상을 떠난 후 [elder.GetHerselfHimself] 혼자서 이곳에 살고 있다는 것을 알게 되었습니다. 그럼에도 불구하고 [elder.GetFirstNameNoTooltip]은 긍정적인 태도를 유지하고 있습니다.\n\n\"[그]들은 좋은 삶을 살았고, 저는 그 점에 대해 [elder.GetFaith.HighGodName]께 감사드립니다.\" [elder.GetSheHe]가 말합니다."
-  VIETmisc.7045.a: "현명한 원로의 훌륭한 환대입니다."
-  VIETmisc.7045.b: "아마도 우리는 저 약한 늙은 [elder.GetWomanMan]에게서 훔칠 수 있을 거야...."
-  VIETmisc.7045.b.failure: "누군가가 노인에게서 훔치는 당신을 목격했습니다"
-  VIETmisc.7045.b.success: "노인들에게서 훔친 것에 대해 아무도 신경 쓰지 않아."
+  VIET_every_entourage_tt_religious: "종교를 가진 모든 수행원 구성원" # 238198435914001671
+  VIET_every_entourage_tt_likes_cute: "귀여운 것을 좋아하는 모든 수행원들" # 6225536205738775990
+  VIET_every_entourage_tt_dislikes_cute: "귀여운 것을 경계하는 모든 수행원 구성원" # 17539253245938291777
+  VIETmisc.7001.t: "$travel_event_prefix$ 상한 음식" # 10326423380517229145
+  VIETmisc.7001.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 따라 이동하던 중, 저희는 끔찍하게도 식량 일부가 상했다는 것을 발견했습니다. 여행 초기에 실수로 물과 많이 섞여 곰팡이가 슬기 시작한 것 같습니다.\n\n근처에 정착지가 없으므로, 시간을 낭비하더라도 식량을 구하기 위해 수렵을 해야 합니다. 반면, 현재 가진 식량을 아껴가며 가장 가까운 정착지까지 서둘러 가는 방법도 있겠습니다." # 14292143232181099052
+  VIETmisc.7001.a: "천천히 채집하고 사냥하도록 합시다." # 4761474289175363583
+  VIETmisc.7001.b: "일단은 적은 식량 배급으로 버텨야겠군." # 13951827324391501238
+  VIETmisc.7002.t: "$travel_event_prefix$ 도움이 되는 현지인들" # 14024218322409754490
+  VIETmisc.7002.desc: "여행 중 [ROOT.Char.GetCurrentLocation.GetName]에 있는 꽤나 우호적인 마을에 도착했습니다. 현지 주민들은 공손했고 기꺼이 저희에게 보급품을 주었습니다. 제 이동 상단의 일부 구성원들은 의심했지만, 특이한 일은 아무것도 일어나지 않았습니다." # 3457381216788773217
+  VIETmisc.7002.a: "정말 좋은 사람들이 여기 있군!" # 2108960508992565212
+  VIETmisc.7003.t: "$travel_event_prefix$ 지름길" # 10525411132225988610
+  VIETmisc.7003.desc: "[master.GetHerHis]의 부지런한 노력 덕분에, 저의 대상(caravan master) [master.GetTitledFirstName]가 [ROOT.Char.GetCurrentLocation.GetName]에서 안전한 지름길을 발견했습니다. 이 길을 이용하면 여정 시간을 상당히 줄일 수 있겠군요. 정말 다행입니다!" # 9487455169695948247
+  VIETmisc.7003.a: "훌륭하군!" # 11216778563906199394
+  VIETmisc.7004.t: "$travel_event_prefix$ 여가" # 7497618338257660768
+  VIETmisc.7004.desc: "우리는 잠시 휴식을 취하기 위해 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀습니다.\n\n이 마을은 편의 시설과 유흥의 중심지로 현지에서 유명하며, 수행원 중 몇몇 경비병들이 현지 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 처녀들의 미모에 정신이 팔렸습니다. 곧 떠나야 하지만, 조금 더 쉬는 것도 나쁘지 않을 것 같습니다…." # 7754778877032446143
+  VIETmisc.7004.a: "현지인들과 좀 어울려 보는 것도 나쁘지 않겠군." # 14859500705675388911
+  VIETmisc.7004.b: "이런 사소한 일에 시간을 낭비하지 않을 것이오!" # 11324779393054747264
+  VIETmisc.7005.t: "$travel_event_prefix$ 길가의 성소" # 12282852506573506820
+  VIETmisc.7005.desc: "[ROOT.Char.GetCurrentLocation.GetName]에는 제가 오늘 지나가는 길에 마침 들르게 된 유명한 길가 성지가 있습니다.\n\n현지인들의 말에 따르면, 그곳에서 며칠을 기도하며 보내는 여행자들도 드물지 않다고 합니다. 그렇게 하면 여정이 안전할 것이라고 전해지기 때문입니다.\n\n이곳에서 기도하는 것이 얼마나 도움이 될지는 모르겠지만, 적어도 이곳에 있는 동안에는 [ROOT.Char.GetFaith.HighGodName]께 경의를 표해야겠습니다." # 9317003314331230365
+  VIETmisc.7005.a: "빠른 기도를 올리고, 계속 진행하십시오." # 16963838088120721320
+  VIETmisc.7005.b: "며칠 동안 기도하십시오." # 10586723164144460097
+  VIETmisc.7005.c: "성소에 작은 봉헌물을 남기십시오." # 11736129734855736867
+  VIETmisc.7006.t: "$travel_event_prefix$ 카라반 약탈" # 6676409303551810778
+  VIETmisc.7006.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]에서 교역 카라반의 잔해를 발견했습니다. 화살에 꿰뚫린 상인, 경비병, 말들의 시체, 뒤집힌 수레, 그리고 망가진 상품들은 이것이 산적들의 습격이었음을 시사합니다.\n\n어쨌든, 길 위의 이러한 위험은 드문 일이 아닙니다. 시신들을 묻은 후, 나와 내 동행자들은 산적들이 챙겨가지 못한 상품들을 어떻게 할지 의논합니다. 이 물품들을 수습하면 꽤 짭짤한 수입을 올릴 수 있겠지만, 시간이 꽤 걸릴 것입니다." # 5665735684377829475
+  VIETmisc.7006.a: "물품을 우리끼리 나누도록 합시다." # 1822889109724053664
+  VIETmisc.7006.b: "마땅히 내 몫인 사자의 몫을 내가 차지하겠소." # 16660353069155851667
+  VIETmisc.7006.c: "우리는 죽은 자들에게서 이것들을 훔쳐서는 안 됩니다." # 9914239068996753501
+  VIETmisc.7006.d: "그 지역의 통치자인 [ROOT.Char.GetCurrentLocation.GetTitle.GetDeJureLiege.GetHolder.GetFirstName]에게 전달하시오." # 8634056428581091801
+  VIETmisc.7007.t: "$travel_event_prefix$ 지역 순방" # 7897779760797948994
+  VIETmisc.7007.desc: "저는 여행 중에 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀는데, 현지 주민들이 저에게 큰 존경심을 표하고 있습니다.\n\n이곳 사람들은 저와 같은 인물이 그들의 보잘것없는 정착지에 방문할 것이라고는 예상하지 못했으며, 일부 지역 지도자들은 제가 며칠간 머물 것을 제안하고 있습니다. 이 지도자들은 저에게 이 지역과 그 주변, 그리고 이곳에 사는 사람들에 대해 좋은 인상을 남기고자 저를 안내하고 싶어 합니다." # 2089154117979320292
+  VIETmisc.7007.a: "좋군! 잠시 우회하는 것도 괜찮다네." # 4505138119149422218
+  VIETmisc.7007.b: "아아, 저는 가야 할 곳이 있습니다." # 12696777229012881524
+  VIETmisc.7008.t: "$travel_event_prefix$ 늦잠" # 12383737285759161135
+  VIETmisc.7008.desc: "어제 [ROOT.Char.GetCurrentLocation.GetName]에서의 여정은 꽤나 고되었고, 저는 너무 지친 나머지 늦잠을 잤습니다. 수행원들은 제가 충분한 휴식을 취하지 못하면 정신 상태가 온전치 못할 것을 염려하여 저를 깨우고 싶지 않았다고 하더군요." # 8705044588946603659
+  VIETmisc.7008.a: "다시는 늦잠을 자지 않도록 조심해야겠군." # 9207302042010794938
+  VIETmisc.7008.b: "고맙소! #italic 그#!것은 참으로 푹 잔 밤이었소." # 14347226214869103765
+  VIETmisc.7009.t: "$travel_event_prefix$ 거짓말쟁이" # 13675733834010078670
+  VIETmisc.7009.desc: "우리가 [ROOT.Char.GetCurrentLocation.GetName]에 야영지를 마련했을 때, 마침 상인들의 행렬이 우리와 꽤 가까운 곳에 야영하고 있었습니다. 그들은 반대 방향으로 여행 중이었고, 우리는 각자의 여정에 대한 노면 상황에 대한 정보를 서로 교환했습니다.\n\n어쨌든, 상인들은 며칠 전 '거짓말쟁이'라는 별명으로 불리는 매우 이상한 사나이를 만났다고 내게 말했습니다. 그는 다소 터무니없는 조언을 했는데, 그 조언이 왠지 모르게... 이치에 맞기도 했습니다. 그들은 그 사나이를 어떻게 받아들여야 할지 확신하지 못했지만, 노련한 상인들은 그가 이제껏 만난 이들 중 가장 이상한 사나이라고 말했습니다." # 14511018179877013137
+  VIETmisc.7009.a: "그는 괴짜처럼 들리는군." # 13467864191936034511
+  VIETmisc.7009.b: "치마 그 거짓말쟁이를 말하는 건가? 그를 만나본 적이 있소." # 10304370357952625632
+  VIETmisc.7010.t: "$travel_event_prefix$ 시종의 죽음" # 6685652481122985123
+  VIETmisc.7010.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중, 저의 가까운 시종 중 한 명이 세상을 떠났습니다. 노환으로 인한 죽음은 이런 여정에서 드문 일은 아니지만, 그 시종이 저와 가까웠기에 여전히 유감스러운 일입니다.\n\n어쨌든, 우리는 고인의 시신을 어떻게 할지 결정해야 합니다. 아무리 시종이라 할지라도 그 시신을 길가에 버리는 것은 부적절할 것입니다. 대신, 장례를 치르기 위해 그 시신을 집으로 모셔갈 수도 있습니다." # 2259005423857902821
+  VIETmisc.7010.a: "시신을 길가에 버려라." # 4146862594179210613
+  VIETmisc.7010.b: "이곳에 소박하지만 격식 있는 장례를 치러주시오." # 12202262605622902493
+  VIETmisc.7010.c: "그들을 우리와 함께 데려가야 합니다. 그들은 그럴 자격이 있습니다." # 7193364143548776785
+  VIETmisc.7011.t: "$travel_event_prefix$ 짐승의 습격" # 1196452843796748476
+  VIETmisc.7011.desc: "지난밤 [ROOT.Char.GetCurrentLocation.GetName]에 머무는 동안 야생 동물들이 우리 야영지로 들이닥쳤습니다. 다친 사람은 없었으나 식량 일부를 약탈당했습니다." # 18114180964905624139
+  VIETmisc.7011.a: "우리는 손실을 받아들여야 할 것입니다." # 10338163910650889164
+  VIETmisc.7011.b: "지역 주민들에게서 보급품을 구매하십시오." # 12161875681807308813
+  VIETmisc.7011.c: "지역 주민들에게 강제로 보급품을 징발합니다." # 8897606158892486645
+  VIETmisc.7012.t: "$travel_event_prefix$ 끔찍한 여관" # 1069162675390191926
+  VIETmisc.7012.desc: "어젯밤 [ROOT.Char.GetCurrentLocation.GetName]에서 묵었던 여관은 솔직히 말해 끔찍했습니다. 침구의 질이나 분위기 같은 것들이 어젯밤 잠을 청하려던 우리 중 다수, 저를 포함해서 말이죠, 마음에 들지 않았습니다. 오늘 우리가 계속 길을 떠나는 동안, 제 수행원 모두가 눈에 띄게 피곤하고 지쳐 보입니다." # 6600017488755341935
+  VIETmisc.7012.a: "우리가 감수해야 할 것 같군." # 7236592955843062157
+  VIETmisc.7012.b: "며칠간 더 좋은 여관에서 쉬도록 합시다." # 15005411766128382967
+  VIETmisc.7013.t: "$travel_event_prefix$ 놀라운 여관" # 2560838636467579233
+  VIETmisc.7013.desc: "어젯밤 [ROOT.Char.GetCurrentLocation.GetName]에서 묵었던 여관은 놀라울 정도로 훌륭한 곳이었습니다. 여관이나 그 직원들이 무엇을 잘했는지는 모르겠지만, 무언가 그곳 덕분에 수행원 대부분이 밤새도록 평화롭게 잠들 수 있었습니다. 오늘 아침, 우리가 떠날 준비를 하는 동안 수행원들의 얼굴에는 미소가 가득합니다." # 10360844431489308565
+  VIETmisc.7013.a: "이곳은 정말 멋진 곳이었어!" # 10082751058273909066
+  VIETmisc.7013.b: "며칠 더 머무는 것이 좋을지도 모르겠군…." # 10331275483111557870
+  VIETmisc.7014.t: "$travel_event_prefix$ 논거" # 9991834499214875418
+  VIETmisc.7014.desc: "[traveler_1.GetTitledFirstName]와 [traveler_2.GetTitledFirstName]가 우리가 길을 따라 끙끙거리며 나아가는 동안 몇 시간째 말다툼을 벌이고 있습니다. 이 시점에서, 이 어리석은 논쟁이 어떻게 시작되었는지조차 모르겠고, 끼어들고 싶지도 않습니다. 반면에, 수행단에 있는 다른 몇몇은 나를 쳐다보며, [ROOT.Char.GetTitleAsNameNoTooltip]으로서 무언가를 해야 한다고 조용히 말하고 있습니다." # 15853609400215068767
+  VIETmisc.7014.a: "사람들이 대규모로 여행하는 것을 이상화하는 것을 믿을 수가 없군." # 7992965466748928329
+  VIETmisc.7014.b: "저 두 얼간이들을 잠재울 수 있을지도 모르겠군." # 7379248149419026759
+  VIETmisc.7014.b.success: "그들은 그들의 어리석은 논쟁을 멈추는 데 동의했습니다." # 11404879932712706803
+  VIETmisc.7014.b.failure: "그들은 당신의 논쟁을 멈추라는 간청을 무시합니다." # 15577845850587356575
+  VIETmisc.7015.t: "$travel_event_prefix$ 우정" # 4111587887554764772
+  VIETmisc.7015.desc: "[traveler_1.GetTitledFirstName]와 [traveler_2.GetTitledFirstName]는 우리가 여행을 계속하는 동안 몇 시간 동안이나 다정하게 이야기를 나누었습니다. 두 사람은 서로 정말 잘 지내는 것 같습니다." # 9226479068115247717
+  VIETmisc.7015.a: "그들은 빠르게 친구가 되고 있습니다!" # 16665733339067240220
+  VIETmisc.7016.t: "$travel_event_prefix$ 진흙탕 길" # 16810322202498419624
+  VIETmisc.7016.desc: "우리가 지금 이동 중인 [ROOT.Char.GetCurrentLocation.GetName] 지역은 최근 평소보다 많은 비가 내려 도로가 진창이 되었습니다. 비는 그쳤지만, 진흙 때문에 길이 엉망입니다. 대부분은 그럭저럭 지나갈 만했지만, 오늘 짐마차 몇 대가 진흙에 빠져버렸습니다. 짐과 가축들을 진흙에서 빼내어 마른 땅으로 옮기는 데 상당한 노력과 시간이 소요되었습니다." # 13337404857609105230
+  VIETmisc.7016.a: "여행은 정말 싫어…." # 3245472608655849120
+  VIETmisc.7017.t: "$travel_event_prefix$ 우연한 꿈인가?" # 11268130151921179722
+  VIETmisc.7017.desc: "\"맹세컨대, 이 장소를 꿈에서 본 적이 있소\" [dreamer.GetTitledFirstName]가 외칩니다.\"너무나 익숙하군! 그래, 그래, 내 꿈에서 지형과 풍경이 꼭 이랬어\"\n\n오늘 우리는 몇 시간 동안 [ROOT.Char.GetCurrentLocation.GetName]을 여행하고 있었는데, 그때 [dreamer.GetFirstNameNoTooltip]가 갑자기 흥분했습니다.\n\\\"[dreamer.GetSheHe]가 말을 잇습니다.\"얼마나 경이로운가! 이것은 틀림없이 [dreamer.GetFaith.HighGodName]께서 주신 징조일 것이오\"" # 2879430349678814160
+  VIETmisc.7017.a: "좋은 징조이기를 바라네." # 4741549176808459295
+  VIETmisc.7017.b: "저의 꿈에 대해 더 말씀드리겠습니까?" # 12647331981916357552
+  VIETmisc.7018.t: "$travel_event_prefix$ 지역 결혼식" # 5090681641305093650
+  VIETmisc.7018.desc: "정말 우연이군요! 우리가 마침 [ROOT.Char.GetCurrentLocation.GetName]의 한 마을에 들렀을 때, 그곳에 사는 두 위대한 씨족 간의 결혼식이 열리고 있었습니다.\n\n신부는 전통적인 [culture.GetName] 혼례복을 입고 아름답고 우아하며, 신랑 역시 그에 못지않게 잘생기고 매력적이군요. 무엇보다 중요한 것은, 이것이 장대한 규모의 활기찬 축제의 시작이며, 현지인들이 우리를 초대했다는 것입니다. 그들의 말에 따르면, 낯선 사람들에게도 충분한 음식과 술이 준비되어 있으며, 축제는 며칠 동안 계속될 것 같습니다." # 13615774671249816686
+  VIETmisc.7018.a: "재미있는 행사가 되겠군요! 왜 안 되겠습니까?" # 10255246076582847665
+  VIETmisc.7018.b: "갈 곳이 있습니다. 지체할 수 없습니다." # 6172835441272965310
+  VIETmisc.7019.t: "$travel_event_prefix$ 순회 음유시인" # 7744790867665939630
+  VIETmisc.7019.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]에서 길가에서 쉬고 있었는데, 마침 떠돌이 [culture.GetName] 음유시인이 지나갔습니다. [bard.GetSheHe|U]는 [bard.GetHerselfHimself]를 [bard.GetFullName]이라고 소개했습니다.\n\n제 호위병 중 한 명이 그 [bard.GetWomanMan]에게 흥을 돋우는 대가로 약간의 동전을 건넸습니다. [bard.GetFirstNameNoTooltip]은 그 후 현지 [culture.GetLanguage.GetName] 방언으로 여러 노래를 불렀는데, [bard.GetHerHis]의 재능에 대해서는 의심의 여지가 거의 없었습니다. 애절한 노래는 우리 마음을 깊이 울렸고, 즐거운 노래는 우리의 기운을 북돋아 주었습니다." # 2945658823281682809
+  VIETmisc.7019.a: "공연에 감사드립니다!" # 840478106225249047
+  VIETmisc.7019.b: "몇 곡 더 들을 수 있도록 동전 몇 닢을 더 드리리다!" # 17161530763140856096
+  VIETmisc.7019.c: "제가 좋아하는 노래들을 적어보겠습니다." # 11829831492189469216
+  VIETmisc.7020.t: "$travel_event_prefix$ 오염된 물" # 430646246888170879
+  VIETmisc.7020.desc: "여행 중 휴식을 취하고 있을 때, [drinker.GetFirstName]가 물을 구하러 갔습니다. [drinker.GetSheHe]가 정말 목이 말랐는지, [drinker.GetHerHis] 물주머니에 물이 충분하지 않았던 것 같습니다!\n\n안타깝게도 우리는 [drinker.GetFirstNameNoTooltip]가 길어 올린 물이 고여 있던 물이라는 것을 너무 늦게 깨달았습니다. 늪지대나 습지에서 발견되는 고인 물은 마시기에 위험하다는 것을 많은 이들이 알고 있습니다. 아마 [drinker.GetSheHe]가 너무 조급했거나 목이 말라 제정신이 아니었던 모양입니다.\n\n어쨌든, [drinker.GetFirstNameNoTooltip]는 벌써 몸이 조금 좋지 않다고 느끼고 있습니다." # 15650114739350701086
+  VIETmisc.7020.a: "[drinker.GetFirstNameNoTooltip], 이 어리석은 자야!" # 11881544042217127695
+  VIETmisc.7020.b: "제가 도울 수 있는 약초 몇 가지를 알고 있습니다." # 8615347903565431985
+  VIETmisc.7020.c: "$VIETmisc.7020.b$" # 3742842028415622752
+  VIETmisc.7020.info: "#emphasis 역사적 배경:#! 중세 사람들은 물의 품질이 좋지 않아 알코올이나 다른 음료만 마셨다는 고정관념이 있습니다. 하지만 중세 사람들은 안전하게 마실 수 있는 물과 마시기에 부적합한 물을 구별할 줄 알았습니다. 따라서 그들은 예를 들어 도시 지역이나 습지 근처의 물은 피하고, 다른 곳에서 더 깨끗한 물을 찾았습니다." # 12544758896307288837
+  VIETmisc.7021.t: "$travel_event_prefix$ 드디어 물이로구나!" # 4365160079561178706
+  VIETmisc.7021.desc: "우리는 하루 종일 여행하느라 지치고 피곤했습니다. 몇 시간 동안 제대로 쉴 만한 곳이 없었기 때문입니다. 이 길이 꽤나 잘 다녀지는 길이라고 하지 않았던가요?\n\n그런데 이게 웬일입니까, 마침내 작은 물줄기를 발견했고, 게다가 근처 바위에 쇠사슬에 매달린 낡고 해진 청동 컵들이 있었습니다. 이 지역의 현지인들이나, 어쩌면 이 지역을 책임지는 누군가가 여행자들이 물을 더 쉽게 뜰 수 있도록 이 컵들을 아낌없이 제공한 것 같습니다." # 10438393021219557933
+  VIETmisc.7021.a: "[ROOT.Char.GetFaith.HighGodName]께 이 시원한 물에 감사드립니다!" # 9891231693848892527
+  VIETmisc.7022.t: "$travel_event_prefix$ 사막의 소녀" # 18203288685194393298
+  VIETmisc.7022.desc: "[ROOT.Char.GetCurrentLocation.GetName] 사막을 여행하던 중, 우리는 [culture.GetName] 출신의 사랑스러운 처녀를 만났는데, 그녀는 자신을 [trickster.GetFirstName]라고 소개했습니다.\n\n우리가 그녀에게 다가가자, 그녀는 우리를 유혹하듯 바라보며 현지 노래로 보이는 것을 부르고 춤을 추기 시작했고, 우리를 초대했습니다. 하지만 내가 그녀에게 손을 뻗는 순간, 우리 모두 그녀가 단지 모래더미에 불과하다는 것을 깨달았습니다.\n\n우리는 신기루를 본 것뿐이었습니다.\n\n아마도 말이죠." # 6330852840757390886
+  VIETmisc.7022.a: "우리의 다음 목적지는 그리 멀지 않으니, [ROOT.Char.GetFaith.HighGodName]께 감사드릴 일입니다." # 3611848157788684608
+  VIETmisc.7022.tooltip: "#weak 바람결에 웃음소리가 들리는 것 같군...!#" # 15455534316719504175
+  VIETmisc.7023.t: "$travel_event_prefix$ 사막의 희생자들" # 5458206434426353168
+  VIETmisc.7023.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 가장 험난한 사막 지대에서, 얼마 전에 세상을 떠난 듯한 여행자들의 유해를 발견했습니다. 부디 [ROOT.Char.GetFaith.HighGodName]께서 이 불행한 영혼들을 사후 세계에서 축복해 주시기를.\n\n아아, 그들의 운명은 드문 일이 아닙니다. 이와 같은 사막이 얼마나 가혹한지 의심하는 이는 거의 없을 것입니다. 아무리 그런 지형과 환경에 익숙한 자라 할지라도, 불운하다면 이처럼 황량한 땅에서 때 이른 죽음을 맞이할 수 있으니까요.\n\n다행히도 우리에게는 아직 보급품이 많이 남아있습니다." # 15922872425606028760
+  VIETmisc.7023.a: "우리의 목적지를 향해 계속 나아가자." # 58496952754724807
+  VIETmisc.7023.b: "고인에게 적절한 장례를 치러 드릴 시간을 가지십시오." # 17659485125313439369
+  VIETmisc.7024.t: "$travel_event_prefix$ 신기루인가?" # 7908889495365988845
+  VIETmisc.7024.desc: "우리는 휴식도 취하지 못한 채 몇 시간째 [ROOT.Char.GetCurrentLocation.GetName]의 사막을 헤매고 있습니다. 저 앞에 오아시스의 신기루를 보았고, 아직 상황이 그렇게 나쁘지도 않은데도 스스로가 얼마나 무력한지 보며 씁쓸하게 웃었습니다. 그 신기루는 너무나 생생해서 물소리와 동물 소리까지 들리는 듯했습니다!\n\n“아아악!” [person.GetFirstName]이 소리치더니, 덤불에 걸려 물웅덩이로 첨벙 빠집니다.\n\n어라. 알고 보니 그 신기루가 진짜였나 보군요. [ROOT.Char.GetFaith.HighGodName]께 찬미를!" # 2821111744839798639
+  VIETmisc.7024.a: "우리는 [person.GetFirstNameNoTooltip]을 오아시스 물에서 끌어내며 호탕하게 웃습니다." # 2838324437987802480
+  VIETmisc.7025.t: "$travel_event_prefix$ 오로라" # 8161440519915511004
+  VIETmisc.7025.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 황야에서 밤을 지새우기 위해 야영한 후, 우리는 가장 장엄한 광경, 즉 오로라를 보는 축복을 받았습니다.\n\n머리 위, 가장 순수한 어둠이었던 밤하늘이 생생한 색상으로 변모했습니다. 온갖 색깔의 커튼이나 햇살처럼, 그것들이 지평선 위로 솟아올라 우리를 눈부신 광경으로 현혹시켰습니다." # 4586489256524328054
+  VIETmisc.7025.a: "정말 놀랍군." # 17193150456070749497
+  VIETmisc.7025.info: "#emphasis 역사적 배경:#! 우리가 이해하는 #italic 오로라#!라는 용어는 (새벽의 로마 여신에게서 유래했으며) 불과 지난 몇 세기 동안에야 등장했습니다. 하지만 로마와 중국의 기록을 포함하여 오로라를 묘사하는 역사적 자료는 풍부하며, 오로라는 전 세계 특정 민족의 신화에서 두드러지게 나타납니다. 예를 들어, 1세기 로마의 철학자이자 정치가, 작가였던 세네카는 그의 저서 #italic 자연에 대한 탐구#!에서 티베리우스 황제 치세 동안 오스티아(로마 근처) 상공에서 목격된 오로라를 묘사한 바 있습니다." # 10413828560315703507
+  VIETmisc.7026.t: "$travel_event_prefix$ 덧없는 유적" # 3532109949914765749
+  VIETmisc.7026.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중, 우리는 오래된 폐허를 발견했습니다. 너무나 오래되어 처음에는 무심코 쌓인 돌무더기인 줄 알았을 정도였습니다.\n\n이러한 폐허에 대해 어느 정도 지식이 있는 [scholar.GetTitledFirstName]께서 가까이 다가와서야 그곳이 인공 구조물임을 알아보셨습니다. [scholar.GetSheHe]께서 말씀하시길, 이 구조물은 풍파에 심하게 닳아버렸다고 합니다.\n\n우리가 이 폐허 곁에서 잠시 쉬는 동안, [scholar.GetFirstNameNoTooltip]께서 한숨을 쉬며 말했습니다.\"인생이란 참 덧없는 것이지요. 저것들이 아득한 옛날에는 어떤 영광스러운 건물이었을 거라 생각하니 말입니다. 언젠가 우리 역시 저 폐허보다도 더 초라한 모습이 되겠지요\"" # 16440434383058455636
+  VIETmisc.7026.a: "우리의 삶은 덧없지만, [ROOT.Char.GetFaith.HighGodName]께서는 영원하십니다." # 5208873048653074040
+  VIETmisc.7026.b: "그렇다면 우리가 살아있는 동안 위대하고 용감한 업적을 세워야겠군!" # 4521806612028852619
+  VIETmisc.7026.c: "그럴수록 그저 삶을 즐기고 스트레스를 받지 않는 것이 낫겠군." # 15421377576795914790
+  VIETmisc.7027.t: "$travel_event_prefix$ 허풍" # 4809137025775062141
+  VIETmisc.7027.desc: "[ROOT.Char.GetCurrentLocation.GetName]을 여행하던 중, 저희는 현지 주점에서 쉬면서 현지 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 요리와 [ROOT.Char.GetCurrentLocation.GetCulture.GetLanguage.GetName]어로 불리는 경쾌한 민속 음악을 즐기고 있었습니다.\n\n즐거운 분위기는 키가 크고 건장하며 술에 잔뜩 취한 한 남자가 나타나면서 깨졌습니다. 그 남자는 제가 본 것 중 가장 거만한 미소를 짓고 있었습니다. 그는 자신이 죽인 적들이나 잠자리를 가진 여자들에 대해 온갖 터무니없는 소리를 지껄여댔습니다.\n\n그가 다른 손님들을 괴롭히기 시작하자, 주점 직원이 그를 밖으로 내쫓았습니다. 결국 그는 그렇게 강하지 않았던 모양입니다! 제 수행원들은 낄낄거렸는데, 어떤 이들은 그를 보는 것이 재미있었다고 말했고, 다른 이들은 주점에서 그를 더 일찍 내쫓았어야 했다고 말했습니다." # 14029511582793808957
+  VIETmisc.7027.a: "그런 멍청이들을 비웃는 것은 즐거운 일이지." # 10558687747015973254
+  VIETmisc.7027.b: "그냥 여기서 평화롭게 식사하고 싶을 뿐이오." # 3846740065123783075
+  VIETmisc.7028.t: "$travel_event_prefix$ 저주받은 가문" # 1261309266703899714
+  VIETmisc.7028.desc: "저희는 [ROOT.Char.GetCurrentLocation.GetName]을 지나가던 중, 어떤 거주지의 것으로 보이는 불에 타 속이 텅 빈 폐허를 보았습니다. 저와 수행원들은 이곳이 그저 약간 흥미로운 장소인지, 아니면 다소 우려스러운 장소인지 확신할 수 없었습니다.\n\n마침 근처를 지나가던 지역 [ROOT.Char.GetCurrentLocation.GetCulture.GetName] 인물에게 다가가 그 건물에 대해 아는 것이 있는지 물어보았습니다.\n\n“아, 안타까운 사고였지.” 그가 머리를 흔들며 설명했습니다. “농부 가족이 살던 곳인데, 최근 사고로 집이 통째로 타버렸소. 그들은 이 지역이 사악한 힘에 의해 저주받았다고 하더군. 혹시 모르니, 제 [ROOT.Char.GetLadyLord]께서도 이곳에 오래 머무르지 않는 것이 좋겠소…. 폐허를 보니 나도 몸서리가 쳐지는군.”" # 8884783618617147133
+  VIETmisc.7028.a: "경고해 주셔서 감사합니다. 조심하겠습니다." # 399334379527361643
+  VIETmisc.7028.b: "하! 그거 우스꽝스러운 미신처럼 들리는군." # 18260666326352773129
+  VIETmisc.7029.t: "$travel_event_prefix$ 잘못된 길 안내?" # 9499635217187650414
+  VIETmisc.7029.desc: "오늘 아침, 우리는 [ROOT.Char.GetCurrentLocation.GetName] 길을 지나가던 현지인에게 다음 목적지로 가는 길을 물어보았습니다. 지금 생각하니 그들에게 묻지 말았어야 했는지 모르겠습니다.\n\n결국 우리는 길을 잃었습니다.\n\n우리가 따르려던 이 길 안내가 처음부터 잘못된 것이었을까요, 아니면 우리가 그저 잘못 이해한 것일까요?" # 1227141490553103253
+  VIETmisc.7029.a: "저쪽으로 가는 게 어떨까요?" # 94696292979983346
+  VIETmisc.7030.t: "$travel_event_prefix$ 좋은 지름길이로군" # 6701041056564250847
+  VIETmisc.7030.desc: "오늘 아침, 우리는 [ROOT.Char.GetCurrentLocation.GetName] 길을 지나가던 현지인에게 다음 목적지로 가는 길을 물었습니다. 그 현지인은 우리가 가려던 길이 사실 이 지역을 통과하는 가장 빠른 길이 아니며, 지름길이 있다고 알려주었습니다.\n\n다행히도 그 현지인의 말이 완전히 맞았고 우리는 그가 알려준 길을 이해했습니다. 우리는 그 지름길 덕분에 상당한 시간을 절약할 수 있었습니다." # 17036294191394179084
+  VIETmisc.7030.a: "이 지름길을 알게 되어 정말 다행이군!" # 9147446025326154045
+  VIETmisc.7031.t: "$travel_event_prefix$ 지역 무용" # 5163929336841451997
+  VIETmisc.7031.desc: "[ROOT.Char.GetCurrentLocation.GetCulture.GetCollectiveNoun]의 [ROOT.Char.GetCurrentLocation.GetName] 지역 풍습은 정말 볼만하군요. 이 지역을 지나면서 몇 군데 선술집에 들렀습니다.\n\n들르는 곳마다 지역의 음악과 춤을 감상할 기회가 있었는데, 제 수행원들은 비록 흥미진진하지는 않더라도 꽤 매력적이라고 생각하는 듯합니다.\n\n예를 들어, [traveler.GetTitledFirstName]께서는 지역 춤을 배우려고 시도하셨는데, 꽤 잘 추시는 것 같습니다!" # 5756088711134115832
+  VIETmisc.7031.a: "어쩌면 나도 직접 춤을 배워야겠군!" # 10726193542422909178
+  VIETmisc.7031.b: "이 소위 '춤'이라는 것들은 내 시간을 들일 가치도 없다." # 3719846480908676765
+  VIETmisc.7032.t: "$travel_event_prefix$ 아름다운 경관" # 6432191123807224188
+  VIETmisc.7032.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]에서 멋진 광경을 목격했습니다. 우리가 본 그 어떤 것과도 다른 아름다운 경치이며, 우리 세계의 영광을 진정으로 보여주는 그림 같은 풍광입니다.\n\n수행원 중 몇몇이 이 지역에 하루 이틀 머물며 경치를 감상해야 한다고 주장하고 있습니다." # 10601163524508241237
+  VIETmisc.7032.a: "우리는 이것을 위해서조차 너무 오래 지체할 수 없습니다." # 4357588267423608264
+  VIETmisc.7032.b: "여기서 잠시 즐기는 것도 나쁘지 않겠지!" # 867631853344628024
+  VIETmisc.7032.c: "이곳에서 휴식을 취하는 동안 [ROOT.Char.GetFaith.HighGodName]께 감사 기도를 올립시다." # 7365536473401086531
+  VIETmisc.7033.t: "$travel_event_prefix$ 험난한 강 건너기" # 12649780538254191174
+  VIETmisc.7033.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 강을 건너던 중, 일부 보급품이 헐거워져 강물에 빠지고 말았습니다. 우리는 무력하게도 물살이 그 보급품들을 휩쓸고 가는 것을 지켜보았습니다. 다행히도 대부분의 보급품은 여전히 우리와 함께 있지만, 상당량을 잃은 것은 사실입니다.\n\n동료들은 이 상황에 대해 각기 다른 제안을 내놓고 있습니다. 일부는 물이 닿는 곳이 있다면 보급품 일부라도 회수하기 위해 하류로 내려가 보자고 말합니다. 다른 이들은 손실을 감수하고 다음 마을에서 보급품을 새로 구매하자고 주장합니다. 또 다른 이들은 이 불운을 감내하고 여정을 계속하자고 말합니다." # 6373061232259823633
+  VIETmisc.7033.a: "하류에 있는 보급품 일부를 되찾도록 시도해 보시오." # 13640859161430238563
+  VIETmisc.7033.b: "다음 읍내에서 물품을 구입하십시오." # 16428597054146064363
+  VIETmisc.7033.c: "참고 견디며 우리의 여정을 계속합시다." # 14774588559526883063
+  VIETmisc.7034.t: "$travel_event_prefix$ 희귀 약초" # 4718635829733315973
+  VIETmisc.7034.desc: "저희가 [ROOT.Char.GetCurrentLocation.GetName]을 지나고 있을 때, [herbalist.GetTitledFirstName]께서 길가에서 발견한 식물 몇 가지를 제게 주목하게 하셨습니다.\n\n[herbalist.GetFirstNameNoTooltip]께서는 흥분하여 제게 말씀하셨습니다. “저기 있는 약초들… 보이십니까? 그것들은 꽤 희귀합니다. [ROOT.Char.GetCurrentLocation.GetNameNoTooltip]에서 가끔 발견된다는 이야기는 들었지만, 이렇게 한 무더기를 여기서 발견하다니요? 허락해 주신다면, 제가 좀 채취할 수 있도록 근처에 야영지를 마련해야 합니다. 어떤 의사라도 그것들을 유용하게 쓸 수 있을 테니, 당신의 의사도 마찬가지입니다.”" # 14900737947552693734
+  VIETmisc.7034.a: "왜 안 되겠소? 근처에 야영할 수 있소." # 9404773005939440610
+  VIETmisc.7034.b: "아쉽지만, 낭비할 시간이 없습니다." # 12233160088207315582
+  VIETmisc.7035.t: "$travel_event_prefix$ 함께 노래 부르기" # 18041012735002515249
+  VIETmisc.7035.desc: "우리가 [ROOT.Char.GetCurrentLocation.GetName]을 계속 지나던 어느 날, [cheerful.GetTitledFirstName]가 웬일인지 갑자기 기운을 차립니다. 내가 [cheerful.GetSheHe]가 무슨 생각을 하는지 묻기도 전에, [cheerful.GetSheHe]는 모두에게 [ROOT.Char.GetCurrentLocation.GetName]의 아름다움에 대한 민요를 기억하는지 묻습니다.\n\\\"[cheerful.GetFirstNameNoTooltip]가 며칠 전 선술집에서 현지인들이 부르는 것을 들었던 바로 그 노래야\"라고 [cheerful.GetFirstNameNoTooltip]가 우리에게 상기시켜 줍니다. [cheerful.GetSheHe]가 가사를 부르기 시작하자마자, 모두가 그 노래를 기억해내기 시작하고, 각자의 노래 실력은 달랐지만 모두 함께 따라 부릅니다.\n\n모두의 마음이 그 경쾌한 곡조 덕분에 활기를 되찾자, 여정이 갑자기 덜 지루하게 느껴집니다." # 208211811084907588
+  VIETmisc.7035.a: "나도 노래에 동참하겠소!" # 11048567333881060456
+  VIETmisc.7035.b: "그저 모두가 즐기는 모습을 지켜보겠소." # 16070596818512905536
+  VIETmisc.7036.t: "$travel_event_prefix$ 편자와 안장" # 2029545088516122423
+  VIETmisc.7036.desc: "아, 우리의 편자(편자)와 안장이 수리가 필요한 지경에 이르렀소. 이는 길을 따라 여행하는 누구에게나 새로운 일이 아니오. 말을 이용한 모든 여행에는 그러한 보급품에 대한 정비가 필요하지.\n\n[ROOT.Char.GetCurrentLocation.GetName]의 마을들에는 합리적인 가격으로 우리의 편자와 안장을 수리해 줄 장인들이 살고 있소. 물론, 돈을 아끼기 위해 편자와 안장이 실제로 부서질 때까지 그것들에 돈을 쓰지 않을 수도 있겠지…. #italic 말이지#!" # 7619989219182591067
+  VIETmisc.7036.a: "장인들에게 돈을 지불할 것입니다. 만일의 사태에 대비하는 것이 낫지요." # 4690675270153704980
+  VIETmisc.7036.b: "흠, 그냥 참으면서 조심해야겠군." # 7710020411181559744
+  VIETmisc.7037.t: "$travel_event_prefix$ 친절한 통행료 징수원들" # 8426974888188949662
+  VIETmisc.7037.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]에 있는 통행료 징수소에 도착했고, 내 수행원들은 통행료를 지불할 준비를 했습니다. 이 통행료는 여행자들을 보호할 자금을 마련한다는 명목으로 통행료를 징수하는 것은 모든 통치자의 권리이므로, 별다를 것 없는 일이었습니다.\n\n하지만 경비병들은 꽤나 친절한 무리처럼 보였습니다. 모든 경비병이 끔찍한 사람들이라는 말은 아니지만, 보통은 선량한 경비병들조차도 이들처럼 사교적이고 말이 많기보다는 의무에 충실하고 진지한 법입니다.\n\n경비대장이 수행원들이 금화를 지불하는 동안 말했습니다.\"여기서는 별일이 일어나지 않습니다. 그러니 존경받는 [ROOT.Char.GetTitleAsNameNoTooltip]이신 분께서 이곳을 지나가신다니 영광입니다, 나의 [ROOT.Char.GetLadyLord]. 제가 도로 위의 다음 몇 군데 통행료 징수소에 알려서 당신이 마땅히 받아야 할 존중을 갖추도록 상기시켜 드리겠습니다\"" # 175504420537150594
+  VIETmisc.7037.a: "음... 감사합니다. 영광이군요." # 6953566171399767239
+  VIETmisc.7038.t: "$travel_event_prefix$ 무단 거주자들" # 14222780348693770026
+  VIETmisc.7038.desc: "[ROOT.Char.GetCurrentLocation.GetName]에 머무는 동안 고대 유적을 발견했습니다. 수많은 몰락한 거지들과 방랑자들이 갈 곳이 없어 그곳에 자리 잡고 있었습니다.\n\n수행원 중 일부는 이 절박하고 위험한 부랑자들이 무슨 짓을 할지 모르니 그냥 지나쳐야 한다고 말합니다. 하지만 다른 이들은 그들이 무해해 보이니, 자선을 베풀어 약간의 돈을 주어야 한다고 주장합니다." # 15527233232580868609
+  VIETmisc.7038.a: "가자, 저들은 나를 불안하게 만드는군." # 7249361675562030185
+  VIETmisc.7038.b: "네, 우리는 이 불쌍한 영혼들을 도와야 합니다." # 7111356590932882019
+  VIETmisc.7039.t: "$travel_event_prefix$ 오가는 대화의 불꽃" # 17439251253540841369
+  VIETmisc.7039.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 고대 유적을 발견했습니다. 물론 가장 장엄한 유적은 아니었고 크기가 작아 야영을 할 수는 없었지만, 그럼에도 불구하고 볼 만한 가치가 있었습니다!\n\n저와 제 수행원들은 지루한 길을 하루 종일 여행하며 꽤 지루해하고 있었는데, 이 유적 덕분에 이야기거리가 생겼습니다. 다른 주제들 중에서도, 우리는 고대인들이 왜 이 유적을 세웠는지, 혹은 어떤 고대인들이 이곳에 살았는지, 그리고 전성기에는 어떤 모습이었을지에 대해 열렬히 추측했습니다." # 3390660945873393818
+  VIETmisc.7039.a: "나눌 만한 흥미로운 논의가 많았습니다." # 11891945210396545540
+  VIETmisc.7040.t: "$travel_event_prefix$ 선원들" # 9555626586693179148
+  VIETmisc.7040.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 한 선술집에서 우리는 소란스럽지만 그럭저럭 친절한 뱃사람들을 만났는데, 그들의 배는 근처 항구에 정박해 있었습니다. 배의 주인인 상인들은 자신들의 상품을 팔기 위해 이 도시에 와 있었고, 그들이 장사하는 동안 뱃사람들은 할 일이 없어 [sailor.Custom('RegionalAlcoholicDrink')]에 돈을 쓰는 수밖에 없었습니다.\n\n그들은 자신들의 모험과 고용주들이 무엇을 하는지에 대해 열렬하게 나와 대화를 나누었습니다.\"우리는 불과 일주일 전만 해도 [sailor.Custom('GetTribalTradegoods')]와 다른 물건들을 운송하고 있었는데, 바람이 우리를 완전히 버렸지 뭡니까\"라고 [sailor.GetFirstName]라는 이름의 한 뱃사람이 말했습니다.\"우리는 계속하기 전에 바람이 불기를 기다려야 했습니다. 이 상인들을 위해 계속 일하고 싶은지는 모르겠습니다. 그들은 거래를 잘하는 방법을 모르는 것 같아요. 그래서 이 물건들을 파는 데 어려움을 겪는 거겠죠\"" # 7448085385300376266
+  VIETmisc.7040.a: "그 물품들에 대해 더 자세히 말씀해 주시겠습니까?" # 7888449590955209608
+  VIETmisc.7040.b: "무역풍에 대해 설명해 주시겠습니까." # 8148672426163367576
+  VIETmisc.7040.c: "만약 제가 여러분들을 고용하여 저를 위해 일하게 한다면 어떻겠습니까?" # 859535446218301306
+  VIETmisc.7040.d: "행운을 비네. 나는 이제 자러 가야겠네." # 16055497829093562880
+  VIETmisc.7041.t: "$travel_event_prefix$ 사소한 [ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip] 성소" # 4046529274027579588
+  VIETmisc.7041.desc: "[ROOT.Char.GetCurrentLocation.GetName]에서 치유 능력이 있다고 알려진 작은 [ROOT.Char.GetFaith.GetReligion.GetAdjective] 성소에 대한 소문을 들었습니다. 이곳은 주요 순례지가 아니기에 이 지역 외부에 아는 사람은 많지 않습니다.\n\n하지만 이 성소는 꾸준히 지역 방문객들을 끌어모으고 있습니다. 이곳 사람들은 [ROOT.Char.GetFaith.HighGodName]께 이 성소에서 예배를 드리는 것이 병자들이 여러 질병에서 회복하는 데 도움이 되었다고 맹세합니다.\n\n저와 제 여행 동료들은 이 성소에 잠시 들러 [ROOT.Char.GetFaith.HighGodName]께 기도하고 봉헌물을 바치는 것이 가치가 있을지 논쟁 중입니다." # 4514771723936631457
+  VIETmisc.7041.a: "그곳에서 [ROOT.Char.GetFaith.HighGodName]께 기도하는 것도 나쁘지 않겠군." # 6982401248042460821
+  VIETmisc.7041.a.toast: "축복을 받으셨습니다!" # 9972989460045413111
+  VIETmisc.7041.b: "이런 유람을 즐길 시간이 없습니다." # 18251240626161016088
+  VIETmisc.7042.t: "$travel_event_prefix$ 거짓된 역사, 거짓된 유물" # 15161408573418096494
+  VIETmisc.7042.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 한 선술집에 들렀을 때, 저는 [innkeeper.GetFirstName]라는 친절한 주인을 만났고 그와 대화를 나누었습니다. [innkeeper.GetHerHim]은 저에게 순진한 [ROOT.Char.GetFaith.GetReligion.GetAdjective] 순례자들과 여행자들에게 가짜 유물을 파는 사기꾼 장사꾼들을 조심하라고 말했습니다. 그런 자들이 이 지역에 점점 흔해지고 있다고 합니다.\n\\\"[innkeeper.GetFirstNameNoTooltip]이 설명합니다. '쉽게 속는 자들에게서 큰 이익을 얻을 수 있지요. 그들은 이 장소의 #italic 진짜#! 역사에 대해 아는 것이 거의 없으니까요. 사람들은 신성한 [ROOT.Char.GetFaith.PriestNeuterPlural]이나 실존하지도 않은 다른 성스러운 인물들에 대한 얼마나 기발한 이야기를 믿는지 모릅니다! 그들이 제게 그런 이야기를 할 때마다 저는 그들을 바로잡아주며 그들의 흥분을 망쳐놓아야 하지만, 누군가는 해야 할 일이니까요.\"" # 5412614251790363192
+  VIETmisc.7042.a: "이곳의 '진짜' 역사에 대해 알려주시오!" # 13591144808925968521
+  VIETmisc.7042.b: "그 #italic 사기꾼들#은 무슨 종류의 거짓말을 지껄이는가?" # 13905809323369390655
+  VIETmisc.7043.t: "$travel_event_prefix$ 죽은 말" # 5418436107929636462
+  VIETmisc.7043.desc: "얼마나 큰 불행인가! 우리가 [ROOT.Char.GetCurrentLocation.GetName]의 길을 가던 중, [traveler.GetFirstNamePossessive]의 말이 다리 밑에서 쓰러지더니 죽고 말았습니다.\n\n우리 모두 말의 시체 주위에 모여 어떻게 해야 할지 고민하는 동안, [traveler.GetFirstNameNoTooltip]이\"저주받을 놈들\"이라고 낮게 읊조렸습니다. 며칠 전부터 이 말은 지친 기색을 보였지만, 이렇게 심각할 줄은 몰랐습니다. 이제야 알았군요.\n\n다행히 멀지 않은 곳에 마을이 있습니다. 그곳에서 [traveler.GetFirstNameNoTooltip]에게 새 말을 구해줄 수도 있고, 시간이 촉박하다면 짐을 나르는 나귀 중 하나를 [traveler.GetHerHim]에게 주고 짐을 재분배할 수도 있겠지요." # 12149086781272697730
+  VIETmisc.7043.a: "[traveler.GetFirstNameNoTooltip]을 위해 새 말을 사주십시오" # 4890726868495000199
+  VIETmisc.7043.b: "[traveler.GetSheHe|U]는 여분의 당나귀를 타고 갈 수 있습니다." # 14895395972795303832
+  VIETmisc.7044.t: "$travel_event_prefix$ 관광객의 실망" # 1017957794235314232
+  VIETmisc.7044.desc: "“실망이군요.” [traveler.GetFirstName]가 한숨을 쉬며 말합니다. “저는 이 유적에 대해 읽은 적이 있습니다. 그리고… 뭐, 여기 있긴 하네요.”\n\n우리는 고대의 요새였거나 꽤 큰 [ROOT.Char.GetFaith.HouseOfWorship]였을지도 모르는 거대한 유적 옆에 멈춰 밤을 지새우려 했습니다. 대단한 규모는 아니었지만, 무시할 만한 수준도 아니었습니다.\n\n“[traveler.GetFirstNameNoTooltip]가 주장합니다. “저는 이 유적에 대해 책에서 읽었습니다. 아주 오래전에 이곳에 장엄한 수도가 있었다고 하더군요. 그 유적은 수 마일에 걸쳐 뻗어 있었다고 합니다. 정말 감명 깊게 들렸는데 말이죠! 그런데… 이게 전부인가요? 요즘은 책에 나오는 모든 것을 믿을 수가 없군요….”" # 16674622807206494754
+  VIETmisc.7044.a: "적어도 이제 이 장소에 대한 진실은 알게 되었겠지." # 310219829036357602
+  VIETmisc.7044.b: "이 지역은 여전히 묘한 아름다움을 간직하고 있는 것 같소." # 16523711869560278549
+  VIETmisc.7044.c: "이 폐허 말인가? 겉으로 보는 것보다 더 많은 것이 담겨 있는 것 같군…." # 12226275649445824909
+  VIETmisc.7045.t: "$travel_event_prefix$ 노인 농부" # 10084268581906155007
+  VIETmisc.7045.desc: "우리는 [ROOT.Char.GetCurrentLocation.GetName]의 어느 한적한 시골길에 접어들었는데, 이곳에는 눈에 띄는 정착지가 없었다. 해가 지기 시작할 무렵, 우리는 나이 든 [elder.GetWomanMan]인 [elder.GetFirstName]가 소유한 농가에 도착했다.\n\n“[elder.GetSheHe]가 우리를 안으로 맞이한 후, [elder.GetFirstNameNoTooltip]가 말했다. “편히 머무르시고, 오늘 밤 묵어가세요. 마침 식사를 준비하고 있었어요. 원하는 만큼 드세요!”\n\n우리가 이야기를 나누는 동안, 나는 [elder.GetFirstNameNoTooltip]가 몇 년 전 성인 자녀들이 병으로 세상을 떠난 후 [elder.GetHerselfHimself] 홀로 이곳에 살고 있다는 것을 알게 되었다. 그럼에도 불구하고, [elder.GetFirstNameNoTooltip]는 긍정적인 태도를 유지하고 있었다.\n\n“[elder.GetSheHe]가 말한다. “그들은 좋은 삶을 살았고, 그것에 대해 [elder.GetFaith.HighGodName]께 감사드립니다.”" # 13732782044015211940
+  VIETmisc.7045.a: "현명한 원로의 훌륭한 환대이로다." # 6323805734007935754
+  VIETmisc.7045.b: "아마도 이 나약한 늙은 [elder.GetWomanMan]에게서 무언가를 훔칠 수 있을지도 모르겠군...." # 10255906251435578119
+  VIETmisc.7045.b.failure: "누군가 당신이 노인에게서 물건을 훔치는 것을 목격했습니다." # 13217068181427994810
+  VIETmisc.7045.b.success: "노인은 아무도 당신이 훔친 것에 신경 쓰지 않습니다" # 12220083796896115273
   VIETmisc.7046.t: "정말 수치스럽군!" # 18376687030013202586
-  VIETmisc.7046.desc: "얼마 전, 저는 [county.GetNameNoTier]를 여행하고 있었습니다. 그곳에서 저는 [elder.GetWomanMan]인 [elder.GetFirstNameNoTooltip]라는 노파의 집에서 묵었습니다.\n\n저는 [elder.GetHerHim]가 나이가 많고 속이기 쉬웠기에, 그분의 물건을 훔치지 않을 수 없었습니다... 적어도 저는 그렇게 생각했습니다.\n\n알고 보니, 시골에서 홀로 살고 있음에도 불구하고, [elder.GetFirstNameNoTooltip]는 수년 동안 근처 여러 정착지에서 존경받아 왔기에 [county.GetNameNoTierNoTooltip]에서 #italic 매우#! 잘 알려진 인물이었습니다. 제 생각에 그분의 물건을 훔친 것이 발각된 듯하며, 이제 [ROOT.Char.GetTitledFirstNameNoTooltip]가 얼마나 한심하게 탐욕스러워서 늙은 [elder.GetWomanMan]에게까지 손을 대야 했는지에 대한 소문이 퍼지고 있습니다!"
+  VIETmisc.7046.desc: "얼마 전, 저는 [county.GetNameNoTier]를 여행하고 있었습니다. 그곳에서 저는 [elder.GetWomanMan]인 [elder.GetFirstNameNoTooltip]라는 노파의 집에서 머물렀습니다.\n\n[elder.GetHerHim]이 나이가 많아 속이기 쉬웠기에, 저는 그분의 소지품을 훔치는 것을 참을 수 없었습니다... 라고 생각했죠.\n\n알고 보니, 시골에서 홀로 살고 있음에도 불구하고, [elder.GetFirstNameNoTooltip]는 수년 동안 주변 여러 정착지에서 존경받아 온 덕분에 [county.GetNameNoTierNoTooltip]에서 #italic 매우#! 잘 알려진 인물이었습니다. 제가 그분의 물건을 훔친 것이 발각되었고, 이제 [ROOT.Char.GetTitledFirstNameNoTooltip]가 늙은 [elder.GetWomanMan]에게서 물건을 훔쳐야 할 정도로 비참하게 탐욕스러웠다는 소문이 퍼지고 있습니다!" # 11694202828522783724
   VIETmisc.7046.a: "이런." # 18311732011150879925
-  VIETmisc.7047.t: "$travel_event_prefix$ 나무 판자 훔치기"
-  VIETmisc.7047.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 일부 도로는 나무 판자로 덮여 있습니다. 이는 일부 지역에서 흔히 볼 수 있는 것으로, 이동을 더 쉽게 하기 위함입니다. 그러나 특히 외딴 지역에서는 이 나무가 종종 도난의 대상이 된다는 것은 놀라운 일이 아닐 것입니다.\n\n마침 우리는 나무 판자를 훔치려던 불량배 무리와 마주쳤습니다. 그들은 우리가 접근하자마자 나무를 가지고 도망치려 했습니다."
-  VIETmisc.7047.a: "이것은 우리가 신경 쓸 문제가 아닙니다."
-  VIETmisc.7047.b: "놈들을 쫓아라!"
-  VIETmisc.7047.b.failure: "도둑들을 잡는 데 실패했습니다"
-  VIETmisc.7047.b.success: "도둑들을 잡았습니다"
-  VIETmisc.7047.info: "#emphasis 역사적 배경:#! 중세 시대에는 여행자의 이동을 돕기 위해 흙길을 나무 판자로 보강하는 경우가 있었습니다. 그러나 포장 도로의 돌과 마찬가지로 도난의 대상이 되는 경우가 많았습니다. 예를 들어 13세기 프랑스 법률 텍스트의 일부인 #italic Coutumes de Beauvaisis#!는 도로 규정에 대해 논의하고 도로에 사용된 돌이나 나무 판자를 불법적으로 훔쳐 도로가 예상보다 좁아지는 문제를 언급합니다."
-  VIETmisc.7048.t: "$travel_event_prefix$ 별자리 연구"
-  VIETmisc.7048.desc: "\"무엇을 하고 있소\" 나는 [traveler.GetTitledFirstName]에게 물었다.\n\n오늘 밤은 여행 때문에 평소의 생활 리듬이 깨져 잠들기가 어려웠다. 그래서 나는 모닥불가로 나왔다. [traveler.GetFirstNameNoTooltip] 역시 그 순간 야간 경계 근무가 아니었음에도 깨어 있었기에, 나는 [traveler.GetHerHim] 옆에 앉았다.\n\n깊은 생각에 잠긴 듯한 표정으로 [traveler.GetHerHis] 얼굴을 하고 있던 [traveler.GetFirstNameNoTooltip]은 밤하늘을 가리키며 미소 지었다.\"별들이오…. 가끔은 그저 바라보는 것이 좋소. 장엄하지 않소? 나는 매일 이런 경이로움을 볼 수 있게 해준 [traveler.GetFaith.NightGodName]께 감사하오. 당신도 몇몇 별자리는 알아보겠소\""
-  VIETmisc.7048.a: "저 별자리는 [ROOT.Char.Custom('RandomDivinity')]의 [ROOT.Char.Custom('GetAccessory')|U]인가?"
-  VIETmisc.7048.b: "아니, 됐어. 그냥 다시 자러 가야겠다."
-  VIETmisc.7049.t: "다시, 밤하늘 아래"
-  VIETmisc.7049.desc: "오늘 밤, 어찌 된 영문인지 잠이 오지 않았다. 나는 한숨을 쉬며 침실에서 나왔다.\n\n경비병들은 무슨 일이 생긴 줄 알고 깜짝 놀라 걱정했지만, 나는 손을 들어 모든 것이 괜찮다고 안심시켰다. 그들은 내가 밖에서 서성이자 조용히 물러났다.\n\n그때 밤하늘을 올려다보니 얼마 전 [traveler.GetTitledFirstName]와 함께 별을 보며 별자리를 공부했던 저녁이 떠올랐다. 나는 혼자 킥킥 웃으며 손가락을 들어 우리가 이야기했던 별자리 중 몇 개를 가리키려 했다."
-  VIETmisc.7049.a: "저기 [ROOT.Char.Custom('GetPubAdjective')|U] [ROOT.Char.Custom('GetRandomRegionalSmallGame')|U] 별자리가…."
-  VIETmisc.7050.t: "$travel_event_prefix$ 갑옷 입은 문어"
-  VIETmisc.7050.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 해안 지역을 페리를 타고 여행하던 중, 맑고 푸르스름한 물 아래에서 매우 흥미로운 광경을 목격했습니다. 모래 바닥을 기어 다니는 작은 문어 여러 마리가 깨진 코코넛 껍질을 들고 있었습니다. 이 문어들은 코코넛 껍질을 갑옷처럼 배열했는데, 그 모습이 매우 우스꽝스러웠습니다.\n\n뱃사공은 이 광경이 흔하지는 않지만, 이 지역에서는 드물지 않다고 믿고 있습니다. 왜냐하면 현지 [ROOT.Char.GetCurrentLocation.GetCulture.GetCollectiveNoun](이)가 일상 생활에서 코코넛을 광범위하게 사용하기 때문입니다."
-  VIETmisc.7050.a: "재미있으면서도 흥미로운 광경이로군."
-  VIETmisc.7050.b: "흠…. 군사적인 아이디어가 떠오르는군!"
-  VIETmisc.7050.info: "#emphasis 생물학적 배경:#! #italic Amphioctopus marginatus#!는 코코넛 문어 또는 정맥 문어라고도 하며, 서태평양에 서식하며 식용으로 어획되는 문어의 일종입니다. 이들은 머리 발달의 좋은 예시인데, 포식자나 다른 위험으로부터 자신을 보호하기 위해 조개껍데기를 이동식 갑옷으로 사용하는 경우가 많습니다. 인도네시아의 인간 거주 지역 근처에 사는 이 종의 구성원들은 조개껍데기 대신 버려진 코코넛 껍데기를 모아서 사용하는 것이 관찰되었는데, 이는 그들이 지역 환경에 적응하고 미래의 위협에 대비할 수 있는 능력이 있음을 나타냅니다."
-  VIETmisc.7051.t: "$travel_event_prefix$ 반딧불이"
-  VIETmisc.7051.desc: "해가 지고 있을 때, 우리는 [ROOT.Char.GetCurrentLocation.GetName]를 지나고 있었습니다. 야영할 곳을 찾던 중, 섬뜩한 광경과 마주쳤습니다. 죽은 [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] 나무들이 원을 그리고 있는 모습이었습니다. 이 원 안에는 비정상적으로 커다란 거미줄에 덮인 바위들과, 섬뜩하게도 사람의 해골 두어 개가 있었습니다.\n\n“[scared.GetFirstName]는 두려움에 목이 메인 [scared.GetHerHis] 목소리로 속삭였습니다. “이곳은 저주받았습니다. 떠나야 합니다.”\n\n“[brave.GetFirstName]가 반대했습니다. [brave.GetSheHe|U]는 죽은 나무들을 가리키며 말했습니다. “잠깐. #italic 반딧불#!을 봐요! 이건 행운의 징조입니다. 여기서 야영해야 해요.”\n\n이곳에 야영할지 말지 고민하며, 저는 반딧불을 바라봅니다. 밤하늘에 부드럽게 반짝이는 별들처럼, 반딧불이 땅과 죽은 나무들을 비추는 모습에 시선이 머물렀습니다. 제 마음속에 어떤 감정이 일렁이는 것을 느꼈습니다. 도저히 설명할 수 없는 감정이었습니다."
-  VIETmisc.7051.a: "조금 더 멀리 야영하자."
-  VIETmisc.7051.b: "오늘 밤 이곳에서 진을 치겠소."
-  VIETmisc.7051.b.toast: "다음날 아침...."
-  VIETmisc.7051.b.toast.desc: "깨어보니, 밤사이 반딧불이들이 죽어 있었습니다."
-  VIETmisc.7052.t: "$travel_event_prefix$ 오래 기다려온 도착"
-  VIETmisc.7052.desc: "여러 고난과 위험을 견뎌낸 힘겨운 여정이었지만, 마침내 오늘 오후, 시간에 맞춰 [ROOT.Char.GetCurrentLocation.GetName]에 위치한 커다란 항구 도시에 도착했습니다.\n\n성문을 지키던 경비병들이 우리를 통과시키자, 따스한 햇살이 우리를 부드럽게 감쌌고 신선하고 시원한 바닷바람이 지친 얼굴을 어루만졌습니다. 아마 지난 며칠간 겪었던 어려움 때문이었겠지요, 우리는 그렇게 안도했고 무척 행복했습니다.\n\n마을 한가운데에는 커다란 [ROOT.Char.GetCurrentLocation.Custom('GetRandomAppropriateTree')] 나무가 서 있었고, 말없이 나의 수행단과 나는 그 그늘 아래에서 쉬고 있던 현지 주민들과 합류했습니다."
-  VIETmisc.7052.a: "마침내 해냈으니 참으로 기쁘군."
-  VIETmisc.7052.b: "우리는 여기서 며칠 이상 쉬어야 합니다."
-  VIETmisc.7053.t: "$travel_event_prefix$ $VIETmisc.7054.t$"
-  VIETmisc.7053.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 길을 걷던 중, 나무 근처에서 회색 고양이 한 마리와 흰색 고양이 한 마리가 무언가 가지고 노는 것을 발견했습니다.\n궁금해서 우리는 가까이 다가갔습니다.\n\n복숭아였습니다. 근처 복숭아나무에서 땅에 떨어진 복숭아들을 가지고 놀고 있었습니다.\n\n“고양이들이 복숭아도 먹나?” 나는 혼자서 한가롭게 생각했습니다. “전에는 본 적이 없는 것 같은데.”"
-  VIETmisc.7053.a: "두 고양이가 사랑스러운 광경입니다!"
-  VIETmisc.7053.b: "고양이 몇 마리일 뿐이다. 모두 출발하자."
-  VIETmisc.7053.c: "[ROOT.Char.GetFaith.HighGodName]께서 주신 징조임에 틀림없다!"
-  VIETmisc.7054.t: "피치 캣츠" # 9423910059420330373
-  VIETmisc.7054.desc: "얼마 전 여행 중에, 근처 복숭아나무에서 떨어진 복숭아를 가지고 놀고 있던 고양이 두 마리를 보았습니다. 한 마리는 회색이었고, 다른 한 마리는 흰색이었죠.\n\n지난밤, 알 수 없는 이유로 저는 그 고양이들이 다시 복숭아를 가지고 노는 꿈을 꾸었습니다. 하지만 이번에는 무언가 달라 보였습니다.\n\n왠지 모르게, 저는 훨씬 더 편안하고 평화로워졌습니다."
-  VIETmisc.7054.a: "나는 잠에서 깨어나며 잔잔한 미소를 짓는다."
-  VIETmisc.7055.t: "$travel_event_prefix$ 간통과 계몽"
-  VIETmisc.7055.desc: "우리는 오래전에 세워져 지역의 명망 있는 가문의 시조를 기리는 [culture.GetName] 신당에 [ROOT.Char.GetCurrentLocation.GetName]에서 들렀습니다.\n\n전설에 따르면, 이 남자는 군인이었는데, 종종 군사 원정을 위해 집을 떠나 아내와 아들을 친구에게 맡기곤 했습니다. 하지만 그가 어느 날 돌아왔을 때, 아내와 친구가 간음하는 현장을 목격했습니다. 그는 칼을 뽑아 그들을 죽이려 했으나 마지막 순간에 멈췄습니다. 그는 황무지로 물러나 명망 높고 깨달음을 얻은 은둔자가 되었습니다.\n\n그 남자의 후손인, 현명한 성향의 [heir.GetWomanMan]인 [heir.GetFirstName]이 [heir.GetHerselfHimself]는 이 이야기를 들려준 후 껄껄 웃으며 말했습니다.\"요즘은 성스러운 삶을 사는 것에 신경 쓰는 사람은 거의 없지. 모두가 즉시 부처가 되기를 원해. 우리 조상의 사례는 즉각적인 부처가 되는 유일한 진정한 길은 칼을 내려놓는 것임을 가르쳐주지\""
-  VIETmisc.7055.a: "그것에 동의합니다. 실로 현명한 말씀이십니다."
-  VIETmisc.7055.b: "당신의 조상이 그들을 살려두지 말았어야 했는데."
-  VIETmisc.7055.c: "당신 스스로도 덕이 있어 보이는군요. 저를 위해 일해 보시겠습니까?"
-  VIETmisc.7055.info: "$VIETmisc.liaozhai_zhiyi.intro$ 이 이야기는 친구와 바람을 피우던 아내를 붙잡고 살해할 뻔했으나, 결국 그들을 용서하기로 한 한 군인에 대한 이야기입니다. 그는 이후 많은 이들의 존경을 받는 유명한 은둔자가 되었지만, 그 관심 자체를 즐기지는 않았습니다. 이 이야기는 당시 사람들이, 지금과 마찬가지로, 덕 있는 삶으로 나아가는 데 필요한 행동을 할 의지는 없으면서도 즉각적인 영적 성취와 업적을 갈망했던 세태를 풍자합니다."
-  VIETmisc.7056.t: "$travel_event_prefix$ 늑대들"
-  VIETmisc.7056.desc: "[ROOT.Char.GetCurrentLocation.GetName]의 장터 마을에는 맛있는 음식이 가득했습니다. 무엇을 먹을지 고민하던 중, 우리는 수다쟁이 도살자 [butcher.GetFirstName]을 만났는데, 그가 지난밤 겪었던 무시무시한 만남에 대해 이야기해주었습니다.\n\n집으로 돌아가는 길에 뼈 몇 개와 도살용 칼을 들고 가던 그는 자신을 죽여 잡아먹으려는 듯한 늑두 마리를 만났습니다. 그는 늑대들의 주의를 돌리기 위해 뼈를 던졌지만, 늑대들은 계속해서 그를 따라왔고, 그는 근처 밭에 있는 건초 더미 속에 숨었습니다.\n\n늑대들은 그가 나오기를 기다렸고, 마침내 한 놈은 지루해하며 떠나고 다른 놈은 잠이 들었습니다. 그는 잠든 늑대에게 덮쳐 칼로 그 늑대를 죽였습니다. 그러자 그는 다른 늑대가 멀리서 구덩이를 파는 것을 보았고, 잠든 늑대가 자신을 유인하여 다른 늑대가 뒤에서 공격하게 하려고 일부러 잔 척했다는 것을 깨달았습니다. 도살자는 그 후 두 번째 늑대도 죽이고 탈출했습니다."
-  VIETmisc.7056.a: "늑대들은 교활했지만, 당신은 그보다 더 교활하군요!"
-  VIETmisc.7056.b: "그들이 #italic 그토록#! 무섭게 들렸다고 생각하지 않소."
-  VIETmisc.7056.info: "$VIETmisc.liaozhai_zhiyi.intro$ 이 이야기는 도살자 한 명이 자신을 죽이려 하는 두 마리의 늑대를 제거하려는 여러 시도에 관한 것입니다. 이 이야기는 비교적 단순하고 어려운 상황에서도 사람의 결단력과 교활함에 대한 명확한 교훈을 담고 있어, 오늘날 중국 학교에서도 흔히 가르치고 있습니다."
-  VIETmisc.7057.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7057.desc: "xxxxx"
-  VIETmisc.7057.a: "xxxxx"
-  VIETmisc.7058.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7058.desc: "xxxxx"
-  VIETmisc.7058.a: "xxxxx"
-  VIETmisc.7059.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7059.desc: "xxxxx"
-  VIETmisc.7059.a: "xxxxx"
-  VIETmisc.7060.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7060.desc: "xxxxx"
-  VIETmisc.7060.a: "xxxxx"
-  VIETmisc.7061.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7061.desc: "xxxxx"
-  VIETmisc.7061.a: "xxxxx"
-  VIETmisc.7062.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7062.desc: "xxxxx"
-  VIETmisc.7062.a: "xxxxx"
-  VIETmisc.7063.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7063.desc: "xxxxx"
-  VIETmisc.7063.a: "xxxxx"
-  VIETmisc.7064.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7064.desc: "xxxxx"
-  VIETmisc.7064.a: "xxxxx"
-  VIETmisc.7065.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7065.desc: "xxxxx"
-  VIETmisc.7065.a: "xxxxx"
-  VIETmisc.7066.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7066.desc: "xxxxx"
-  VIETmisc.7066.a: "xxxxx"
-  VIETmisc.7067.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7067.desc: "xxxxx"
-  VIETmisc.7067.a: "xxxxx"
-  VIETmisc.7068.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7068.desc: "xxxxx"
-  VIETmisc.7068.a: "xxxxx"
-  VIETmisc.7069.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7069.desc: "xxxxx"
-  VIETmisc.7069.a: "xxxxx"
-  VIETmisc.7070.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7070.desc: "xxxxx"
-  VIETmisc.7070.a: "xxxxx"
-  VIETmisc.7071.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7071.desc: "xxxxx"
-  VIETmisc.7071.a: "xxxxx"
-  VIETmisc.7072.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7072.desc: "xxxxx"
-  VIETmisc.7072.a: "xxxxx"
-  VIETmisc.7073.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7073.desc: "xxxxx"
-  VIETmisc.7073.a: "xxxxx"
-  VIETmisc.7074.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7074.desc: "xxxxx"
-  VIETmisc.7074.a: "xxxxx"
-  VIETmisc.7075.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7075.desc: "xxxxx"
-  VIETmisc.7075.a: "xxxxx"
-  VIETmisc.7076.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7076.desc: "xxxxx"
-  VIETmisc.7076.a: "xxxxx"
-  VIETmisc.7077.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7077.desc: "xxxxx"
-  VIETmisc.7077.a: "xxxxx"
-  VIETmisc.7078.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7078.desc: "xxxxx"
-  VIETmisc.7078.a: "xxxxx"
-  VIETmisc.7079.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7079.desc: "xxxxx"
-  VIETmisc.7079.a: "xxxxx"
-  VIETmisc.7080.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7080.desc: "xxxxx"
-  VIETmisc.7080.a: "xxxxx"
-  VIETmisc.7081.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7081.desc: "xxxxx"
-  VIETmisc.7081.a: "xxxxx"
-  VIETmisc.7082.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7082.desc: "xxxxx"
-  VIETmisc.7082.a: "xxxxx"
-  VIETmisc.7083.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7083.desc: "xxxxx"
-  VIETmisc.7083.a: "xxxxx"
-  VIETmisc.7084.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7084.desc: "xxxxx"
-  VIETmisc.7084.a: "xxxxx"
-  VIETmisc.7085.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7085.desc: "xxxxx"
-  VIETmisc.7085.a: "xxxxx"
-  VIETmisc.7086.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7086.desc: "xxxxx"
-  VIETmisc.7086.a: "xxxxx"
-  VIETmisc.7087.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7087.desc: "xxxxx"
-  VIETmisc.7087.a: "xxxxx"
-  VIETmisc.7088.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7088.desc: "xxxxx"
-  VIETmisc.7088.a: "xxxxx"
-  VIETmisc.7089.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7089.desc: "xxxxx"
-  VIETmisc.7089.a: "xxxxx"
-  VIETmisc.7090.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7090.desc: "xxxxx"
-  VIETmisc.7090.a: "xxxxx"
-  VIETmisc.7091.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7091.desc: "xxxxx"
-  VIETmisc.7091.a: "xxxxx"
-  VIETmisc.7092.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7092.desc: "xxxxx"
-  VIETmisc.7092.a: "xxxxx"
-  VIETmisc.7093.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7093.desc: "xxxxx"
-  VIETmisc.7093.a: "xxxxx"
-  VIETmisc.7094.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7094.desc: "xxxxx"
-  VIETmisc.7094.a: "xxxxx"
-  VIETmisc.7095.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7095.desc: "xxxxx"
-  VIETmisc.7095.a: "xxxxx"
-  VIETmisc.7096.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7096.desc: "xxxxx"
-  VIETmisc.7096.a: "xxxxx"
-  VIETmisc.7097.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7097.desc: "xxxxx"
-  VIETmisc.7097.a: "xxxxx"
-  VIETmisc.7098.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7098.desc: "xxxxx"
-  VIETmisc.7098.a: "xxxxx"
-  VIETmisc.7099.t: "$travel_event_prefix$ xxxxx"
-  VIETmisc.7099.desc: "xxxxx"
-  VIETmisc.7099.a: "xxxxx"
+  VIETmisc.7047.t: "$travel_event_prefix$ 목재 판자 도난 사건" # 3505130881544205016
