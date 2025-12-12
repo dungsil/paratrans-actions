@@ -1,7 +1,14 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
-// TranslationRefusedError는 ai.ts에서 실제 클래스를 사용
-// 모킹된 모듈에서도 동일한 클래스를 export하여 테스트와 실제 코드가 같은 에러 타입 사용
+/**
+ * TranslationRefusedError 클래스 정의
+ * 
+ * 주의: 이 클래스는 scripts/utils/ai.ts의 TranslationRefusedError와 동일한 구현입니다.
+ * vi.mock()은 파일 상단에서 호이스팅되므로 dynamic import를 사용할 수 없어
+ * 불가피하게 클래스 정의를 복제합니다.
+ * 
+ * ai.ts의 TranslationRefusedError가 변경되면 이 정의도 함께 업데이트해야 합니다.
+ */
 class TranslationRefusedError extends Error {
   constructor(
     public readonly text: string,
@@ -395,19 +402,19 @@ describe('TranslationRefusedError 처리', () => {
 
     // TranslationRefusedError를 던지도록 모킹
     const testError = new TranslationRefusedError('test text', '프롬프트 차단됨: PROHIBITED_CONTENT')
-    vi.mocked(translateAI).mockRejectedValueOnce(testError)
+    vi.mocked(translateAI).mockRejectedValue(testError)
 
-    // translate 함수가 TranslationRefusedError를 재throw하는지 확인
-    await expect(translate('test text', 'ck3')).rejects.toThrow('번역 거부')
-    
     // 에러 타입과 속성 검증
     try {
       await translate('test text', 'ck3')
+      // 에러가 발생하지 않으면 테스트 실패
+      expect.fail('Expected translate to throw TranslationRefusedError')
     } catch (error) {
       expect(error).toBeInstanceOf(ImportedTranslationRefusedError)
       expect(error).toHaveProperty('name', 'TranslationRefusedError')
       expect(error).toHaveProperty('text', 'test text')
       expect(error).toHaveProperty('reason', '프롬프트 차단됨: PROHIBITED_CONTENT')
+      expect(String(error)).toContain('번역 거부')
     }
     
     expect(translateAI).toHaveBeenCalledWith('test text', 'ck3', undefined, false)
