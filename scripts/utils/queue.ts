@@ -53,18 +53,27 @@ async function processQueue (): Promise<void> {
       task.resolve()
     } catch (error) {
       task.reject(error)
-      // 남은 작업들도 모두 reject 처리
-      while (translationQueue.length > 0) {
-        const remainingTask = translationQueue.shift()
-        if (remainingTask) {
-          remainingTask.reject(new Error('큐 처리가 이전 에러로 인해 중단됨', { cause: error }))
+      // TranslationRefusedError는 해당 작업만 실패 처리하고 큐 처리 계속
+      // 다른 에러는 큐를 중단하고 남은 작업들도 reject 처리
+      // 에러 이름을 확인하여 TranslationRefusedError인지 판단 (instanceof는 모듈 리로드 시 실패할 수 있음)
+      const isTranslationRefused = error instanceof TranslationRefusedError || 
+        (error instanceof Error && error.name === 'TranslationRefusedError')
+      
+      if (!isTranslationRefused) {
+        // 남은 작업들도 모두 reject 처리
+        while (translationQueue.length > 0) {
+          const remainingTask = translationQueue.shift()
+          if (remainingTask) {
+            remainingTask.reject(new Error('큐 처리가 이전 에러로 인해 중단됨', { cause: error }))
+          }
         }
+        isProcessing = false
+        if (translationQueue.length > 0) {
+          void processQueue()
+        }
+        return
       }
-      isProcessing = false
-      if (translationQueue.length > 0) {
-        void processQueue()
-      }
-      return
+      // TranslationRefusedError의 경우 다음 작업으로 계속 진행
     }
   }
 
@@ -80,7 +89,11 @@ async function executeTaskWithRetry (task: QueueTask, retryCount = 0): Promise<v
     await task.queue()
   } catch (error) {
     // TranslationRefusedError는 재시도 없이 즉시 전파
-    if (error instanceof TranslationRefusedError) {
+    // 에러 이름을 확인하여 TranslationRefusedError인지 판단 (instanceof는 모듈 리로드 시 실패할 수 있음)
+    const isTranslationRefused = error instanceof TranslationRefusedError || 
+      (error instanceof Error && error.name === 'TranslationRefusedError')
+    
+    if (isTranslationRefused) {
       throw error
     }
 

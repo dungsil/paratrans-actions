@@ -58,28 +58,33 @@ describe('큐 동작', () => {
     expect(delayMock).toHaveBeenCalled()
   })
 
-  it('TranslationRefusedError 발생 시 남은 작업들도 모두 reject되어야 함', async () => {
+  it('TranslationRefusedError 발생 시 해당 작업만 reject되고 나머지는 계속 실행되어야 함', async () => {
     const { addQueue } = await import('./queue')
+    const executionOrder: string[] = []
     
     // 첫 번째 작업은 TranslationRefusedError를 발생시킴
     const firstPromise = addQueue('first', async () => {
+      executionOrder.push('first')
       throw new TranslationRefusedError('text', 'reason')
     })
     
-    // 두 번째와 세 번째 작업은 큐에 대기
+    // 두 번째와 세 번째 작업은 정상 실행
     const secondPromise = addQueue('second', async () => {
-      // 이 작업은 실행되지 않아야 함
+      executionOrder.push('second')
     })
     const thirdPromise = addQueue('third', async () => {
-      // 이 작업도 실행되지 않아야 함
+      executionOrder.push('third')
     })
 
     // 첫 번째는 TranslationRefusedError로 reject
     await expect(firstPromise).rejects.toBeInstanceOf(TranslationRefusedError)
     
-    // 나머지는 cascading error로 reject
-    await expect(secondPromise).rejects.toThrow('큐 처리가 이전 에러로 인해 중단됨')
-    await expect(thirdPromise).rejects.toThrow('큐 처리가 이전 에러로 인해 중단됨')
+    // 나머지는 정상적으로 resolve되어야 함
+    await expect(secondPromise).resolves.toBeUndefined()
+    await expect(thirdPromise).resolves.toBeUndefined()
+    
+    // 모든 작업이 실행되었는지 확인
+    expect(executionOrder).toEqual(['first', 'second', 'third'])
   })
 
   it('일반 오류가 MAX_RETRIES 초과 시 reject되어야 함', async () => {
@@ -115,5 +120,37 @@ describe('큐 동작', () => {
     expect(task).toHaveBeenCalledTimes(4)
     // 재시도 3회에 대한 delay 호출
     expect(delayMock).toHaveBeenCalledTimes(3)
+  })
+
+  it('일반 오류(MAX_RETRIES 초과)는 남은 작업들도 모두 reject되어야 함', async () => {
+    const { addQueue } = await import('./queue')
+    const executionOrder: string[] = []
+    
+    // 첫 번째 작업은 재시도를 초과하는 일반 오류 발생
+    const firstPromise = addQueue('first', async () => {
+      executionOrder.push('first-attempt')
+      throw new Error('재시도 초과 오류')
+    })
+    
+    // 두 번째와 세 번째 작업은 큐에 대기
+    const secondPromise = addQueue('second', async () => {
+      executionOrder.push('second')
+    })
+    const thirdPromise = addQueue('third', async () => {
+      executionOrder.push('third')
+    })
+
+    // 첫 번째는 일반 오류로 reject (재시도 6회 후)
+    await expect(firstPromise).rejects.toThrow('재시도 초과 오류')
+    
+    // 나머지는 cascading error로 reject (실행되지 않음)
+    await expect(secondPromise).rejects.toThrow('큐 처리가 이전 에러로 인해 중단됨')
+    await expect(thirdPromise).rejects.toThrow('큐 처리가 이전 에러로 인해 중단됨')
+    
+    // 첫 번째 작업만 6회 시도되고, 나머지는 실행되지 않음
+    const firstAttempts = executionOrder.filter(x => x === 'first-attempt').length
+    expect(firstAttempts).toBe(6) // 초기 1회 + 재시도 5회
+    expect(executionOrder).not.toContain('second')
+    expect(executionOrder).not.toContain('third')
   })
 })
