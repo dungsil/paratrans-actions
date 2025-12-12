@@ -1,4 +1,4 @@
-import { access, mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises'
+import { access, mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises'
 import { basename, dirname, join } from 'pathe'
 import { parseToml, parseYaml, stringifyYaml } from '../parser'
 import { hashing } from '../utils/hashing'
@@ -105,12 +105,21 @@ export async function processModTranslations ({ rootDir, mods, gameType, onlyHas
       }
 
       const sourceFiles = await readdir(sourceDir, { recursive: true })
+      const processedFiles: string[] = []
+      
       for (const file of sourceFiles) {
         // 언어파일 이름이 `_l_언어코드.yml` 형식이면 처리
         if (file.endsWith(`.yml`) && file.includes(`_l_${meta.upstream.language}`)) {
           processes.push(processLanguageFile(mod, sourceDir, targetDir, file, meta.upstream.language, gameType, onlyHash, startTime, timeoutMs))
+          // 처리된 파일 추적 (한국어 파일명으로 변환)
+          const targetParentDir = join(targetDir, dirname(file))
+          const targetFileName = '___' + basename(file).replace(`_l_${meta.upstream.language}.yml`, '_l_korean.yml')
+          processedFiles.push(join(targetParentDir, targetFileName))
         }
       }
+      
+      // 업스트림에서 삭제된 파일 정리 (한국어 번역 파일 삭제)
+      await cleanupOrphanedFiles(targetDir, processedFiles, mod, locPath)
     }
 
     // Promise.allSettled를 사용하여 모든 파일 처리가 완료될 때까지 대기
@@ -179,6 +188,47 @@ async function saveAndReturnResult(
   }
   
   return result
+}
+
+/**
+ * 업스트림에서 삭제된 파일에 해당하는 한국어 번역 파일을 삭제합니다.
+ * @param targetDir 한국어 번역 파일이 위치한 디렉토리
+ * @param processedFiles 현재 처리된 파일 경로 목록 (절대 경로)
+ * @param mod 모드 이름
+ * @param locPath 로케일 경로
+ */
+async function cleanupOrphanedFiles(targetDir: string, processedFiles: string[], mod: string, locPath: string): Promise<void> {
+  try {
+    // targetDir 디렉토리가 존재하는지 확인
+    await access(targetDir)
+  } catch (error) {
+    // 디렉토리가 없으면 정리할 파일도 없음
+    return
+  }
+
+  // targetDir의 모든 한국어 번역 파일 목록 가져오기
+  const targetFiles = await readdir(targetDir, { recursive: true })
+  const koreanFiles = targetFiles.filter(file => 
+    file.endsWith('_l_korean.yml') && file.includes('___')
+  )
+
+  // processedFiles를 Set으로 변환하여 빠른 검색
+  const processedSet = new Set(processedFiles)
+
+  // 업스트림에 없는 한국어 파일 삭제
+  for (const file of koreanFiles) {
+    const fullPath = join(targetDir, file)
+    
+    if (!processedSet.has(fullPath)) {
+      log.info(`[${mod}/${locPath}] 업스트림에서 삭제된 파일 정리: ${file}`)
+      try {
+        await rm(fullPath, { force: true })
+        log.debug(`[${mod}/${locPath}] 파일 삭제 완료: ${fullPath}`)
+      } catch (error) {
+        log.warn(`[${mod}/${locPath}] 파일 삭제 실패: ${fullPath} - ${error}`)
+      }
+    }
+  }
 }
 
 class TimeoutReachedError extends Error {
@@ -328,9 +378,24 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
   }
 
   // 최종 저장
-  const updatedContent = stringifyYaml(newYaml)
-  await writeFile(targetPath, updatedContent, 'utf-8')
-  log.debug(`[${mode}/${file}] 번역 완료 (번역 파일 위치: ${targetPath})`)
+  // 빈 파일 생성 방지: l_korean 객체가 비어있으면 파일을 쓰지 않음
+  const hasEntries = Object.keys(newYaml.l_korean).length > 0
+  
+  if (!hasEntries) {
+    log.warn(`[${mode}/${file}] 번역할 항목이 없습니다. 파일을 생성하지 않습니다.`)
+    // 기존 파일이 있다면 삭제 (업스트림에서 내용이 모두 삭제된 경우)
+    try {
+      await access(targetPath)
+      await rm(targetPath, { force: true })
+      log.info(`[${mode}/${file}] 빈 파일 삭제: ${targetPath}`)
+    } catch (error) {
+      // 파일이 없으면 무시
+    }
+  } else {
+    const updatedContent = stringifyYaml(newYaml)
+    await writeFile(targetPath, updatedContent, 'utf-8')
+    log.debug(`[${mode}/${file}] 번역 완료 (번역 파일 위치: ${targetPath})`)
+  }
   
   return untranslatedItems
 }
