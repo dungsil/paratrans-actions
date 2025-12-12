@@ -1,7 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
-// TranslationRefusedError 클래스 정의 (모킹을 위해)
-class MockTranslationRefusedError extends Error {
+// TranslationRefusedError는 ai.ts에서 실제 클래스를 사용
+// 모킹된 모듈에서도 동일한 클래스를 export하여 테스트와 실제 코드가 같은 에러 타입 사용
+class TranslationRefusedError extends Error {
   constructor(
     public readonly text: string,
     public readonly reason: string,
@@ -14,7 +15,7 @@ class MockTranslationRefusedError extends Error {
 // 의존성 모킹
 vi.mock('./ai', () => ({
   translateAI: vi.fn((text: string) => Promise.resolve(`[번역됨]${text}`)),
-  TranslationRefusedError: MockTranslationRefusedError,
+  TranslationRefusedError,
 }))
 
 vi.mock('./cache', () => ({
@@ -390,15 +391,25 @@ describe('TranslationRefusedError 처리', () => {
 
   it('TranslationRefusedError가 발생하면 상위로 전파해야 함', async () => {
     const { translate } = await import('./translate')
-    const { translateAI } = await import('./ai')
+    const { translateAI, TranslationRefusedError: ImportedTranslationRefusedError } = await import('./ai')
 
     // TranslationRefusedError를 던지도록 모킹
-    vi.mocked(translateAI).mockRejectedValueOnce(
-      new MockTranslationRefusedError('test text', '프롬프트 차단됨: PROHIBITED_CONTENT')
-    )
+    const testError = new TranslationRefusedError('test text', '프롬프트 차단됨: PROHIBITED_CONTENT')
+    vi.mocked(translateAI).mockRejectedValueOnce(testError)
 
     // translate 함수가 TranslationRefusedError를 재throw하는지 확인
     await expect(translate('test text', 'ck3')).rejects.toThrow('번역 거부')
+    
+    // 에러 타입과 속성 검증
+    try {
+      await translate('test text', 'ck3')
+    } catch (error) {
+      expect(error).toBeInstanceOf(ImportedTranslationRefusedError)
+      expect(error).toHaveProperty('name', 'TranslationRefusedError')
+      expect(error).toHaveProperty('text', 'test text')
+      expect(error).toHaveProperty('reason', '프롬프트 차단됨: PROHIBITED_CONTENT')
+    }
+    
     expect(translateAI).toHaveBeenCalledWith('test text', 'ck3', undefined, false)
   })
 
