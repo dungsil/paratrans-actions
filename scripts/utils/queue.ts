@@ -5,6 +5,15 @@ import { log } from './logger'
 type QueueTask = { key: string, queue: () => Promise<void>, resolve: () => void, reject: (reason?: any) => void }
 const translationQueue: QueueTask[] = []
 
+/**
+ * 에러가 TranslationRefusedError인지 확인합니다.
+ * instanceof 체크와 error.name 체크를 모두 사용하여 모듈 리로드 시에도 동작합니다.
+ */
+function isTranslationRefusedError(error: unknown): boolean {
+  return error instanceof TranslationRefusedError || 
+    (error instanceof Error && error.name === 'TranslationRefusedError')
+}
+
 // MAX_RETRIES = 5는 재시도 횟수 0~4를 의미 (총 5회 시도)
 const MAX_RETRIES = 5
 const RETRY_DELAYS = [1_000, 2_000, 8_000, 10_000, 60_000] // 밀리초 단위
@@ -55,11 +64,7 @@ async function processQueue (): Promise<void> {
       task.reject(error)
       // TranslationRefusedError는 해당 작업만 실패 처리하고 큐 처리 계속
       // 다른 에러는 큐를 중단하고 남은 작업들도 reject 처리
-      // 에러 이름을 확인하여 TranslationRefusedError인지 판단 (instanceof는 모듈 리로드 시 실패할 수 있음)
-      const isTranslationRefused = error instanceof TranslationRefusedError || 
-        (error instanceof Error && error.name === 'TranslationRefusedError')
-      
-      if (!isTranslationRefused) {
+      if (!isTranslationRefusedError(error)) {
         // 남은 작업들도 모두 reject 처리
         while (translationQueue.length > 0) {
           const remainingTask = translationQueue.shift()
@@ -68,9 +73,6 @@ async function processQueue (): Promise<void> {
           }
         }
         isProcessing = false
-        if (translationQueue.length > 0) {
-          void processQueue()
-        }
         return
       }
       // TranslationRefusedError의 경우 다음 작업으로 계속 진행
@@ -89,11 +91,7 @@ async function executeTaskWithRetry (task: QueueTask, retryCount = 0): Promise<v
     await task.queue()
   } catch (error) {
     // TranslationRefusedError는 재시도 없이 즉시 전파
-    // 에러 이름을 확인하여 TranslationRefusedError인지 판단 (instanceof는 모듈 리로드 시 실패할 수 있음)
-    const isTranslationRefused = error instanceof TranslationRefusedError || 
-      (error instanceof Error && error.name === 'TranslationRefusedError')
-    
-    if (isTranslationRefused) {
+    if (isTranslationRefusedError(error)) {
       throw error
     }
 
