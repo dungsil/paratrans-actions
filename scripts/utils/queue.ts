@@ -7,7 +7,11 @@ const translationQueue: QueueTask[] = []
 
 /**
  * 에러가 TranslationRefusedError인지 확인합니다.
- * instanceof 체크와 error.name 체크를 모두 사용하여 모듈 리로드 시에도 동작합니다.
+ * 
+ * 두 가지 체크를 모두 수행하는 이유:
+ * 1. instanceof 체크: 정상적인 실행 환경에서 동작
+ * 2. error.name 체크: 테스트 환경에서 vi.resetModules() 사용 시,
+ *    동적 임포트로 인해 클래스 인스턴스가 달라져서 instanceof가 실패함
  */
 function isTranslationRefusedError(error: unknown): boolean {
   return (
