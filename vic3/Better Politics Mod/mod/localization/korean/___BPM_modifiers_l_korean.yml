@@ -20,6 +20,7 @@
   bpm_from_anti_serfdom_anarchists: "농본주의 무정부주의자들은 농노제를 증오합니다" # 3006376711946867137
   bpm_from_radical_peasants: "농촌 산림단체의 진보적 지도자" # 6646333267441269267
   bpm_still_united: "사회주의자들은 여전히 단결해 있다" # 449464221430881651
+  bpm_from_july_monarchy: "7월 왕정" # 9718072732024721972
   bpm_second_party_system: "제2당 체제" # 15072468972038474482
   bpm_third_party_system: "제삼자 체제" # 7167536920371273890
   bpm_from_conservative_ideologies: "보수주의 이념으로부터" # 10540851221696468880
@@ -72,6 +73,8 @@
   bpm_from_trade_unions: "노동조합은 사회주의를 좋아한다" # 11746973878946545075
   bpm_from_illegal_trade_unions: "불법 무역 조합으로부터" # 5940804216529144690
   bpm_from_bonapartism: "보나파르트주의로부터" # 440836785093831920
+  bpm_from_bourbon: "부르봉 왕가로부터" # 12057525831283746657
+  bpm_from_monarchist: "군주제로부터" # 16531580576214195102
   bpm_from_american_devout: "미국 복음주의로부터" # 11992270570050990856
   bpm_anarchist_soft_anti_party: "무정부주의자들은 정당을 다소 싫어합니다" # 2938919330711101556
   bpm_landowner_wary: "노예제 폐지론에 대한 경계" # 17217807451807892191
@@ -200,6 +203,7 @@
   bpm_flooded_province: "대홍수" # 15361403831633888070
   bpm_bad_examinees: "제국 과거 응시자들의 저조한 성적" # 10785680990653555297
   bpm_good_examinees: "황실 과거시험의 비범한 선발대" # 18100847192380194490
+  bpm_ig_all_alone: "홀로 남겨지다" # 8124852117989709335
   bpm_east_asia_dynamics_opium_wars_stability: "아편 전쟁의 파문" # 15144204523209279547
   bpm_east_asia_dynamics_opium_wars_stand_with_qing: "동아시아 연대 강화" # 9892096141462865622
   bpm_east_asia_dynamics_opium_wars_reform: "초기 서구화 노력" # 13476562708247289881

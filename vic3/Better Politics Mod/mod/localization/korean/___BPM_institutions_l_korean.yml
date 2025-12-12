@@ -5,7 +5,6 @@
   country_institution_suffrage_max_investment_add_desc: "$institution_suffrage$ [Concept('concept_institution', 'Institution')]의 최대 투자 수준에 대한 보너스 또는 페널티" # 13376728284035230103
   country_institution_culture_max_investment_add: "최대 $institution_culture$ [Concept('concept_institution', 'Institution')] 투자" # 15293080839221725369
   country_institution_culture_max_investment_add_desc: "$institution_culture$ [Concept('concept_institution', 'Institution')]의 최대 투자 수준에 대한 보너스 또는 페널티" # 6087961599545766944
-  institution_suffrage: "참정권" # 4970530540101406097
   country_institution_diplomacy_max_investment_add: "최대 $institution_diplomacy$ [Concept('concept_institution', 'Institution')] 투자" # 245148036702858183
   country_institution_diplomacy_max_investment_add_desc: "$institution_diplomacy$ [Concept('concept_institution', '기관')]의 최대 투자 수준에 대한 보너스 또는 페널티" # 4031037619740944137
   institution_colonial_affairs_base: "식민지 사무" # 4559788964927105524
@@ -23,6 +22,7 @@
   institution_health_system_base: "의료 체계" # 2259459658724742869
   institution_health_system_usa_charity: "주립 병원 위원회" # 1986336803052180020
   institution_health_system_usa_professional: "보건부" # 13529540821163165878
+  institution_suffrage: "참정권" # 4970530540101406097
   institution_suffrage_base: "참정권" # 4970530540101406097
   institution_suffrage_usa: "주 의회 참정권 위원회" # 2743727754536601020
   institution_suffrage_desc: "현실에서 우리 선거의 공정성." # 433728629016386619

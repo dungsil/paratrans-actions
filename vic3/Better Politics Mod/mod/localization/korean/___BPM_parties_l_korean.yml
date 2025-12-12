@@ -153,16 +153,18 @@
   party_fra_order: "질서당" # 1841784538103628430
   party_fra_national_union: "국민 연합" # 18403918183498423304
   party_fra_bonapartist: "보나파르트당" # 16252949614215833084
-  party_fra_republican_union: "공화련" # 17523933461908686929
+  party_fra_liberal_republican_union: "자유 공화 연합" # 1805358776943539595
+  party_fra_republican_federation: "공화국 연방" # 13879547150723432985
   party_agrarian_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('fra_agrarian_party_name')]" # 18297210555190896056
   party_peasants: "농민 조합" # 492666689357716474
   party_independent_rad: "독립 급진파" # 15164175698785420033
   party_papf: "파프" # 2745813468319482899
   party_radical_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('fra_radical_party_name')]" # 166722013022995517
   party_fra_radical_republican_party: "공화당" # 1695249673546052919
+  party_fra_republican_union: "공화련" # 17523933461908686929
   party_fra_radical_party: "급진 사회주의자들" # 9865151693580885597
-  party_socdem_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('fra_socdem_party_name')]" # 13190239577465520289
-  party_revsoc_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('fra_revsoc_party_name')]" # 9049043960554421322
+  party_socdem_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('FRA_socdem_party_name')]" # 13696023493001709246
+  party_revsoc_fra: "[SCOPE.GetRootScope.GetCountry.GetCustom('FRA_revsoc_party_name')]" # 4622824134082130956
   party_le_mountain: "라 몽타뉴" # 1359565963544169555
   party_blanquist: "중앙 혁명 위원회" # 17147048379372569738
   party_ftsf: "FTSF" # 12611430928840824887
@@ -227,6 +229,9 @@
   party_por_fmp: "포르투갈 극단주의 연방" # 16821633356992957721
   party_pcp: "포르투갈 공산당" # 13139495203230821115
   party_anarchist_por: "FMP (무정부주의자)" # 9020602873298594027
+  party_cro_peoples: "인민당" # 15228391349040625226
+  party_cro_rights: "권리당" # 12939889261228031870
+  party_cro_peasants: "농민당" # 11146381612757415489
   party_liberal_tur: "[SCOPE.GetRootScope.GetCountry.GetCustom('tur_liberal_party_name')]" # 12481393845787749707
   party_tur_freedom_and_accord: "자유와 조화당" # 12128741899748180438
   party_tur_progressive_republican: "진보 공화당" # 18241028228151484976
@@ -262,7 +267,8 @@
   party_rus_sr: "사회혁명당" # 11600863829317938990
   party_rus_peasants: "노동 농민 연합" # 4005179712878490826
   party_conservative_ast: "[SCOPE.GetRootScope.GetCountry.GetCustom('ast_conservative_party_name')]" # 3056292269099629949
-  party_protectionist: "국민당" # 17428428496366749239
+  party_protectionist: "보호주의 정당" # 13540932856098159472
+  party_national_ast: "국민당" # 17428428496366749239
   party_liberal_ast: "[SCOPE.GetRootScope.GetCountry.GetCustom('ast_liberal_party_name')]" # 400747376220263564
   party_bpm_free_trade: "자유무역당" # 10750574050724127448
   party_radical_ast: "[SCOPE.GetRootScope.GetCountry.GetCustom('ast_radical_party_name')]" # 8301118905018778697

@@ -8,3 +8,5 @@
   join_existing_party: "[concept_party]에 가입해야 합니다." # 10768194145562432431
   usfp_bourbon_democrats: "버번 민주당원" # 14062873681622602343
   from_progressive_leader: "진보적인 지도자" # 16578144738238065372
+  powerful_abolitionist: "[concept_powerful] [GetIdeology('ideology_abolitionist').GetName] [concept_leader]" # 6770767241321702038
+  harlem_renaissance_movement_attraction: "[GetCulture('afro_american').GetName] 르네상스" # 18381872988967336411

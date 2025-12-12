@@ -14,4 +14,4 @@
   je_bpm_constitutional_restrictions: "법적 규제" # 1647016363344169341
   je_bpm_constitutional_restrictions_desc: "[GetPlayer.GetRuler.GetPrimaryRoleTitle]이 너무 많은 권력을 가지고 있습니다." # 7528051479062560021
   je_bpm_constitutional_restrictions_reason: "우리 국가의 대다수 이익 집단은 [Country.GetRuler.GetPrimaryRoleTitle]가 너무 많은 권력을 가지고 있다는 데 동의하고 있습니다. 그들은 [Country.GetRuler.GetPrimaryRoleTitle]의 권한을 제한하는 법률 조치에 기꺼이 동의할 것입니다. 하지만 [Country.GetRuler.GetPrimaryRoleTitle]는 권력을 쉽게 포기할 의사가 없습니다.\n\n만약 우리가 [Country.GetRuler.GetPrimaryRoleTitle]를 설득하여 권한을 일부 포기하게 만들 수 있다면, 우리의 의제를 더 쉽게 실행할 수 있을 것입니다. [Country.GetRuler.GetPrimaryRoleTitle]는 위협적인 혁명이 발생하거나 [Country.GetRuler.GetHerHim]에 대항하는 강력한 움직임이 있을 때 설득될 수 있습니다." # 17430689473747766603
-  bpm_the_eternal_ruler_mod: "영원한 [GetPlayer.GetRuler.GetPrimaryRoleTitle]" # 13540793702727418004
+  bpm_the_eternal_ruler_mod: "영원한 통치자" # 7413257050362457127
