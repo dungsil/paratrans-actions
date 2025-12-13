@@ -1,24 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-
-/**
- * TranslationRefusedError 클래스 정의
- * 
- * 주의: 이 클래스는 scripts/utils/ai.ts의 TranslationRefusedError와 동일한 구현입니다.
- * vi.mock()은 파일 상단에서 호이스팅되므로 dynamic import를 사용할 수 없어
- * 불가피하게 클래스 정의를 복제합니다.
- * 
- * ai.ts의 TranslationRefusedError가 변경되면 이 정의도 함께 업데이트해야 합니다.
- */
-class TranslationRefusedError extends Error {
-  constructor(
-    public readonly text: string,
-    public readonly reason: string,
-  ) {
-    super(`번역 거부: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}" (사유: ${reason})`)
-    this.name = 'TranslationRefusedError'
-  }
-}
-
+import { TranslationRefusedError } from './ai'
 // 의존성 모킹
 vi.mock('./ai', () => ({
   translateAI: vi.fn((text: string) => Promise.resolve(`[번역됨]${text}`)),
