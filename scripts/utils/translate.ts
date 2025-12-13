@@ -216,7 +216,18 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
   }
 
   // 실제 AI 번역 요청
-  const translatedText = sanitizeTranslationText(await translateAI(text, gameType, retranslationContext, useTransliteration))
+  let translatedText: string
+  try {
+    translatedText = sanitizeTranslationText(await translateAI(text, gameType, retranslationContext, useTransliteration))
+  } catch (error) {
+    // TranslationRefusedError는 재throw하여 상위 호출자가 처리하도록 함
+    if (error instanceof TranslationRefusedError) {
+      throw error
+    }
+    // 기타 오류도 재throw
+    throw error
+  }
+
   log.debug(`AI 번역 결과: ${normalizedText} -> ${translatedText}${useTransliteration ? ' (음역 모드)' : ''}`)
 
   // 잘못된 결과 재 번역 시도

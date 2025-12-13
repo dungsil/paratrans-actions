@@ -1,8 +1,28 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
+/**
+ * TranslationRefusedError 클래스 정의
+ * 
+ * 주의: 이 클래스는 scripts/utils/ai.ts의 TranslationRefusedError와 동일한 구현입니다.
+ * vi.mock()은 파일 상단에서 호이스팅되므로 dynamic import를 사용할 수 없어
+ * 불가피하게 클래스 정의를 복제합니다.
+ * 
+ * ai.ts의 TranslationRefusedError가 변경되면 이 정의도 함께 업데이트해야 합니다.
+ */
+class TranslationRefusedError extends Error {
+  constructor(
+    public readonly text: string,
+    public readonly reason: string,
+  ) {
+    super(`번역 거부: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}" (사유: ${reason})`)
+    this.name = 'TranslationRefusedError'
+  }
+}
+
 // 의존성 모킹
 vi.mock('./ai', () => ({
   translateAI: vi.fn((text: string) => Promise.resolve(`[번역됨]${text}`)),
+  TranslationRefusedError,
 }))
 
 vi.mock('./cache', () => ({
@@ -368,5 +388,48 @@ describe('음역 모드 (useTransliteration=true)', () => {
     // 캐시 조회 시 transliteration prefix가 포함된 키로 조회되는지 확인
     // (hasCache가 호출될 때 prefix가 포함된 키로 호출됨)
     expect(hasCache).toHaveBeenCalledWith('transliteration:Anglo-Saxon', 'ck3')
+  })
+})
+
+describe('TranslationRefusedError 처리', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('TranslationRefusedError가 발생하면 상위로 전파해야 함', async () => {
+    const { translate } = await import('./translate')
+    const { translateAI } = await import('./ai')
+
+    // TranslationRefusedError를 던지도록 모킹 (Once 사용: 다른 테스트에 영향 없도록)
+    const testError = new TranslationRefusedError('test text', '프롬프트 차단됨: PROHIBITED_CONTENT')
+    vi.mocked(translateAI).mockRejectedValueOnce(testError)
+
+    // 에러 타입과 속성 검증: 한 번만 호출하여 에러를 받아 여러 속성 검증
+    let caughtError: any
+    try {
+      await translate('test text', 'ck3')
+      expect.fail('Expected translate to throw TranslationRefusedError')
+    } catch (err) {
+      caughtError = err
+    }
+    
+    expect(caughtError).toBeInstanceOf(TranslationRefusedError)
+    expect(caughtError).toHaveProperty('text', 'test text')
+    expect(caughtError).toHaveProperty('reason', '프롬프트 차단됨: PROHIBITED_CONTENT')
+    expect(caughtError.message).toContain('번역 거부')
+    
+    expect(translateAI).toHaveBeenCalledWith('test text', 'ck3', undefined, false)
+  })
+
+  it('일반 오류가 발생하면 상위로 전파해야 함', async () => {
+    const { translate } = await import('./translate')
+    const { translateAI } = await import('./ai')
+
+    // 일반 오류를 던지도록 모킹
+    const genericError = new Error('네트워크 오류')
+    vi.mocked(translateAI).mockRejectedValueOnce(genericError)
+
+    // translate 함수가 일반 오류도 재throw하는지 확인
+    await expect(translate('another text', 'ck3')).rejects.toThrow('네트워크 오류')
   })
 })
