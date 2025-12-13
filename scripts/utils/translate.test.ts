@@ -389,39 +389,6 @@ describe('음역 모드 (useTransliteration=true)', () => {
     // (hasCache가 호출될 때 prefix가 포함된 키로 호출됨)
     expect(hasCache).toHaveBeenCalledWith('transliteration:Anglo-Saxon', 'ck3')
   })
-
-  it('파일 해시가 제공되면 캐시 키에 해시가 포함되어야 함', async () => {
-    const { translate } = await import('./translate')
-    const { hasCache } = await import('./cache')
-
-    // 파일 해시와 함께 번역 요청
-    await translate('Hello World', 'ck3', 0, undefined, false, '1234567890')
-
-    // 캐시 조회 시 파일 해시가 포함된 키로 조회되는지 확인
-    expect(hasCache).toHaveBeenCalledWith('1234567890:Hello World', 'ck3')
-  })
-
-  it('음역 모드와 파일 해시가 함께 제공되면 둘 다 캐시 키에 포함되어야 함', async () => {
-    const { translate } = await import('./translate')
-    const { hasCache } = await import('./cache')
-
-    // 음역 모드와 파일 해시를 함께 전달
-    await translate('Anglo-Saxon', 'ck3', 0, undefined, true, 'abcdef1234')
-
-    // 캐시 조회 시 transliteration prefix와 파일 해시가 모두 포함된 키로 조회되는지 확인
-    expect(hasCache).toHaveBeenCalledWith('transliteration:abcdef1234:Anglo-Saxon', 'ck3')
-  })
-
-  it('파일 해시가 없으면 하위 호환성을 위해 기존 캐시 키 형식을 사용해야 함', async () => {
-    const { translate } = await import('./translate')
-    const { hasCache } = await import('./cache')
-
-    // 파일 해시 없이 번역 요청
-    await translate('Hello World', 'ck3', 0, undefined, false)
-
-    // 캐시 조회 시 기존 형식의 키로 조회되는지 확인 (하위 호환성)
-    expect(hasCache).toHaveBeenCalledWith('Hello World', 'ck3')
-  })
 })
 
 describe('TranslationRefusedError 처리', () => {

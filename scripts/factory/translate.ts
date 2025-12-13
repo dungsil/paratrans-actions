@@ -371,7 +371,7 @@ async function processLanguageFile (mode: string, sourceDir: string, targetBaseD
     let hashForEntry: string | null = sourceHash
 
     try {
-      translatedValue = await translate(sourceValue, gameType, 0, undefined, shouldTransliterate, sourceHash)
+      translatedValue = await translate(sourceValue, gameType, 0, undefined, shouldTransliterate)
     } catch (error) {
       if (error instanceof TranslationRetryExceededError) {
         log.warn(`[${mode}/${file}:${key}] 번역 재시도 초과, 원문을 유지합니다.`)

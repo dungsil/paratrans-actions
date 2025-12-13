@@ -140,7 +140,7 @@ function sanitizeTranslationText (text: string): string {
   return text.replace(addSpaceAfterClosingVariable, '$1 ')
 }
 
-export async function translate (text: string, gameType: GameType = 'ck3', retry: number = 0, retranslationContext?: RetranslationContext, useTransliteration: boolean = false, fileHash?: string): Promise<string> {
+export async function translate (text: string, gameType: GameType = 'ck3', retry: number = 0, retranslationContext?: RetranslationContext, useTransliteration: boolean = false): Promise<string> {
 
   if (retry > 5) {
     log.debug(`번역 재시도 횟수 초과: "${text}" (사유: ${retranslationContext?.failureReason || '알 수 없음'})`)
@@ -188,13 +188,10 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
   // 캐시에 이미 번역된 텍스트가 있는 경우 캐시에서 반환
   // 음역 모드가 활성화된 경우 캐시 키에 음역 prefix 추가하여 별도로 관리
   // 캐시 키 구조 (모든 게임 통일, 실제 캐시 키는 cache.ts의 getCacheKey()에서 gameType: prefix가 추가됨):
-  // - 번역 (파일 해시 없음): "gameType:text" (예: "ck3:Hello World") - 하위 호환성
-  // - 번역 (파일 해시 있음): "gameType:hash:text" (예: "ck3:1234567890:Hello World")
-  // - 음역 (파일 해시 없음): "gameType:transliteration:text" (예: "ck3:transliteration:Afar") - 하위 호환성
-  // - 음역 (파일 해시 있음): "gameType:transliteration:hash:text" (예: "ck3:transliteration:1234567890:Afar")
+  // - 번역: "gameType:text" (예: "ck3:Hello World")
+  // - 음역: "gameType:transliteration:text" (예: "ck3:transliteration:Afar")
   const transliterationPrefix = useTransliteration ? 'transliteration:' : ''
-  const hashPrefix = fileHash ? `${fileHash}:` : ''
-  const cacheKey = `${transliterationPrefix}${hashPrefix}${normalizedText}`
+  const cacheKey = `${transliterationPrefix}${normalizedText}`
   
   if (await hasCache(cacheKey, gameType)) {
     const cached = await getCache(cacheKey, gameType)
@@ -240,7 +237,7 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
       previousTranslation: translatedText,
       failureReason: 'It appears that a meta-response was returned without performing the translation.'
     }
-    return await translate(text, gameType, retry + 1, newContext, useTransliteration, fileHash)
+    return await translate(text, gameType, retry + 1, newContext, useTransliteration)
   }
 
   // 번역 유효성 검증 (translation-validator.ts의 통합 로직 사용)
@@ -252,7 +249,7 @@ export async function translate (text: string, gameType: GameType = 'ck3', retry
       previousTranslation: translatedText,
       failureReason: validation.reason || 'Validation failed - The translation failed validation. Please ensure you follow all guidelines in the system instruction, especially regarding variable preservation, technical identifiers, and formatting rules.'
     }
-    return await translate(text, gameType, retry + 1, newContext, useTransliteration, fileHash)
+    return await translate(text, gameType, retry + 1, newContext, useTransliteration)
   }
 
   await setCache(cacheKey, translatedText, gameType)
