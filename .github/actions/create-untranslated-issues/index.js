@@ -1,21 +1,21 @@
+const core = require('@actions/core');
+const github = require('@actions/github');
 const fs = require('fs');
 const path = require('path');
-const { Octokit } = require('@octokit/rest');
 
 async function run() {
   try {
+    // 복합 액션에서는 INPUT_ 환경 변수를 직접 읽어야 함
     const game = process.env.INPUT_GAME;
     const token = process.env.INPUT_GITHUB_TOKEN;
-    const repository = process.env.GITHUB_REPOSITORY;
 
     if (!game) {
-      throw new Error('game input is required');
+      core.setFailed('game input is required');
+      return;
     }
     if (!token) {
-      throw new Error('github-token input is required');
-    }
-    if (!repository || !repository.includes('/')) {
-      throw new Error('GITHUB_REPOSITORY environment variable is required and must be in owner/repo format');
+      core.setFailed('github-token input is required');
+      return;
     }
 
     // game 이름을 대문자로 변환 (이슈 제목용)
@@ -23,15 +23,13 @@ async function run() {
                             game === 'vic3' ? 'VIC3' : 
                             game === 'stellaris' ? 'Stellaris' : game;
 
-    const octokit = new Octokit({ auth: token });
-    
-    // GitHub Actions 환경 변수에서 repo 정보 가져오기
-    const [owner, repo] = repository.split('/');
+    const octokit = github.getOctokit(token);
+    const { context } = github;
 
     const filePath = path.join(process.cwd(), `${game}-untranslated-items.json`);
 
     if (!fs.existsSync(filePath)) {
-      console.log('번역되지 않은 항목이 없습니다.');
+      core.info('번역되지 않은 항목이 없습니다.');
       return;
     }
 
@@ -39,18 +37,19 @@ async function run() {
     try {
       data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     } catch (error) {
-      throw new Error(`Failed to parse ${filePath}: ${error.message}. The file may contain invalid JSON.`);
+      core.setFailed(`Failed to parse ${filePath}: ${error.message}. The file may contain invalid JSON.`);
+      return;
     }
 
     if (!data.items || data.items.length === 0) {
-      console.log('번역되지 않은 항목이 없습니다.');
+      core.info('번역되지 않은 항목이 없습니다.');
       return;
     }
 
     // 기존 이슈 검색 (동일한 제목의 열린 이슈가 있는지 확인)
     const existingIssues = await octokit.rest.issues.listForRepo({
-      owner,
-      repo,
+      owner: context.repo.owner,
+      repo: context.repo.repo,
       state: 'open',
       labels: `translation-refused,${game}`
     });
@@ -58,6 +57,17 @@ async function run() {
     // 모드별로 항목 그룹화 (prototype pollution 방지)
     const itemsByMod = Object.create(null);
     for (const item of data.items) {
+      // 필수 속성 검증
+      if (
+        !item ||
+        typeof item.mod !== 'string' ||
+        typeof item.file !== 'string' ||
+        typeof item.key !== 'string' ||
+        typeof item.message !== 'string'
+      ) {
+        core.warning(`Skipping item with missing required properties: ${JSON.stringify(item)}`);
+        continue;
+      }
       if (!itemsByMod[item.mod]) {
         itemsByMod[item.mod] = [];
       }
@@ -84,7 +94,7 @@ async function run() {
         const newItems = items.filter(item => !existingKeys.has(item.key));
 
         if (newItems.length === 0) {
-          console.log(`기존 이슈 #${existingIssue.number}에 새로운 항목이 없습니다.`);
+          core.info(`기존 이슈 #${existingIssue.number}에 새로운 항목이 없습니다.`);
           continue;
         }
 
@@ -103,7 +113,7 @@ async function run() {
         }
 
         if (tableStartLine === -1) {
-          console.log('테이블을 찾을 수 없습니다');
+          core.warning('테이블을 찾을 수 없습니다');
           continue;
         }
 
@@ -157,12 +167,12 @@ async function run() {
 
         // 이슈 본문 업데이트
         await octokit.rest.issues.update({
-          owner,
-          repo,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
           issue_number: existingIssue.number,
           body: updatedBody
         });
-        console.log(`기존 이슈 #${existingIssue.number}의 본문을 업데이트했습니다. (새 항목 ${newItems.length}개 추가)`);
+        core.info(`기존 이슈 #${existingIssue.number}의 본문을 업데이트했습니다. (새 항목 ${newItems.length}개 추가)`);
       } else {
         // 새 이슈 생성
         let body = `## 번역 거부 항목\n\n`;
@@ -194,18 +204,20 @@ async function run() {
         body += `이 이슈는 자동으로 생성되었습니다. 수동 번역이 필요한 항목입니다.\n`;
 
         const newIssue = await octokit.rest.issues.create({
-          owner,
-          repo,
+          owner: context.repo.owner,
+          repo: context.repo.repo,
           title: title,
           body: body,
           labels: ['translation-refused', game]
         });
-        console.log(`새 이슈 #${newIssue.data.number}를 생성했습니다.`);
+        core.info(`새 이슈 #${newIssue.data.number}를 생성했습니다.`);
       }
     }
   } catch (error) {
-    console.error('Error:', error);
-    process.exit(1);
+    core.setFailed(error.message);
+    if (error.stack) {
+      core.debug(error.stack);
+    }
   }
 }
 

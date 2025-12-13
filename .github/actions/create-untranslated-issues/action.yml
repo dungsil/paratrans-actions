@@ -24,5 +24,4 @@ runs:
       env:
         INPUT_GAME: ${{ inputs.game }}
         INPUT_GITHUB_TOKEN: ${{ inputs.github-token }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
       run: node ${{ github.action_path }}/index.js

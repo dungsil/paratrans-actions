@@ -1,15 +1,24 @@
-# Create Untranslated Items Issues
+# Create Untranslated Items Issues Action
 
 번역되지 않은 항목이 있을 때 자동으로 GitHub 이슈를 생성하거나 업데이트하는 GitHub Action입니다.
 
-## 사용법
+## Setup
+
+이 액션을 사용하기 전에 의존성을 설치해야 합니다:
+
+```bash
+cd .github/actions/create-untranslated-issues
+npm install
+```
+
+## Usage
 
 ```yaml
 - name: Create issue for untranslated items
   if: always()
   uses: ./.github/actions/create-untranslated-issues
   with:
-    game: 'ck3'  # 게임 식별자: ck3, vic3, stellaris
+    game: 'ck3'  # or 'vic3', 'stellaris'
     github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
@@ -34,3 +43,12 @@
 - 긴 메시지는 접을 수 있는 섹션으로 표시
 - 이슈 본문의 테이블 형식으로 깔끔하게 정리
 - 마지막 업데이트 시간 자동 기록
+
+## Development
+
+의존성 설치:
+```bash
+npm install
+```
+
+코드를 수정한 후 변경사항을 커밋하면 됩니다. `node_modules`는 `.gitignore`에 포함되어 있으므로 GitHub Actions에서 자동으로 설치됩니다.
