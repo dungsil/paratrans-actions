@@ -1,0 +1,19 @@
+{
+  "name": "create-untranslated-issues",
+  "version": "1.0.0",
+  "description": "Automatically create or update GitHub issues for untranslated items",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github-actions",
+    "translation",
+    "issues"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2"
+  }
+}
