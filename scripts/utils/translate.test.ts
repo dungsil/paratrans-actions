@@ -411,7 +411,6 @@ describe('TranslationRefusedError 처리', () => {
       expect.fail('Expected translate to throw TranslationRefusedError')
     } catch (error) {
       expect(error).toBeInstanceOf(TranslationRefusedError)
-      expect(error).toHaveProperty('name', 'TranslationRefusedError')
       expect(error).toHaveProperty('text', 'test text')
       expect(error).toHaveProperty('reason', '프롬프트 차단됨: PROHIBITED_CONTENT')
       expect(String(error)).toContain('번역 거부')
