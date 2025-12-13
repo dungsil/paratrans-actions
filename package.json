@@ -12,6 +12,7 @@
     "ck3:update-hash": "jiti scripts/ck3.ts onlyHash",
     "ck3:update-dict": "jiti scripts/ck3.ts updateDict",
     "ck3:retranslate": "jiti scripts/ck3.ts retranslate",
+    "invalidate-transliteration-files": "jiti scripts/ck3.ts updateTransliterationFiles ; jiti scripts/stellaris.ts updateTransliterationFiles ; jiti scripts/vic3.ts updateTransliterationFiles",
     "stellaris": "jiti scripts/stellaris.ts",
     "stellaris:update-hash": "jiti scripts/stellaris.ts onlyHash",
     "stellaris:update-dict": "jiti scripts/stellaris.ts updateDict",

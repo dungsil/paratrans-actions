@@ -83,6 +83,10 @@ pnpm stellaris:update-dict -- --since-date "2024-01-01"
 # For transliteration files (culture, dynasty, names), also detects semantic translations
 pnpm stellaris:retranslate
 
+# Invalidate translations when transliteration_files list changes in meta.toml
+# This marks affected files for retranslation with the correct mode
+pnpm invalidate-transliteration-files -- --since-commit <commit-id>
+
 # Add dictionary entries from a git commit
 pnpm add-dict <commit-id>
 
@@ -113,13 +117,21 @@ Each mod directory contains a `meta.toml` file that defines translation configur
 [upstream]
 localization = ["RICE/localization/english"]  # Source file paths
 language = "english"                          # Source language
+
+# Optional: Manually specify files to use transliteration mode
+# Supports exact filenames and wildcard patterns (*)
+transliteration_files = ["custom_events_l_english.yml", "*_special_names_*"]
 ```
+
+The `transliteration_files` option allows manual specification of files that should use transliteration mode (음역) instead of semantic translation. This is useful for files that don't match the automatic detection patterns but contain proper nouns that should be transliterated.
 
 ### Translation Pipeline
 1. **Upstream Update**: Optimized repository sync using sparse checkout (`utils/upstream.ts`)
 2. **Discovery**: Scan for `meta.toml` files in game directories
 3. **Parsing**: Parse YAML localization files (`l_english:` → `l_korean:`)
-4. **Mode Detection**: Automatic transliteration mode detection based on filename patterns
+4. **Mode Detection**: Automatic or manual transliteration mode detection
+   - Automatic: Based on filename patterns (culture, dynasty, names keywords)
+   - Manual: Via `transliteration_files` option in `meta.toml`
 5. **Hashing**: Generate content hashes to detect changes (via `utils/hashing.ts`)
 6. **Translation/Transliteration**: AI translation or transliteration with game-specific context prompts
 7. **Caching**: Store results in database with separate cache keys for translation vs transliteration
@@ -130,6 +142,7 @@ language = "english"                          # Source language
 **Core Translation Logic** (`scripts/factory/translate.ts`):
 - Orchestrates the entire translation workflow
 - Automatic transliteration mode detection via `shouldUseTransliteration(filename)`
+- Manual transliteration file specification via `meta.toml`'s `transliteration_files` option
 - Handles file discovery, parsing, and output generation
 - Translation refusal tracking and graceful error handling
 - Exports untranslated items to `{game}-untranslated-items.json`
@@ -512,7 +525,15 @@ The project uses separate GitHub Actions workflows for different translation inv
 - **Commit message**: "chore: 유효하지 않은 번역 재번역 [skip ci]"
 - **When to use**: To periodically clean up incorrectly translated items (e.g., items with untranslated technical identifiers)
 
-**3. Game Translation Workflows** (`.github/workflows/translate-{game}.yml`):
+**3. Transliteration Files Change Workflow** (`.github/workflows/invalidate-on-transliteration-files-change.yml`):
+- **Trigger**: Automatically runs when `**/meta.toml` files are modified and pushed to main
+- **Purpose**: Invalidates translations when files are added/removed from `transliteration_files` option
+- **Commands executed**: `pnpm invalidate-transliteration-files -- --since-commit {sha}`
+- **Commit message**: "chore: transliteration_files 변경에 따른 번역 무효화 [skip ci]"
+- **When to use**: When you add or remove files from the `transliteration_files` array in meta.toml
+- **Why needed**: Files need to be retranslated when switching between semantic translation and transliteration mode
+
+**4. Game Translation Workflows** (`.github/workflows/translate-{game}.yml`):
 - **Trigger**: Runs on schedule (hourly at different minutes) or when upstream files change
 - **Purpose**: Main translation process for each game
 - **Commands executed**: `pnpm {game}`

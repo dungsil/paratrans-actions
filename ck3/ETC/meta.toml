@@ -1,3 +1,11 @@
 [upstream]
 localization = ["."]
 language = "english"
+
+# Norse titles should be transliterated (음역), not semantically translated
+transliteration_files = [
+  "feudalnorse_l_english.yml",
+  "tribalnorse_l_english.yml",
+  "jfcfeudalnorse_l_english.yml",
+  "jfctribalnorse_l_english.yml"
+]

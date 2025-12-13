@@ -4,6 +4,7 @@ import { join } from 'pathe'
 import { processModTranslations } from './factory/translate'
 import { invalidateDictionaryTranslations } from './utils/dictionary-invalidator'
 import { invalidateIncorrectTranslations } from './utils/retranslation-invalidator'
+import { invalidateTransliterationFilesChanges } from './utils/transliteration-files-invalidator'
 import { getChangedDictionaryKeys } from './utils/dictionary-changes'
 import { parseDictionaryFilterArgs } from './utils/cli-args'
 import { log } from './utils/logger'
@@ -18,6 +19,7 @@ async function main () {
     const onlyHash = process.argv?.[2] === 'onlyHash'
     const updateDict = process.argv?.[2] === 'updateDict'
     const retranslate = process.argv?.[2] === 'retranslate'
+    const updateTransliterationFiles = process.argv?.[2] === 'updateTransliterationFiles'
     
     // 특정 모드가 지정된 경우 해당 모드만 처리
     const mods = filterMods(allMods, process.argv?.[3])
@@ -74,6 +76,22 @@ async function main () {
       await invalidateIncorrectTranslations('vic3', vic3Dir, mods)
       
       log.success(`잘못 번역된 항목 무효화 완료!`)
+    } else if (updateTransliterationFiles) {
+      // CLI 인자 파싱: --since-commit
+      const commitArg = process.argv.find(arg => arg.startsWith('--since-commit='))
+      const commitId = commitArg ? commitArg.split('=')[1] : 'HEAD'
+      
+      log.box(
+        `
+        VIC3 transliteration_files 변경 기반 번역 무효화
+        - 대상 경로: ${vic3Dir}
+        - 커밋: ${commitId}
+        `,
+      )
+      
+      await invalidateTransliterationFilesChanges('vic3', vic3Dir, commitId)
+      
+      log.success(`transliteration_files 변경 기반 번역 무효화 완료!`)
     } else {
       log.box(
         `

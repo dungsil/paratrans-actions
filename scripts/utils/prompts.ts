@@ -2,9 +2,22 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { type GameType } from './types'
 import { getTranslationMemories, getProperNouns } from './dictionary'
+import { matchWildcardPattern } from './pattern-matcher'
 
 // Re-export GameType for backward compatibility
 export type { GameType }
+
+/**
+ * 키 제외 패턴 (번역 모드를 사용해야 하는 키 패턴)
+ * 음역 파일이더라도 이 패턴을 포함한 키는 일반 번역 모드 사용
+ */
+export const TRANSLATION_ONLY_PATTERNS = [
+  '_loc',
+  '_desc',
+  'tradition_',
+  'culture_parameter',
+  '_interaction',
+]
 
 // 프로젝트 루트 디렉토리
 const projectRoot = join(import.meta.dirname, '../..')
@@ -95,12 +108,37 @@ export function getSystemPrompt(gameType: GameType, useTransliteration: boolean 
  * culture, dynasty, names 등의 키워드가 포함된 파일은 음역 모드를 사용합니다.
  * 단, 특정 패턴을 가진 키는 음역 대상에서 제외됩니다.
  * 
- * @param filename 검사할 파일명
+ * @param filename 검사할 파일명 (경로 포함 가능)
  * @param key 검사할 키 (선택적). 제공되면 키 패턴도 함께 검사
+ * @param manualList 수동으로 지정된 음역 파일 목록 (선택적). meta.toml의 transliteration_files
  * @returns 음역 모드를 사용해야 하면 true
  */
-export function shouldUseTransliteration(filename: string, key?: string): boolean {
-  const lowerFilename = filename.toLowerCase()
+export function shouldUseTransliteration(filename: string, key?: string, manualList?: string[]): boolean {
+  // 경로에서 파일명만 추출 (basename)
+  const baseFilename = filename.split('/').pop() || filename
+  const lowerFilename = baseFilename.toLowerCase()
+  
+  // 수동 지정 목록이 있으면 먼저 검사
+  if (manualList && manualList.length > 0) {
+    // 파일명이 수동 지정 패턴 중 하나와 일치하는지 확인
+    const isManuallySpecified = manualList.some(pattern => 
+      matchWildcardPattern(pattern, lowerFilename)
+    )
+    
+    if (isManuallySpecified) {
+      // 수동 지정된 파일이지만, 키 제외 패턴은 여전히 적용
+      if (key) {
+        const lowerKey = key.toLowerCase()
+        const shouldSkipTransliteration = TRANSLATION_ONLY_PATTERNS.some(pattern => 
+          lowerKey.includes(pattern)
+        )
+        return !shouldSkipTransliteration
+      }
+      return true
+    }
+  }
+  
+  // 수동 지정 목록에 없거나 목록이 없는 경우, 자동 감지 로직 사용
   
   // 음역 대상 키워드 목록
   // - 'culture', 'cultures': 문화 이름 파일 (예: rice_cultures_l_english.yml)
@@ -144,22 +182,9 @@ export function shouldUseTransliteration(filename: string, key?: string): boolea
     return true
   }
   
-  // 키에 다음 패턴이 포함되면 음역 모드를 사용하지 않음 (일반 번역 사용)
-  // - '_loc': 현지화된 설명 텍스트
-  // - '_desc': 설명(description) 텍스트  
-  // - 'tradition_': 전통(tradition) 관련 텍스트
-  // - 'culture_parameter': 문화 파라미터 텍스트
-  // - '_interaction': 상호작용 텍스트
-  const translationOnlyPatterns = [
-    '_loc',
-    '_desc',
-    'tradition_',
-    'culture_parameter',
-    '_interaction',
-  ]
-  
+  // 키에 제외 패턴이 포함되면 음역 모드를 사용하지 않음 (일반 번역 사용)
   const lowerKey = key.toLowerCase()
-  const shouldSkipTransliteration = translationOnlyPatterns.some(pattern => 
+  const shouldSkipTransliteration = TRANSLATION_ONLY_PATTERNS.some(pattern => 
     lowerKey.includes(pattern)
   )
   
@@ -199,8 +224,7 @@ export function shouldUseTransliterationForKey(key: string): boolean {
   
   // shouldUseTransliteration에서 사용하는 키 제외 패턴과 동일하게 검사
   // 이 패턴들이 포함된 키는 음역 모드를 사용하지 않음
-  const exclusionPatterns = ['tradition_', '_loc', 'culture_parameter', '_interaction', '_desc']
-  if (exclusionPatterns.some(pattern => lowerKey.includes(pattern))) {
+  if (TRANSLATION_ONLY_PATTERNS.some(pattern => lowerKey.includes(pattern))) {
     return false
   }
   
