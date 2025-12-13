@@ -1339,7 +1339,7 @@
   VIETmisc.0275.a: "흥미로운 교훈이었군! 꽤 많이 배웠어." # 2960402618668221313
   VIETmisc.0275.b: "지루하기 짝이 없는 소리! 수업 중에 잠들어 버렸군." # 15606111836099295546
   VIETmisc.0276.t: "우리의 손가락" # 2057154871879841061
-  VIETmisc.0276.desc: "One day, [child.GetFirstName] approaches me and asks, “Why do we have ten fingers and ten toes?”\n\nIt seems like such a simple question, but thinking about it further, I realize I don’t have a good answer for that off the top of my head."
+  VIETmisc.0276.desc: "어느 날, [child.GetFirstName]이/가 다가와 제게 물었어요. "우리는 왜 손가락이랑 발가락이 열 개씩 있어요?"\n\n정말 간단한 질문 같았지만, 곰곰이 생각해보니 바로 떠오르는 그럴듯한 답이 없다는 걸 깨달았죠."
   VIETmisc.0276.a: "[ROOT.Char.GetFaith.HighGodName]께서 인간을 그렇게 만드셨을 게 분명하오." # 16074768038193427483
   VIETmisc.0276.a.failure: "[child.GetFirstNameNoTooltip]은 그 설명을 납득하지 못했습니다." # 15334301496839926890
   VIETmisc.0276.a.success: "[child.GetFirstNameNoTooltip]는 그 설명을 납득했습니다." # 11841091101951304707
