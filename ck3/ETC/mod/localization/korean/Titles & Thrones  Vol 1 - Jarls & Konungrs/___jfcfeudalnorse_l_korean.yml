@@ -1,0 +1,128 @@
+﻿l_korean:
+  hegemon_male_norse_christian: "스톨케이사르" # 7861311743010713680
+  hegemon_female_norse_christian: "스톨케 여제" # 9237854136196497320
+  hegemon_spouse_male_norse_christian: "스톨케이사라펠라기" # 6414638973897481506
+  hegemon_spouse_female_norse_christian: "스톨케이사프루" # 4416938426357902657
+  hegemon_son_norse_christian: "스톨케이사르손" # 13714147147030097876
+  hegemon_daughter_norse_christian: "스톨케이사르도티르" # 3967367817556347177
+  hegemon_mother_norse_christian: "스톨케이사르모디르" # 13034153173556704728
+  hegemony_norse_christian: "스톨케이사르아리키" # 3859924002170263389
+  emperor_male_norse_christian: "황제" # 3580604038276406207
+  emperor_female_norse_christian: "황후" # 16296085161900104106
+  emperor_spouse_male_norse_christian: "카이사르펠라기" # 15659275439612034218
+  emperor_spouse_female_norse_christian: "황후" # 2283516237881129583
+  emperor_son_norse_christian: "카이사르의 아들" # 17916970972220816431
+  emperor_daughter_norse_christian: "카이사르의 딸" # 2378899601861269084
+  emperor_mother_norse_christian: "황후" # 18331967986154366837
+  empire_norse_christian: "황제국" # 4650845169917785663
+  emperor_male_norse_vassal_christian: "스마이케사리" # 8712177484702953451
+  emperor_female_norse_vassal_christian: "스마이 황후" # 13023361380642811985
+  emperor_spouse_male_norse_vassal_christian: "스마케이사라펠라그" # 11269400556429193194
+  emperor_spouse_female_norse_vassal_christian: "스마이케사라프루" # 17729149266313232981
+  emperor_son_norse_vassal_christian: "스마이카이사손" # 2875763369693298152
+  emperor_daughter_norse_vassal_christian: "스마케이사르도티르" # 18136826497416134293
+  emperor_mother_norse_vassal_christian: "스마케이사르모디르" # 5742935092245122723
+  empire_norse_vassal_christian: "소제국" # 4656988986839371550
+  king_male_norse_christian: "코눙그르" # 15613571580595236101
+  king_female_norse_christian: "여왕" # 13591907872056841613
+  king_spouse_male_norse_christian: "코눙펠라기" # 4714870025883729517
+  king_spouse_female_norse_christian: "여시녀" # 782262678320808278
+  king_son_norse_christian: "코눙링그르" # 10278743087475324727
+  king_daughter_norse_christian: "코눙스메이" # 5705812489949123707
+  king_mother_norse_christian: "여왕 어머니" # 354589378254137495
+  kingdom_norse_christian: "리키" # 13068978488030052373
+  king_male_norse_vassal_christian: "렌콘눙그르" # 9059054715759759852
+  king_female_norse_vassal_christian: "여왕" # 3829981205768853142
+  king_spouse_male_norse_vassal_christian: "레콘눙펠라기" # 10143506148529878410
+  king_spouse_female_norse_vassal_christian: "여성 기사" # 14328007791611885916
+  king_son_norse_vassal_christian: "렌콘눙글링그르" # 8709848873675966608
+  king_daughter_norse_vassal_christian: "여왕" # 10134857061741870377
+  king_mother_norse_vassal_christian: "여왕의 어머니" # 5464706564155446975
+  kingdom_norse_vassal_christian: "렌리키" # 11398016261826687976
+  duke_male_norse_independent_christian: "야를" # 16504366838572349751
+  duke_female_norse_independent_christian: "야를랴" # 1301904764412218231
+  duke_spouse_male_norse_independent_christian: "얄펠라기" # 2548407267865216852
+  duke_spouse_female_norse_independent_christian: "얄메이야" # 221740870913707118
+  duke_son_norse_independent_christian: "에를링그" # 2943486794434700010
+  duke_daughter_norse_independent_christian: "야를스메이" # 1947517463021930967
+  duke_mother_norse_independent_christian: "야를모디르" # 5054197435962382275
+  duchy_norse_independent_christian: "야를돔르" # 713198817252034425
+  duke_male_norse_christian: "공작" # 11883744713904147175
+  duke_female_norse_christian: "공작부인" # 3504288241145027375
+  duke_spouse_male_norse_christian: "공작령" # 11285768514440446479
+  duke_spouse_female_norse_christian: "공녀" # 14886729378461527604
+  duke_son_norse_christian: "공작령 후작" # 4575922676069459351
+  duke_daughter_norse_christian: "공작령" # 778914994191357235
+  duke_mother_norse_christian: "공작비" # 8954431948772821866
+  duchy_norse_christian: "공작령" # 1103528866770332515
+  count_male_norse_independent_christian: "호프딩이" # 3363718433820770513
+  count_female_norse_independent_christian: "호프딩이프루" # 8394380880360868358
+  count_spouse_male_norse_independent_christian: "#bold 족장회#!" # 449761790989294475
+  count_spouse_female_norse_independent_christian: "호프딩야메이야" # 17097873008474197693
+  count_son_norse_independent_christian: "족장" # 16459924594651284419
+  count_daughter_norse_independent_christian: "호프딩야메이" # 17064868190057729571
+  count_mother_norse_independent_christian: "족장 어머니" # 12806977323450653102
+  county_norse_independent_christian: "퓔키" # 9060513334210834432
+  count_male_norse_christian: "그라이프" # 2621350882480164035
+  count_female_norse_christian: "그라이프루" # 12296079293143724868
+  count_spouse_male_norse_christian: "그라이파펠라기" # 293436563429355999
+  count_spouse_female_norse_christian: "그라이프메이야" # 14916735209444415256
+  count_son_norse_christian: "그라이플링르" # 4295891421479480498
+  count_daughter_norse_christian: "그라이프스마르" # 11523992797834539841
+  count_mother_norse_christian: "그라이프모디르" # 3547071182170370306
+  county_norse_christian: "그라이프다움르" # 3507536383664542158
+  baron_male_norse_christian: "레드마드르" # 6102932021389153188
+  baron_female_norse_christian: "렌프루" # 9224470146109124565
+  baron_spouse_male_norse_christian: "렌드르펠라기" # 1027272376578858965
+  baron_spouse_female_norse_christian: "렌드르메이야" # 14383110529440301990
+  baron_son_norse_christian: "렌링르" # 3457410961596633197
+  baron_daughter_norse_christian: "렌스메이" # 16624492577736658678
+  baron_mother_norse_christian: "렌모디르" # 7766984482774278106
+  barony_castle_norse_christian: "헤라드" # 6903425316076281339
+  barony_tribe_norse_christian: "$barony_castle_norse_christian$" # 6130154044625800900
+  h_north_sea_christian: "노르드샤르발드" # 1810364404402660278
+  h_north_sea_adj_christian: "노르드르샤르" # 13009918467184226967
+  title_nshegemony_christian: "왕비의 권한" # 17902641337103593456
+  title_nsoverlord_christian: "알밀킬세쾨눙그르" # 2747438481833657011
+  title_nsoverlordqueen_christian: "알믹일세드뢰트닝" # 4941672685790455797
+  title_nsoverlord_spouse_male_christian: "알믹일세코눙펠라기" # 11352910694669532795
+  title_nsoverlord_spouse_female_christian: "알믹일세이드로트닝메야" # 3753518438657901221
+  title_nsoverlordprince_christian: "알믹일세코눙링그르" # 10528446773434346927
+  title_nsoverlordprincess_christian: "알밀킬사예쾨눙스메이" # 17704911262901273610
+  title_nsoverlordqueenmother_christian: "알믹일세드롯트닝모디르" # 3941048525623246578
+  title_nsoverlordkingfather_christian: "알믹일세콘웅스파디르" # 5525974160030212272
+  e_north_sea_christian: "노르드해 왕국" # 2678337866899821825
+  e_north_sea_adj_christian: "노르드인" # 4726621921372904836
+  title_nsempire_christian: "미클사리키" # 7464415317940020451
+  title_nsemperor_christian: "대왕" # 7399439031762536322
+  title_nsqueen_christian: "미클사이드로트닝" # 6231359821364517144
+  title_nsemperor_spouse_male_christian: "미클사예콘눙펠라기" # 16480939921219204884
+  title_nsemperor_spouse_female_christian: "미클사이드로트닝메이야" # 11235595664551924521
+  title_nsprince_christian: "미클사왕자" # 10869495820166845287
+  title_nsprincess_christian: "미클사외쿵스메이" # 1851551441362312161
+  title_nsqueenmother_christian: "미클세드롯닝모디르" # 7245680484537087345
+  title_nskingfather_christian: "미클사왕의 아버지" # 2078527298500641936
+  scandinavia_empire_norse_christian: "알크리스티키" # 7991770136297846089
+  scandinavia_emperor_male_norse_christian: "전기독교 왕" # 11865197526506794034
+  scandinavia_emperor_female_norse_christian: "알크리스트 여왕" # 16716529114738498100
+  scandinavia_emperor_spouse_male_norse_christian: "전기 기독교 왕국 연맹" # 5682219077351373431
+  scandinavia_emperor_spouse_female_norse_christian: "알크리스츠드로트닝메이야" # 1420116653764588570
+  scandinavia_emperor_son_norse_christian: "전(全) 기독교의 왕" # 13598971830089824098
+  scandinavia_emperor_daughter_norse_christian: "알크리스트스쾨눙스메이" # 415111006195796924
+  scandinavia_emperor_mother_norse_christian: "모든 그리스도의 여왕 어머니" # 18405737481519489738
+  norway_kingdom_norse_christian: "크리스티아노 왕국" # 5389562938292758030
+  norway_king_male_norse_christian: "그리스도 왕" # 10452861483171874626
+  norway_king_female_norse_christian: "크리스트로트닝" # 11525585279846048318
+  norway_king_spouse_male_norse_christian: "크리스트콘눙펠라기" # 13571586321839494350
+  norway_king_spouse_female_norse_christian: "크리스츠드로트닝메이야" # 14304395437088312758
+  norway_king_son_norse_christian: "그리스도 왕자" # 17765417809690390336
+  norway_king_daughter_norse_christian: "크리스티콘눙메이" # 14792131579513554007
+  norway_king_mother_norse_christian: "크리스츠드로트닝모디르" # 2804351520006581068
+  title_mandom_christian: "크리스티아니티" # 15141934174802451803
+  title_manking_christian: "크리스트세코눙그르" # 4263704784974353666
+  title_manqueen_christian: "크리스트로트닝" # 4478299191463063193
+  title_manking_spouse_male_christian: "크리스티아나 연합" # 12919648208101872917
+  title_manking_spouse_female_christian: "크리스츠드로트닝메이야" # 13196641303982824430
+  title_manprince_christian: "크리스트 왕자" # 2899509901241166303
+  title_manprincess_christian: "크리스츠에코눙스메이" # 8453010944359366776
+  title_manqueenmother_christian: "크리스트의 어머니" # 8724348974085536109

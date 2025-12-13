@@ -1,0 +1,174 @@
+﻿l_english:
+################################################
+# NORSE TITLES — RULER + HEIR + MOTHER + REALM (FEUDAL - REWORKED)
+################################################
+
+### HEGEMON (Top Rank)
+hegemon_male_norse:0 "Yfirkonungr"
+hegemon_female_norse:0 "Yfirdróttning"
+hegemon_spouse_male_norse:0 "Yfirkonungfélagi"
+hegemon_spouse_female_norse:0 "Yfirdróttningmeyja"
+hegemon_son_norse:0 "Yfirkonunglingr"
+hegemon_daughter_norse:0 "Yfirkonungsmey"
+hegemon_mother_norse:0 "Yfirdróttningmóðir"
+hegemony_norse:0 "Yfirríki"
+
+### EMPEROR — Independent
+emperor_male_norse:0 "Hárkonungr"
+emperor_female_norse:0 "Hárdrottning"
+emperor_spouse_male_norse:0 "Hárkonungfélagi"
+emperor_spouse_female_norse:0 "Hárdrottningmeyja"
+emperor_son_norse:0 "Hárkonunglingr"
+emperor_daughter_norse:0 "Hárkonungsmey"
+emperor_mother_norse:0 "Hárdrottningmóðir"
+empire_norse:0 "Háríki"
+
+### EMPEROR — Vassal
+emperor_male_norse_vassal:0 "Hirdkonungr"
+emperor_female_norse_vassal:0 "Hirddróttning"
+emperor_spouse_male_norse_vassal:0 "Hirdkonungfélagi"
+emperor_spouse_female_norse_vassal:0 "Hirddróttningmeyja"
+emperor_son_norse_vassal:0 "Hirdkonunglingr"
+emperor_daughter_norse_vassal:0 "Hirdkonungsmey"
+emperor_mother_norse_vassal:0 "Hirddróttningmóðir"
+empire_norse_vassal:0 "Hirdlríki"
+
+### KING — Independent
+king_male_norse:0 "Konungr"
+king_female_norse:0 "Dróttning"
+king_spouse_male_norse:0 "Konungfélagi"
+king_spouse_female_norse:0 "Dróttningmeyja"
+king_son_norse:0 "Konunglingr"
+king_daughter_norse:0 "Konungsmey"
+king_mother_norse:0 "Dróttningmóðir"
+kingdom_norse:0 "Ríki"
+
+### KING — Vassal
+king_male_norse_vassal:0 "Undirkonungr"
+king_female_norse_vassal:0 "Undirdróttning"
+king_spouse_male_norse_vassal:0 "Undirkonungfélagi"
+king_spouse_female_norse_vassal:0 "Undirdróttningmeyja"
+king_son_norse_vassal:0 "Undirkonunglingr"
+king_daughter_norse_vassal:0 "Undirkonungsmey"
+king_mother_norse_vassal:0 "Undirdróttningmóðir"
+kingdom_norse_vassal:0 "Undirríki"
+
+### DUKE — Independent (Petty King)
+duke_male_norse_independent:0 "Smákonungr"
+duke_female_norse_independent:0 "Smákonungsdróttning"
+duke_spouse_male_norse_independent:0 "Smákonungfélagi"
+duke_spouse_female_norse_independent:0 "Smádróttningmeyja"
+duke_son_norse_independent:0 "Smákonunglingr"
+duke_daughter_norse_independent:0 "Smákonungsmey"
+duke_mother_norse_independent:0 "Smádróttningmóðir"
+duchy_norse_independent:0 "Smáríki"
+
+### DUKE — VASSAL (Jarl)
+duke_male_norse:0 "Jarl"
+duke_female_norse:0 "Jarlfru"
+duke_spouse_male_norse:0 "Jarlfélagi"
+duke_spouse_female_norse:0 "Jarlmeyja"
+duke_son_norse:0 "Erlingr"
+duke_daughter_norse:0 "Jarlsmey"
+duke_mother_norse:0 "Jarlmóðir"
+duchy_norse:0 "Jarldómr"
+
+### COUNT — Independent (Hǫfðingi)
+count_male_norse_independent:0 "Hofðingi"
+count_female_norse_independent:0 "Hofðingifru"
+count_spouse_male_norse_independent:0 "Hofðingjafélagi"
+count_spouse_female_norse_independent:0 "Hofðingjameyja"
+count_son_norse_independent:0 "Hǫfðinglingr"
+count_daughter_norse_independent:0 "Hǫfðingjamey"
+count_mother_norse_independent:0 "Hǫfðingmóðir"
+county_norse_independent:0 "Fylki"
+
+### COUNT — VASSAL (Hersir)
+count_male_norse:0 "Hersir"
+count_female_norse:0 "Hersirfru"
+count_spouse_male_norse:0 "Hersirfélagi"
+count_spouse_female_norse:0 "Hersirmeyja"
+count_son_norse:0 "Hersirlingr"
+count_daughter_norse:0 "Hersirmey"
+count_mother_norse:0 "Hersirmóðir"
+county_norse:0 "Hersirdómr"
+
+### BARON (Lendr maðr)
+baron_male_norse:0 "Lendr maðr"
+baron_female_norse:0 "Lendrfrú"
+baron_spouse_male_norse:0 "Lendrfélagi"
+baron_spouse_female_norse:0 "Lendrmeyja"
+baron_son_norse:0 "Lendrlingr"
+baron_daughter_norse:0 "Lendrsmey"
+baron_mother_norse:0 "Lendrsmóðir"
+barony_castle_norse:0 "Hérað"
+barony_tribe_norse:0 "$barony_castle_norse$"
+
+################################################
+# NORTH SEA HEGEMONY — Personal Overlordship
+################################################
+h_north_sea:0 "Norðrsjárvald"
+h_north_sea_adj:0 "Norðrsjár"
+h_north_sea_article:0 ""
+title_nshegemony:0 "Sædróttnun"
+title_nsoverlord:0 "Allmikisælkonungr"
+title_nsoverlordqueen:0 "Allmikilsædróttning"
+title_nsoverlord_spouse_male:0 "Allmikilsækonungfélagi"
+title_nsoverlord_spouse_female:0 "Allmikilsædróttningmeyja"
+title_nsoverlordprince:0 "Allmikilsækonunglingr"
+title_nsoverlordprincess:0 "Allmikilsækonungsmey"
+title_nsoverlordqueenmother:0 "Allmikilsædróttningmóðir"
+title_nsoverlordkingfather:0 "Allmikilsækonungsfaðir"
+
+################################################
+# NORTH SEA EMPIRE — De Jure Empire under Hegemon
+################################################
+e_north_sea:0 "Norðrsjáríki"
+e_north_sea_adj:0 "Norðmannligr"
+e_north_sea_article:0 ""
+title_nsempire:0 "Mikilsæríki"
+title_nsemperor:0 "Mikilsækonungr"
+title_nsqueen:0 "Mikilsædróttning"
+title_nsemperor_spouse_male:0 "Mikilsækonungfélagi"
+title_nsemperor_spouse_female:0 "Mikilsædróttningmeyja"
+title_nsprince:0 "Mikilsækonunglingr"
+title_nsprincess:0 "Mikilsækonungsmey"
+title_nsqueenmother:0 "Mikilsædróttningmóðir"
+title_nskingfather:0 "Mikilsækonungsfaðir"
+
+################################################
+# SCANDINAVIA EMPIRE — All-Scandinavian Emperor
+################################################
+scandinavia_empire_norse:0 "AllÞjóðríki"
+scandinavia_emperor_male_norse:0 "AllÞjóðkonungr"
+scandinavia_emperor_female_norse:0 "AllÞjóðdróttning"
+scandinavia_emperor_spouse_male_norse:0 "AllÞjóðkonungfélagi"
+scandinavia_emperor_spouse_female_norse:0 "AllÞjóðdróttningmeyja"
+scandinavia_emperor_son_norse:0 "AllÞjóðkonunglingr"
+scandinavia_emperor_daughter_norse:0 "AllÞjóðkonungsmey"
+scandinavia_emperor_mother_norse:0 "AllÞjóðdróttningmóðir"
+
+################################################
+# NATIONAL KINGDOMS — Norway (and analogues)
+################################################
+norway_kingdom_norse:0 "Þjóðríki"
+norway_king_male_norse:0 "Þjóðkonungr"
+norway_king_female_norse:0 "Þjóðdrottning"
+norway_king_spouse_male_norse:0 "Þjóðkonungfélagi"
+norway_king_spouse_female_norse:0 "Þjóðdróttningmeyja"
+norway_king_son_norse:0 "Þjóðkonunglingr"
+norway_king_daughter_norse:0 "Þjóðkonungsmey"
+norway_king_mother_norse:0 "Þjóðdróttningmóðir"
+
+################################################
+# MANN & THE ISLES — Maritime Kingdom Title
+################################################
+title_mandom:0 "Særíki"
+title_manking:0 "Sækonungr"
+title_manqueen:0 "Sædróttning"
+title_manking_spouse_male:0 "Sækonungfélagi"
+title_manking_spouse_female:0 "Sædróttningmeyja"
+title_manprince:0 "Sækonunglingr"
+title_manprincess:0 "Sækonungsmey"
+title_manqueenmother:0 "Sædróttningmóðir"
+title_mankingfather:0 "Sækonungsfaðir"

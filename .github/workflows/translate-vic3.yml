@@ -27,10 +27,11 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache@v4
         with:
           key: translate-cache
           path: "**.db"
+          save-always: true
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
@@ -41,21 +42,15 @@ jobs:
         id: translate
         run: pnpm vic3
         continue-on-error: true
-      - name: Save cache
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          key: translate-cache
-          path: "**.db"
       - name: Commit translated files
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          push: true
-          commit: --signoff
-          default_author: github_actor
+          commit_options: '--signoff'
           commit_message: "chore(vic3): 번역 파일 업데이트 [skip ci]"
-          pull_options: '--rebase --autostash'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+          commit_author: 'dungsil <39783731+dungsil@users.noreply.github.com>'
       - name: Close translation-refused issues if all items translated
         if: always()
         uses: ./.github/actions/close-translation-issues

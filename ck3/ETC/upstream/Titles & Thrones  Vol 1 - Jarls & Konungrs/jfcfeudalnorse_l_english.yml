@@ -1,0 +1,182 @@
+﻿l_english:
+################################################
+# NORSE TITLES — RULER + HEIR + MOTHER + REALM (FEUDAL - CHRISTIANIZED)
+################################################
+
+HEGEMON (Top Rank)
+hegemon_male_norse_christian:0 "Stólkeisari"
+hegemon_female_norse_christian:0 "Stólkeisarinna"
+hegemon_spouse_male_norse_christian:0 "Stólkeisarafélagi"
+hegemon_spouse_female_norse_christian:0 "Stólkeisafrú"
+hegemon_son_norse_christian:0 "Stólkeisarason"
+hegemon_daughter_norse_christian:0 "Stólkeisardóttir"
+hegemon_mother_norse_christian:0 "Stólkeisarmóðir"
+hegemony_norse_christian:0 "Stólkeisararíki"
+
+EMPEROR — Independent
+emperor_male_norse_christian:0 "Keisari"
+emperor_female_norse_christian:0 "Keisarinna"
+emperor_spouse_male_norse_christian:0 "Keisarafélagi"
+emperor_spouse_female_norse_christian:0 "Keisarafrú"
+emperor_son_norse_christian:0 "Keisarason"
+emperor_daughter_norse_christian:0 "Keisardóttir"
+emperor_mother_norse_christian:0 "Keisarmóðir"
+empire_norse_christian:0 "Keisararíki"
+
+EMPEROR — Vassal
+emperor_male_norse_vassal_christian:0 "Smákeisari"
+emperor_female_norse_vassal_christian:0 "Smákeisarinna"
+emperor_spouse_male_norse_vassal_christian:0 "Smákeisarafélagi"
+emperor_spouse_female_norse_vassal_christian:0 "Smákeisarafrú"
+emperor_son_norse_vassal_christian:0 "Smákeisarason"
+emperor_daughter_norse_vassal_christian:0 "Smákeisardóttir"
+emperor_mother_norse_vassal_christian:0 "Smákeisarmóðir"
+empire_norse_vassal_christian:0 "Smákeisararíki"
+
+KING — Independent
+king_male_norse_christian:0 "Konungr"
+king_female_norse_christian:0 "Dróttning"
+king_spouse_male_norse_christian:0 "Konungfélagi"
+king_spouse_female_norse_christian:0 "Dróttningmeyja"
+king_son_norse_christian:0 "Konunglingr"
+king_daughter_norse_christian:0 "Konungsmey"
+king_mother_norse_christian:0 "Dróttningmóðir"
+kingdom_norse_christian:0 "Ríki"
+
+KING — Vassal
+king_male_norse_vassal_christian:0 "Lénkonungr"
+king_female_norse_vassal_christian:0 "Léndróttning"
+king_spouse_male_norse_vassal_christian:0 "Lénkonungfélagi"
+king_spouse_female_norse_vassal_christian:0 "Léndróttningmeyja"
+king_son_norse_vassal_christian:0 "Lénkonunglingr"
+king_daughter_norse_vassal_christian:0 "Lénkonungsmey"
+king_mother_norse_vassal_christian:0 "Léndróttningmóðir"
+kingdom_norse_vassal_christian:0 "Lénríki"
+
+DUKE — Independent (Petty King)
+duke_male_norse_independent_christian:0 "Jarl"
+duke_female_norse_independent_christian:0 "Jarlja"
+duke_spouse_male_norse_independent_christian:0 "Jarlfélagi"
+duke_spouse_female_norse_independent_christian:0 "Jarlmeyja"
+duke_son_norse_independent_christian:0 "Erlingr"
+duke_daughter_norse_independent_christian:0 "Jarlsmey"
+duke_mother_norse_independent_christian:0 "Jarlmóðir"
+duchy_norse_independent_christian:0 "Jarldómr"
+
+DUKE — VASSAL (Hertug)
+duke_male_norse_christian:0 "Hertogi"
+duke_female_norse_christian:0 "Hertogfru"
+duke_spouse_male_norse_christian:0 "Hertogfélagi"
+duke_spouse_female_norse_christian:0 "Hertugmeyja"
+duke_son_norse_christian:0 "Hertoglingr"
+duke_daughter_norse_christian:0 "Hertogsmey"
+duke_mother_norse_christian:0 "Hertogmóðir"
+duchy_norse_christian:0 "Hertogdómr"
+
+COUNT — Independent (Hǫfðingi)
+count_male_norse_independent_christian:0 "Hofðingi"
+count_female_norse_independent_christian:0 "Hofðingifru"
+count_spouse_male_norse_independent_christian:0 "Hofðingjafélagi"
+count_spouse_female_norse_independent_christian:0 "Hofðingjameyja"
+count_son_norse_independent_christian:0 "Hofðinglingr"
+count_daughter_norse_independent_christian:0 "Hofðingjamey"
+count_mother_norse_independent_christian:0 "Hofðingmóðir"
+county_norse_independent_christian:0 "Fylki"
+
+COUNT — VASSAL (Hersir)
+count_male_norse_christian:0 "Greifi"
+count_female_norse_christian:0 "Greiffrú"
+count_spouse_male_norse_christian:0 "Greifafélagi"
+count_spouse_female_norse_christian:0 "Greifmeyja"
+count_son_norse_christian:0 "Greiflingr"
+count_daughter_norse_christian:0 "Greifsmey"
+count_mother_norse_christian:0 "Greifmóðir"
+county_norse_christian:0 "Greifadómr"
+
+BARON (Lénmaðr)
+baron_male_norse_christian:0 "Lénmaðr"
+baron_female_norse_christian:0 "Lénfrú"
+baron_spouse_male_norse_christian:0 "Lendrfélagi"
+baron_spouse_female_norse_christian:0 "Lendrmeyja"
+baron_son_norse_christian:0 "Lénlingr"
+baron_daughter_norse_christian:0 "Lénsmey"
+baron_mother_norse_christian:0 "Lénmóðir"
+barony_castle_norse_christian:0 "Hérað"
+barony_tribe_norse_christian:0 "$barony_castle_norse_christian$"
+################################################
+
+NORTH SEA HEGEMONY — Personal Overlordship
+
+################################################
+h_north_sea_christian:0 "Norðrsjárvald"
+h_north_sea_adj_christian:0 "Norðrsjár"
+h_north_sea_article_christian:0 ""
+title_nshegemony_christian:0 "Sædróttnun"
+title_nsoverlord_christian:0 "Allmikilsækonungr"
+title_nsoverlordqueen_christian:0 "Allmikilsædróttning"
+title_nsoverlord_spouse_male_christian:0 "Allmikilsækonungfélagi"
+title_nsoverlord_spouse_female_christian:0 "Allmikilsædróttningmeyja"
+title_nsoverlordprince_christian:0 "Allmikilsækonunglingr"
+title_nsoverlordprincess_christian:0 "Allmikilsækonungsmey"
+title_nsoverlordqueenmother_christian:0 "Allmikilsædróttningmóðir"
+title_nsoverlordkingfather_christian:0 "Allmikilsækonungsfaðir"
+
+################################################
+
+NORTH SEA EMPIRE — De Jure Empire under Hegemon
+
+################################################
+e_north_sea_christian:0 "Norðrsjáríki"
+e_north_sea_adj_christian:0 "Norðmannligr"
+e_north_sea_article_christian:0 ""
+title_nsempire_christian:0 "Mikilsæríki"
+title_nsemperor_christian:0 "Mikilsækonungr"
+title_nsqueen_christian:0 "Mikilsædróttning"
+title_nsemperor_spouse_male_christian:0 "Mikilsækonungfélagi"
+title_nsemperor_spouse_female_christian:0 "Mikilsædróttningmeyja"
+title_nsprince_christian:0 "Mikilsækonunglingr"
+title_nsprincess_christian:0 "Mikilsækonungsmey"
+title_nsqueenmother_christian:0 "Mikilsædróttningmóðir"
+title_nskingfather_christian:0 "Mikilsækonungsfaðir"
+
+################################################
+
+SCANDINAVIA EMPIRE — All-Scandinavian Emperor
+
+################################################
+scandinavia_empire_norse_christian:0 "Allkristsríki"
+scandinavia_emperor_male_norse_christian:0 "Allkristskonungr"
+scandinavia_emperor_female_norse_christian:0 "Allkristsðdróttning"
+scandinavia_emperor_spouse_male_norse_christian:0 "Allkristskonungfélagi"
+scandinavia_emperor_spouse_female_norse_christian:0 "Allkristsdróttningmeyja"
+scandinavia_emperor_son_norse_christian:0 "Allkristskonunglingr"
+scandinavia_emperor_daughter_norse_christian:0 "Allkristskonungsmey"
+scandinavia_emperor_mother_norse_christian:0 "Allkristsdróttningmóðir"
+
+################################################
+
+NATIONAL KINGDOMS — Norway (and analogues)
+
+################################################
+norway_kingdom_norse_christian:0 "Kristsríki"
+norway_king_male_norse_christian:0 "Kristskonungr"
+norway_king_female_norse_christian:0 "Kristsdrottning"
+norway_king_spouse_male_norse_christian:0 "Kristskonungfélagi"
+norway_king_spouse_female_norse_christian:0 "Kristsdróttningmeyja"
+norway_king_son_norse_christian:0 "Kristskonunglingr"
+norway_king_daughter_norse_christian:0 "Kristskonungsmey"
+norway_king_mother_norse_christian:0 "Kristsdróttningmóðir"
+
+################################################
+
+MANN & THE ISLES — Maritime Kingdom Title
+
+################################################
+title_mandom_christian:0 "Kristsæríki"
+title_manking_christian:0 "Kristsækonungr"
+title_manqueen_christian:0 "Kristsædróttning"
+title_manking_spouse_male_christian:0 "Kristsækonungfélagi"
+title_manking_spouse_female_christian:0 "Kristsædróttningmeyja"
+title_manprince_christian:0 "Kristsækonunglingr"
+title_manprincess_christian:0 "Kristsækonungsmey"
+title_manqueenmother_christian:0 "Kristsædróttningmóðir"

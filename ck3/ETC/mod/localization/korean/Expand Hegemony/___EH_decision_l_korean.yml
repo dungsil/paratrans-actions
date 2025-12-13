@@ -1,0 +1,9 @@
+﻿l_korean:
+  expand_hegemony_decision: "패권국 확장" # 5570087935642334535
+  expand_hegemony_decision_desc: "이제 새로운 제국을 하나 이상 보유하고 있으니, 이를 나의 관할 패권국에 추가해야 합니다.\n\nNOTE: 이 결정을 내린 후에는 패권국 지도를 확인하여 새로 추가된 관할권을 확인해야 합니다." # 16293287457866881182
+  expand_hegemony_decision_confirm: "내 영지가 확장되는군!" # 16332092796286084133
+  expand_hegemony_decision_tooltip: "주요 패권국 작위의 법적 영역에 새로운 제국을 추가하십시오." # 5679550207882633850
+  EH_major_decisions.1.t: "강력한 영지가 팽창하다..." # 16609288074512417195
+  EH_major_decisions.1.desc: "우리 영지의 여행자들이 [de_jure_holder.GetTitleAsNameNoTooltip] [de_jure_holder.GetFirstName]에 의해 [main_title.GetName]의 법적 지배권이 확장되고 있다는 이야기를 합니다. 이는 영지가 상속되어야지 주장되는 것이 아니라고 생각하는 우리 귀족들의 분노를 샀습니다. 부디 이 상황이 오래가지 않기를 바랍니다." # 272402359304221234
+  EH_major_decisions.1.a: "그 왕국이 역사 속에서 잊히기를..." # 5419282270654905873
+  EH_major_decisions.1.tooltip: "참고: 이 이벤트를 보고 계시다면, 패권국이 법적 소유권 지도 모드에서 더 커졌으니 패권국 지도 모드를 확인해 보시는 것을 추천합니다." # 10148515444562555727

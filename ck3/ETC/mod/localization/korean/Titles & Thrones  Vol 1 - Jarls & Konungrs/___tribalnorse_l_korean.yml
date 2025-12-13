@@ -1,0 +1,114 @@
+﻿l_korean:
+  baron_male_norse_tribal: "홀드르" # 10056978685779746968
+  baron_female_norse_tribal: "홀드리아" # 17041048524991141428
+  baron_spouse_male_norse_tribal: "홀드르마드르" # 7082615340783012960
+  baron_spouse_female_norse_tribal: "홀드르프로" # 7911098439814658204
+  baron_son_norse_tribal: "홀드르세링르" # 12376476665431390771
+  baron_daughter_norse_tribal: "홀드마르" # 17993389448817969765
+  baron_mother_norse_tribal: "홀드르모디르" # 7382612186736162494
+  barony_castle_norse_tribal: "홀드" # 5795030476752963913
+  barony_tribe_norse_tribal: "$barony_castle_norse$" # 18085027804531053454
+  count_male_norse_independent_tribal: "헤르시르" # 12578805351840694852
+  count_female_norse_independent_tribal: "헤르시르야" # 11723341122014665047
+  count_spouse_male_norse_independent_tribal: "헤르시르마드르" # 14963964956187720461
+  count_spouse_female_norse_independent_tribal: "헤르시르프루" # 13882349386512294256
+  count_son_norse_independent_tribal: "헤르시르사링르" # 18121488906748168265
+  count_daughter_norse_independent_tribal: "헤르시머" # 16562654851449913355
+  count_mother_norse_independent_tribal: "헤르시르모디르" # 2363305451757718638
+  county_norse_independent_tribal: "허시르돔르" # 7655409182259062874
+  count_male_norse_tribal: "호프딩이" # 3363718433820770513
+  count_female_norse_tribal: "호프딩이프루" # 8394380880360868358
+  count_spouse_male_norse_tribal: "영주" # 16688940772982068374
+  count_spouse_female_norse_tribal: "여주인" # 3861064794449316424
+  count_son_norse_tribal: "호프딩이사링그르" # 3867889900627290137
+  count_daughter_norse_tribal: "호프딩마에르" # 17555589235416067089
+  count_mother_norse_tribal: "족장 어머니" # 12806977323450653102
+  county_norse_tribal: "영주령" # 17434492371835465093
+  duke_male_norse_tribal: "오드비티" # 2109522859057056736
+  duke_female_norse_tribal: "오드비트야" # 6374767864358725776
+  duke_spouse_male_norse_tribal: "오드비티마드르" # 6569274821629306233
+  duke_spouse_female_norse_tribal: "오드비티프루" # 17367035774896991996
+  duke_son_norse_tribal: "오드비티사링르" # 6760695428937125678
+  duke_daughter_norse_tribal: "오드비트마르" # 14334203233957926736
+  duke_mother_norse_tribal: "오드비티모디르" # 4554060527469920316
+  duchy_norse_tribal: "오드비트돔르" # 4022909465871010141
+  duke_male_norse_independent_tribal: "필키르" # 15232498297441802005
+  duke_female_norse_independent_tribal: "필키르야" # 14070279317707473214
+  duke_spouse_male_norse_independent_tribal: "필키르마드르" # 10230547653897159793
+  duke_spouse_female_norse_independent_tribal: "여왕" # 9458965926820406210
+  duke_son_norse_independent_tribal: "필키사링그르" # 15773263162965957090
+  duke_daughter_norse_independent_tribal: "필키스마르" # 47820485320751954
+  duke_mother_norse_independent_tribal: "필키르모디르" # 7889616096908489125
+  duchy_norse_independent_tribal: "퓔키" # 9060513334210834432
+  king_male_norse_vassal_tribal: "요푸르" # 6085299183265207654
+  king_female_norse_vassal_tribal: "요푸르야" # 8072599433034628663
+  king_spouse_male_norse_vassal_tribal: "요푸르마드르" # 4066624933286607782
+  king_spouse_female_norse_vassal_tribal: "요푸르프루" # 13786780185258373403
+  king_son_norse_vassal_tribal: "요푸르사링그르" # 13802340758552636698
+  king_daughter_norse_vassal_tribal: "요푸르마에르" # 1089777469075866561
+  king_mother_norse_vassal_tribal: "요푸르모디르" # 13263388056820375866
+  kingdom_norse_vassal_tribal: "요푸르돔" # 5690169016328153533
+  king_male_norse_tribal: "래시르" # 9694301568808424131
+  king_female_norse_tribal: "여왕" # 15089448203529199045
+  king_spouse_male_norse_tribal: "레이시아르마드르" # 517071606510876888
+  king_spouse_female_norse_tribal: "레이시르프루" # 3644594164744897696
+  king_son_norse_tribal: "레이시사링르" # 14392340667069148686
+  king_daughter_norse_tribal: "레시마르" # 5744745730561015810
+  king_mother_norse_tribal: "레이시모디르" # 10013246654446875308
+  kingdom_norse_tribal: "리키" # 13068978488030052373
+  emperor_male_norse_vassal_tribal: "야다르" # 14385014329204419467
+  emperor_female_norse_vassal_tribal: "야다르야" # 9693468364938396976
+  emperor_spouse_male_norse_vassal_tribal: "야드르마드르" # 18185226654616390592
+  emperor_spouse_female_norse_vassal_tribal: "야다르프로" # 3488394359859362820
+  emperor_son_norse_vassal_tribal: "야다르세링르" # 2231156866764135523
+  emperor_daughter_norse_vassal_tribal: "야드마르" # 16532576642776341656
+  emperor_mother_norse_vassal_tribal: "야드르모디르" # 2636812777052674685
+  empire_norse_vassal: "야다르도움르" # 8989325522762307103
+  emperor_male_norse_tribal: "드로틴" # 3011152161657865490
+  emperor_female_norse_tribal: "여왕들" # 10420787968673211792
+  emperor_spouse_male_norse_tribal: "드로트닌마드르" # 2965459299053492058
+  emperor_spouse_female_norse_tribal: "여주인" # 6500007041335211118
+  emperor_son_norse_tribal: "드로틴사링르" # 13952714066789246192
+  emperor_daughter_norse_tribal: "여왕의 법" # 14645080915253904520
+  emperor_mother_norse_tribal: "여왕의 어머니" # 5267131604550509224
+  empire_norse: "드로트닌리키" # 18324919225150532440
+  hegemon_male_norse_tribal: "발드르" # 7623843805707654710
+  hegemon_female_norse_tribal: "발드랴" # 6391607300017416291
+  hegemon_spouse_male_norse_tribal: "발드르마드르" # 8752586318717294078
+  hegemon_spouse_female_norse_tribal: "발드르프루" # 9439626752952170334
+  hegemon_son_norse_tribal: "발드사링르" # 12654440324348310966
+  hegemon_daughter_norse_tribal: "발드마르" # 4842105263584505491
+  hegemon_mother_norse_tribal: "발드르모디르" # 15618901606799467438
+  hegemony_norse: "발드리키" # 427606042896343406
+  title_nsempire_tribal: "미클사이드로트눈" # 5181514822395278370
+  title_nsemperor_tribal: "미클사드로틴" # 1012335649430812711
+  title_nsqueen_tribal: "미클사여왕" # 8235468246928040883
+  title_nsemperor_spouse_male_tribal: "미켈스오트닝마드르" # 6875685294928887631
+  title_nsemperor_spouse_female_tribal: "미클드세로팅프루" # 17883427714674356495
+  title_nsprince_tribal: "미클사이드로틴사링르" # 4441058896436933078
+  title_nsprincess_tribal: "미클사이드로틴마르" # 140098312279661968
+  title_nsqueenmother_tribal: "위대한 여왕 어머니" # 14184792407259761510
+  scandinavia_empire_norse_tribal: "알튀오드드로트눈" # 5653108909926370201
+  scandinavia_emperor_male_norse_tribal: "알트요드드로트인" # 7481905087616838186
+  scandinavia_emperor_female_norse_tribal: "#bold 알트요드여왕#" # 18128477656154372995
+  scandinavia_emperor_spouse_male_norse_tribal: "전 세계의 군주" # 13221862315187542505
+  scandinavia_emperor_spouse_female_norse_tribal: "#bold 세계 여왕#" # 5196253270338421991
+  scandinavia_emperor_son_norse_tribal: "알툐드롯틴사링" # 15847276469849350215
+  scandinavia_emperor_daughter_norse_tribal: "알툐드요트로트닌마르" # 16332129042008275157
+  scandinavia_emperor_mother_norse_tribal: "#bold 세계의 왕비#" # 6740815970849925128
+  title_nshegemony_tribal: "알믹일세드롯트눈" # 7339202008957306678
+  title_nsoverlord_tribal: "알미킬새드로틴" # 5817810080798467970
+  title_nsoverlordqueen_tribal: "알밀킬세드로트닝" # 8118855974207166174
+  title_nsoverlord_spouse_male_tribal: "알믹일세드로트닝스마드르" # 3242999285822161502
+  title_nsoverlord_spouse_female_tribal: "알밀킬사이드로트닝프루" # 1585438966848990746
+  title_nsoverlordprince_tribal: "알믹일스애드로틴사애링그르" # 5732052102786240622
+  title_nsoverlordprincess_tribal: "알믹일세드로틴마르" # 8577146531955020981
+  title_nsoverlordqueenmother_tribal: "알믹일스애드로트닝모디르" # 11773818853600137286
+  norway_kingdom_norse_tribal: "민족의 여주인" # 17517992285801749190
+  norway_king_male_norse_tribal: "#bold 국왕#" # 12783929199147925334
+  norway_king_female_norse_tribal: "쇼드드로트닝" # 11484515988860191250
+  norway_king_spouse_male_norse_tribal: "여왕의 총신" # 4341596857798813012
+  norway_king_spouse_female_norse_tribal: "여왕님" # 10673230377002272877
+  norway_king_son_norse_tribal: "국왕 대관식" # 15255323514818025963
+  norway_king_daughter_norse_tribal: "여왕" # 5718029176003244281
+  norway_king_mother_norse_tribal: "여왕의 어머니" # 12065573387858715443

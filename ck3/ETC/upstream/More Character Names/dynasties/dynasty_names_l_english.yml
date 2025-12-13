@@ -5355,7 +5355,7 @@
  dynn_Saar:0 "Saar"
  dynn_Saarbrucken:0 "Saarbrücken"
  dynn_Saaremaa:0 "Saaremaa"
- dynn_Saaremaai:0 "Saaremaai"
+ dynn_Saaremaai:0 "Saaremaa" #Changed name in quotes
  dynn_Sabakyr:0 "Sabakyr"
  dynn_Sabbah:0 "Sabbah"
  dynn_Sabir:0 "Sabir"
@@ -12472,50 +12472,50 @@
  dynn_Catteral:0 "Catteral"
  dynn_Cattral:0 "Cattral"
  dynn_Bebbanburh:0 "Bebbanburh"
- dynn_Eoforwic:0 "Eoforwic"
+ dynn_Eoforwic:0 "Eoforwīc" # Changed name in quotes
  dynn_Escan_ceastre:0 "Escanceastre"
- dynn_North_Hamtun:0 "North Hamtun"
- dynn_Suth_Hamtun:0 "Suth Hamtun"
+ dynn_North_Hamtun:0 "North Hamtūn" # Changed name in quotes
+ dynn_Suth_Hamtun:0 "Suth Hamtūn" # Changed name in quotes
  dynn_Scrobbesbyrig:0 "Scrobbesbyrig"
  dynn_Deoraby:0 "Deoraby"
  dynn_Ligera_ceastre:0 "Ligeraceastre"
  dynn_Lintun:0 "Lintun"
  dynn_Ceastre:0 "Ceastre"
  dynn_Lan_ceastre:0 "Lanceastre"
- dynn_SomersE_te:0 "Somersetun" #Changed name in quotes
+ dynn_SomersE_te:0 "Somersetūn" # Changed name in quotes
  dynn_Suth_Seaxe:0 "Suth Seaxe"
  dynn_West_Seaxe:0 "West Seaxe"
  dynn_Oxnaford:0 "Oxnaford"
- dynn_Lundenwic:0 "Lundenwic"
+ dynn_Lundenwic:0 "Lundenwīc" # Changed name in quotes
  dynn_Suthrige:0 "Suthrige"
  dynn_Middle_Seaxe:0 "Middle Seaxe"
  dynn_Colen_ceastre:0 "Colenceastre"
  dynn_Weogornaceastre:0 "Weogornaceastre"
  dynn_WE_clingaceastre:0 "Wæclingaceastre"
- dynn_DornsE_te:0 "Dornsetun" #Changed name in quotes
- dynn_SumursE_te:0 "Sumursetun" #Changed name in quotes
+ dynn_DornsE_te:0 "Dornsetūn" # Changed name in quotes
+ dynn_SumursE_te:0 "Sumursetūn" # Changed name in quotes
  dynn_Wihtware:0 "Wihtware"
  dynn_Cantware:0 "Cantware"
  dynn_Medeshamstede:0 "Medeshamstede"
  dynn_Tadceastre:0 "Tadceastre"
  dynn_Bermingeham:0 "Bermingeham"
  dynn_Egebaldestone:0 "Egebaldestone"
- dynn_MagonsE_te:0 "Magonsetun" #Changed name in quotes
- dynn_TemersE_te:0 "Temersetun" #Changed name in quotes
- dynn_HahlsE_te:0 "Hahlsetun" #Changed name in quotes
+ dynn_MagonsE_te:0 "Magonsetūn" # Changed name in quotes
+ dynn_TemersE_te:0 "Temersetūn" # Changed name in quotes
+ dynn_HahlsE_te:0 "Hahlsetūn" # Changed name in quotes
  dynn_Wihtwara:0 "Wihtwara"
- dynn_WiltsE_te:0 "Wiltsetun" #Changed name in quotes
+ dynn_WiltsE_te:0 "Wiltsetūn" # Changed name in quotes
  dynn_Meonwara:0 "Meonwara"
  dynn_GlE_styngabyrig:0 "Glæstyngabyrig"
- dynn_Hamtum:0 "Hamtun" #Changed name in quotes
+ dynn_Hamtum:0 "Hamtun" # Changed name in quotes
  dynn_Hengesteselle:0 "Hengesteselle"
  dynn_AgE_lesT_rep:0 "Agælesþrep"
  dynn_Ceasterware:0 "Ceasterware"
  dynn_Brycgstowl:0 "Brycgstowl"
- dynn_ElmetsE_te:0 "Elmetsetun" #Changed name in quotes
+ dynn_ElmetsE_te:0 "Elmetsetun" # Changed name in quotes
  dynn_Eastorege:0 "Eastorege"
  dynn_Sunning:0 "Sunning"
- dynn_Reading:0 "Rēading" #Changed name in quotes
+ dynn_Reading:0 "Rēading" # Changed name in quotes
  dynn_Gewisse:0 "Gewisse"
  dynn_Basing:0 "Basing"
  dynn_HE_sting:0 "Hæsting"
@@ -12532,7 +12532,7 @@
  dynn_Banesbyrig:0 "Banesbyrig"
  dynn_Weardbyrig:0 "Weardbyrig"
  dynn_Grantabrycge:0 "Grantabrycge"
- dynn_Gipeswic:0 "Gipeswic"
+ dynn_Gipeswic:0 "Gipeswīc" # Changed name in quotes
  dynn_Boroware:0 "Boroware"
  dynn_Glesting:0 "Glesting"
  dynn_Brahhing:0 "Brahhing"
@@ -12545,7 +12545,7 @@
  dynn_Tewing:0 "Tewing"
  dynn_WE_cling:0 "Wæcling"
  dynn_Woccing:0 "Woccing"
- dynn_PE_ding_tun:0 "Pædingtun" #Changed name in quotes
+ dynn_PE_ding_tun:0 "Pædingtūn" # Changed name in quotes
  dynn_HrE_fnescroft:0 "Hræfnescroft"
  dynn_Daenning:0 "Daenning"
  dynn_Hauering:0 "Hauering"
@@ -12554,14 +12554,33 @@
  dynn_Limenwara:0 "Limenwara"
  dynn_Modingahema:0 "Modingahema"
  dynn_E_lfing:0 "Ælfing"
- dynn_Arosetun:0 "Arosetun"
- dynn_Bilsetun:0 "Bilsetun"
- dynn_Cilternsetun:0 "Cilternsetun"
- dynn_Duddensetun:0 "Duddensetun"
+ dynn_Arosetun:0 "Arosetūn" # Changed name in quotes
+ dynn_Bilsetun:0 "Bilsetūn" # Changed name in quotes
+ dynn_Cilternsetun:0 "Cilternsetūn" # Changed name in quotes
+ dynn_Duddensetun:0 "Duddensetūn" # Changed name in quotes
  dynn_Husmerae:0 "Husmerae"
- dynn_Pecsetun:0 "Pecsetun"
- dynn_Pencersetun:0 "Pencersetun"
+ dynn_Pecsetun:0 "Pecsetūn" # Changed name in quotes
+ dynn_Pencersetun:0 "Pencersetūn" # Changed name in quotes
  dynn_Loidis:0 "Loidis"
+ dynn_Stirestrop:0 "Stirestrop" # https://en.wikipedia.org/wiki/Edenthorpe
+ dynn_AddawI_c:0 "Addawīc" # https://en.wikipedia.org/wiki/Adwick_le_Street#Medieval
+ dynn_AlcalE_ah:0 "Alcalēah" # https://en.wikipedia.org/wiki/Auckley
+ dynn_Eowestre:0 "Eowestre" # https://en.wikipedia.org/wiki/Austerfield
+ dynn_Barnebi:0 "Barnebi" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - Was named Barnebi in the Doomsday book and was founded by vikings in during the Danelaw
+ dynn_StreonE_shalh:0 "Streonæshalch" # https://en.wikipedia.org/wiki/Whitby#History - The Anglo-Saxon name for the town of Whitby
+ dynn_BrA_dwella:0 "Brādwella" # https://en.wikipedia.org/wiki/Braithwell - The Anglo-Saxon name of the village of Braithwell
+ dynn_Camshalh:0 "Camshalh" # https://en.wikipedia.org/wiki/Campsall - The Anglo-Saxon name for the village of Campsall
+ dynn_CantalE_ah:0 "Cantalēah" # https://en.wikipedia.org/wiki/Cantley,_South_Yorkshire Anglo-Saxon name of Cantley
+ dynn_HE_T_feld:0 "Hæþfeld" # https://en.wikipedia.org/wiki/Hatfield,_South_Yorkshire#Dunscroft Anglo-Saxon name of Hatfield
+ dynn_FennwI_c:0 "Fennwīc" # https://en.wikipedia.org/wiki/Fenwick,_South_Yorkshire Anglo-Saxon name of Fenwick
+ dynn_FenningaslE_ah:0 "Fenningaslēah" # https://en.wikipedia.org/wiki/Finningley Anglo-Saxon name of Finningley
+ dynn_Fisclacu:0 "Fisclacu" # https://en.wikipedia.org/wiki/Fishlake Anglo-Saxon name of Fishlake
+ dynn_Peohting:0 "Peohting" #Semi Fictional
+ dynn_HanapO_l:0 "Hanapōl" # https://en.wikipedia.org/wiki/Hampole - Anglo-Saxon name of Hampole
+ dynn_HicoltU_n:0 "Hicoltūn" # https://en.wikipedia.org/wiki/Hickleton - Anglo-Saxon name of Hickleton
+ dynn_HO_htU_n:0 "Hōhtūn" # https://en.wikipedia.org/wiki/Hooton_Pagnell - Anglo-Saxon name of Hooton Pagnell, desected the name and used Anglo-Saxon naming
+ dynn_BrO_mwudu:0 "Brōmwudu" # https://en.wikipedia.org/wiki/Kirk_Bramwith - Anglo-Saxon name of Kirk Bramwith
+ dynn_Mos:0 "Mos" # https://en.wikipedia.org/wiki/Moss,_South_Yorkshire - Anglo-Saxon name of Moss in South Yorkshire, Mos meaning bog in old English
 
  dynn_Chilvers:0 "Chilvers"
  dynn_Chorlton:0 "Chorlton"
@@ -12826,6 +12845,33 @@
  dynn_Hales:0 "Hales"
  dynn_Whitmore:0 "Whitmore"
  dynn_Tyrrell:0 "Tyrrell"
+ dynn_Barneby:0 "Barneby" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - A 13th century English rendering of Barnebi
+ dynn_Foliot:0 "Foliot" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - A 13th century family that were landholders of Barnebi
+ dynn_la_Ryvere:0 "la Ryvere" # https://en.wikipedia.org/wiki/William_de_Essendon - A 13th century surname of a senior Crown servant
+ dynn_Wymondham:0 "Wymondham" # https://en.wikipedia.org/wiki/William_de_Essendon - A 13th century surname of a keeper of the Royal Exchanges at London and Canterbury
+ dynn_Vesci:0 "Vesci" # https://en.wikipedia.org/wiki/William_de_Essendon - A late 13th century English surname of Norman origin 
+ dynn_Estdene:0 "Estdene" # https://en.wikipedia.org/wiki/William_de_Essendon - An early 13th century English surname of orignated from East Dean in West Sussex, many versions of this surname exist but I went with the one frequently listed from offical records
+ dynn_Marchelay:0 "Marchelay" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - A 13th century English surname of Piere de Marchelay, his surname is of unknown origin as I can't find any records as of yet.
+ dynn_Vavasour:0 "Vavasour" # https://en.wikipedia.org/wiki/Vavasour_family - An old English noble family that dates back to the Norman period, the noble house's descendants are still around to day.
+ dynn_Livet:0 "Livet" # https://en.wikipedia.org/wiki/Levett - Norman surname that orginates from the village of Livet-en-Ouche now called Jonquerets-de-Livet
+ dynn_Blacston:0 "Blacston" # https://en.wikipedia.org/wiki/Blaxton - A village that dates back to the early 13th century
+ dynn_Burghwallis:0 "Burghwallis" # https://en.wikipedia.org/wiki/Burghwallis - A church that dates back to the mid 10th century, it's name was given during the early 13th century
+ dynn_Cadeby:0 "Cadeby" # https://en.wikipedia.org/wiki/Cadeby,_South_Yorkshire - A village that was once a manor that was held by a Norman noble family
+ dynn_Campsall:0 "Campsall" # https://en.wikipedia.org/wiki/Campsall - A village that was originally called Camshalh when the Anglo-Saxon's still ruled over England
+ dynn_Cauntele:0 "Cauntele" # https://en.wikipedia.org/wiki/Cantley,_South_Yorkshire - Kanteleia and Cauntele were the late Norman names given to Cantley during the early 13th century, decided to go with Cauntele
+ dynn_Everingham:0 "Everingham" # https://en.wikipedia.org/wiki/Cantley,_South_Yorkshire - The surname of the owners of Kanteleia/Cauntele who were granted it after the Norman Conquest
+ dynn_Cuzeuuorde:0 "Cuzeuuorde" # https://en.wikipedia.org/wiki/Cusworth - The original Norman name given to Cusworth after the Norman Conquest, unsure if it had an Anglo-Saxon name
+ dynn_Hatfield:0 "Hatfield" # https://en.wikipedia.org/wiki/Hatfield,_South_Yorkshire#Dunscroft - The original Norman name given to Hatfield after the Norman Conquest, was originally called Hæþfeld before the Norman's took over England
+ dynn_Streethorpe:0 "Streethorpe" # https://en.wikipedia.org/wiki/Edenthorpe - The original Norman name given to Edenthorpe after the Norman Conquest, was originally called Stirestrop before the Norman's took over England
+ dynn_Fenwick:0 "Fenwick" # https://en.wikipedia.org/wiki/Fenwick,_South_Yorkshire - The Norman name given to Fenwick after the Norman Conquest, was originally called Fennwīc before the Norman's took over England
+ dynn_Finningley:0 "Finningley" # https://en.wikipedia.org/wiki/Finningley - Founded during early Norman rule between the mid 11th century or 12th century
+ dynn_Fiscelac:0 "Fiscelac" # https://en.wikipedia.org/wiki/Fishlake - The original Norman name given to Fishlake after the Norman Conquest, was originally called Fisclacu before the Norman's took over England
+ dynn_Hampole:0 "Hampole" # https://en.wikipedia.org/wiki/Hampole - The original Norman name given to Hampole after the Norman Conquest, was originally called Hanapōl before the Norman's took over England
+ dynn_Tania:0 "Tania" # https://en.wikipedia.org/wiki/Hampole - The surname of the founder of the priory at Hampole from 1153, couldn't find any records of the surname as of now, not to mention their forename seems strange
+ dynn_Hickleton:0 "Hickleton" # https://en.wikipedia.org/wiki/Hickleton - The Norman name given to Hickleton after the Norman Conquest, was originally called Hicoltūn before the Norman's took over England
+ dynn_Hotone:0 "Hotone" # https://en.wikipedia.org/wiki/Hooton_Pagnell - The Norman name given to Hooton Pagnell after the Norman Conquest, was originally called Hōhtūn before the Norman's took over England
+ dynn_Bramwith:0 "Bramwith" # https://en.wikipedia.org/wiki/Kirk_Bramwith - The English name for Kirk Bramwith, was originally called Brōmwudu before the Norman's took over England, Would change during the middle age England
+ dynn_Moss_English:0 "Moss" # https://en.wikipedia.org/wiki/Moss,_South_Yorkshire - The English name for Moss, was originally called Mos before the Norman's took over England
 
  dynn_Longueville:0 "Longueville"
  dynn_Thouars:0 "Thouars"
@@ -12904,6 +12950,7 @@
  dynn_Aspremont:0 "Aspremont"
  dynn_ChA_telet:0 "Châtelet"
  dynn_Estourmel:0 "Estourmel"
+ dynn_Paganal:0 "Paganal" # https://en.wikipedia.org/wiki/Hooton_Pagnell - The Norman family that came to rule to Hooton Pagnell after the Norman Conquest, their rule over it would lead to their surname being added to Hooton
 
  dynn_Marvejols:0 "Marvejols" 
  dynn_Limoux:0 "Limoux"
@@ -14263,6 +14310,10 @@
  dynn_Kiev:0 "Kiev"
  dynn_Suzdal:0 "Suzdal"
  dynn_Volodavich:0 "Volodavich"
+ dynn_Chernigov:0 "Chernigov"
+ dynn_Beloozero:0 "Beloozero" # https://en.wikipedia.org/wiki/Belozersk - Was founded by Kievan Rus during the mid 800's
+ dynn_Belyov:0 "Belyov" # https://en.wikipedia.org/wiki/Belyov - It's unknown when Belyov was founded but it was first mentioned in a chronicle from 1147
+ dynn_Belz:0 "Belz" # https://en.wikipedia.org/wiki/Belyov - It's unknown when Belz was founded but it was apart of the Cherven Cities during the 10th century
 
  dynn_BranimislaviC_:0 "Branimislavić"
  dynn_GranoZ_iviC_:0 "Granoživić"
@@ -14511,3 +14562,237 @@
  dynn_Anrakuan:0 "Anrakuan"
  dynn_Shimizu:0 "Shimizu"
  dynn_Umemura:0 "Umemura"
+ dynn_Sugitani:0 "Sugitani"
+ dynn_Kamei:0 "Kamei"
+ dynn_Ashina_2:0 "Ashina"
+ dynn_KO_riki:0 "Kōriki"
+ dynn_Arima:0 "Arima"
+ dynn_O_mura:0 "Ōmura"
+ dynn_Kanagami:0 "Kanagami"
+ dynn_Kawano:0 "Kawano"
+ dynn_Horiuchi:0 "Horiuchi"
+ dynn_Ishida:0 "Ishida"
+ dynn_Toyotomi:0 "Toyotomi"
+ dynn_Ukita:0 "Ukita"
+ dynn_Furuta:0 "Furuta"
+ dynn_Fuwa:0 "Fuwa"
+ dynn_Hineno:0 "Hineno"
+ dynn_Naito:0 "Naito"
+ dynn_Hiraiwa:0 "Hiraiwa"
+ dynn_Miyamoto:0 "Miyamoto"
+ dynn_Terao:0 "Terao"
+ dynn_Furuhashi:0 "Furuhashi"
+ dynn_Takemura:0 "Takemura"
+ dynn_Mizuno:0 "Mizuno"
+ dynn_Is_shiki:0 "Is'shiki"
+ dynn_Kaganoi:0 "Kaganoi"
+ dynn_Kinoshita:0 "Kinoshita"
+ dynn_Kuroda:0 "Kuroda"
+ dynn_Kuze:0 "Kuze"
+ dynn_Maeda:0 "Maeda"
+ dynn_Kazan_in:0 "Kazan'in"
+ dynn_Nishio:0 "Nishio"
+ dynn_RyU_zO_ji:0 "Ryūzōji"
+ dynn_Sakazaki:0 "Sakazaki"
+ dynn_Sassa:0 "Sassa"
+ dynn_Terazawa:0 "Terazawa"
+ dynn_Bekki:0 "Bekki"
+ dynn_Ueno:0 "Ueno"
+ dynn_O_hO_ri:0 "Ōhōri"
+ dynn_Numata:0 "Numata"
+ dynn_Kushihashi:0 "Kushihashi"
+ dynn_Katakura:0 "Katakura"
+ dynn_Akechi:0 "Akechi"
+ dynn_Tsumaki:0 "Tsumaki"
+ dynn_TO_yama:0 "Tōyama"
+ dynn_Hibino:0 "Hibino"
+ dynn_Awa:0 "Awa"
+ dynn_Inukami:0 "Inukami"
+ dynn_Akashi:0 "Akashi"
+ dynn_O_tori:0 "Ōtori"
+ dynn_Hakata:0 "Hakata"
+ dynn_Akita:0 "Akita"
+ dynn_Taga:0 "Taga"
+ dynn_Okitama:0 "Okitama"
+ dynn_Iwaki:0 "Iwaki"
+ dynn_Ibaraki:0 "Ibaraki"
+ dynn_Katsushika:0 "Katsushika"
+ dynn_Ichihara:0 "Ichihara"
+ dynn_Tama:0 "Tama"
+ dynn_Tagata:0 "Tagata"
+ dynn_Yatsushiro:0 "Yatsushiro"
+ dynn_Tsukama:0 "Tsukama"
+ dynn_Gunma:0 "Gunma"
+ dynn_Kubiki:0 "Kubiki"
+ dynn_Imizu:0 "Imizu"
+ dynn_Kashima:0 "Kashima"
+ dynn_Enuma:0 "Enuma"
+ dynn_NyU_:0 "Nyū"
+ dynn_Nakashima:0 "Nakashima"
+ dynn_Atsumi:0 "Atsumi"
+ dynn_Tsuruga:0 "Tsuruga"
+ dynn_Wakasa:0 "Wakasa"
+ dynn_KO_ka:0 "Kōka"
+ dynn_Iga:0 "Iga"
+ dynn_AnO_:0 "Anō"
+ dynn_Kuwada:0 "Kuwada"
+ dynn_Kumano:0 "Kumano"
+ dynn_Yoshino:0 "Yoshino"
+ dynn_Nagusa:0 "Nagusa"
+ dynn_Fukuhara:0 "Fukuhara"
+ dynn_Shikama:0 "Shikama"
+ dynn_Keta:0 "Keta"
+ dynn_Ibo:0 "Ibo"
+ dynn_HO_mi:0 "Hōmi"
+ dynn_Oki:0 "Oki"
+ dynn_Kume:0 "Kume"
+ dynn_Tomata:0 "Tomata"
+ dynn_JO_tO_:0 "Jōtō"
+ dynn_Kuboya:0 "Kuboya"
+ dynn_Yasuna:0 "Yasuna"
+ dynn_Ou:0 "Ou"
+ dynn_Kamo:0 "Kamo"
+ dynn_Naka:0 "Naka"
+ dynn_Yoshiki:0 "Yoshiki"
+ dynn_Toyora:0 "Toyora"
+ dynn_Nakata:0 "Nakata"
+ dynn_Yashima:0 "Yashima"
+ dynn_Iyo:0 "Iyo"
+ dynn_Usa:0 "Usa"
+ dynn_O_ita:0 "Ōita"
+ dynn_Koyu:0 "Koyu"
+ dynn_Soo:0 "Soo"
+ dynn_Kawanabe:0 "Kawanabe"
+ dynn_Mashiki:0 "Mashiki"
+ dynn_Mii:0 "Mii"
+ dynn_Dazaifu:0 "Dazaifu"
+ dynn_Saga:0 "Saga"
+ dynn_Yora:0 "Yora"
+ dynn_TagajO_:0 "Tagajō"
+ dynn_Hiraizumi:0 "Hiraizumi"
+ dynn_Sakai:0 "Sakai"
+ dynn_Niigata:0 "Niigata"
+ dynn_Negi:0 "Negi"
+ dynn_Arakida:0 "Arakida"
+ dynn_Manabe:0 "Manabe"
+ dynn_Onatsu:0 "Onatsu"
+ dynn_Yatabe:0 "Yatabe"
+ dynn_Ushijima:0 "Ushijima"
+ dynn_Umekawa:0 "Umekawa"
+ dynn_Uchimura:0 "Uchimura"
+ dynn_Tanba:0 "Tanba"
+ dynn_Takigawa:0 "Takigawa"
+ dynn_Takagi:0 "Takagi" #Semi Fictional
+ dynn_Soeki:0 "Soeki" #Semi Fictional
+ dynn_Shinohara:0 "Shinohara" #Semi Fictional
+ dynn_SakujO_:0 "Sakujō" #Semi Fictional
+ dynn_Oe:0 "Oe" #Semi Fictional
+ dynn_Nomura:0 "Nomura" #Semi Fictional
+ dynn_Miyake:0 "Miyake" #Semi Fictional
+ dynn_Matsunaga:0 "Matsunaga"
+ dynn_Tsutsui:0 "Tsutsui"
+ dynn_O_tani:0 "Ōtani"
+ dynn_Yokota:0 "Yokota"
+ dynn_Ankokuji:0 "Ankokuji" # https://en.wikipedia.org/wiki/Ankokuji_Ekei - The surname of a military Monk called Ekei Ankokuji
+ dynn_Ishin:0 "Ishin" # https://en.wikipedia.org/wiki/Ishin_Sūden - The surname of a Rinzai Zen monk called Ishin Sūden
+ dynn_Seishuku:0 "Seishuku" # https://en.wikipedia.org/wiki/Ishin_Sūden - The surname of the mentor Sūden studied under
+ dynn_Koshikibu:0 "Koshikibu" # https://en.wikipedia.org/wiki/Koshikibu_no_Naishi - The name of a Waka poet
+
+ dynn_Chinen:0 "Chinen" #Semi Fictional
+ dynn_Haneji:0 "Haneji"
+ dynn_GesshU_:0 "Gesshū"
+ dynn_Gusiji:0 "Gusiji" #Semi Fictional
+
+ dynn_Yi_KR:0 "Yi"
+ dynn_Gil_KR:0 "Gil"
+ dynn_Ha_KR:0 "Ha"
+ dynn_Bak_KR:0 "Bak" # From a General called Bak Sul-Hui, a General who supported Hyejong (of the Goryeo dynasty) to become Crown Prince of Goryeo in 921 - sourced from this https://en.wikipedia.org/wiki/Hyejong_of_Goryeo
+ dynn_Pak:0 "Pak"
+ dynn_Seol:0 "Seol" # From a leading scholar in the unifiled Silla period called Seol Chong, son of a prominent Buddhist figure Wonhyo and a Silla princess called Yoseok - sourced from this https://en.wikipedia.org/wiki/Hyejong_of_Goryeo
+ dynn_Hae:0 "Hae" #Semi Fictional
+ dynn_Maeng:0 "Maeng" #Semi Fictional
+
+ dynn_GA_n:0 "Gān" # From a governer and military commander of the Western Han dynasty called Gān Yánshòu who gained fame from defeating the ruler of the Xiongnu empire during 36 BC 
+ dynn_HuO_:0 "Huò" # From a politician and military general of the Western Han dynasty called Huò Qùbìng who is considered one of the most legendary commanders in Chinese history
+ dynn_XU_:0 "Xǔ"
+ dynn_ZhA_i:0 "Zhài"
+ dynn_ZhuA_ng:0 "Zhuāng"
+ dynn_ShO_u:0 "Shòu"
+ dynn_BO_:0 "Bó"
+ dynn_DO_ng:0 "Dōng"
+
+ dynn_Roela:0 "Roela"
+ dynn_Reastvere:0 "Reastvere"
+ dynn_Massu:0 "Massu"
+ dynn_Lindanisa:0 "Lindanisa"
+ dynn_Varbola:0 "Varbola"
+ dynn_Iru:0 "Iru"
+ dynn_KA_rla:0 "Kärla"
+ dynn_Uusvada:0 "Uusvada"
+ dynn_Vaskjala:0 "Vaskjala"
+ dynn_Vomentagana:0 "Vomentagana"
+ dynn_Kose_Estonian:0 "Kose"
+ dynn_Rapla:0 "Rapla"
+ dynn_Lohu:0 "Lohu"
+ dynn_Kivivare:0 "Kivivare"
+ dynn_AgemA_e:0 "Agemäe"
+ dynn_Ahisilla:0 "Ahisilla"
+ dynn_Akupere:0 "Akupere"
+ dynn_Alatskivi:0 "Alatskivi"
+ dynn_Alulinn:0 "Alulinn"
+ dynn_Elva:0 "Elva"
+ dynn_Hinniala:0 "Hinniala"
+ dynn_Ehmja:0 "Ehmja"
+ dynn_Ehavere:0 "Ehavere"
+ dynn_ErumA_e:0 "Erumäe"
+ dynn_Jalukse:0 "Jalukse"
+ dynn_JA_gala:0 "Jägala"
+ dynn_JA_neda:0 "Jäneda"
+ dynn_JA_rvekU_la:0 "Järveküla"
+ dynn_Kaarma:0 "Kaarma"
+ dynn_Kalana:0 "Kalana"
+ dynn_Kuusalu:0 "Kuusalu"
+ dynn_KantsimA_e:0 "Kantsimäe"
+ dynn_Karitsa:0 "Karitsa"
+ dynn_Karuse:0 "Karuse"
+ dynn_Karula:0 "Karula"
+ dynn_Keava:0 "Keava"
+ dynn_Kongla:0 "Kongla"
+ dynn_Koila:0 "Koila"
+ dynn_Konuvere:0 "Konuvere"
+ dynn_Kuigatsi:0 "Kuigatsi"
+ dynn_Lihnutsi:0 "Lihnutsi"
+ dynn_Luhte:0 "Luhte"
+ dynn_LO_havere:0 "Lõhavere"
+ dynn_LO_imemA_e:0 "Lõimemäe"
+ dynn_Maianpata:0 "Maianpata"
+ dynn_MA_rdi:0 "Märdi"
+ dynn_Paehalle:0 "Paehalle"
+ dynn_Pikasilla:0 "Pikasilla"
+ dynn_Pidula:0 "Pidula"
+ dynn_Salevere:0 "Salevere"
+ dynn_TalimA_e:0 "Talimäe"
+ dynn_Tammiku:0 "Tammiku"
+ dynn_Varangu:0 "Varangu"
+ dynn_Vareste:0 "Vareste"
+ dynn_Vilina:0 "Vilina"
+ dynn_VO_hma:0 "Võhma"
+ dynn_AstijA_rve:0 "Astijärve"
+ dynn_Aloja:0 "Aloja"
+ dynn_VO_nnu:0 "Võnnu"
+ dynn_Hargla:0 "Hargla"
+ dynn_Aumeistri:0 "Aumeistri"
+ dynn_Aluliina:0 "Aluliina"
+ dynn_Koiva:0 "Koiva"
+ dynn_Kraasna:0 "Kraasna"
+ dynn_Purtse:0 "Purtse"
+ dynn_Avispea:0 "Avispea"
+ dynn_SO_tkU_la:0 "Sõtküla"
+ dynn_VO_handu:0 "Võhandu"
+ dynn_JA_rve:0 "Järve"
+ dynn_Metsa:0 "Metsa"
+ dynn_JO_e:0 "Jõe"
+ dynn_Lutsi:0 "Lutsi"
+ dynn_Suure_Jaani:0 "Suure-Jaani"
+ dynn_Paluoja:0 "Paluoja"
+ dynn_Karksi:0 "Karksi"

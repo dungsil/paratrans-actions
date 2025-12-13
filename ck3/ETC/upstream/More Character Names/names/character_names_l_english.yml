@@ -38768,7 +38768,7 @@
  Yasusuke_2: "Yasusuke" # 康資
  Yasusuke_3: "Yasusuke" # 保相
  Yasutada: "Yasutada" # 泰忠
- Yasutada_2: "Yasutada_2" # 保忠
+ Yasutada_2: "Yasutada" # 保忠
  Yasutada_3: "Yasutada" # 安忠
  Yasutada_4: "Yasutada" # 寧内
  Yasutada_5: "Yasutada" # 康忠
@@ -44429,7 +44429,7 @@
  Arfast:0 "Arfast"
  Armund:0 "Armund"
  Arnbernus:0 "Arnbernus"
- Arnbiorn:0 "Arnbiorn"
+ Arnbiorn:0 "Arnbiorne" #Changed name in quotes
  Arnbyern:0 "Arnbyern"
  Arndt:0 "Arndt"
  Arnels:0 "Arnels"
@@ -44665,6 +44665,8 @@
  AglhE_:0 "Aglhæ"
  Alanos:0 "Alanos"
  Aldous:0 "Aldous"
+ Austmathr:0 "Austmathr" #Semi Fictional
+ Arnbjorn:0 "Arnbjorn"
  
  Bjartr:0 "Bjartr"
  BjO_rn2:0 "Bjǫrn"
@@ -45194,6 +45196,8 @@
  BO_rre:0 "Børre"
  BO_si2:0 "Bøsi"
  Bendt:0 "Bendt"
+ Biring:0 "Biring" #Semi Fictional
+ Botholfus:0 "Botholfus" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  Carolus:0 "Carolus"
  Christer:0 "Christer"
@@ -45725,6 +45729,7 @@
  Eerik:0 "Eerik"
  Eivor:0 "Eivor"
  Elwin:0 "Elwin"
+ Erlangr:0 "Erlangr" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  FastU_lfr:0 "Fastúlfr"
  FE_lagi:0 "Félagi"
@@ -46564,6 +46569,8 @@
  GO_tved:0 "Gøtved"
  Gudmundur:0 "Gudmundur"
  Gregard:0 "Gregard"
+ Gauth:0 "Gauth" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
+ Garde:0 "Garde" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  HA_lfdan:0 "Hálfdan"
  HallbjO_rn:0 "Hallbjǫrn"
@@ -47294,6 +47301,9 @@
  HO_ghe:0 "Høghe"
  HO_ther:0 "Høther"
  Hughleik:0 "Hughleik"
+ Hrapp:0 "Hrapp" #Semi Fictional
+ Hubaldus:0 "Hubaldus" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
+ HO_yen:0 "Høyen" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  Ingi:0 "Ingi"
  IngimA_rr:0 "Ingimárr"
@@ -48088,6 +48098,7 @@
  Lyder:0 "Lyder"
  LE_ff:0 "Læff"
  LO_ther:0 "Løther"
+ Lodinus:0 "Lodinus" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  Mundi:0 "Mundi"
  ME_ginbaldr:0 "Mæginbaldr"
@@ -48335,6 +48346,7 @@
  Normand:0 "Normand"
  NE_we:0 "Næwe"
  NO_k:0 "Nøk"
+ Norek:0 "Norek" # https://slaegtsbibliotek.dk/911905.pdf?utm_source=chatgpt.com
 
  OddbjO_rn:0 "Oddbjǫrn"
  Oddgeirr:0 "Oddgeirr"
@@ -49593,6 +49605,9 @@
  Sejr:0 "Sejr"
  Sjovat:0 "Sjovat"
  Steinodd:0 "Steinodd"
+ SkO_dir:0 "Skœdir" #Semi Fictional
+ SnE_kol:0 "Snækol" #Semi Fictional
+ SE_vil:0 "Sævil" #Semi Fictional
 
  T_O_rarinn:0 "Þórarinn"
  T_O_rbjO_rn:0 "Þórbjǫrn"
@@ -50401,6 +50416,7 @@
  Vrage:0 "Vrage"
  VO_gg:0 "Vøgg"
  VO_lund:0 "Vølund"
+ Veleif:0 "Veleif" #Semi Fictional
 
  Yngvarr:0 "Yngvarr"
  Ylfingr:0 "Ylfingr"
@@ -53161,6 +53177,7 @@
  Alfhere:0 "Alfhere"
  Alfnoth:0 "Alfnoth"
  Arnbrand:0 "Arnbrand"
+ Alca:0 "Alca" # https://en.wikipedia.org/wiki/Auckley
 
  Botwulf:0 "Botwulf"
  Bacga:0 "Bacga"
@@ -53318,6 +53335,8 @@
  CenlE_f:0 "Cenlæf"
  Ceolaf:0 "Ceolaf"
  Cathwulf:0 "Cathwulf"
+ CE_dmon:0 "Cædmon" #Changed name in quotes - Cædmon, is the earliest recorded Anglo-Saxon poet.
+ Cam:0 "Cam" # https://en.wikipedia.org/wiki/Campsall - Campsall's Anglo-Saxon name, Camshalh which translates to "Cam's nook of land"
 
  Deorwine:0 "Deorwine"
  Dudda:0 "Dudda"
@@ -53608,12 +53627,15 @@
  Healfdan:0 "Healfdan"
  HE_fer:0 "Hæfer"
  HE_fing:0 "Hæfing"
+ HU_nbeald:0 "Hūnbeald"
 
  Ifa:0 "Ifa"
  IngfriD_:0 "Ingfrið"
  IngwE_r:0 "Ingwær"
  Ithamar:0 "Ithamar"
  Ingwy:0 "Ingwy"
+
+ Ketilbert:0 "Ketilbeorht" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - An Anglo-Danish decended name, changed the "bert" to the Anglo-Saxon "beorht"
 
  Leofcild:0 "Leofcild"
  LeofdE_g:0 "Leofdæg"
@@ -53772,6 +53794,7 @@
  SwE_fbert:0 "Swæfbert"
  SwiT_red:0 "Swiþred"
  Swegen:0 "Swegen"
+ Streon:0 "Streon" # https://en.wikipedia.org/wiki/Whitby#History - Whitby's Anglo-Saxon name, Streonæshalch which translates to "Streon's nook of land"
 
  Tatberht:0 "Tatberht"
  TatnoD_:0 "Tatnoð"
@@ -53841,6 +53864,7 @@
  Ulfsige:0 "Ulfsige"
  UhtwE_gn:0 "Uhtwægn"
  U_D_ric:0 "Ūðric"
+ Ulfkil:0 "Ulfkil" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066)
 
  WE_rmund:0 "Wærmund"
  Wealdhere:0 "Wealdhere"
@@ -54909,6 +54933,7 @@
  Posthumus:0 "Posthumus"
  Potkin:0 "Potkin"
  Pharamus:0 "Pharamus"
+ Piere:0 "Piere" # https://en.wikipedia.org/wiki/Barnby_Dun#Pre-Norman_era_(pre–1066) - A 13th century English name of an English noble called Piere de Marchelay, his name seems to be a bygone middle English rending of Pierre, which is the French rendering of the Greek name Petros
 
  Raoulin:0 "Raoulin"
  Ratikin:0 "Ratikin"
@@ -57565,6 +57590,7 @@
  Dovelin:0 "Dovelin"
  Drogot:0 "Drogot"
  Dagulfus:0 "Dagulfus"
+ Dat_Arnaud:0 "Dat-Arnaud"
  
  E_duin:0 "Éduin"
  Elisiard:0 "Elisiard"
@@ -58371,6 +58397,7 @@
  Amadour:0 "Amadour"
  Ato:0 "Ato"
  Aiguinart:0 "Aiguinart"
+ AdalbE_rt:0 "Adalbèrt"
 
  BartolomE_:0 "Bartolomè"
  BodO_in:0 "Bodóin"
@@ -65382,6 +65409,8 @@
  Auzar:0 "Auzar"
  Avald:0 "Avald"
  Auzor:0 "Auzor"
+ AlpA_r:0 "Alpár"
+ Atyusz:0 "Atyusz"
 
  BA_cs:0 "Bács"
  BajA_n:0 "Baján"
@@ -65513,6 +65542,10 @@
  CsonsA_s:0 "Csonsás"
  CsopA_n:0 "Csopán"
  Csupor:0 "Csupor"
+ GerencsE_r:0 "Gerencsér"
+ Csurka:0 "Csurka"
+ CsurgO_:0 "Csurgó"
+ CsO_rsz:0 "Csörsz"
 
  Domonkos:0 "Domonkos"
  DA_nos:0 "Dános"
@@ -65645,6 +65678,8 @@
  Ezven:0 "Ezven"
  EzrO_d:0 "Ezród"
  EzsA_m:0 "Ezsám"
+ EtelemE_r:0 "Etelemér"
+ Etelep:0 "Etelep"
 
  FehE_r:0 "Fehér"
  Fodor:0 "Fodor"
@@ -65679,6 +65714,7 @@
  Fortuna:0 "Fortuna"
  Fancs:0 "Fancs"
  Farkuc:0 "Farkuc"
+ FO_ldvA_r:0 "Földvár"
 
  Gal:0 "Gal"
  GO_ncO_l:0 "Göncöl"
@@ -65855,6 +65891,8 @@
  Koszko:0 "Koszko"
  KO_s:0 "Kós"
  KO_si:0 "Kósi"
+ KastE_ly:0 "Kastély"
+ Kasztor:0 "Kasztor"
 
  LipO_t:0 "Lipót"
  LotA_r:0 "Lotár"
@@ -65865,12 +65903,16 @@
  MeszU_j:0 "Meszúj"
  MilO_szlO_:0 "Milószló"
  MihA_lyszlO_:0 "Mihályszló"
+ Morzsi:0 "Morzsi"
+ ME_nrO_t:0 "Ménrót"
 
  NavO_:0 "Navó"
  NE_rA_d:0 "Nérád"
  Neszek:0 "Neszek"
  Nyali:0 "Nyali"
  Norci:0 "Norci"
+
+ OsvA_t:0 "Osvát"
 
  RA_zim:0 "Rázim"
  RA_vO_l:0 "Rávól"
@@ -69010,8 +69052,11 @@
 
  MunI_r:0 "Munīr"
  Mujahid:0 "Mujahid"
+ Ma_rU_f:0 "Ma'rūf" #Semi Fictional
 
  YU_hana:0 "Yūhana"
+
+ WA_S_il:0 "Wāṣil" #Semi Fictional
 
  Sarjun:0 "Sarjun"
  S_iddI_q:0 "Ṣiddīq"
@@ -69029,7 +69074,7 @@
  JamI_lah:0 "Jamīlah"
  Halimah:0 "Halimah"
  Salmah:0 "Salmah"
- RabI_ah:0 "Rabīʿah"
+ RabI_ah:0 "Rabī'ah"
  ZubA_ydah:0 "Zubāydah"
 
  # More Character Names - Andalusian/Arabicised Spanish - Male
@@ -71354,6 +71399,11 @@
  Ustana:0 "Ustana"
  Ustinya:0 "Ustinya"
  Usmila:0 "Usmila"
+ 
+ Vysheslava:0 "Vysheslava" # https://en.wikipedia.org/wiki/Wyszesława_of_Kiev
+ Visheslava:0 "Visheslava"
+ Veleslava:0 "Veleslava"
+
  # More Character Names - Normal & Zoroastrian Persian - Male
  Abarmazd:0 "Abarmazd"
  AdarO_S_:0 "Adarōš"
@@ -75363,7 +75413,120 @@
  Begay:0 "Begay"
  Begsu:0 "Begsu"
  Beyazsu:0 "Beyazsu"
- # More Character Names - Japanese - Male - sources https://en.wikipedia.org/wiki/Category:16th-century_Japanese_people - mainly 9th-17th century lists
+ # More Character Names - Estonian - Male
+ Att:0 "Att"
+ Ahko:0 "Ahko"
+
+ Haigo:0 "Haigo"
+ Harjo:0 "Harjo"
+ Helmik:0 "Helmik"
+ HO_alemb:0 "Höalemb"
+ HO_ameel:0 "Höameel"
+ Hiimo:0 "Hiimo"
+
+ Illo:0 "Illo"
+
+ Juss:0 "Juss"
+ 
+ Kaur:0 "Kaur"
+ Kuulo:0 "Kuulo"
+
+ Lembar:0 "Lembar"
+ LembitO_iv:0 "Lembitõiv"
+
+ Meljas:0 "Meljas"
+
+ Peko:0 "Peko"
+
+ Reeno:0 "Reeno"
+ Riido:0 "Riido"
+
+ Tahvo:0 "Tahvo"
+ Taivo:0 "Taivo"
+ TO_du:0 "Tõdu"
+ TO_dur:0 "Tõdur"
+ TO_igo:0 "Tõigo"
+ Taivo:0 "Taivo"
+ TO_ho:0 "Tõho"
+
+ Ugalemb:0 "Ugalemb"
+
+ Valdalemb:0 "Valdalemb"
+ Valdik:0 "Valdik"
+
+ # More Character Names - Estonian - Female
+ Aade:0 "Aade"
+ Anu:0 "Anu"
+ 
+ Eili:0 "Eili"
+ Elmi:0 "Elmi"
+
+ Heidi:0 "Heidi"
+ Hellike:0 "Hellike"
+
+ Ilve:0 "Ilve"
+ Ilvi:0 "Ilvi"
+
+ Kadri:0 "Kadri"
+ Keio:0 "Keio"
+ Koidu:0 "Koidu"
+ Koidula:0 "Koidula"
+ KU_llu:0 "Küllu"
+
+ Maime:0 "Maime"
+ Mall:0 "Mall"
+ Malle:0 "Malle"
+
+ Piibe:0 "Piibe"
+
+ Sirve:0 "Sirve"
+ # More Character Names - Oghuz/Turkish - Male # Oghuz and Turkmen share the same namelist however this should be fine given Turks claim their origins back to the Oghuz who adopted Islam
+ Alp_Tegin:0 "Alp Tegin" # https://en.wikipedia.org/wiki/Alp-Tegin?utm_source=chatgpt.com
+ SeljU_q:0 "Seljūq"
+ T_ughrI_l:0 "Ṭughrīl" # https://en.wikipedia.org/wiki/Tughril_I?utm_source=chatgpt.com
+ Mika_il:0 "Mika'il" # https://en.wikipedia.org/wiki/Chaghri_Beg
+ BilgA_QaG_an:0 "Bilgä Qağan" # https://en.wikipedia.org/wiki/Orkhon_inscriptions?utm_source=chatgpt.com
+ KO_l_Tigin:0 "Köl Tigin" # https://en.wikipedia.org/wiki/Orkhon_inscriptions?utm_source=chatgpt.com
+ ToN_uquq:0 "Toñuquq" # https://dergipark.org.tr/en/download/article-file/991592?utm_source=chatgpt.com
+ QapY_an:0 "Qapγan" # https://en.wikipedia.org/wiki/Orkhon_inscriptions?utm_source=chatgpt.com
+ BO_gU_QaG_an:0 "Bögü Qağan" # https://dergipark.org.tr/en/download/article-file/991592?utm_source=chatgpt.com
+ BuG_rA_:0 "Buġrā" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ QutluG_:0 "Qutluġ" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ QutalmI_S_:0 "Qutalmıš" # https://www.researchgate.net/publication/390816635_Onomasticon_Turcicum_Turkic_Personal_Names_Parts_I-II
+ I_nal:0 "İnal" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ I_lteriS_:0 "İlteriş" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ BayI_ndI_r:0 "Bayındır" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ InalC_uq:0 "Inalçuq" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ O_gret:0 "Ögret" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ YarlI_g:0 "Yarlıg" # https://www.researchgate.net/publication/390816635_Onomasticon_Turcicum_Turkic_Personal_Names_Parts_I-II
+ Qara_Arslan:0 "Qara Arslan" # https://en.wikipedia.org/wiki/Dīwān_Lughāt_al-Turk?utm_source=chatgpt.com
+ YU_suf:0 "Yūsuf" # https://en.wikipedia.org/wiki/Kutadgu_Bilig?utm_source=chatgpt.com - Author of the Kutadgu Bilig from 1069-1070
+ KO_roG_lu:0 "Köroğlu" # https://en.wikipedia.org/wiki/Kutadgu_Bilig?utm_source=chatgpt.com - Author of the Kutadgu Bilig from 1069-1070
+ UluG_:0 "Uluğ" #Semi Fictional
+ BayuC_:0 "Bayuç" #Semi Fictional
+ Nurmyrat:0 "Nurmyrat" #Semi Fictional
+ RO_wS_en:0 "Röwşen" #Semi Fictional
+ Y_yllyz:0 "Ýyllyz" #Semi Fictional
+ CankO_S_:0 "Canköş" #Semi Fictional
+ C_arkyn:0 "Çarkyn" #Semi Fictional
+ TemirtaS_:0 "Temirtaş" #Semi Fictional
+ UraG_:0 "Urağ" #Semi Fictional
+ Ulaş:0 "Ulaş" #Semi Fictional
+ SavcI_:0 "Savcı" #Semi Fictional
+ Elbegen:0 "Elbegen" #Semi Fictional
+ Egilmez:0 "Egilmez" #Semi Fictional
+ Cansev:0 "Cansev" #Semi Fictional
+ CanO_z:0 "Canöz" #Semi Fictional
+ AY_az:0 "Aýaz" #Semi Fictional
+ Amangeldi:0 "Amangeldi" #Semi Fictional
+ Atamyrat:0 "Atamyrat" #Semi Fictional
+ BaY_ram:0 "Baýram" #Semi Fictional
+ Bolat:0 "Bolat" #Semi Fictional
+ DerviS_:0 "Derviş" #Semi Fictional
+
+ # More Character Names - Oghuz/Turkish - Female
+
+ # More Character Names - Japanese - Male - sources https://en.wikipedia.org/wiki/Category:16th-century_Japanese_people - https://en.wikipedia.org/w/index.php?title=Category:Daimyo_stubs&pageuntil=Nishio%2C+Tadakata%0ANishio+Tadakata#mw-pages - https://en.wikipedia.org/wiki/Category:Japanese_nobility_stubs - https://en.wikipedia.org/wiki/Category:9th-century_Japanese_poets - mainly 9th-17th century lists
  Katauji:0 "Katauji" #Semi Fictional
  Hiroyoshi:0 "Hiroyoshi"
  Michimoro:0 "Michimoro"
@@ -75410,7 +75573,369 @@
  Hiroshi:0 "Hiroshi"
  Sakuden:0 "Sakuden"
  Muneharu:0 "Muneharu"
- ChO_zaemon:0 "Chōzaemon"
+ ZenjU_bO_:0 "Zenjūbō"
+ KO_sa:0 "Kōsa" # - https://en.wikipedia.org/wiki/Kōsa The name of Kennyo, 11th patriarch of the Hongan-ji lineage of Jodo Shinshu Buddhism
+ Haruyoshi:0 "Haruyoshi" #Semi Fictional
+ Harumasa:0 "Harumasa" #Semi Fictional
+ Harumori:0 "Harumori" #Semi Fictional
+ Nobukatsu:0 "Nobukatsu" #Semi Fictional
+ ShijO_:0 "Shijō" #default name but for some reason doesn't appear in the localisation
+ Fusaie:0 "Fusaie"
+ Nobutomo:0 "Nobutomo" #Semi Fictional
+ Masakatsu:0 "Masakatsu"
+ Nobutsugu:0 "Nobutsugu"
+ Hidemori:0 "Hidemori"
+ Okihisa:0 "Okihisa"
+ HikoshirO_:0 "Hikoshirō"
+ Kunihisa:0 "Kunihisa"
+ Hidetsuna:0 "Hidetsuna"
+ Toshihisa:0 "Toshihisa"
+ Tadao:0 "Tadao"
+ Haruyasu:0 "Haruyasu" #Semi Fictional
+ Sumitada:0 "Sumitada"
+ SO_teki:0 "Sōteki"
+ Ujikazu:0 "Ujikazu" #Semi Fictional
+ Nagashige:0 "Nagashige"
+ Teruoki:0 "Teruoki"
+ Nagatomo:0 "Nagatomo"
+ Tsuna_akira:0 "Tsuna'akira"
+ Tsunakira:0 "Tsunakira" #Semi Fictional
+ Tsunayo:0 "Tsunayo" #Semi Fictional
+ Moriuji:0 "Moriuji"
+ Ujikata:0 "Ujikata"
+ Terumasa:0 "Terumasa"
+ Chikakazu:0 "Chikakazu"
+ Moritane:0 "Moritane"
+ Hidemune:0 "Hidemune"
+ Hideyori:0 "Hideyori"
+ Hideie:0 "Hideie"
+ Toshisato:0 "Toshisato"
+ Toshitsura:0 "Toshitsura"
+ ChO_in:0 "Chōin"
+ Oribe:0 "Oribe"
+ Hideyuki:0 "Hideyuki"
+ Katahide:0 "Katahide"
+ Harima:0 "Harima"
+ ChO_ei:0 "Chōei"
+ Haruaki:0 "Haruaki"
+ Narishige:0 "Narishige"
+ Takichiro:0 "Takichiro" #Semi Fictional
+ Takikazu:0 "Takikazu" #Semi Fictional
+ Takiyasu:0 "Takiyasu" #Semi Fictional
+ Tatsuoki:0 "Tatsuoki"
+ Yoshitatsu:0 "Yoshitatsu"
+ DO_san:0 "Dōsan"
+ Masanao:0 "Masanao"
+ Motonao:0 "Motonao" #Semi Fictional
+ Ujitsuna:0 "Ujitsuna"
+ Tatsuhiro:0 "Tatsuhiro"
+ Musashi:0 "Musashi"
+ MagonojO_:0 "Magonojō"
+ Motomenosuke:0 "Motomenosuke"
+ UjinojO_:0 "Ujinojō" #Semi Fictional
+ MasanojO_:0 "Masanojō" #Semi Fictional
+ Bennosuke:0 "Bennosuke"
+ Mikinosuke:0 "Mikinosuke"
+ KurO_tarO_:0 "Kurōtarō"
+ Iori:0 "Iori"
+ Yoemon:0 "Yoemon"
+ Katsunari:0 "Katsunari"
+ Musanari:0 "Musanari" #Semi Fictional
+ Katsuzumi:0 "Katsuzumi"
+ Tada_aki:0 "Tada'aki"
+ Katsuaki:0 "Katsuaki"
+ Ujishige:0 "Ujishige"
+ Shigesatoi:0 "Shigesatoi"
+ Nariharu:0 "Nariharu"
+ Uchisane:0 "Uchisane"
+ Uchitsune:0 "Uchitsune"
+ Katsutsune:0 "Katsutsune"
+ Mitsutoyo:0 "Mitsutoyo"
+ Kazumasa:0 "Kazumasa"
+ Narioki:0 "Narioki"
+ Kazuoki:0 "Kazuoki" #Semi Fictional
+ Sokan:0 "Sokan"
+ Nobutora:0 "Nobutora"
+ Katsushige:0 "Katsushige"
+ Ujikane:0 "Ujikane"
+ GorO_ta:0 "Gorōta"
+ Harutoshi:0 "Harutoshi"
+ Tsuneoki:0 "Tsuneoki"
+ Kazunao:0 "Kazunao" #Semi Fictional
+ Kazushige:0 "Kazushige" #Semi Fictional
+ Kurajishige:0 "Kurajishige" #Semi Fictional
+ Kurajitoshi:0 "Kurajitoshi" #Semi Fictional
+ Kurajikazu:0 "Kurajikazu" #Semi Fictional
+ Amikane:0 "Amikane" #Semi Fictional
+ Hakuseki:0 "Hakuseki"
+ Tsunashige:0 "Tsunashige"
+ TO_tomono:0 "Tōtomono"
+ Mao_JP:0 "Mao" #Means "True Fish" in Japanese, not to be mistaken with the Chinese name "Mao"
+ Kazuseki:0 "Kazuseki" #Semi Fictional
+ Yukitsugu:0 "Yukitsugu" #Semi Fictional
+ Takiji:0 "Takiji" #Semi Fictional
+ Hirauchi:0 "Hirauchi" #Semi Fictional
+ Hisanobu:0 "Hisanobu" #Semi Fictional
+ Mitsutake:0 "Mitsutake" #Semi Fictional
+ Shincho:0 "Shincho"
+ Tadatsugu:0 "Tadatsugu"
+ Iruka:0 "Iruka"
+ Uchimoto:0 "Uchimoto"
+ Kaneka:0 "Kaneka"
+ Kanefuyu:0 "Kanefuyu"
+ Fuyuyoshi:0 "Fuyuyoshi"
+ Fusamichi:0 "Fusamichi"
+ Yasutoki:0 "Yasutoki"
+ Ujiteru:0 "Ujiteru"
+ Tokiuji:0 "Tokiuji"
+ Ujitsugu:0 "Ujitsugu" #Semi Fictional
+ HeiichirO_:0 "Heiichirō" #Semi Fictional
+ Heisuke:0 "Heisuke" #Semi Fictional
+ JirO_emon:0 "Jirōemon" #Semi Fictional
+ TorachirO_:0 "Torachirō" #Semi Fictional
+ Takauji:0 "Takauji"
+ Mochitsura:0 "Mochitsura" #Semi Fictional
+ KenkO_:0 "Kenkō"
+ Yasu_uji:0 "Yasu'uji" #Semi Fictional
+ Yoichi:0 "Yoichi"
+ Hisahide:0 "Hisahide"
+ Teitoku:0 "Teitoku"
+ Sekigo:0 "Sekigo"
+ Kojiro:0 "Kojiro"
+ JunshO_:0 "Junshō"
+ Junkei:0 "Junkei"
+ HO_shi:0 "Hōshi"
+ Sou_un:0 "Sou'un"
+ Tsunatoshi:0 "Tsunatoshi"
+ SO_zen:0 "Sōzen"
+ Kenshin:0 "Kenshin"
+ Chikatomo:0 "Chikatomo"
+ Yori_ina:0 "Yori'ina"
+ Ujisato:0 "Ujisato"
+ Ujichika:0 "Ujichika"
+ YagorO_:0 "Yagorō" # https://en.wikipedia.org/wiki/Itō_Ittōsai - Was Itō Ittōsai's original name, a swordsman who is considered the founder of Ittō-ryū school of sword fighting
+ Ekei:0 "Ekei" # https://en.wikipedia.org/wiki/Ankokuji_Ekei - Was a military monk and decendant of the Takeda clan
+ ShO_nyo:0 "Shōnyo" # https://en.wikipedia.org/wiki/Kōsa - Kōsa's (Kennyo) father, 10th patriarch of the Hongan-ji lineage of Jodo Shinshu Buddhism
+ YosaburO_:0 "Yosaburō" # https://en.wikipedia.org/wiki/Hon%27inbō_Sansa - The assumed name of Hon'inbō Sansa
+ SU_den:0 "Sūden" # https://en.wikipedia.org/wiki/Ishin_Sūden - Was a Japanese Rinzai Zen monk 
+ Hidekatsu:0 "Hidekatsu" # https://en.wikipedia.org/wiki/Ishin_Sūden - The father of Ishin Sūden
+ Tokurin:0 "Tokurin" # https://en.wikipedia.org/wiki/Ishin_Sūden - The name of the mentor Sūden studied under
+ Takeuji:0 "Takeuji" #Semi Fictional
+ Hisatane:0 "Hisatane" #Semi Fictional
+ Ujisue:0 "Ujisue" #Semi Fictional
+ Sueuji:0 "Sueuji" #Semi Fictional
+ Masahide:0 "Masahide" #Semi Fictional
+ Harumichi:0 "Harumichi" #Semi Fictional
+ TomoburO_:0 "Tomoburō" #Semi Fictional
+
+ # More Character Names - Japanese - Female - sources https://en.wikipedia.org/wiki/Category:12th-century_Japanese_women - https://en.wikipedia.org/wiki/Category:9th-century_Japanese_poets - mainly 9th-17th century lists - It's become difficult to find historical names, I'll try and find old fashioned names
+ Sen:0 "Sen"
+ Kaihime:0 "Kaihime"
+ Kamehime:0 "Kamehime"
+ Kita:0 "Kita"
+ Tsune:0 "Tsune"
+ Komatsuhime:0 "Komatsuhime"
+ Teru_JP:0 "Teru"
+ Matsu:0 "Matsu"
+ MyO_ki:0 "Myōki"
+ MyO_rin:0 "Myōrin"
+ JakO_:0 "Jakō"
+ Tsuruhime:0 "Tsuruhime"
+ Omasa:0 "Omasa"
+ Akohime:0 "Akohime"
+ Asahihime:0 "Asahihime"
+ GO_hime:0 "Gōhime"
+ Fuku:0 "Fuku"
+ Rikei:0 "Rikei"
+ Seienin:0 "Seienin"
+ SeikO_in:0 "Seikōin"
+ Senhime:0 "Senhime"
+ Tatsuko:0 "Tatsuko"
+ KyO_un_in:0 "Kyōun'in"
+ Oinu:0 "Oinu"
+ Oichi:0 "Oichi"
+ Oeyo:0 "Oeyo"
+ OtsU_:0 "Otsū"
+ Otsuya:0 "Otsuya"
+ Kitsuno:0 "Kitsuno"
+ Sakiko:0 "Sakiko"
+ KO_zO_su:0 "Kōzōsu"
+ Myorin:0 "Myorin"
+ Ikushi:0 "Ikushi"
+ Tokuko:0 "Tokuko"
+ Akimi:0 "Akimi"
+ Izumi:0 "Izumi"
+ Natsuko:0 "Natsuko"
+ Aka:0 "Aka"
+ Yome:0 "Yome"
+ Kimi_JP:0 "Kimi"
+ Kishi:0 "Kishi"
+ Ukon:0 "Ukon"
+ Rinshi:0 "Rinshi"
+ JijU_:0 "Jijū"
+ Sagami:0 "Sagami"
+ Makiko:0 "Makiko" #Semi Fictional
+ Koshiko:0 "Koshiko" #Semi Fictional
+ Hanako:0 "Hanako" #Semi Fictional
+ Etsuko:0 "Etsuko" #Semi Fictional
+ Fujiko:0 "Fujiko" #Semi Fictional
+ Sawano:0 "Sawano" # https://en.wikipedia.org/wiki/Umemura_Sawano - Was a Kunoichi whose believed to have served the Takeda clan
+ Naishi:0 "Naishi" # https://en.wikipedia.org/wiki/Koshikibu_no_Naishi - The name of a Waka poet
+ Ai_JP:0 "Ai" #Semi Fictional
+ Aiko_JP:0 "Aiko" #Semi Fictional
+
+ # More Character Names - Emishi - Male - sources *mostly fictional* as most of the default Emishi names seem to be mispellings of Japanese names from what I've researched - There isn't much historical Emishi figures unfortunately
+ Shimatsukami:0 "Shimatsukami"
+ Kunitsukami:0 "Kunitsukami"
+ More:0 "More" #Semi Fictional
+ Tatemaro:0 "Tatemaro"
+ OryO_:0 "Oryō" #Semi Fictional
+ Ashifurihe:0 "Ashifurihe"
+ Ohohafurihe:0 "Ohohafurihe"
+ Kanihira:0 "Kanihira" #Semi Fictional
+ Tanyeiko:0 "Tanyeiko" #Semi Fictional
+ Norihiza:0 "Norihiza" #Semi Fictional
+ Kiyozke:0 "Kiyozke" #Semi Fictional
+ Atarhu:0 "Atarhu" #Semi Fictional
+ Sitari:0 "Sitari" #Semi Fictional
+ Tomrro:0 "Tomrro" #Semi Fictional
+ Oritzu:0 "Oritzu" #Semi Fictional
+ Shinaru:0 "Shinaru" #Semi Fictional
+ Poramuya:0 "Poramuya" #Semi Fictional
+ Isanoma:0 "Isanoma" #Semi Fictional
+ Mashio:0 "Mashio" #Semi Fictional
+ Tomari:0 "Tomari" #Semi Fictional
+ Aramake:0 "Aramake" #Semi Fictional
+ Teshimaro:0 "Teshimaro" #Semi Fictional
+ Anuhaji:0 "Anuhaji" #Semi Fictional
+ Sakako:0 "Sakako" #Semi Fictional
+ Satsumaro:0 "Satsumaro" #Semi Fictional
+ Takematak:0 "Takematak" #Semi Fictional
+ Shirishibe:0 "Shirishibe" #Semi Fictional
+ # More Character Names - Ryukyuan - Male - sources - https://en.wikipedia.org/wiki/Category:Kings_of_Ryūkyū - *mostly fictional* as there isn't too much recorded names other then nobles and rulers
+ Taruten:0 "Taruten" #Semi Fictional
+ ChO_shU_:0 "Chōshū"
+ TarU_:0 "Tarû"
+ Ushii:0 "Ushii"
+ Tuku:0 "Tuku"
+ ChirU_:0 "Chirû"
+ Bii:0 "Bii"
+ Haa:0 "Haa"
+ Shunten:0 "Shunten"
+ Bunei:0 "Bunei"
+ Seii:0 "Seii"
+ Tamagusuku:0 "Tamagusuku"
+ Eiji:0 "Eiji"
+ Taisei:0 "Taisei"
+ Jeisu:0 "Jeisu"
+ Gihon:0 "Gihon"
+ Shunbajunki:0 "Shunbajunki"
+ Shunshii:0 "Shunshii" #Semi Fictional
+ RiyU_:0 "Riyū"
+ Jukei:0 "Jukei"
+ Ei:0 "Ei"
+ Turaisu:0 "Turaisu" #Semi Fictional
+ Gen:0 "Gen"
+ Nei:0 "Nei"
+ TaikyU_:0 "Taikyū"
+ Tai_Ryukyuan:0 "Tai"
+ Shitatsu:0 "Shitatsu"
+ Shin_Ryukyuan:0 "Shin"
+ Sen_i:0 "Sen'i"
+ Kanemaru:0 "Kanemaru"
+ Kin_puku:0 "Kin'puku"
+ ChU_:0 "Chū"
+ Shitsu:0 "Shitsu"
+ Shungusuku:0 "Shungusuku" #Semi Fictional
+ On:0 "On"
+ Kei_Ryukyuan:0 "Kei"
+ Iku:0 "Iku"
+ HO_:0 "Hō"
+ Hashi:0 "Hashi"
+ Eki_Ryukyuan:0 "Eki"
+ Boku:0 "Boku"
+ Mausatu:0 "Mausatu" #Semi Fictional
+ Tarueji:0 "Tarueji" #Semi Fictional
+ Tamamaci:0 "Tamamaci" #Semi Fictional
+ Taijira:0 "Taijira" #Semi Fictional
+ Sattumaci:0 "Sattumaci" #Semi Fictional
+ # More Character Names - Korean - Male - sources - https://en.wikipedia.org/wiki/Category:1st-century_Korean_people
+ Ji_hwan:0 "Ji-hwan" #Semi Fictional
+ Myeong_su:0 "Myeong-su" #Semi Fictional
+ Dae_so:0 "Dae-so"
+ Jin_ho:0 "Jin-ho" #Semi Fictional
+ Yeo_hae:0 "Yeo-hae"
+ Mo_su:0 "Mo-su"
+ Gyo_gak:0 "Gyo-gak"
+ Mong_ju:0 "Mong-ju"
+ Gyeong_ho:0 "Gyeong-ho" #Semi Fictional
+ Gwang_seok:0 "Gwang-seok" #Semi Fictional
+ Dae_deok:0 "Dae-deok" #Semi Fictional
+ Do_jun:0 "Do-jun" #Semi Fictional
+ Tae_ryeom:0 "Tae-ryeom" #Semi Fictional
+ Dong_yeop:0 "Dong-yeop" #Semi Fictional
+ Cheol_hwan:0 "Cheol-hwan" #Semi Fictional
+ Jae_hun:0 "Jae-hun" #Semi Fictional
+ Jung_kyu:0 "Jung-kyu" #Semi Fictional
+ Hyeon_gi:0 "Hyeon-gi" #Semi Fictional
+ Hui_seong:0 "Hui-seong" #Semi Fictional
+ Jae_keun:0 "Jae-keun" #Semi Fictional
+ Cheol_gyu:0 "Cheol-gyu" #Semi Fictional
+ Jin_woo:0 "Jin-woo" #Semi Fictional
+ Soo_hwan:0 "Soo-hwan" #Semi Fictional
+ Chong_dok:0 "Chong-dok"
+ Chong_hak:0 "Chong-hak"
+ Chong_son:0 "Chong-son"
+ Do_jeon:0 "Do-jeon"
+ Hae_jin:0 "Hae-jin" #Semi Fictional
+ Gyu_bo:0 "Gyu-bo"
+ Eui_seok:0 "Eui-seok" #Semi Fictional
+ Gyeong_seo:0 "Gyeong-seo" #Semi Fictional
+ Gyeong_hyeon:0 "Gyeong-hyeon" #Semi Fictional
+ Gyeong_ryeong:0 "Gyeong-ryeong" #Semi Fictional
+ Jong_myeong:0 "Jong-myeong" #Semi Fictional
+ Dae_seong:0 "Dae-seong"
+ Yeong_sul:0 "Yeong-sul" #Semi Fictional
+ Yu_seok:0 "Yu-seok" #Semi Fictional
+ Seong_gye:0 "Seong-gye" #Semi Fictional
+ Sang_guk:0 "Sang-guk" #Semi Fictional
+ Sang_hwan:0 "Sang-hwan" #Semi Fictional
+ Ho_yeong:0 "Ho-yeong" #Semi Fictional
+ Heung_ju:0 "Heung-ju" #Semi Fictional
+ Do_jeung:0 "Do-jeung"
+ Won_cheuk:0 "Won-cheuk"
+ Ui_sang:0 "Ui-sang"
+ Nan_jeung:0 "Nan-jeung" #Semi Fictional
+ Hye_jo:0 "Hye-jo" #Semi Fictional
+ Gwang_chung:0 "Gwang-chung" #Semi Fictional
+ Jong_jung:0 "Jong-jung" #Semi Fictional
+ Tae_yu:0 "Tae-yu" #Semi Fictional
+ In_won:0 "In-won" #Semi Fictional
+ Im_hyeon:0 "Im-hyeon" #Semi Fictional
+ # More Character Names - Korean - Female - sources - https://en.wikipedia.org/wiki/Category:1st-century_Korean_people
+ Gyeong_hwa:0 "Gyeong-hwa" #Semi Fictional
+ Hwon_ae:0 "Hwon-ae" #Semi Fictional
+ Mi_yeon:0 "Mi-yeon" #Semi Fictional
+ Yong_deok:0 "Yong-deok"
+ Cheon_nyeong:0 "Cheon-nyeong" #Semi Fictional
+ Heon_kyeom:0 "Heon-kyeom" #Semi Fictional
+ Yeong_ran:0 "Yeong-ran" #Semi Fictional
+ Ae_suk:0 "Ae-suk" #Semi Fictional
+ Hwa_jeong:0 "Hwa-jeong" #Semi Fictional
+ Eun_ran:0 "Eun-ran" #Semi Fictional
+ Byeok_nyong:0 "Byeok-nyong" #Semi Fictional
+ Suk_jin:0 "Suk-jin" #Semi Fictional
+ Si_dae:0 "Si-dae" #Semi Fictional
+ Mi_hye:0 "Mi-hye" #Semi Fictional
+ Goeng_baek:0 "Goeng-baek" #Semi Fictional
+ Hae_nye:0 "Hae-nye" #Semi Fictional
+ Jun_byeol:0 "Jun-byeol" #Semi Fictional
+ Suk_young:0 "Suk-young" #Semi Fictional
+ Yu_gyo:0 "Yu-gyo" #Semi Fictional
+ Myeong_bo:0 "Myeong-bo" #Semi Fictional
+ Seon_mi:0 "Seon-mi" #Semi Fictional
+ gyeong_mi:0 "gyeong-mi" #Semi Fictional
+ gyeong_bi:0 "gyeong-bi" #Semi Fictional
 
  # More Character Names - Different names - Names that I've forgotten to add loc for, to make things easy I just add them here if I can't find said culture that their apart of!
  Aquart:0 "Aquart"

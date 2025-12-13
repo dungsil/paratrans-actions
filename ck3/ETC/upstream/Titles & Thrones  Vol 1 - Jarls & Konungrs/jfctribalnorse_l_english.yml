@@ -1,0 +1,141 @@
+﻿l_english:
+### BARON — Tribal Christian (Hersir)
+baron_male_norse_tribal_christian:0 "Hersir"
+baron_female_norse_tribal_christian:0 "Hersirja"
+baron_spouse_male_norse_tribal_christian:0 "Hersirmaðr"
+baron_spouse_female_norse_tribal_christian:0 "Hersirfrú"
+baron_son_norse_tribal_christian:0 "Hersirsaeringr"
+baron_daughter_norse_tribal_christian:0 "Hersirmær"
+baron_mother_norse_tribal_christian:0 "Hersirmóðir"
+barony_castle_norse_tribal_christian:0 "Fylki"
+barony_tribe_norse_tribal_christian:0 "$barony_castle_norse$"
+
+### COUNT — Tribal Christian (Hofðingi)
+count_male_norse_independent_tribal_christian:0 "Hofðingi"
+count_female_norse_independent_tribal_christian:0 "Hofðingifrú"
+count_spouse_male_norse_independent_tribal_christian:0 "Hofðingimaðr"
+count_spouse_female_norse_independent_tribal_christian:0 "Hofðingifrú"
+count_son_norse_independent_tribal_christian:0 "Hofðingssaeringr"
+count_daughter_norse_independent_tribal_christian:0 "Hofðingmær"
+count_mother_norse_independent_tribal_christian:0 "Hofðingmóðir"
+county_norse_independent_tribal_christian:0 "Fylki"
+
+### Vassal COUNT — Tribal Christian (Jarl)
+count_male_norse_tribal_christian:0 "Jarl"
+count_female_norse_tribal_christian:0 "Jarlfrú"
+count_spouse_male_norse_tribal_christian:0 "Jarlamaðr"
+count_spouse_female_norse_tribal_christian:0 "Jarlfrú"
+count_son_norse_tribal_christian:0 "Jarlssaeringr"
+count_daughter_norse_tribal_christian:0 "Jarlmær"
+count_mother_norse_tribal_christian:0 "Jarlmóðir"
+county_norse_tribal_christian:0 "Jarldómr"
+
+### VASSAL DUKE — Tribal Christian (Fylkisjarl)
+duke_male_norse_tribal_christian:0 "Fylkisjarl"
+duke_female_norse_tribal_christian:0 "Fylkisjarlfrú"
+duke_spouse_male_norse_tribal_christian:0 "Fylkisjarlamaðr"
+duke_spouse_female_norse_tribal_christian:0 "Fylkisjarlfrú"
+duke_son_norse_tribal_christian:0 "Fylkisjarlssaeringr"
+duke_daughter_norse_tribal_christian:0 "Fylkisjarlmær"
+duke_mother_norse_tribal_christian:0 "Fylkisjarlmóðir"
+duchy_norse_tribal_christian:0 "Fylkisjarldómr"
+
+### DUKE — Independent (Tribal Christian) (Hilmir)
+duke_male_norse_independent_tribal_christian:0 "Hilmir"
+duke_female_norse_independent_tribal_christian:0 "Hilmja"
+duke_spouse_male_norse_independent_tribal_christian:0 "Hilmir-maðr"
+duke_spouse_female_norse_independent_tribal_christian:0 "Hilmjafrú"
+duke_son_norse_independent_tribal_christian:0 "Hilmirsaeringr"
+duke_daughter_norse_independent_tribal_christian:0 "Hilmjamær"
+duke_mother_norse_independent_tribal_christian:0 "Hilmjamóðir"
+duchy_norse_independent_tribal_christian:0 "Hilmirríki"
+
+### VASSAL KING — Tribal Christian (Ríkisjarl)
+king_male_norse_vassal_tribal_christian:0 "Ríkisjarl"
+king_female_norse_vassal_tribal_christian:0 "Ríkisjarlfrú"
+king_spouse_male_norse_vassal_tribal_christian:0 "Ríkisjarlamaðr"
+king_spouse_female_norse_vassal_tribal_christian:0 "Ríkisjarlfrú"
+king_son_norse_vassal_tribal_christian:0 "Ríkisjarlssaeringr"
+king_daughter_norse_vassal_tribal_christian:0 "Ríkisjarlmær"
+king_mother_norse_vassal_tribal_christian:0 "Ríkisjarlmóðir"
+kingdom_norse_vassal_tribal_christian:0 "Ríkisjarldómr"
+
+### KING — Independent (Tribal Christian) (Hilmir)
+king_male_norse_tribal_christian:0 "Hilmir"
+king_female_norse_tribal_christian:0 "Hilmja"
+king_spouse_male_norse_tribal_christian:0 "Hilmir-maðr"
+king_spouse_female_norse_tribal_christian:0 "Hilmjafrú"
+king_son_norse_tribal_christian:0 "Hilmirsaeringr"
+king_daughter_norse_tribal_christian:0 "Hilmjamær"
+king_mother_norse_tribal_christian:0 "Hilmjamóðir"
+kingdom_norse_tribal_christian:0 "Hilmirríki"
+
+### VASSAL EMPEROR — Tribal Christian (Stóljarl)
+emperor_male_norse_vassal_tribal_christian:0 "Stóljarl"
+emperor_female_norse_vassal_tribal_christian:0 "Stóljarlfrú"
+emperor_spouse_male_norse_vassal_tribal_christian:0 "Stóljarlamaðr"
+emperor_spouse_female_norse_vassal_tribal_christian:0 "Stóljarlfrú"
+emperor_son_norse_vassal_tribal_christian:0 "Stóljarlssaeringr"
+emperor_daughter_norse_vassal_tribal_christian:0 "Stóljarlmær"
+emperor_mother_norse_vassal_tribal_christian:0 "Stóljarlmóðir"
+empire_norse_vassal_christian:0 "Stóljarldómr"
+
+### EMPEROR — Independent (Tribal Christian) (Stólhilmir)
+emperor_male_norse_tribal_christian:0 "Stólhilmir"
+emperor_female_norse_tribal_christian:0 "Stólhilmja"
+emperor_spouse_male_norse_tribal_christian:0 "Stólhilmir-maðr"
+emperor_spouse_female_norse_tribal_christian:0 "Stólhilmjafrú"
+emperor_son_norse_tribal_christian:0 "Stólhilmirsaeringr"
+emperor_daughter_norse_tribal_christian:0 "Stólhilmjamær"
+emperor_mother_norse_tribal_christian:0 "Stólhilmjamóðir"
+empire_norse_christian:0 "Stólhilmirríki"
+
+### HEGEMON — Tribal Christian (Fólksvald)
+hegemon_male_norse_tribal_christian:0 "Fólksvald"
+hegemon_female_norse_tribal_christian:0 "Fólksvaldfrú"
+hegemon_spouse_male_norse_tribal_christian:0 "Fólksvaldamaðr"
+hegemon_spouse_female_norse_tribal_christian:0 "Fólksvaldfrú"
+hegemon_son_norse_tribal_christian:0 "Fólksvaldssaeringr"
+hegemon_daughter_norse_tribal_christian:0 "Fólksvaldmær"
+hegemon_mother_norse_tribal_christian:0 "Fólksvaldmóðir"
+hegemony_norse_christian:0 "Fólksvaldríki"
+
+# Empire (North Sea)
+title_nsempire_tribal:0 "Mikilsæriki"
+title_nsemperor_male_tribal_christian:0 "Mikilsæhilmir"
+title_nsemperor_female_tribal_christian:0 "Mikilsæhilmja"
+title_nsemperor_spouse_male_tribal_christian:0 "Mikilsæhilmir-maðr"
+title_nsemperor_spouse_female_tribal_christian:0 "Mikilsæhilmjafrú"
+title_nsemperor_son_tribal_christian:0 "Mikilsæhilmirsaeringr"
+title_nsemperor_daughter_tribal_christian:0 "Mikilsæhilmjamær"
+title_nsemperor_mother_tribal_christian:0 "Mikilsæhilmjamóðir"
+
+# Empire (Scandinavia)
+scandinavia_empire_norse_tribal_christian:0 "Allþjóðriki"
+scandinavia_emperor_male_norse_tribal_christian:0 "Allþjóðhilmir"
+scandinavia_emperor_female_norse_tribal_christian:0 "Allþjóðhilmja"
+scandinavia_emperor_spouse_male_norse_tribal_christian:0 "Allþjóðhilmir-maðr"
+scandinavia_emperor_spouse_female_norse_tribal_christian:0 "Allþjóðhilmjafrú"
+scandinavia_emperor_son_norse_tribal_christian:0 "Allþjóðhilmirsaeringr"
+scandinavia_emperor_daughter_norse_tribal_christian:0 "Allþjóðhilmjamær"
+scandinavia_emperor_mother_norse_tribal_christian:0 "Allþjóðhilmjamóðir"
+
+# Hegemony (North Sea)
+title_nshegemony_tribal_christian:0 "Allmikilsæriki"
+title_nsoverlord_male_tribal_christian:0 "Allmikilsæhilmir"
+title_nsoverlord_female_tribal_christian:0 "Allmikilsæhilmja"
+title_nsoverlord_spouse_male_tribal_christian:0 "Allmikilsæhilmir-maðr"
+title_nsoverlord_spouse_female_tribal_christian:0 "Allmikilsæhilmjafrú"
+title_nsoverlord_son_tribal_christian:0 "Allmikilsæhilmirsaeringr"
+title_nsoverlord_daughter_tribal_christian:0 "Allmikilsæhilmjamær"
+title_nsoverlord_mother_tribal_christian:0 "Allmikilsæhilmjamóðir"
+
+# Kingdom (Nor/Sw/Den)
+norway_kingdom_norse_tribal_christian:0 "Þjóðriki"
+norway_king_male_norse_tribal_christian:0 "Þjóðhilmir"
+norway_king_female_norse_tribal_christian:0 "Þjóðhilmja"
+norway_king_spouse_male_norse_tribal_christian:0 "Þjóðhilmir-maðr"
+norway_king_spouse_female_norse_tribal_christian:0 "Þjóðhilmjafrú"
+norway_king_son_norse_tribal_christian:0 "Þjóðhilmirsaeringr"
+norway_king_daughter_norse_tribal_christian:0 "Þjóðhilmjamær"
+norway_king_mother_norse_tribal_christian:0 "Þjóðhilmjamóðir"

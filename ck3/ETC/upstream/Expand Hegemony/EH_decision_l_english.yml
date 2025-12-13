@@ -1,0 +1,13 @@
+﻿# Expand Hegemony custom localization by Guildar_
+
+l_english:
+ # Decision for expanding your hegemony:
+ expand_hegemony_decision:0 "Expand Hegemony"
+ expand_hegemony_decision_desc:0 "Since I now hold at least one new empire, I should add it to my de jure hegemony.\n\nNOTE: After taking this decision, you should check the hegemonies map to see your new de jure."
+ expand_hegemony_decision_confirm:0 "My realm grows!"
+ expand_hegemony_decision_tooltip:0 "Add a new empire to the de jure of your primary hegemony title."
+ # Events for expanding the hegemony:
+ EH_major_decisions.1.t:0 "A Powerful Realm Expands..."
+ EH_major_decisions.1.desc:0 "Travellers in our realm talk about the expansion of the de jure of [main_title.GetName] by [de_jure_holder.GetTitleAsNameNoTooltip] [de_jure_holder.GetFirstName]. This has outraged our nobles since lands are meant to be inherited, not claimed. Hopefully, this does not continue for too long."
+ EH_major_decisions.1.a:0 "May that realm be forgotten in history..."
+ EH_major_decisions.1.tooltip:0 "NOTE: If you are seeing this event, I would recommend checking the hegemony map mode because a hegemony has become bigger on the de jure map."

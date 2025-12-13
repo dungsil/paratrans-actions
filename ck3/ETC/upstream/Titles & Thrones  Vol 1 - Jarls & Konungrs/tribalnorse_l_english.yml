@@ -1,0 +1,142 @@
+﻿l_english:
+### BARON — Tribal
+baron_male_norse_tribal:0 "Hölðr"
+baron_female_norse_tribal:0 "Hölðrja"
+baron_spouse_male_norse_tribal:0 "Hölðrmaðr"
+baron_spouse_female_norse_tribal:0 "Hölðrfrú"
+baron_son_norse_tribal:0 "Hölðrsaeringr"
+baron_daughter_norse_tribal:0 "Hölðrmær"
+baron_mother_norse_tribal:0 "Hölðrmóðir"
+barony_castle_norse_tribal:0 "Hölð"
+barony_tribe_norse_tribal:0 "$barony_castle_norse$"
+
+###  COUNT — Tribal
+count_male_norse_independent_tribal:0 "Hersir"
+count_female_norse_independent_tribal:0 "Hersirja"
+count_spouse_male_norse_independent_tribal:0 "Hersirmaðr"
+count_spouse_female_norse_independent_tribal:0 "Hersirfrú"
+count_son_norse_independent_tribal:0 "Hersirsaeringr"
+count_daughter_norse_independent_tribal:0 "Hersirmær"
+count_mother_norse_independent_tribal:0 "Hersirmóðir"
+county_norse_independent_tribal:0 "Hersirdómr"
+
+
+### Vassal COUNT — Tribal
+count_male_norse_tribal:0 "Hofðingi"
+count_female_norse_tribal:0 "Hofðingifru"
+count_spouse_male_norse_tribal:0 "Hofðingimaðr"
+count_spouse_female_norse_tribal:0 "Hofðingifrú"
+count_son_norse_tribal:0 "Hofðingssaeringr"
+count_daughter_norse_tribal:0 "Hofðingmǽr"
+count_mother_norse_tribal:0 "Hofðingmóðir"
+county_norse_tribal:0 "Hofðingdómr"
+
+### VASSAL DUKE — Tribal
+duke_male_norse_tribal:0 "Oddviti"
+duke_female_norse_tribal:0 "Oddvitja"
+duke_spouse_male_norse_tribal:0 "Oddvitimaðr"
+duke_spouse_female_norse_tribal:0 "Oddvitifrú"
+duke_son_norse_tribal:0 "Oddvitisaeringr"
+duke_daughter_norse_tribal:0 "Oddvitmǽr"
+duke_mother_norse_tribal:0 "Oddvitimóðir"
+duchy_norse_tribal:0 "Oddvitdómr"
+
+### DUKE — Independent (Tribal)
+duke_male_norse_independent_tribal:0 "Fylkir"
+duke_female_norse_independent_tribal:0 "Fylkirja"
+duke_spouse_male_norse_independent_tribal:0 "Fylkirmaðr"
+duke_spouse_female_norse_independent_tribal:0 "Fylkirfrú"
+duke_son_norse_independent_tribal:0 "Fylkissaeringr"
+duke_daughter_norse_independent_tribal:0 "Fylkismær"
+duke_mother_norse_independent_tribal:0 "Fylkirmóðir"
+duchy_norse_independent_tribal:0 "Fylki"
+
+### VASSAL KING — Tribal
+king_male_norse_vassal_tribal:0 "Jǫfurr"
+king_female_norse_vassal_tribal:0 "Jǫfurrja"
+king_spouse_male_norse_vassal_tribal:0 "Jǫfurrmaðr"
+king_spouse_female_norse_vassal_tribal:0 "Jǫfurrfrú"
+king_son_norse_vassal_tribal:0 "Jǫfurrsaeringr"
+king_daughter_norse_vassal_tribal:0 "Jǫfurrmær"
+king_mother_norse_vassal_tribal:0 "Jǫfurrmóðir"
+kingdom_norse_vassal_tribal:0 "Jǫfurrdómr"
+
+### KING — Independent (Tribal)
+king_male_norse_tribal:0 "Ræsir"
+king_female_norse_tribal:0 "Drottning"
+king_spouse_male_norse_tribal:0 "Ræsiarmaðr"
+king_spouse_female_norse_tribal:0 "Ræsirfrú"
+king_son_norse_tribal:0 "Ræsisæringr"
+king_daughter_norse_tribal:0 "Ræsimær"
+king_mother_norse_tribal:0 "Ræsimóðir"
+kingdom_norse_tribal:0 "Ríki"
+
+### VASSAL EMPEROR — Tribal
+emperor_male_norse_vassal_tribal:0 "Jaðarr"
+emperor_female_norse_vassal_tribal:0 "Jaðarrja"
+emperor_spouse_male_norse_vassal_tribal:0 "Jaðarrmaðr"
+emperor_spouse_female_norse_vassal_tribal:0 "Jaðarrfrú"
+emperor_son_norse_vassal_tribal:0 "Jaðarrsaeringr"
+emperor_daughter_norse_vassal_tribal:0 "Jaðarrmær"
+emperor_mother_norse_vassal_tribal:0 "Jaðarrmóðir"
+empire_norse_vassal:0 "Jaðarrdómr"
+
+### EMPEROR — Independent (Tribal)
+emperor_male_norse_tribal:0 "Drottinn"
+emperor_female_norse_tribal:0 "Dróttninga"
+emperor_spouse_male_norse_tribal:0 "Drottinnmaðr"
+emperor_spouse_female_norse_tribal:0 "Drottinnfrú"
+emperor_son_norse_tribal:0 "Drottinssaeringr"
+emperor_daughter_norse_tribal:0 "Drottinmær"
+emperor_mother_norse_tribal:0 "Dróttningamóðir"
+empire_norse:0 "Drottinnriki"
+
+### HEGEMON — Tribal
+hegemon_male_norse_tribal:0 "Valdr"
+hegemon_female_norse_tribal:0 "Valdrja"
+hegemon_spouse_male_norse_tribal:0 "Valdrmaðr"
+hegemon_spouse_female_norse_tribal:0 "Valdrfrú"
+hegemon_son_norse_tribal:0 "Valdrsaeringr"
+hegemon_daughter_norse_tribal:0 "Valdrmær"
+hegemon_mother_norse_tribal:0 "Valdrmóðir"
+hegemony_norse:0 "Valdriki"
+
+# Empire (North Sea)
+title_nsempire_tribal:0 "Mikilsædróttnunn"
+title_nsemperor_tribal:0 "Mikilsædrottinn"
+title_nsqueen_tribal:0 "Mikilsædrottning"
+title_nsemperor_spouse_male_tribal:0 "Mikildsærottningsmaðr"
+title_nsemperor_spouse_female_tribal:0 "Mikildsærottningfrú"
+title_nsprince_tribal:0 "Mikilsædrottinssaeringr"
+title_nsprincess_tribal:0 "Mikilsædrottinmær"
+title_nsqueenmother_tribal:0 "Mikilsædrottningmóðir"
+
+# Empire (Scandinavia)
+scandinavia_empire_norse_tribal:0 "Allþjóðdróttnunn"
+scandinavia_emperor_male_norse_tribal:0 "Allþjóðdrottinn"
+scandinavia_emperor_female_norse_tribal:0 "Allþjóðdrottning"
+scandinavia_emperor_spouse_male_norse_tribal:0 "Allþjóðdrottningsmaðr"
+scandinavia_emperor_spouse_female_norse_tribal:0 "Allþjóðdrottningfrú"
+scandinavia_emperor_son_norse_tribal:0 "Allþjóðdrottinssaeringr"
+scandinavia_emperor_daughter_norse_tribal:0 "Allþjóðdrottinmær"
+scandinavia_emperor_mother_norse_tribal:0 "Allþjóðdrottningmóðir"
+
+# Hegemony (North Sea)
+title_nshegemony_tribal:0 "Allmikilsædróttnun"
+title_nsoverlord_tribal:0 "Allmikilsædrottinn"
+title_nsoverlordqueen_tribal:0 "Allmikilsædrottning"
+title_nsoverlord_spouse_male_tribal:0 "Allmikilsædrottningsmaðr"
+title_nsoverlord_spouse_female_tribal:0 "Allmikilsædrottningfrú"
+title_nsoverlordprince_tribal:0 "Allmikilsædrottinssaeringr"
+title_nsoverlordprincess_tribal:0 "Allmikilsædrottinmær"
+title_nsoverlordqueenmother_tribal:0 "Allmikilsædrottningmóðir"
+
+# Kingdom (Nor/Sw/Den)
+norway_kingdom_norse_tribal:0 "Þjóðdróttnunn"
+norway_king_male_norse_tribal:0 "Þjóðdrottinn"
+norway_king_female_norse_tribal:0 "Þjóðdrottning"
+norway_king_spouse_male_norse_tribal:0 "Þjóðdrottningsmaðr"
+norway_king_spouse_female_norse_tribal:0 "Þjóðdrottningfrú"
+norway_king_son_norse_tribal:0 "Þjóðdrottinssaeringr"
+norway_king_daughter_norse_tribal:0 "Þjóðdrottinmær"
+norway_king_mother_norse_tribal:0 "Þjóðdrottningmóðir"

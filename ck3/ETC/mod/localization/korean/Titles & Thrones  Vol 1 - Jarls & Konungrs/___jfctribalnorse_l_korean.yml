@@ -1,0 +1,114 @@
+﻿l_korean:
+  baron_male_norse_tribal_christian: "헤르시르" # 12578805351840694852
+  baron_female_norse_tribal_christian: "헤르시르야" # 11723341122014665047
+  baron_spouse_male_norse_tribal_christian: "헤르시르마드르" # 14963964956187720461
+  baron_spouse_female_norse_tribal_christian: "헤르시르프루" # 13882349386512294256
+  baron_son_norse_tribal_christian: "헤르시르사링르" # 18121488906748168265
+  baron_daughter_norse_tribal_christian: "헤르시머" # 16562654851449913355
+  baron_mother_norse_tribal_christian: "헤르시르모디르" # 2363305451757718638
+  barony_castle_norse_tribal_christian: "퓔키" # 9060513334210834432
+  barony_tribe_norse_tribal_christian: "$barony_castle_norse$" # 18085027804531053454
+  count_male_norse_independent_tribal_christian: "호프딩이" # 3363718433820770513
+  count_female_norse_independent_tribal_christian: "여주인" # 3861064794449316424
+  count_spouse_male_norse_independent_tribal_christian: "영주" # 16688940772982068374
+  count_spouse_female_norse_independent_tribal_christian: "여주인" # 3861064794449316424
+  count_son_norse_independent_tribal_christian: "호프딩이사링그르" # 3867889900627290137
+  count_daughter_norse_independent_tribal_christian: "호프딩마에르" # 17068100746583735614
+  count_mother_norse_independent_tribal_christian: "호프딩모디르" # 12806977323450653102
+  county_norse_independent_tribal_christian: "퓔키" # 9060513334210834432
+  count_male_norse_tribal_christian: "야를" # 16504366838572349751
+  count_female_norse_tribal_christian: "야를프루" # 14738275197729675088
+  count_spouse_male_norse_tribal_christian: "얄라마드르" # 7353906775560473634
+  count_spouse_female_norse_tribal_christian: "야를프루" # 14738275197729675088
+  count_son_norse_tribal_christian: "얄사링그르" # 14947202323297700662
+  count_daughter_norse_tribal_christian: "얄마르" # 156090103045306222
+  count_mother_norse_tribal_christian: "야를모디르" # 5054197435962382275
+  county_norse_tribal_christian: "야를돔르" # 713198817252034425
+  duke_male_norse_tribal_christian: "필키스야를" # 4006580464017870075
+  duke_female_norse_tribal_christian: "필키스야를부인" # 4559678083195598521
+  duke_spouse_male_norse_tribal_christian: "필키스얄라르마드르" # 3381082383440061743
+  duke_spouse_female_norse_tribal_christian: "필키스야를부인" # 4559678083195598521
+  duke_son_norse_tribal_christian: "필키스야를 선출" # 14181914422101361540
+  duke_daughter_norse_tribal_christian: "필키스야를마르" # 6887076787654914717
+  duke_mother_norse_tribal_christian: "여왕의 어머니" # 6020672894693960385
+  duchy_norse_tribal_christian: "필키얄다르도움" # 16099668618639317185
+  duke_male_norse_independent_tribal_christian: "힐미르" # 11968332054207556867
+  duke_female_norse_independent_tribal_christian: "힐름야" # 6690480456918642675
+  duke_spouse_male_norse_independent_tribal_christian: "힐미르마드르" # 17028773299197558153
+  duke_spouse_female_norse_independent_tribal_christian: "힐름야프루" # 4758092858577145034
+  duke_son_norse_independent_tribal_christian: "힐미르세링르" # 15154084100871888237
+  duke_daughter_norse_independent_tribal_christian: "힐름야메르" # 17593552845932565984
+  duke_mother_norse_independent_tribal_christian: "힐름야모디르" # 16794463251084200028
+  duchy_norse_independent_tribal_christian: "힐미르리키" # 17401431827655134204
+  king_male_norse_vassal_tribal_christian: "국왕급 족장" # 12960668281845200951
+  king_female_norse_vassal_tribal_christian: "여공작부인" # 14677119205334804914
+  king_spouse_male_norse_vassal_tribal_christian: "왕국 공작" # 4888281981784705220
+  king_spouse_female_norse_vassal_tribal_christian: "여공작부인" # 14677119205334804914
+  king_son_norse_vassal_tribal_christian: "국가 재판관 회의" # 14988690934543901904
+  king_daughter_norse_vassal_tribal_christian: "왕국 백작부인" # 6269971938286428794
+  king_mother_norse_vassal_tribal_christian: "여왕" # 42048836892396667
+  kingdom_norse_vassal_tribal_christian: "국가 야를 작위" # 11733516309648431138
+  king_male_norse_tribal_christian: "힐미르" # 11968332054207556867
+  king_female_norse_tribal_christian: "힐름야" # 6690480456918642675
+  king_spouse_male_norse_tribal_christian: "힐미르마드르" # 17028773299197558153
+  king_spouse_female_norse_tribal_christian: "힐름야프루" # 4758092858577145034
+  king_son_norse_tribal_christian: "힐미르세링르" # 15154084100871888237
+  king_daughter_norse_tribal_christian: "힐름야메르" # 17593552845932565984
+  king_mother_norse_tribal_christian: "힐름야모디르" # 16794463251084200028
+  kingdom_norse_tribal_christian: "힐미르리키" # 17401431827655134204
+  emperor_male_norse_vassal_tribal_christian: "스톨야를" # 10215851246125008930
+  emperor_female_norse_vassal_tribal_christian: "스톨야를프루" # 17897240668138827703
+  emperor_spouse_male_norse_vassal_tribal_christian: "스톨랴를라드르" # 7818948664917394542
+  emperor_spouse_female_norse_vassal_tribal_christian: "스톨야를프루" # 17897240668138827703
+  emperor_son_norse_vassal_tribal_christian: "스톨야를사링그르" # 9255607786984486997
+  emperor_daughter_norse_vassal_tribal_christian: "스톨야를메르" # 18045192559479019279
+  emperor_mother_norse_vassal_tribal_christian: "스톨야를모디르" # 3902247838825075074
+  empire_norse_vassal_christian: "스톨야를트" # 14770901560969182923
+  emperor_male_norse_tribal_christian: "스톨힐미르" # 18052579201209453712
+  emperor_female_norse_tribal_christian: "스톨힐먀" # 16749419425247409644
+  emperor_spouse_male_norse_tribal_christian: "스톨힐미르인" # 1010297501768264290
+  emperor_spouse_female_norse_tribal_christian: "스톨힐므야프로" # 15417829021575277373
+  emperor_son_norse_tribal_christian: "스툴힐미르세링르" # 11227450769782510916
+  emperor_daughter_norse_tribal_christian: "스톨힐름야메르" # 18328524498939976759
+  emperor_mother_norse_tribal_christian: "스톨힐름야모디르" # 413573436890486598
+  empire_norse_christian: "스톨힐미르리키" # 6121945897216494078
+  hegemon_male_norse_tribal_christian: "민의" # 15745417230356791415
+  hegemon_female_norse_tribal_christian: "민중의 귀부인" # 6925252418385591523
+  hegemon_spouse_male_norse_tribal_christian: "민중의 대리인" # 6906767152738790173
+  hegemon_spouse_female_norse_tribal_christian: "민중의 귀부인" # 6925252418385591523
+  hegemon_son_norse_tribal_christian: "민중의 지지" # 13248504737561259509
+  hegemon_daughter_norse_tribal_christian: "민중의 권력" # 14528739679040598102
+  hegemon_mother_norse_tribal_christian: "국민적 어머니" # 10924650111750961164
+  hegemony_norse_christian: "민중 주권국" # 12015155331460709881
+  title_nsempire_tribal: "미킬세리키" # 11690872622919982382
+  title_nsemperor_male_tribal_christian: "미킬새힐미르" # 5810616064182330318
+  title_nsemperor_female_tribal_christian: "미클사힐먀" # 13844165828871732476
+  title_nsemperor_spouse_male_tribal_christian: "미킬새힐미르-마드르" # 15388546018121583394
+  title_nsemperor_spouse_female_tribal_christian: "미킬새힐름야프루" # 10579371359349053851
+  title_nsemperor_son_tribal_christian: "미킬세힐미르세링르" # 14150283878972809651
+  title_nsemperor_daughter_tribal_christian: "미킬새힐므야메르" # 10400896585217905075
+  title_nsemperor_mother_tribal_christian: "미킬스헤일름야모디르" # 2160970660716331183
+  scandinavia_empire_norse_tribal_christian: "알트요드리키" # 14040796832433311260
+  scandinavia_emperor_male_norse_tribal_christian: "알트요드힐미르" # 14471509194432618721
+  scandinavia_emperor_female_norse_tribal_christian: "알트요드힐미야" # 5810241398495393297
+  scandinavia_emperor_spouse_male_norse_tribal_christian: "알트요드힐미르-인" # 5817845562129976762
+  scandinavia_emperor_spouse_female_norse_tribal_christian: "알트요드힐미야프로" # 10756451144506961125
+  scandinavia_emperor_son_norse_tribal_christian: "알튀요드힐미르세링그르" # 2368630834015396355
+  scandinavia_emperor_daughter_norse_tribal_christian: "알트요드힐먀메르" # 10427218383537387811
+  scandinavia_emperor_mother_norse_tribal_christian: "알트요드힐먀모디르" # 3427217002182518740
+  title_nshegemony_tribal_christian: "알믹일사예리키" # 3109517893580119385
+  title_nsoverlord_male_tribal_christian: "알밀킬새힐미르" # 1796727650803158394
+  title_nsoverlord_female_tribal_christian: "알밀킬새힐미야" # 8280041253059282988
+  title_nsoverlord_spouse_male_tribal_christian: "알밀킬새힐미르인" # 10780956402820152525
+  title_nsoverlord_spouse_female_tribal_christian: "알믹일스에힐므야프루" # 5782948922716091779
+  title_nsoverlord_son_tribal_christian: "알밀킬새힐미르새링르" # 11390530518640690279
+  title_nsoverlord_daughter_tribal_christian: "알믹일스에힐름야메르" # 2334760453174476990
+  title_nsoverlord_mother_tribal_christian: "알밀킬새힐름야모디르" # 4182242666412383018
+  norway_kingdom_norse_tribal_christian: "민족국가" # 18154092461748780707
+  norway_king_male_norse_tribal_christian: "툐드힐미르" # 10047008668286993054
+  norway_king_female_norse_tribal_christian: "국민 보호" # 15783071016703063881
+  norway_king_spouse_male_norse_tribal_christian: "민족의 수호자" # 15341584021761624592
+  norway_king_spouse_female_norse_tribal_christian: "국가 수호자" # 7935528318638110322
+  norway_king_son_norse_tribal_christian: "민족의 칭송" # 8775532719995211877
+  norway_king_daughter_norse_tribal_christian: "국가 수호자" # 12525576480444128832
+  norway_king_mother_norse_tribal_christian: "국가 수호 어머니" # 16845431698595125856

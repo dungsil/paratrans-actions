@@ -1,0 +1,129 @@
+﻿l_korean:
+  hegemon_male_norse: "위피르코눙그르" # 14631672569106767543
+  hegemon_female_norse: "여왕" # 11545533997712131778
+  hegemon_spouse_male_norse: "요르프 궁정 연합" # 17465155410244881337
+  hegemon_spouse_female_norse: "여왕 시녀" # 3039415038127311505
+  hegemon_son_norse: "차기 국왕 후보" # 7547984904401265307
+  hegemon_daughter_norse: "여왕의 딸" # 12133392750030628735
+  hegemon_mother_norse: "여왕모" # 10815271409921177831
+  hegemony_norse: "위피르리키" # 11642753844370496958
+  emperor_male_norse: "하르코눙그르" # 4339438416739722740
+  emperor_female_norse: "여왕 폐하" # 16154463731413083129
+  emperor_spouse_male_norse: "하이킹 동료" # 12454421876932112665
+  emperor_spouse_female_norse: "여왕의 시녀" # 11939580976008783055
+  emperor_son_norse: "하르코눙글링르" # 11930430654288039723
+  emperor_daughter_norse: "여왕 시종" # 1675671694338820650
+  emperor_mother_norse: "하르드로트닝모디르" # 17773679529462820718
+  empire_norse: "하리키" # 17098038172816685559
+  emperor_male_norse_vassal: "히르드코눙그르" # 316363478016415354
+  emperor_female_norse_vassal: "히르드로트닝" # 3232911172395654360
+  emperor_spouse_male_norse_vassal: "히르드코눙펠라그" # 10922321652541337979
+  emperor_spouse_female_norse_vassal: "여왕 시녀" # 5308900324145120537
+  emperor_son_norse_vassal: "히르드코눙링그르" # 14622740493212050103
+  emperor_daughter_norse_vassal: "히르드코눙스메이" # 10422279901969056511
+  emperor_mother_norse_vassal: "히르드로트닝모디르" # 3772610023850098253
+  empire_norse_vassal: "히르들리키" # 15412721235192677037
+  king_male_norse: "코눙그르" # 15613571580595236101
+  king_female_norse: "여왕" # 13591907872056841613
+  king_spouse_male_norse: "코눙펠라기" # 4714870025883729517
+  king_spouse_female_norse: "여시녀" # 782262678320808278
+  king_son_norse: "코눙링그르" # 10278743087475324727
+  king_daughter_norse: "왕녀" # 5705812489949123707
+  king_mother_norse: "여왕어머니" # 354589378254137495
+  kingdom_norse: "리키" # 13068978488030052373
+  king_male_norse_vassal: "운디르코눙그르" # 16355862620625733319
+  king_female_norse_vassal: "여왕 폐하" # 4378058318054150931
+  king_spouse_male_norse_vassal: "지하 왕국 연합" # 12402328327928614469
+  king_spouse_female_norse_vassal: "시녀" # 7902961959545258209
+  king_son_norse_vassal: "왕자" # 13274481190418165788
+  king_daughter_norse_vassal: "부왕" # 11803033214243081716
+  king_mother_norse_vassal: "여왕의 어머니" # 7703801602675922256
+  kingdom_norse_vassal: "속국" # 10072091824460011539
+  duke_male_norse_independent: "스마코눙그르" # 2317199211942935856
+  duke_female_norse_independent: "소왕비" # 13539211172049489814
+  duke_spouse_male_norse_independent: "소왕 동맹" # 6335091563129768428
+  duke_spouse_female_norse_independent: "소녀 여왕" # 12963913380349341025
+  duke_son_norse_independent: "소왕" # 7433100891065543749
+  duke_daughter_norse_independent: "소왕녀" # 15751980453425423086
+  duke_mother_norse_independent: "소왕의 어머니" # 7097627419884846914
+  duchy_norse_independent: "스마리키" # 17862902997806936573
+  duke_male_norse: "야를" # 16504366838572349751
+  duke_female_norse: "야를프루" # 18425732133065484909
+  duke_spouse_male_norse: "얄펠라기" # 2548407267865216852
+  duke_spouse_female_norse: "얄메이야" # 221740870913707118
+  duke_son_norse: "에를링그" # 2943486794434700010
+  duke_daughter_norse: "야를스메이" # 1947517463021930967
+  duke_mother_norse: "야를모디르" # 5054197435962382275
+  duchy_norse: "야를돔르" # 713198817252034425
+  count_male_norse_independent: "호프딩이" # 3363718433820770513
+  count_female_norse_independent: "호프딩이프루" # 8394380880360868358
+  count_spouse_male_norse_independent: "#bold 족장회#!" # 449761790989294475
+  count_spouse_female_norse_independent: "호프딩야메이야" # 17097873008474197693
+  count_son_norse_independent: "호프딩이" # 13212433324900769271
+  count_daughter_norse_independent: "호프딩야메이" # 3997303583775274245
+  count_mother_norse_independent: "여성 족장" # 5372688331970208059
+  county_norse_independent: "퓔키" # 9060513334210834432
+  count_male_norse: "헤르시르" # 12578805351840694852
+  count_female_norse: "히르스프루" # 14914003143604480976
+  count_spouse_male_norse: "헤르시펠라기" # 1229234480456320204
+  count_spouse_female_norse: "헤르시르메이야" # 15752420129472706491
+  count_son_norse: "헤르실링르" # 1523217304832115033
+  count_daughter_norse: "헤르시르메이" # 17351981750230541416
+  count_mother_norse: "헤르시르모디르" # 2363305451757718638
+  county_norse: "허시르돔르" # 7655409182259062874
+  baron_male_norse: "렌드르 남자" # 1080910378216914641
+  baron_female_norse: "렌드프루" # 7390770712651173495
+  baron_spouse_male_norse: "렌드르펠라기" # 1027272376578858965
+  baron_spouse_female_norse: "렌드르메이야" # 14383110529440301990
+  baron_son_norse: "렌들링르" # 8129922466154638649
+  baron_daughter_norse: "렌드르스메이" # 4080547914102998266
+  baron_mother_norse: "렌드르스모디르" # 577623565257797350
+  barony_castle_norse: "헤라드" # 6903425316076281339
+  barony_tribe_norse: "$barony_castle_norse$" # 18085027804531053454
+  h_north_sea: "노르드샤르발드" # 1810364404402660278
+  h_north_sea_adj: "노르드샤르" # 13009918467184226967
+  title_nshegemony: "왕비의 권한" # 17902641337103593456
+  title_nsoverlord: "알미킬새콘눙그르" # 5930660599645483685
+  title_nsoverlordqueen: "알믹일세드뢰트닝" # 4941672685790455797
+  title_nsoverlord_spouse_male: "알믹일세코눙펠라기" # 11352910694669532795
+  title_nsoverlord_spouse_female: "알믹일세드롯트닝메이야" # 3753518438657901221
+  title_nsoverlordprince: "알미킬사에콘눙글링그르" # 10528446773434346927
+  title_nsoverlordprincess: "알밀크일사코눙스메이" # 17704911262901273610
+  title_nsoverlordqueenmother: "알믹일세드롯트닝모디르" # 3941048525623246578
+  title_nsoverlordkingfather: "알밀킬세콘웅파디르" # 5525974160030212272
+  e_north_sea: "노르드해 제국" # 2678337866899821825
+  e_north_sea_adj: "노르드만닝그르" # 4726621921372904836
+  title_nsempire: "미클사리키" # 7464415317940020451
+  title_nsemperor: "대왕" # 7399439031762536322
+  title_nsqueen: "미클사드뢰트닝" # 6231359821364517144
+  title_nsemperor_spouse_male: "미클사외콘눙펠라기" # 16480939921219204884
+  title_nsemperor_spouse_female: "미클사이드로트닝메이야" # 11235595664551924521
+  title_nsprince: "미클사예콘눙글링르" # 10869495820166845287
+  title_nsprincess: "여왕" # 1851551441362312161
+  title_nsqueenmother: "미클사이드로트닝모디르" # 7245680484537087345
+  title_nskingfather: "미클사왕의 아버지" # 2078527298500641936
+  scandinavia_empire_norse: "모든 민족 국가" # 9897318169143360712
+  scandinavia_emperor_male_norse: "알튀요드코눙그르" # 14947417882992563540
+  scandinavia_emperor_female_norse: "#bold 모든 국왕#" # 5629623104939568671
+  scandinavia_emperor_spouse_male_norse: "범게일 왕회" # 11351854305745546920
+  scandinavia_emperor_spouse_female_norse: "#bold 모든 국민의 여왕#" # 3732030978688293770
+  scandinavia_emperor_son_norse: "#bold 모든 민족의 왕#" # 11848401077379703396
+  scandinavia_emperor_daughter_norse: "#bold 모든 국왕의 여왕#" # 15153054059010595303
+  scandinavia_emperor_mother_norse: "#bold 모든 국민의 왕비 어머니#" # 14018037172495343172
+  norway_kingdom_norse: "쇼드리키" # 10847164796453963979
+  norway_king_male_norse: "쇼드코눙그르" # 5349719379894355820
+  norway_king_female_norse: "쇼드드로트닝" # 11484515988860191250
+  norway_king_spouse_male_norse: "국왕 연합" # 3662126978869436843
+  norway_king_spouse_female_norse: "여왕" # 11109728943181138503
+  norway_king_son_norse: "국왕" # 4818862301368697041
+  norway_king_daughter_norse: "여왕" # 187769734387748323
+  norway_king_mother_norse: "쇼드드로트닝모디르" # 6515872122385103367
+  title_mandom: "세리키" # 14670277964034474029
+  title_manking: "세콘눙그르" # 8536280212007923778
+  title_manqueen: "여왕" # 8097903244500232931
+  title_manking_spouse_male: "세콘웅펠라그" # 15144784593833475767
+  title_manking_spouse_female: "여왕 시종" # 17355989015409211387
+  title_manprince: "세콘눙글링그르" # 13035398917895248696
+  title_manprincess: "여왕" # 17765618277244899788
+  title_manqueenmother: "여왕 모친" # 5567936187979458941
+  title_mankingfather: "세콘눙그파디르" # 7146863157987399594
