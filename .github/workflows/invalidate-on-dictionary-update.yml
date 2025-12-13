@@ -19,7 +19,7 @@ jobs:
       contents: write
     env:
       GOOGLE_AI_STUDIO_TOKEN: "${{secrets.GOOGLE_AI_STUDIO_TOKEN}}"
-      LOG_LEVEL: "${{ env.LOG_LEVEL }}"
+      LOG_LEVEL: "${{ vars.LOG_LEVEL }}"
     steps:
       - name: Clean workspace
         run: |

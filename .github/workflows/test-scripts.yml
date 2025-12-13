@@ -16,7 +16,7 @@ jobs:
     permissions:
       contents: read
     env:
-      LOG_LEVEL: "${{ env.LOG_LEVEL }}"
+      LOG_LEVEL: "${{ vars.LOG_LEVEL }}"
     steps:
       - uses: actions/checkout@v6
       
