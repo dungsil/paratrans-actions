@@ -38,9 +38,8 @@ jobs:
           fetch-depth: 0
 
       - uses: actions/cache@v4
-        if: always()
         with:
-          key: translate-cache
+          key: translate-cache-dict
           path: "**.db"
 
       - uses: pnpm/action-setup@v4
@@ -73,8 +72,8 @@ jobs:
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          push: true
-          commit: --signoff
-          default_author: github_actor
+          commit_options: '--signoff'
           commit_message: "chore: 단어사전 업데이트에 따른 번역 무효화 [skip ci]"
-          pull_options: '--rebase --autostash'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+          commit_author: 'dungsil <39783731+dungsil@users.noreply.github.com>'
