@@ -174,6 +174,54 @@ describe('shouldUseTransliteration', () => {
       expect(shouldUseTransliteration(nonTransliterationFile, 'test_desc')).toBe(false)
     })
   })
+
+  describe('수동 지정 목록에 따른 음역 모드', () => {
+    it('수동 지정 목록이 비어있으면 자동 감지 로직을 사용해야 함', () => {
+      expect(shouldUseTransliteration('events_l_english.yml', undefined, [])).toBe(false)
+      expect(shouldUseTransliteration('culture_l_english.yml', undefined, [])).toBe(true)
+    })
+
+    it('수동 지정 목록에 포함된 파일은 음역 모드를 사용해야 함', () => {
+      const manualList = ['custom_events_l_english.yml', 'special_names_l_english.yml']
+      expect(shouldUseTransliteration('custom_events_l_english.yml', undefined, manualList)).toBe(true)
+      expect(shouldUseTransliteration('special_names_l_english.yml', undefined, manualList)).toBe(true)
+    })
+
+    it('수동 지정 목록에 없는 파일은 자동 감지 로직을 사용해야 함', () => {
+      const manualList = ['custom_events_l_english.yml']
+      expect(shouldUseTransliteration('other_events_l_english.yml', undefined, manualList)).toBe(false)
+      expect(shouldUseTransliteration('culture_l_english.yml', undefined, manualList)).toBe(true)
+    })
+
+    it('와일드카드 패턴을 지원해야 함', () => {
+      const manualList = ['*_custom_names_*', 'special_*']
+      expect(shouldUseTransliteration('mod_custom_names_l_english.yml', undefined, manualList)).toBe(true)
+      expect(shouldUseTransliteration('special_events_l_english.yml', undefined, manualList)).toBe(true)
+      expect(shouldUseTransliteration('regular_events_l_english.yml', undefined, manualList)).toBe(false)
+    })
+
+    it('대소문자 구분 없이 매칭해야 함', () => {
+      const manualList = ['Custom_Events_L_English.yml']
+      expect(shouldUseTransliteration('custom_events_l_english.yml', undefined, manualList)).toBe(true)
+      expect(shouldUseTransliteration('CUSTOM_EVENTS_L_ENGLISH.YML', undefined, manualList)).toBe(true)
+    })
+
+    it('수동 지정된 파일도 키 제외 패턴을 적용해야 함', () => {
+      const manualList = ['custom_l_english.yml']
+      // 수동 지정된 파일이지만 _loc 패턴이 있는 키는 번역 모드 사용
+      expect(shouldUseTransliteration('custom_l_english.yml', 'test_loc', manualList)).toBe(false)
+      expect(shouldUseTransliteration('custom_l_english.yml', 'test_desc', manualList)).toBe(false)
+      expect(shouldUseTransliteration('custom_l_english.yml', 'tradition_name', manualList)).toBe(false)
+      // 일반 키는 음역 모드 사용
+      expect(shouldUseTransliteration('custom_l_english.yml', 'normal_key', manualList)).toBe(true)
+    })
+
+    it('부분 매칭을 지원해야 함', () => {
+      const manualList = ['custom_names']
+      expect(shouldUseTransliteration('mod_custom_names_l_english.yml', undefined, manualList)).toBe(true)
+      expect(shouldUseTransliteration('custom_names_extended_l_english.yml', undefined, manualList)).toBe(true)
+    })
+  })
 })
 
 describe('isRegularTranslationContext', () => {

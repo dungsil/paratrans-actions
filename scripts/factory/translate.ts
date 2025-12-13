@@ -48,6 +48,7 @@ interface ModMeta {
   upstream: {
     localization: string[];
     language: string;
+    transliteration_files?: string[];
   };
 }
 
@@ -125,7 +126,7 @@ export async function processModTranslations ({ rootDir, mods, gameType, onlyHas
       for (const file of sourceFiles) {
         // 언어파일 이름이 `_l_언어코드.yml` 형식이면 처리
         if (file.endsWith(`.yml`) && file.includes(`_l_${meta.upstream.language}`)) {
-          processes.push(processLanguageFile(mod, sourceDir, targetDir, file, meta.upstream.language, gameType, onlyHash, startTime, timeoutMs, projectRoot))
+          processes.push(processLanguageFile(mod, sourceDir, targetDir, file, meta.upstream.language, gameType, onlyHash, startTime, timeoutMs, projectRoot, meta.upstream.transliteration_files))
           // 처리될 한국어 파일 경로 추적
           const targetParentDir = join(targetDir, dirname(file))
           const targetFileName = '___' + basename(file).replace(`_l_${meta.upstream.language}.yml`, '_l_korean.yml')
@@ -274,14 +275,14 @@ class TimeoutReachedError extends Error {
 }
 
 
-async function processLanguageFile (mode: string, sourceDir: string, targetBaseDir: string, file: string, sourceLanguage: string, gameType: GameType, onlyHash: boolean, startTime: number, timeoutMs: number | null, projectRoot: string): Promise<UntranslatedItem[]> {
+async function processLanguageFile (mode: string, sourceDir: string, targetBaseDir: string, file: string, sourceLanguage: string, gameType: GameType, onlyHash: boolean, startTime: number, timeoutMs: number | null, projectRoot: string, transliterationFiles?: string[]): Promise<UntranslatedItem[]> {
   const sourcePath = join(sourceDir, file)
   const untranslatedItems: UntranslatedItem[] = []
 
   // 파일명을 기반으로 음역 모드 파일인지 감지
-  const isTransliterationFile = shouldUseTransliteration(file)
+  const isTransliterationFile = shouldUseTransliteration(file, undefined, transliterationFiles)
   if (isTransliterationFile) {
-    log.info(`[${mode}/${file}] 음역 대상 파일 감지 (파일명에 culture/dynasty/names 키워드 포함)`)
+    log.info(`[${mode}/${file}] 음역 대상 파일 감지 (파일명에 culture/dynasty/names 키워드 포함 또는 수동 지정)`)
   }
 
   // 파일 순서를 최상위로 유지해 덮어쓸 수 있도록 앞에 '___'를 붙임 (ex: `___00_culture_l_english.yml`)
