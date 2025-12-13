@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      LOG_LEVEL: "${{ env.LOG_LEVEL }}"
     steps:
       - uses: actions/checkout@v6
       

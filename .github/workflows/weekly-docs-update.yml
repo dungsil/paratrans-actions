@@ -11,6 +11,8 @@ jobs:
     permissions:
       issues: write
       contents: read
+    env:
+      LOG_LEVEL: "${{ env.LOG_LEVEL }}"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
