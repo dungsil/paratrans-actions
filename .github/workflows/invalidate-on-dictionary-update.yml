@@ -39,8 +39,9 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          key: translate-cache-dict
+          key: translate-cache
           path: "**.db"
+          save-always: true
 
       - uses: pnpm/action-setup@v4
 
