@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { mkdir, readFile, writeFile, rm, access } from 'node:fs/promises'
+import { mkdir, writeFile, rm, access } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { join } from 'pathe'
 import { tmpdir } from 'node:os'
@@ -52,29 +52,36 @@ vi.mock('node:child_process', () => ({
 
 vi.mock('node:util', async () => {
   const actual = await vi.importActual<typeof import('node:util')>('node:util')
+  const { exec } = await import('node:child_process')
   const { rm } = await import('node:fs/promises')
   
   return {
     ...actual,
     promisify: (fn: any) => {
-      return async (cmd: string, options?: any) => {
-        mockExecAsync(cmd, options)
-        
-        // git checkout 명령 시뮬레이션: 파일을 삭제하여 "롤백" 효과 재현
-        if (cmd.includes('git checkout HEAD --')) {
-          const match = cmd.match(/git checkout HEAD -- "(.+)"/)
-          if (match) {
-            const filePath = match[1]
-            try {
-              // 테스트에서는 파일을 삭제하여 롤백을 시뮬레이션
-              await rm(filePath, { force: true })
-            } catch (error) {
-              // 파일이 없으면 무시
+      // exec 함수만 모킹하고 나머지는 실제 promisify 사용
+      if (fn === exec) {
+        return async (cmd: string, options?: any) => {
+          mockExecAsync(cmd, options)
+          
+          // git checkout 명령 시뮬레이션: 파일을 삭제하여 "롤백" 효과 재현
+          if (cmd.includes('git checkout HEAD --')) {
+            // 작은따옴표로 감싼 파일 경로 매칭 (escapeShellArg 사용 시)
+            const match = cmd.match(/git checkout HEAD -- '(.+)'/) || cmd.match(/git checkout HEAD -- "(.+)"/)
+            if (match) {
+              const filePath = match[1].replace(/'\\''/g, "'") // 이스케이프된 작은따옴표 복원
+              try {
+                // 테스트에서는 파일을 삭제하여 롤백을 시뮬레이션
+                await rm(filePath, { force: true })
+              } catch (error) {
+                // 파일이 없으면 무시
+              }
             }
           }
+          
+          return { stdout: '', stderr: '' }
         }
-        
-        return { stdout: '', stderr: '' }
+      } else {
+        return actual.promisify(fn)
       }
     }
   }
